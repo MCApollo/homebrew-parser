@@ -1,0 +1,37 @@
+name :
+	 Hdf5AT18
+homepage :
+	 https://www.hdfgroup.org/HDF5
+url :
+	 https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.8/hdf5-1.8.21/src/hdf5-1.8.21.tar.bz2
+description :
+	 File format designed to store large amounts of data
+build_deps :
+	 autoconf
+	 automake
+	 libtool
+link_deps :
+	 gcc
+	 open-mpi
+	 szip
+conflicts :
+patches :
+EOF_patch :
+install :
+	 ENV.cxx11 if build.cxx11?
+	 inreplace %w[c++/src/h5c++.in fortran/src/h5fc.in tools/misc/h5cc.in],
+	 "${libdir}/libhdf5.settings", "#{pkgshare}/libhdf5.settings"
+	 inreplace "src/Makefile.am", "settingsdir=$(libdir)", "settingsdir=#{pkgshare}"
+	 system "autoreconf", "-fiv"
+	 args = %W[
+	 --disable-dependency-tracking
+	 --disable-silent-rules
+	 --prefix=#{prefix}
+	 --with-szlib=#{Formula["szip"].opt_prefix}
+	 --enable-build-mode=production
+	 --enable-fortran
+	 ]
+	 if build.without?("mpi")
+	 args << "--enable-cxx"
+	 else
+	 args << "--disable-cxx"

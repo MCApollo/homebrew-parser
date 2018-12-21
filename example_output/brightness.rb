@@ -1,0 +1,16 @@
+name :
+	 Brightness
+homepage :
+	 https://github.com/nriley/brightness
+url :
+	 https://github.com/nriley/brightness/archive/1.2.tar.gz
+description :
+	 Change macOS display brightness from the command-line
+build_deps :
+link_deps :
+conflicts :
+patches :
+EOF_patch :
+install :
+	 system "make"
+	 system "make", "prefix=#{prefix}", "install"

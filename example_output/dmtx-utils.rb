@@ -1,0 +1,23 @@
+name :
+	 DmtxUtils
+homepage :
+	 https://github.com/dmtx/dmtx-utils
+url :
+	 https://github.com/dmtx/dmtx-utils/archive/v0.7.6.tar.gz
+description :
+	 Read and write data matrix barcodes
+build_deps :
+	 autoconf
+	 automake
+	 pkg-config
+link_deps :
+	 imagemagick
+	 libdmtx
+	 libtool
+conflicts :
+patches :
+EOF_patch :
+install :
+	 system "autoreconf", "-fiv"
+	 system "./configure", "--disable-dependency-tracking", "--prefix=#{prefix}"
+	 system "make", "install"

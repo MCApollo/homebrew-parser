@@ -16,4 +16,4 @@ output = Parsed.Parse(sys.argv[1])
 for key, value in list(output.items()):
 	print(key, ':')
 	for item in value:
-		print("--> ", item)
+		print("\t", item)

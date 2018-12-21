@@ -1,0 +1,46 @@
+name :
+	 Zabbix
+homepage :
+	 https://www.zabbix.com/
+url :
+	 https://downloads.sourceforge.net/project/zabbix/ZABBIX%20Latest%20Stable/3.4.13/zabbix-3.4.13.tar.gz
+description :
+	 Availability and monitoring solution
+build_deps :
+link_deps :
+	 openssl
+	 pcre
+	 mysql
+	 postgresql
+	 fping
+	 libevent
+	 libssh2
+conflicts :
+patches :
+EOF_patch :
+install :
+	 sdk = MacOS::CLT.installed? ? "" : MacOS.sdk_path
+	 args = %W[
+	 --disable-dependency-tracking
+	 --prefix=#{prefix}
+	 --sysconfdir=#{etc}/zabbix
+	 --enable-agent
+	 --with-iconv=#{sdk}/usr
+	 --with-libpcre=#{Formula["pcre"].opt_prefix}
+	 --with-openssl=#{Formula["openssl"].opt_prefix}
+	 ]
+	 if build.with? "server-proxy"
+	 args += %w[
+	 --enable-server
+	 --enable-proxy
+	 --enable-ipv6
+	 --with-net-snmp
+	 --with-libcurl
+	 --with-ssh2
+	 ]
+	 if build.with? "mysql"
+	 args << "--with-mysql=#{brewed_or_shipped("mysql_config")}"
+	 elsif build.with? "sqlite"
+	 args << "--with-sqlite3"
+	 else
+	 args << "--with-postgresql=#{brewed_or_shipped("pg_config")}"
