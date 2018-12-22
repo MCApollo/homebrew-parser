@@ -19,3 +19,7 @@ install :
 	 resource("scripts").stage do
 	 system "./configure", "--prefix=#{scripts}", "--with-nsfw"
 	 system "make", "install"
+	 end
+	 ENV.append_path "PKG_CONFIG_PATH", "#{scripts}/lib/pkgconfig"
+	 system "./configure", "--disable-dependency-tracking", "--prefix=#{prefix}"
+	 system "make", "install"

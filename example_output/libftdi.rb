@@ -22,3 +22,4 @@ install :
 	 system "cmake", "..", "-DPYTHON_BINDINGS=OFF", *std_cmake_args
 	 system "make", "install"
 	 (libexec/"bin").install "examples/find_all"
+	 end

@@ -8,7 +8,11 @@ description :
 	 Small tool to convert Djvu files to PDF files
 build_deps :
 link_deps :
+	 djvulibre
+	 ghostscript
 conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "djvu2pdf"
+	 man1.install "djvu2pdf.1.gz"

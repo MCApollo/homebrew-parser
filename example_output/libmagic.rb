@@ -23,3 +23,4 @@ install :
 	 if build.with? "python@2"
 	 cd "python" do
 	 system "python", *Language::Python.setup_install_args(prefix)
+	 end

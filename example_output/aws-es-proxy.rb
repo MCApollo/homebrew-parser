@@ -22,3 +22,4 @@ install :
 	 system "go", "build", "-o", "aws-es-proxy"
 	 bin.install "aws-es-proxy"
 	 prefix.install_metafiles
+	 end

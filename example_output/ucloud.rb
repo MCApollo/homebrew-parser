@@ -19,3 +19,4 @@ install :
 	 cd dir do
 	 system "go", "build", "-o", bin/"ucloud"
 	 prefix.install_metafiles
+	 end

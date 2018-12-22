@@ -19,3 +19,17 @@ install :
 	 "--disable-silent-rules",
 	 "--prefix=#{libexec}"
 	 system "make", "install"
+	 end
+	 ENV.prepend_path "PKG_CONFIG_PATH", libexec/"lib/pkgconfig"
+	 args = %W[
+	 --prefix=#{prefix}
+	 --disable-dependency-tracking
+	 --enable-imfile
+	 --enable-usertools
+	 --enable-diagtools
+	 --disable-uuid
+	 --disable-libgcrypt
+	 ]
+	 system "./configure", *args
+	 system "make"
+	 system "make", "install"

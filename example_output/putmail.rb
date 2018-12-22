@@ -12,3 +12,7 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "putmail.py"
+	 man1.install "man/man1/putmail.py.1"
+	 bin.install_symlink "putmail.py" => "putmail"
+	 man1.install_symlink "putmail.py.1" => "putmail.1"

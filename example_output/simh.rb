@@ -19,3 +19,5 @@ install :
 	 bin.install Dir["BIN/*"]
 	 Dir["**/*.txt"].each do |f|
 	 (doc/File.dirname(f)).install f
+	 end
+	 (pkgshare/"vax").install Dir["VAX/*.{bin,exe}"]

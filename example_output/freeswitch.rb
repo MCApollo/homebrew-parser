@@ -44,3 +44,5 @@ install :
 	 [8, 16, 32, 48].each do |n|
 	 resource("sounds-music-#{n}000").stage do
 	 cp_r ".", prefix/"sounds/music"
+	 end
+	 end

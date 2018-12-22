@@ -27,6 +27,11 @@ install :
 	 s.gsub! "/etc/ppp/resolv.conf", etc/"dnsmasq.d/ppp/resolv.conf", false
 	 s.gsub! "/etc/dhcpc/resolv.conf", etc/"dnsmasq.d/dhcpc/resolv.conf", false
 	 s.gsub! "/usr/sbin/dnsmasq", HOMEBREW_PREFIX/"sbin/dnsmasq", false
+	 end
+	 if build.with? "libidn"
+	 inreplace "src/config.h", "/* #define HAVE_IDN */", "#define HAVE_IDN"
+	 ENV.append_to_cflags "-I#{Formula["gettext"].opt_include}"
+	 ENV.append "LDFLAGS", "-L#{Formula["gettext"].opt_lib} -lintl"
 	 (var/"lib/misc/dnsmasq").mkpath
 	 (var/"run/dnsmasq").mkpath
 	 (etc/"dnsmasq.d/ppp").mkpath

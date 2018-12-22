@@ -8,7 +8,13 @@ description :
 	 Dependency manager for .NET with support for NuGet and Git repositories
 build_deps :
 link_deps :
+	 mono
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "paket.exe"
+	 (bin/"paket").write <<~EOS
+	 #!/bin/bash
+	 mono #{libexec}/paket.exe "$@"
+	 EOS

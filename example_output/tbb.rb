@@ -26,3 +26,9 @@ install :
 	 cd "python" do
 	 ENV["TBBROOT"] = prefix
 	 system "python", *Language::Python.setup_install_args(prefix)
+	 end
+	 system "cmake", "-DTBB_ROOT=#{prefix}",
+	 "-DTBB_OS=Darwin",
+	 "-DSAVE_TO=lib/cmake/TBB",
+	 "-P", "cmake/tbb_config_generator.cmake"
+	 (lib/"cmake"/"TBB").install Dir["lib/cmake/TBB/*.cmake"]

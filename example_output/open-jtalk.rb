@@ -15,3 +15,10 @@ install :
 	 resource("hts_engine API").stage do
 	 system "./configure", "--prefix=#{prefix}"
 	 system "make", "install"
+	 end
+	 system "./configure", "--with-hts-engine-header-path=#{include}",
+	 "--with-hts-engine-library-path=#{lib}",
+	 "--with-charset=UTF-8",
+	 "--prefix=#{prefix}"
+	 if MacOS.version <= :mavericks
+	 inreplace "config.status", "-finput-charset=UTF-8 -fexec-charset=UTF-8", ""

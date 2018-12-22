@@ -20,3 +20,4 @@ install :
 	 system "make", "binary-local"
 	 bin.install "skopeo"
 	 prefix.install_metafiles
+	 end

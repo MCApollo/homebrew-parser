@@ -11,3 +11,4 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 bash_completion.install "etc/bash_completion.d/rustc"

@@ -22,3 +22,7 @@ install :
 	 inreplace Dir["configure{,.ac}"] do |s|
 	 s.gsub!(/ -Wl\,--as-needed/, "")
 	 s.gsub!(/ -Wl,-z,(relro|now)/, "")
+	 end
+	 system "./configure", "--disable-debug", "--disable-dependency-tracking",
+	 "--prefix=#{prefix}"
+	 system "make", "install"

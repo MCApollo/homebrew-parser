@@ -8,7 +8,10 @@ description :
 	 Command-line control panel to manage WordPress sites
 build_deps :
 link_deps :
+	 dnsmasq
+	 php
 conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "easyengine.phar" => "ee"

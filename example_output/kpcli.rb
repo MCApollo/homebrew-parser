@@ -29,3 +29,15 @@ install :
 	 resource(r).stage do
 	 system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
 	 system "make", "install"
+	 end
+	 end
+	 resource("Term::Readline::Gnu").stage do
+	 ENV.refurbish_args
+	 system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}",
+	 "--includedir=#{Formula["readline"].opt_include}",
+	 "--libdir=#{Formula["readline"].opt_lib}"
+	 system "make", "install"
+	 end
+	 libexec.install "kpcli-#{version}.pl" => "kpcli"
+	 chmod 0755, libexec/"kpcli"
+	 (bin/"kpcli").write_env_script("#{libexec}/kpcli", :PERL5LIB => ENV["PERL5LIB"])

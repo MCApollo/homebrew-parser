@@ -43,3 +43,4 @@ install :
 	 EOS
 	 resource("shareware").stage do
 	 pkgshare.install Dir["*"]
+	 end

@@ -16,3 +16,5 @@ install :
 	 mkdir "build" do
 	 system "cmake", "..", *std_cmake_args
 	 system "make", "install"
+	 end
+	 doc.install (buildpath/"documentation").children

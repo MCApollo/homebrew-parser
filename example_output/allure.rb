@@ -8,7 +8,12 @@ description :
 	 Flexible lightweight test report tool
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 rm_f Dir["bin/*.bat"]
+	 prefix.install_metafiles
+	 libexec.install Dir["*"]
+	 bin.install_symlink Dir["#{libexec}/bin/*"]

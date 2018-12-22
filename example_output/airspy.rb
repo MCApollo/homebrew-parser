@@ -22,3 +22,4 @@ install :
 	 mkdir "build" do
 	 system "cmake", "..", *args
 	 system "make", "install"
+	 end

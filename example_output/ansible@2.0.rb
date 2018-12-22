@@ -22,3 +22,15 @@ install :
 	 resources.each do |r|
 	 r.stage do
 	 system "python", *Language::Python.setup_install_args(libexec/"vendor")
+	 end
+	 end
+	 touch vendor_site_packages/"ndg/__init__.py"
+	 inreplace "lib/ansible/constants.py" do |s|
+	 s.gsub! "/usr/share/ansible", pkgshare
+	 s.gsub! "/etc/ansible", etc/"ansible"
+	 end
+	 ENV.prepend_create_path "PYTHONPATH", libexec/"lib/python2.7/site-packages"
+	 system "python", *Language::Python.setup_install_args(libexec)
+	 man1.install Dir["docs/man/man1/*.1"]
+	 bin.install Dir["#{libexec}/bin/*"]
+	 bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])

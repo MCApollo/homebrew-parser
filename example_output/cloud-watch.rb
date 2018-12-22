@@ -8,7 +8,19 @@ description :
 	 Amazon CloudWatch command-line Tool
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 env = Language::Java.java_home_env
+	 env[:AWS_CLOUDWATCH_HOME] = libexec
+	 env[:SERVICE_HOME] = libexec
+	 rm Dir["bin/*.cmd"]
+	 libexec.install Dir["*"]
+	 Pathname.glob("#{libexec}/bin/*") do |file|
+	 next if file.directory?
+	 basename = file.basename
+	 next if basename.to_s == "service"
+	 (bin/basename).write_env_script file, env
+	 end

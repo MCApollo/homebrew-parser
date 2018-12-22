@@ -36,3 +36,5 @@ install :
 	 libexec.install "cataclysm-tiles", "data", "gfx", "lua"
 	 inreplace "cataclysm-launcher" do |s|
 	 s.change_make_var! "DIR", libexec
+	 end
+	 bin.install "cataclysm-launcher" => "cataclysm"

@@ -23,3 +23,9 @@ install :
 	 ENV.prepend_create_path "PYTHONPATH", libexec/"vendor/lib/python2.7/site-packages"
 	 resource("six").stage do
 	 system "python", *Language::Python.setup_install_args(libexec/"vendor")
+	 end
+	 etc.install "offlineimap.conf", "offlineimap.conf.minimal"
+	 libexec.install "bin/offlineimap" => "offlineimap.py"
+	 libexec.install "offlineimap"
+	 (bin/"offlineimap").write_env_script(libexec/"offlineimap.py",
+	 :PYTHONPATH => ENV["PYTHONPATH"])

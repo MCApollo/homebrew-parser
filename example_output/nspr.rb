@@ -31,3 +31,4 @@ install :
 	 system "make", "install"
 	 (bin/"compile-et.pl").unlink
 	 (bin/"prerr.properties").unlink
+	 end

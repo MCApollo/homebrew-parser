@@ -17,3 +17,4 @@ install :
 	 bin.install %w[todos fromdos]
 	 man1.install "fromdos.1"
 	 man1.install_symlink "fromdos.1" => "todos.1"
+	 end

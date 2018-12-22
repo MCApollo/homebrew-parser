@@ -19,3 +19,7 @@ install :
 	 ENV.prepend_create_path "PYTHONPATH", prefix+"lib/python2.7/site-packages"
 	 resources.each do |r|
 	 r.stage { system "python", "setup.py", "install", "--prefix=#{libexec}" }
+	 end
+	 system "python", "setup.py", "install", "--prefix=#{prefix}"
+	 rm Dir["#{lib}/python2.7/site-packages/*.pth"]
+	 bin.env_script_all_files(libexec+"bin", :PYTHONPATH => ENV["PYTHONPATH"])

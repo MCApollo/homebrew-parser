@@ -57,3 +57,4 @@ install :
 	 "$@" >> /var/log/mount-ntfs-3g.log 2>&1
 	 exit $?;
 	 EOS
+	 end

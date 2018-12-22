@@ -26,3 +26,5 @@ install :
 	 mkdir "build" do
 	 system "../configure", *args
 	 system "make", "install"
+	 end
+	 pkgshare.install "examples"

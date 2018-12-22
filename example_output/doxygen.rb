@@ -22,3 +22,6 @@ install :
 	 mkdir "build" do
 	 system "cmake", "..", *args
 	 system "make"
+	 end
+	 bin.install Dir["build/bin/*"]
+	 man1.install Dir["doc/*.1"]

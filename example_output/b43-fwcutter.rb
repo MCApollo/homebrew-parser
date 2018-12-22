@@ -16,3 +16,5 @@ install :
 	 m.gsub! /install -o 0 -g 0/, "install"
 	 m.gsub! /install -d -o 0 -g 0/, "install -d"
 	 m.gsub! "$(PREFIX)/man", man
+	 end
+	 system "make", "PREFIX=#{prefix}", "install"

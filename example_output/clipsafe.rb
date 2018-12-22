@@ -18,3 +18,26 @@ install :
 	 system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
 	 system "make"
 	 system "make", "install"
+	 end
+	 resource("Digest::SHA").stage do
+	 system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
+	 system "make"
+	 system "make", "install"
+	 end
+	 resource("DateTime").stage do
+	 system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
+	 system "make"
+	 system "make", "install"
+	 end
+	 resource("DateTime::Locale").stage do
+	 system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
+	 system "make"
+	 system "make", "install"
+	 end
+	 resource("DateTime::TimeZone").stage do
+	 system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
+	 system "make"
+	 system "make", "install"
+	 end
+	 bin.install "clipsafe"
+	 bin.env_script_all_files(libexec+"bin", :PERL5LIB => ENV["PERL5LIB"])

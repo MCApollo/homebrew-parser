@@ -18,3 +18,4 @@ install :
 	 Dir.glob("#{libexec}/bin/*") do |path|
 	 bin_name = File.basename(path)
 	 (bin/bin_name).write shim_script(bin_name)
+	 end

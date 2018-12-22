@@ -52,3 +52,4 @@ install :
 	 "--llvm-install-components=clang;libclang;libclang-headers",
 	 "--install-llbuild",
 	 "--install-swiftpm"
+	 end

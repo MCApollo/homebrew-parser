@@ -28,3 +28,9 @@ install :
 	 system "make", "install"
 	 Pathname.glob("#{lib}/*.dylib") do |dylib|
 	 lib.install_symlink dylib.basename => "#{dylib.basename(".dylib")}.so"
+	 end
+	 inreplace lib/"pkgconfig/guile-2.2.pc" do |s|
+	 s.gsub! Formula["bdw-gc"].prefix.realpath, Formula["bdw-gc"].opt_prefix
+	 s.gsub! Formula["libffi"].prefix.realpath, Formula["libffi"].opt_prefix
+	 end
+	 (share/"gdb/auto-load").install Dir["#{lib}/*-gdb.scm"]

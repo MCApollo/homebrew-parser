@@ -8,7 +8,14 @@ description :
 	 Extensible, multi-language documentation generator
 build_deps :
 link_deps :
+	 mono
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install Dir["*"]
+	 (bin/"naturaldocs").write <<~EOS
+	 #!/bin/bash
+	 mono #{libexec}/NaturalDocs.exe "$@"
+	 EOS
+	 libexec.install_symlink etc/"naturaldocs" => "config"

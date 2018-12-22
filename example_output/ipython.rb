@@ -20,5 +20,24 @@ install :
 	 (resources - [ipykernel]).each do |r|
 	 r.stage do
 	 system "python3", *Language::Python.setup_install_args(libexec/"vendor")
+	 end
+	 end
+	 ENV.prepend_create_path "PYTHONPATH", libexec/"lib/python#{xy}/site-packages"
+	 system "python3", *Language::Python.setup_install_args(libexec)
+	 bin.install libexec/"bin/ipython"
+	 bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])
+	 man1.install libexec/"share/man/man1/ipython.1"
+	 ipykernel.stage do
+	 system "python3", *Language::Python.setup_install_args(libexec/"vendor")
+	 end
+	 kernel_dir = Dir.mktmpdir
+	 system libexec/"bin/ipython", "kernel", "install", "--prefix", kernel_dir
+	 (share/"jupyter/kernels/python3").install Dir["#{kernel_dir}/share/jupyter/kernels/python3/*"]
+	 inreplace share/"jupyter/kernels/python3/kernel.json", "]", <<~EOS
+	 ],
+	 "env": {
+	 "PYTHONPATH": "#{ENV["PYTHONPATH"]}"
+	 }
+	 EOS
 	 rm_rf etc/"jupyter/kernels/python3"
 	 (etc/"jupyter/kernels/python3").install Dir[share/"jupyter/kernels/python3/*"]

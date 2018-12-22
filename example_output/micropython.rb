@@ -17,3 +17,8 @@ install :
 	 cd "ports/unix" do
 	 system "make", "axtls"
 	 system "make", "install", "PREFIX=#{prefix}"
+	 end
+	 cd "mpy-cross" do
+	 system "make"
+	 bin.install "mpy-cross"
+	 end

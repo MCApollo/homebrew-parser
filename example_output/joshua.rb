@@ -22,3 +22,8 @@ install :
 	 rm_rf "bin/.gitignore"
 	 head do
 	 system "ant"
+	 end
+	 libexec.install Dir["*"]
+	 bin.install_symlink Dir["#{libexec}/bin/*"]
+	 inreplace "#{bin}/joshua-decoder", "JOSHUA\=$(dirname $0)/..", "#JOSHUA\=$(dirname $0)/.."
+	 inreplace "#{bin}/decoder", "JOSHUA\=$(dirname $0)/..", "#JOSHUA\=$(dirname $0)/.."

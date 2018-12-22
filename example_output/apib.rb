@@ -18,3 +18,8 @@ install :
 	 inreplace "configure" do |s|
 	 s.gsub! "/usr/include/apr-1.0", "#{Formula["apr"].opt_libexec}/include/apr-1"
 	 s.gsub! "/usr/include/apr-1", "#{Formula["apr"].opt_libexec}/include/apr-1"
+	 end
+	 ENV.append "LDFLAGS", "-L#{Formula["apr-util"].opt_libexec}/lib"
+	 ENV.append "LDFLAGS", "-L#{Formula["apr"].opt_libexec}/lib"
+	 ENV.append "CFLAGS", "-I#{Formula["apr"].opt_libexec}/include/apr-1"
+	 ENV.append "CFLAGS", "-I#{Formula["apr-util"].opt_libexec}/include/apr-1"

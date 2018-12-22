@@ -33,3 +33,14 @@ install :
 	 resource("nose").stage do
 	 system python, *Language::Python.setup_install_args(libexec/"nose")
 	 (dest_path/"homebrew-numpy-nose.pth").write "#{nose_path}\n"
+	 end
+	 if build.head?
+	 ENV.prepend_create_path "PYTHONPATH", buildpath/"tools/lib/python#{version}/site-packages"
+	 resource("Cython").stage do
+	 system python, *Language::Python.setup_install_args(buildpath/"tools")
+	 end
+	 end
+	 system python, "setup.py",
+	 "build", "--fcompiler=gnu95", "--parallel=#{ENV.make_jobs}",
+	 "install", "--prefix=#{prefix}",
+	 "--single-version-externally-managed", "--record=installed.txt"

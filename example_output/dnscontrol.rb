@@ -19,3 +19,4 @@ install :
 	 cd srcpath do
 	 system "go", "build", "-o", bin/"dnscontrol"
 	 prefix.install_metafiles
+	 end

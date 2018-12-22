@@ -69,3 +69,25 @@ install :
 	 s.change_make_var! "CFLAGS", "#{ENV.cflags} $(MYCFLAGS)"
 	 s.change_make_var! "MYLDFLAGS", ENV.ldflags
 	 s.sub! "MYCFLAGS_VAL", "-fno-common -DLUA_USE_LINUX"
+	 end
+	 inreplace "src/luaconf.h", "/usr/local", HOMEBREW_PREFIX
+	 inreplace "etc/lua.pc" do |s|
+	 s.gsub! "prefix= /usr/local", "prefix=#{HOMEBREW_PREFIX}"
+	 s.gsub! "INSTALL_MAN= ${prefix}/man/man1", "INSTALL_MAN= ${prefix}/share/man/man1"
+	 s.gsub! "INSTALL_INC= ${prefix}/include", "INSTALL_INC= ${prefix}/include/lua-5.1"
+	 s.gsub! "includedir=${prefix}/include", "includedir=${prefix}/include/lua-5.1"
+	 s.gsub! "Libs: -L${libdir} -llua -lm", "Libs: -L${libdir} -llua.5.1 -lm"
+	 end
+	 system "make", "macosx", "INSTALL_TOP=#{prefix}", "INSTALL_MAN=#{man1}", "INSTALL_INC=#{include}/lua-5.1"
+	 system "make", "install", "INSTALL_TOP=#{prefix}", "INSTALL_MAN=#{man1}", "INSTALL_INC=#{include}/lua-5.1"
+	 (lib/"pkgconfig").install "etc/lua.pc"
+	 mv bin/"lua", bin/"lua-5.1"
+	 mv bin/"luac", bin/"luac-5.1"
+	 mv man1/"lua.1", man1/"lua-5.1.1"
+	 mv man1/"luac.1", man1/"luac-5.1.1"
+	 mv lib/"pkgconfig/lua.pc", lib/"pkgconfig/lua-5.1.pc"
+	 bin.install_symlink "lua-5.1" => "lua5.1"
+	 bin.install_symlink "luac-5.1" => "luac5.1"
+	 include.install_symlink "lua-5.1" => "lua5.1"
+	 (lib/"pkgconfig").install_symlink "lua-5.1.pc" => "lua5.1.pc"
+	 (libexec/"lib/pkgconfig").install_symlink lib/"pkgconfig/lua-5.1.pc" => "lua.pc"

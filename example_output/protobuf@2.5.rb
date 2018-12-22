@@ -30,3 +30,7 @@ install :
 	 ENV.append_to_cflags "-L#{lib}"
 	 args = Language::Python.setup_install_args libexec
 	 system "python", *args
+	 end
+	 site_packages = "lib/python2.7/site-packages"
+	 pth_contents = "import site; site.addsitedir('#{libexec/site_packages}')\n"
+	 (prefix/site_packages/"homebrew-protobuf.pth").write pth_contents

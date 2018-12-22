@@ -19,3 +19,4 @@ install :
 	 cd "src/github.com/svent/sift" do
 	 system "go", "build", "-o", bin/"sift"
 	 prefix.install_metafiles
+	 end

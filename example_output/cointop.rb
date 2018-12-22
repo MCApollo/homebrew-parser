@@ -18,3 +18,4 @@ install :
 	 cd "src/github.com/miguelmota/cointop" do
 	 system "go", "build", "-o", bin/"cointop"
 	 prefix.install_metafiles
+	 end

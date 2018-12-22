@@ -27,3 +27,4 @@ install :
 	 system "make", "vvfst"
 	 system "make", "vvfst-install", "DESTDIR=#{lib}/voikko"
 	 lib.install_symlink "voikko"
+	 end

@@ -24,3 +24,8 @@ install :
 	 args << "-DCMAKE_INSTALL_PREFIX=#{buildpath}/vendor/mbelib"
 	 system "cmake", ".", *args
 	 system "make", "install"
+	 end
+	 ENV.prepend "LDFLAGS", "-L#{buildpath}/vendor/mbelib/lib -lmbe"
+	 buildpath.install_symlink buildpath/"vendor/mbelib/include/mbelib.h"
+	 system "cmake", ".", *std_cmake_args
+	 system "make", "install"

@@ -21,3 +21,4 @@ install :
 	 system "dep", "ensure", "-vendor-only"
 	 system "go", "build", "-o", "#{bin}/fn"
 	 prefix.install_metafiles
+	 end

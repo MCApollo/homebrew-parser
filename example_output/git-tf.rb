@@ -12,3 +12,8 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "git-tf"
+	 libexec.install "lib"
+	 (libexec/"native").install "native/macosx"
+	 bin.write_exec_script libexec/"git-tf"
+	 doc.install Dir["Git-TF_*", "ThirdPartyNotices*"]

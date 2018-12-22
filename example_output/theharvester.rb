@@ -19,3 +19,8 @@ install :
 	 resources.each do |r|
 	 r.stage do
 	 system "python3", *Language::Python.setup_install_args(libexec/"vendor")
+	 end
+	 end
+	 libexec.install Dir["*"]
+	 (libexec/"theHarvester.py").chmod 0755
+	 (bin/"theharvester").write_env_script("#{libexec}/theHarvester.py", :PYTHONPATH => ENV["PYTHONPATH"])

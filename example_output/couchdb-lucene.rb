@@ -25,3 +25,5 @@ install :
 	 cmd = "cl_#{bin_name}"
 	 (bin/cmd).write shim_script(bin_name)
 	 (libexec/"clbin").install_symlink bin/cmd => bin_name
+	 end
+	 ini_path.write(ini_file) unless ini_path.exist?

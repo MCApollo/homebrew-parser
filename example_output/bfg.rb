@@ -8,7 +8,10 @@ description :
 	 Remove large files or passwords from Git history like git-filter-branch
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "bfg-#{version}.jar"
+	 bin.write_jar_script libexec/"bfg-#{version}.jar", "bfg"

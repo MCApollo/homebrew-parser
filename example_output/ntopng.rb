@@ -30,3 +30,8 @@ install :
 	 system "./autogen.sh"
 	 system "make"
 	 (buildpath/"nDPI").install Dir["*"]
+	 end
+	 system "./autogen.sh"
+	 system "./configure", "--prefix=#{prefix}"
+	 system "make"
+	 system "make", "install"

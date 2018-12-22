@@ -20,3 +20,4 @@ install :
 	 system "make"
 	 bin.install "out/skaffold"
 	 prefix.install_metafiles
+	 end

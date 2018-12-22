@@ -21,3 +21,4 @@ install :
 	 bash_completion.install "bash_completion" => "dvm"
 	 (prefix/"dvm-helper").install "dvm-helper/dvm-helper"
 	 prefix.install_metafiles
+	 end

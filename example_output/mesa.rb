@@ -23,3 +23,10 @@ install :
 	 ENV.prepend_create_path "PYTHONPATH", buildpath/"vendor/lib/python2.7/site-packages"
 	 resource("Mako").stage do
 	 system "python", *Language::Python.setup_install_args(buildpath/"vendor")
+	 end
+	 resource("gears.c").stage(pkgshare.to_s)
+	 mkdir "build" do
+	 system "meson", "--prefix=#{prefix}", "-D buildtype=plain", "-D b_ndebug=true", ".."
+	 system "ninja"
+	 system "ninja", "install"
+	 end

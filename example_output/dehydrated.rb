@@ -17,3 +17,4 @@ install :
 	 cd "src/github.com/lukas2511/dehydrated" do
 	 bin.install "dehydrated"
 	 prefix.install_metafiles
+	 end

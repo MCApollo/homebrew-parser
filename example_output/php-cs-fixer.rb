@@ -8,7 +8,9 @@ description :
 	 Tool to automatically fix PHP coding standards issues
 build_deps :
 link_deps :
+	 php
 conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "php-cs-fixer.phar" => "php-cs-fixer"

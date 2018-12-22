@@ -12,3 +12,4 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 pkgshare.install "zsh-history-substring-search.zsh"

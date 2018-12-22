@@ -20,3 +20,4 @@ install :
 	 system "govendor", "sync"
 	 system "go", "build", "-o", bin/"dockviz"
 	 prefix.install_metafiles
+	 end

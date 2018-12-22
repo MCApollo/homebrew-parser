@@ -19,3 +19,11 @@ install :
 	 s.gsub! "/usr/local", prefix
 	 s.gsub! "/man/man", "/share/man/man"
 	 s.gsub! "/lib", "/lib/ispell"
+	 end
+	 chmod 0644, "correct.c"
+	 inreplace "correct.c", "getline", "getline_ispell"
+	 system "make", "config.sh"
+	 chmod 0644, "config.sh"
+	 inreplace "config.sh", "/usr/share/dict", "#{share}/dict"
+	 (lib/"ispell").mkpath
+	 system "make", "install"

@@ -37,3 +37,18 @@ install :
 	 cd "doc" do
 	 doc.install "html"
 	 man3.install Dir["man/man3/{q,Q}wt*"]
+	 end
+	 rm_r "doc"
+	 inreplace "qwtpolarconfig.pri" do |s|
+	 s.gsub!(/^(\s*)QWT_POLAR_INSTALL_PREFIX\s*=\s*(.*)$/,
+	 "\\1QWT_POLAR_INSTALL_PREFIX=#{prefix}")
+	 s.sub!(/\+(=\s*QwtPolarExamples)/, "-\\1")
+	 s.sub! %r{(= \$\$\{QWT_POLAR_INSTALL_PREFIX\})/(plugins/designer)$},
+	 "\\1/lib/qt/\\2"
+	 end
+	 ENV["QMAKEFEATURES"] = "#{Formula["qwt"].opt_prefix}/features"
+	 system "qmake", "-config", "release"
+	 system "make"
+	 system "make", "install"
+	 pkgshare.install "examples"
+	 pkgshare.install Dir["*.p*"]

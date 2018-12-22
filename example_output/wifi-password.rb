@@ -12,3 +12,4 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "wifi-password.sh" => "wifi-password"

@@ -16,3 +16,4 @@ install :
 	 mkdir "build" do
 	 system "cmake", "..", "-DLIBCHAOS_ENABLE_TESTING=OFF", *std_cmake_args
 	 system "make", "install"
+	 end

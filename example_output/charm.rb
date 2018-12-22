@@ -25,3 +25,4 @@ install :
 	 system "go", "build", "github.com/juju/charmstore-client/cmd/charm"
 	 bin.install "charm"
 	 prefix.install_metafiles
+	 end

@@ -19,3 +19,10 @@ install :
 	 cd "libiberty" do
 	 system "./configure"
 	 system "make"
+	 end
+	 ENV.append "LDFLAGS", "-L#{buildpath}/libiberty"
+	 ENV.append_to_cflags "-I#{buildpath}/include"
+	 inreplace "Makefile.in", '--root="$$DESTDIR"', ""
+	 system "./autogen.sh"
+	 system "./configure", "--prefix=#{prefix}"
+	 system "make", "install"

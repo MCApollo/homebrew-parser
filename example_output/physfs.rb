@@ -19,3 +19,4 @@ install :
 	 args << "-DPHYSFS_BUILD_WX_TEST=FALSE" unless build.head?
 	 system "cmake", "..", *args
 	 system "make", "install"
+	 end

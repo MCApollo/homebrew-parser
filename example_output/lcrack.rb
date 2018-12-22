@@ -17,3 +17,4 @@ install :
 	 bin.install "lcrack"
 	 %w[mktbl mkword regex].each do |prog|
 	 bin.install prog => "lcrack_#{prog}"
+	 end

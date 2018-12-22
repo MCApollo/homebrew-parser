@@ -22,3 +22,4 @@ install :
 	 "-DENABLE_TESTS=off",
 	 "-DENABLE_TOOLS=off"
 	 system "make", "install"
+	 end

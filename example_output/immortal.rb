@@ -24,3 +24,4 @@ install :
 	 system "go", "build", "-ldflags", ldflags, "-o", "#{bin}/immortaldir", "cmd/immortaldir/main.go"
 	 man8.install Dir["man/*.8"]
 	 prefix.install_metafiles
+	 end

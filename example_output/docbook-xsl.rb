@@ -22,7 +22,18 @@ install :
 	 (prefix/"docbook-xsl").install xsl_files + doc_files
 	 resource("ns").stage do
 	 (prefix/"docbook-xsl-ns").install xsl_files + doc_files
+	 end
+	 bin.write_exec_script "#{prefix}/docbook-xsl/epub/bin/dbtoepub"
+	 end
+	 def post_install
 	 ENV["XML_CATALOG_FILES"] = "#{etc}/xml/catalog"
 	 [prefix/"docbook-xsl/catalog.xml", prefix/"docbook-xsl-ns/catalog.xml"].each do |catalog|
 	 system "xmlcatalog", "--noout", "--del", "file://#{catalog}", "#{etc}/xml/catalog"
 	 system "xmlcatalog", "--noout", "--add", "nextCatalog", "", "file://#{catalog}", "#{etc}/xml/catalog"
+	 end
+	 end
+	 test do
+	 system "xmlcatalog", "#{etc}/xml/catalog", "http://docbook.sourceforge.net/release/xsl/snapshot_9899/"
+	 system "xmlcatalog", "#{etc}/xml/catalog", "http://docbook.sourceforge.net/release/xsl-ns/1.79.1/"
+	 end
+	 end

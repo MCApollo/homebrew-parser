@@ -19,3 +19,4 @@ install :
 	 resource("bindings").stage do
 	 system "./configure", "--prefix=#{prefix}"
 	 system "make", "install"
+	 end

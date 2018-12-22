@@ -8,7 +8,13 @@ description :
 	 Tools for building and publishing API documentation for .NET projects
 build_deps :
 link_deps :
+	 mono
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install Dir["*"]
+	 (bin/"docfx").write <<~EOS
+	 #!/bin/bash
+	 mono #{libexec}/docfx.exe "$@"
+	 EOS

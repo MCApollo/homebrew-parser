@@ -21,7 +21,6 @@ EOF_patch :
 	 if( APPLE OR ${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 	 -  add_definitions("-Dfopen64=fopen -Dfseeko64=fseeko -Dfseek64=fseek -Dftell64=ftell -Dftello64=ftello")
 	 +  add_definitions(-Dfopen64=fopen -Dfseeko64=fseeko -Dfseek64=fseek -Dftell64=ftell -Dftello64=ftello)
-	 endif()
 	 set(COLLADA_DOM_INCLUDE_INSTALL_DIR "include/collada-dom")
 install :
 	 system "cmake", ".", *std_cmake_args

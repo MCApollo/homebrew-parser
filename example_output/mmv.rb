@@ -19,3 +19,4 @@ install :
 	 %w[mcp mad mln].each do |mxx|
 	 bin.install_symlink "mmv" => mxx
 	 man1.install_symlink "mmv.1" => "#{mxx}.1"
+	 end

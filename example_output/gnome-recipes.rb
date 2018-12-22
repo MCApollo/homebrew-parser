@@ -34,5 +34,15 @@ install :
 	 "--prefix=#{libexec}",
 	 "--disable-backend"
 	 system "make", "install"
+	 end
+	 ENV.prepend_path "PKG_CONFIG_PATH", libexec/"lib/pkgconfig"
+	 inreplace "src/gr-recipe-store.c", "argv[0] = \"tar\";", "argv[0] = \"gtar\";"
+	 ENV["DESTDIR"] = ""
+	 ENV.delete "PYTHONPATH"
+	 mkdir "build" do
+	 system "meson", "--prefix=#{prefix}", ".."
+	 system "ninja"
+	 system "ninja", "install"
+	 end
 	 system "#{Formula["glib"].opt_bin}/glib-compile-schemas", "#{HOMEBREW_PREFIX}/share/glib-2.0/schemas"
 	 system "#{Formula["gtk+3"].opt_bin}/gtk3-update-icon-cache", "-f", "-t", "#{HOMEBREW_PREFIX}/share/icons/hicolor"

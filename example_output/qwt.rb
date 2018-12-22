@@ -37,3 +37,9 @@ install :
 	 s.gsub! /^\s*QWT_INSTALL_PREFIX\s*=(.*)$/, "QWT_INSTALL_PREFIX=#{prefix}"
 	 s.sub! %r{(= \$\$\{QWT_INSTALL_PREFIX\})/(plugins/designer)$},
 	 "\\1/lib/qt/\\2"
+	 end
+	 args = ["-config", "release", "-spec"]
+	 if ENV.compiler == :clang && MacOS.version >= :mavericks
+	 args << "macx-clang"
+	 else
+	 args << "macx-g++"

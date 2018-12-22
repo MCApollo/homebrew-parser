@@ -8,7 +8,9 @@ description :
 	 Programmer-oriented testing framework for PHP
 build_deps :
 link_deps :
+	 php
 conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "phpunit-#{version}.phar" => "phpunit"

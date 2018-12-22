@@ -18,3 +18,4 @@ install :
 	 cd "src/github.com/hashicorp/nomad" do
 	 system "go", "build", "-tags", "ui", "-o", bin/"nomad"
 	 prefix.install_metafiles
+	 end

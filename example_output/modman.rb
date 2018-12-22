@@ -12,3 +12,5 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "modman"
+	 bash_completion.install "bash_completion" => "modman.bash"

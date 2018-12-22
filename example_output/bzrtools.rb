@@ -8,7 +8,9 @@ description :
 	 Bazaar plugin that supplies useful additional utilities
 build_deps :
 link_deps :
+	 bazaar
 conflicts :
 patches :
 EOF_patch :
 install :
+	 (share/"bazaar/plugins/bzrtools").install Dir["*"]

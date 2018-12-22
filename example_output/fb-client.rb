@@ -22,3 +22,5 @@ install :
 	 args = Language::Python.setup_install_args(libexec/"vendor")
 	 if MacOS.version >= :high_sierra
 	 args << "--libcurl-dll=/usr/lib/libcurl.dylib"
+	 end
+	 system "python3", *args

@@ -21,3 +21,5 @@ install :
 	 "--with-server-prefix=#{var}/ftimes"
 	 inreplace "doc/ftimes/Makefile" do |s|
 	 s.change_make_var! "INSTALL_PREFIX", man1
+	 end
+	 system "make", "install"

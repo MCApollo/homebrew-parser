@@ -19,3 +19,12 @@ install :
 	 (buildpath/"gtest/googletest").cd do
 	 system "cmake", "."
 	 system "make"
+	 end
+	 ENV["GTEST_CFLAGS"] = "-I./gtest/googletest/include"
+	 ENV["GTEST_LIBS"] = "-L./gtest/googletest/ -lgtest"
+	 system "./autogen.sh" if build.head?
+	 system "./configure", "--disable-dependency-tracking",
+	 "--prefix=#{prefix}",
+	 "--disable-doc"
+	 system "make", "check"
+	 system "make", "install"

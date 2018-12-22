@@ -18,6 +18,10 @@ install :
 	 inreplace "etc/couchdb/default.ini.tpl.in" do |s|
 	 s.gsub! "%package_author_name%", "Homebrew"
 	 s.gsub! "%version%", pkg_version
+	 end
+	 unless build.stable?
+	 touch "THANKS"
+	 system "./bootstrap"
 	 (var/"lib/couchdb").mkpath
 	 (var/"log/couchdb").mkpath
 	 (var/"run/couchdb").mkpath

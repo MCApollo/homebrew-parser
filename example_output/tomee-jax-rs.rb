@@ -12,3 +12,9 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 rm_rf Dir["bin/*.bat"]
+	 rm_rf Dir["bin/*.bat.original"]
+	 rm_rf Dir["bin/*.exe"]
+	 prefix.install %w[NOTICE LICENSE RELEASE-NOTES RUNNING.txt]
+	 libexec.install Dir["*"]
+	 bin.install_symlink "#{libexec}/bin/startup.sh" => "tomee-jax-rs-startup"

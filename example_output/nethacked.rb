@@ -30,3 +30,15 @@ install :
 	 %w[perm logfile].each do |f|
 	 touch f
 	 libexec.install f
+	 end
+	 libexec.install %w[help hh cmdhelp history opthelp wizhelp dungeon license data oracles options rumors quest.dat]
+	 libexec.install Dir["*.lev"]
+	 end
+	 ENV.append_to_cflags "-I../include"
+	 cd "src" do
+	 system "make"
+	 end
+	 bin.install "src/nethacked"
+	 (libexec+"save").mkpath
+	 chmod "g+w", libexec
+	 chmod "g+w", libexec+"save"

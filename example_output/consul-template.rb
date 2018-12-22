@@ -27,3 +27,4 @@ install :
 	 system "go", "build", "-o", bin/"consul-template", "-ldflags",
 	 ldflags.join(" ")
 	 prefix.install_metafiles
+	 end

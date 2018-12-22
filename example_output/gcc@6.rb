@@ -51,3 +51,7 @@ install :
 	 elsif MacOS.version >= :mojave
 	 args << "--with-native-system-header-dir=/usr/include"
 	 args << "--with-sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
+	 end
+	 system "../configure", *args
+	 system "make", "bootstrap"
+	 system "make", "install"

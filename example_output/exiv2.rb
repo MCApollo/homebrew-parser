@@ -38,3 +38,7 @@ install :
 	 system "cmake", "-G", "Unix Makefiles", ".", *args
 	 system "make", "install"
 	 mv prefix/"man", man
+	 end
+	 else
+	 system "./configure", "--prefix=#{prefix}", "--disable-dependency-tracking"
+	 system "make", "install"

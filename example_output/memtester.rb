@@ -15,3 +15,6 @@ install :
 	 inreplace "Makefile" do |s|
 	 s.change_make_var! "INSTALLPATH", prefix
 	 s.gsub! "man/man8", "share/man/man8"
+	 end
+	 inreplace "conf-ld", " -s", ""
+	 system "make", "install"

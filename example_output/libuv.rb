@@ -22,3 +22,10 @@ install :
 	 system "make", "singlehtml"
 	 man1.install "build/man/libuv.1"
 	 doc.install Dir["build/singlehtml/*"]
+	 end
+	 system "./autogen.sh"
+	 system "./configure", "--disable-dependency-tracking",
+	 "--disable-silent-rules",
+	 "--prefix=#{prefix}"
+	 system "make"
+	 system "make", "install"

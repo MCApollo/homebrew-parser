@@ -16,3 +16,6 @@ install :
 	 resource("xtl").stage do
 	 system "cmake", ".", *std_cmake_args
 	 system "make", "install"
+	 end
+	 system "cmake", ".", "-Dxtl_DIR=#{lib}/cmake/xtl", *std_cmake_args
+	 system "make", "install"

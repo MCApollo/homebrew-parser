@@ -12,3 +12,6 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "git-test"
+	 man1.install "git-test.1"
+	 pkgshare.install "test.sh"

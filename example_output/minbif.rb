@@ -21,3 +21,14 @@ install :
 	 inreplace "minbif.conf" do |s|
 	 s.gsub! "users = /var", "users = #{var}"
 	 s.gsub! "motd = /etc", "motd = #{etc}"
+	 end
+	 system "make", "PREFIX=#{prefix}",
+	 "ENABLE_CACA=OFF",
+	 "ENABLE_IMLIB=OFF",
+	 "ENABLE_MINBIF=ON",
+	 "ENABLE_PAM=OFF",
+	 "ENABLE_PLUGIN=ON",
+	 "ENABLE_TLS=ON",
+	 "ENABLE_VIDEO=OFF"
+	 system "make", "install"
+	 (var/"lib/minbif/users").mkpath

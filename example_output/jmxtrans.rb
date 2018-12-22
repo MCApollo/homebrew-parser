@@ -27,3 +27,5 @@ install :
 	 libexec.install %w[jmxtrans.sh target]
 	 pkgshare.install %w[bin example.json src tools vagrant]
 	 doc.install Dir["doc/*"]
+	 end
+	 (bin/"jmxtrans").write_env_script libexec/"jmxtrans.sh", Language::Java.java_home_env("1.8")

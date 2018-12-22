@@ -17,3 +17,5 @@ install :
 	 system "cmake", "..", *std_cmake_args
 	 system "make"
 	 system "make", "install"
+	 end
+	 lib.install Dir[lib/"mac/Release/*"].select { |f| File.file? f }

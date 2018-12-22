@@ -22,3 +22,4 @@ install :
 	 system "make", "release-bins"
 	 bin.install "build/fluxctl_darwin_amd64" => "fluxctl"
 	 prefix.install_metafiles
+	 end

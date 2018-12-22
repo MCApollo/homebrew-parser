@@ -25,3 +25,13 @@ install :
 	 s.gsub! "go get github.com/mitchellh/gox", ""
 	 s.gsub! "go get golang.org/x/tools/cmd/stringer", ""
 	 s.gsub! "go get github.com/kardianos/govendor", ""
+	 end
+	 (buildpath/"bin").mkpath
+	 if build.head?
+	 system "make", "bin"
+	 else
+	 system "make", "releasebin"
+	 end
+	 bin.install buildpath/"bin/packer"
+	 zsh_completion.install "contrib/zsh-completion/_packer"
+	 prefix.install_metafiles

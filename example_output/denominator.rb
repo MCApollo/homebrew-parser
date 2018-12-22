@@ -12,3 +12,4 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "denominator-cli-4.7.1-fat.jar" => "denominator"

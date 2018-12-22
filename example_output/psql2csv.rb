@@ -8,7 +8,9 @@ description :
 	 Run a query in psql and output the result as CSV
 build_deps :
 link_deps :
+	 postgresql
 conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "psql2csv"

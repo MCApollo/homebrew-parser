@@ -22,3 +22,4 @@ install :
 	 system "make"
 	 bin.install "ucon64"
 	 libexec.install "libdiscmage/discmage.so" => "libdiscmage.dylib"
+	 end

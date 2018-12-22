@@ -20,3 +20,8 @@ install :
 	 hintfile = "macosx10.7"
 	 else
 	 hintfile = "macosx10.5"
+	 end
+	 inreplace "hints/#{hintfile}",
+	 /^HACKDIR=.*/,
+	 "HACKDIR=#{libexec}"
+	 system "sh", "setup.sh", "hints/#{hintfile}"

@@ -24,3 +24,4 @@ install :
 	 system "glide", "install"
 	 system "go", "install", ".../br"
 	 prefix.install_metafiles
+	 end

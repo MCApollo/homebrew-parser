@@ -20,3 +20,4 @@ install :
 	 "LIB_DIR=#{lib}"
 	 lib.install "ui/static", "ui/templates"
 	 prefix.install_metafiles
+	 end

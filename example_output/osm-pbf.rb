@@ -17,3 +17,5 @@ install :
 	 cd "src" do
 	 system "make"
 	 lib.install "libosmpbf.a"
+	 end
+	 include.install Dir["include/*"]

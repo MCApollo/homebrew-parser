@@ -12,3 +12,6 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install Dir["ivy*"]
+	 doc.install Dir["doc/*"]
+	 bin.write_jar_script libexec/"ivy-#{version}.jar", "ivy", "$JAVA_OPTS"

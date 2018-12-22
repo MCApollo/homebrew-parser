@@ -12,3 +12,4 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "gpcslots2_0-4-5b" => "gpcslots2"

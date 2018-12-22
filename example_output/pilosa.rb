@@ -19,3 +19,4 @@ install :
 	 cd "src/github.com/pilosa/pilosa" do
 	 system "make", "build", "FLAGS=-o #{bin}/pilosa", "VERSION=v#{version}"
 	 prefix.install_metafiles
+	 end

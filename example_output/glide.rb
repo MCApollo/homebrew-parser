@@ -20,3 +20,4 @@ install :
 	 system "go", "build", "-o", "glide", "-ldflags", "-X main.version=#{version}"
 	 bin.install "glide"
 	 prefix.install_metafiles
+	 end

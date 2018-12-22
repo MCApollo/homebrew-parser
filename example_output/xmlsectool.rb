@@ -8,7 +8,12 @@ description :
 	 Check schema validity and signature of an XML document
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 prefix.install "doc/LICENSE.TXT"
+	 rm_rf "doc"
+	 libexec.install Dir["*"]
+	 (bin/"xmlsectool").write_env_script "#{libexec}/xmlsectool.sh", Language::Java.java_home_env

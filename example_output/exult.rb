@@ -23,3 +23,12 @@ install :
 	 inreplace "files/utils.cc" do |s|
 	 s.gsub! /(gamehome_dir)\("\."\)/, '\1(home_dir)'
 	 s.gsub! /(gamehome_dir) =/, '\1 +='
+	 end
+	 system "./autogen.sh"
+	 system "./configure", "--disable-debug", "--disable-dependency-tracking",
+	 "--prefix=#{prefix}"
+	 system "make", "EXULT_DATADIR=#{pkgshare}/data"
+	 system "make", "bundle"
+	 pkgshare.install "Exult.app/Contents/Resources/data"
+	 prefix.install "Exult.app"
+	 bin.write_exec_script "#{prefix}/Exult.app/Contents/MacOS/exult"

@@ -26,3 +26,5 @@ install :
 	 system "make", "install"
 	 cd "bindings/java" do
 	 system "ant"
+	 end
+	 prefix.install "bindings"

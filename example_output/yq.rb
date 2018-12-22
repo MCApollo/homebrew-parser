@@ -21,3 +21,4 @@ install :
 	 system "govendor", "sync"
 	 system "go", "build", "-o", bin/"yq"
 	 prefix.install_metafiles
+	 end

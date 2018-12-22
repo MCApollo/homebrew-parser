@@ -12,3 +12,5 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "sec"
+	 man1.install "sec.man" => "sec.1"

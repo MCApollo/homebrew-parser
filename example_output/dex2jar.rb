@@ -12,3 +12,10 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 rm_rf Dir["*.bat"]
+	 prefix.install_metafiles
+	 chmod 0755, Dir["*"]
+	 libexec.install Dir["*"]
+	 Dir.glob("#{libexec}/*.sh") do |script|
+	 bin.install_symlink script => File.basename(script, ".sh")
+	 end

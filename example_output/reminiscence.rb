@@ -26,3 +26,8 @@ install :
 	 "--prefix=#{libexec}",
 	 "--disable-static"
 	 system "make", "install"
+	 end
+	 ENV.prepend "CPPFLAGS", "-I#{libexec}/include"
+	 ENV.prepend "LDFLAGS", "-L#{libexec}/lib"
+	 system "make"
+	 bin.install "rs" => "reminiscence"

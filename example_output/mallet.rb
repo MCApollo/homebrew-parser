@@ -8,6 +8,7 @@ description :
 	 MAchine Learning for LanguagE Toolkit
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :

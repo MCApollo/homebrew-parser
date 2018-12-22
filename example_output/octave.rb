@@ -64,3 +64,7 @@ install :
 	 inreplace "src/mkoctfile.cc" do |s|
 	 s.gsub! Formula["fftw"].prefix.realpath, Formula["fftw"].opt_prefix
 	 s.gsub! Formula["gcc"].prefix.realpath, Formula["gcc"].opt_prefix
+	 end
+	 rcfile = buildpath/"scripts/startup/site-rcfile"
+	 rcfile.append_lines "makeinfo_program(\"#{Formula["texinfo"].opt_bin}/makeinfo\");"
+	 system "make", "install"

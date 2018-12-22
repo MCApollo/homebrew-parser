@@ -18,3 +18,4 @@ install :
 	 cd "src/github.com/laurent22/massren" do
 	 system "go", "build", "-o", bin/"massren"
 	 prefix.install_metafiles
+	 end

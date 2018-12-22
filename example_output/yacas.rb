@@ -19,3 +19,7 @@ install :
 	 "-DENABLE_CYACAS_KERNEL=OFF", *std_cmake_args
 	 xcodebuild "-target", "ALL_BUILD", "-project", "YACAS.xcodeproj",
 	 "-configuration", "Release", "SYMROOT=build/cyacas/libyacas"
+	 end
+	 bin.install "build/cyacas/libyacas/Release/yacas"
+	 lib.install Dir["build/cyacas/libyacas/Release/{libyacas.a,yacas.framework}"]
+	 pkgshare.install "scripts"

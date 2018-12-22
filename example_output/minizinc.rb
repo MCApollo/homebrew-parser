@@ -17,3 +17,4 @@ install :
 	 mkdir "build" do
 	 system "cmake", "..", *std_cmake_args
 	 system "cmake", "--build", ".", "--target", "install"
+	 end

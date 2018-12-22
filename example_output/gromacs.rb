@@ -27,3 +27,8 @@ install :
 	 system "cmake", "..", *args
 	 system "make"
 	 ENV.deparallelize { system "make", "install" }
+	 end
+	 bash_completion.install "build/scripts/GMXRC" => "gromacs-completion.bash"
+	 bash_completion.install "#{bin}/gmx-completion-gmx.bash" => "gmx-completion-gmx.bash"
+	 bash_completion.install "#{bin}/gmx-completion.bash" => "gmx-completion.bash"
+	 zsh_completion.install "build/scripts/GMXRC.zsh" => "_gromacs"

@@ -21,3 +21,14 @@ install :
 	 system "./configure", "--prefix=#{libexec}", "--enable-modules=no"
 	 system "make"
 	 system "make", "install"
+	 end
+	 ENV["LANGTAG_CFLAGS"] = "-I#{libexec}/include"
+	 ENV["LANGTAG_LIBS"] = "-L#{libexec}/lib -llangtag -lxml2"
+	 system "./configure", "--without-docs",
+	 "--disable-dependency-tracking",
+	 "--enable-static=no",
+	 "--disable-werror",
+	 "--disable-tests",
+	 "--prefix=#{prefix}",
+	 "--with-mdds=1.2"
+	 system "make", "install"

@@ -21,3 +21,4 @@ install :
 	 ldflags = "-s -w -X main.version=#{version}"
 	 system "go", "build", "-ldflags", ldflags, "-o", "#{bin}/ssh-vault", "cmd/ssh-vault/main.go"
 	 prefix.install_metafiles
+	 end

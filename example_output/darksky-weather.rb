@@ -21,3 +21,4 @@ install :
 	 "-X #{project}/version.VERSION=v#{version}"]
 	 system "go", "build", "-o", bin/"weather", "-ldflags", ldflags.join(" ")
 	 prefix.install_metafiles
+	 end

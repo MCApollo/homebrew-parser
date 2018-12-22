@@ -19,3 +19,4 @@ install :
 	 system "make", "build"
 	 bin.install "bin/local/ecs-cli"
 	 prefix.install_metafiles
+	 end

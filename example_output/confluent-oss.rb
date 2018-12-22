@@ -8,7 +8,13 @@ description :
 	 Developer-optimized distribution of Apache Kafka
 build_deps :
 link_deps :
+	 :java
 conflicts :
+	 kafka
 patches :
 EOF_patch :
 install :
+	 prefix.install "bin"
+	 rm_rf "#{bin}/windows"
+	 prefix.install "etc"
+	 prefix.install "share"

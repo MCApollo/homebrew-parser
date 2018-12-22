@@ -22,4 +22,19 @@ install :
 	 resource("py_libxml2").stage do
 	 cd "python" do
 	 system "python", "setup.py", "install", "--prefix=#{buildpath}/vendor"
+	 end
+	 end
+	 resource("itstool").stage do
+	 ENV.append_path "PYTHONPATH", "#{buildpath}/vendor/lib/python2.7/site-packages"
+	 system "./configure", "--prefix=#{buildpath}/vendor"
+	 system "make", "install"
+	 end
+	 ENV.prepend_path "PATH", buildpath/"vendor/bin"
+	 inreplace "component/Makefile.in",
+	 "GOFFICE_PLUGINS_DIR = @GOFFICE_PLUGINS_DIR@",
+	 "GOFFICE_PLUGINS_DIR = @libdir@/goffice/@GOFFICE_API_VER@/plugins/gnumeric"
+	 system "./configure", "--disable-dependency-tracking",
+	 "--prefix=#{prefix}",
+	 "--disable-schemas-compile"
+	 system "make", "install"
 	 system "#{Formula["glib"].opt_bin}/glib-compile-schemas", "#{HOMEBREW_PREFIX}/share/glib-2.0/schemas"

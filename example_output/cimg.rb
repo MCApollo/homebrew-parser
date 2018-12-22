@@ -12,3 +12,6 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 include.install "CImg.h"
+	 prefix.install "Licence_CeCILL-C_V1-en.txt", "Licence_CeCILL_V2-en.txt"
+	 pkgshare.install "examples", "plugins"

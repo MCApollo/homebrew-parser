@@ -21,3 +21,6 @@ install :
 	 "-DCMAKE_INSTALL_PREFIX=#{libexec}",
 	 "-DCLING_CXX_PATH=clang++"
 	 system "make", "install"
+	 end
+	 bin.install_symlink libexec/"bin/cling"
+	 prefix.install_metafiles buildpath/"src/tools/cling"

@@ -20,3 +20,4 @@ install :
 	 bin.install "desktop/mdview"
 	 bin.install "algernon"
 	 prefix.install_metafiles
+	 end

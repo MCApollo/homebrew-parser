@@ -8,7 +8,9 @@ description :
 	 Git style colocated branches for Bazaar
 build_deps :
 link_deps :
+	 bazaar
 conflicts :
 patches :
 EOF_patch :
 install :
+	 (share/"bazaar/plugins/colo").install Dir["*"]

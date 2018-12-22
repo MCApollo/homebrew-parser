@@ -12,3 +12,11 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 rm Dir["bin/*.{bat,cmd,dll,exe}"]
+	 libexec.install Dir["*"]
+	 bin.install_symlink Dir["#{libexec}/bin/*"]
+	 rm bin/"ant"
+	 (bin/"ant").write <<~EOS
+	 #!/bin/sh
+	 #{libexec}/bin/ant -lib #{HOMEBREW_PREFIX}/share/ant "$@"
+	 EOS

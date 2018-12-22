@@ -28,3 +28,46 @@ install :
 	 system "cmake", "..", "-DBUILD_SHARED_LIBS=OFF", *args
 	 system "make"
 	 lib.install "liblib/libnetcdf.a"
+	 end
+	 args = common_args.dup << "-DNETCDF_C_LIBRARY=#{lib}"
+	 cxx_args = args.dup
+	 cxx_args << "-DNCXX_ENABLE_TESTS=OFF"
+	 resource("cxx").stage do
+	 mkdir "build-cxx" do
+	 system "cmake", "..", "-DBUILD_SHARED_LIBS=ON", *cxx_args
+	 system "make", "install"
+	 system "make", "clean"
+	 system "cmake", "..", "-DBUILD_SHARED_LIBS=OFF", *cxx_args
+	 system "make"
+	 lib.install "cxx4/libnetcdf-cxx4.a"
+	 end
+	 end
+	 fortran_args = args.dup
+	 fortran_args << "-DENABLE_TESTS=OFF"
+	 resource("fortran").stage do
+	 mkdir "build-fortran" do
+	 system "cmake", "..", "-DBUILD_SHARED_LIBS=ON", *fortran_args
+	 system "make", "install"
+	 system "make", "clean"
+	 system "cmake", "..", "-DBUILD_SHARED_LIBS=OFF", *fortran_args
+	 system "make"
+	 lib.install "fortran/libnetcdff.a"
+	 end
+	 end
+	 ENV.prepend "CPPFLAGS", "-I#{include}"
+	 ENV.prepend "LDFLAGS", "-L#{lib}"
+	 resource("cxx-compat").stage do
+	 system "./configure", "--disable-dependency-tracking",
+	 "--enable-shared",
+	 "--enable-static",
+	 "--prefix=#{prefix}"
+	 system "make"
+	 system "make", "install"
+	 end
+	 libnetcdf = (lib/"libnetcdf.dylib").readlink
+	 %w[libnetcdf-cxx4.dylib libnetcdf_c++.dylib].each do |f|
+	 macho = MachO.open("#{lib}/#{f}")
+	 macho.change_dylib("@rpath/#{libnetcdf}",
+	 "#{lib}/#{libnetcdf}")
+	 macho.write!
+	 end

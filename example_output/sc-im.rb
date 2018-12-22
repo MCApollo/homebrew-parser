@@ -16,3 +16,4 @@ install :
 	 cd "src" do
 	 system "make", "prefix=#{prefix}"
 	 system "make", "prefix=#{prefix}", "install"
+	 end

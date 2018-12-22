@@ -17,3 +17,11 @@ install :
 	 system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
 	 system "make"
 	 system "make", "install"
+	 end
+	 end
+	 libexec.install "dnsrend"
+	 doc.install "README"
+	 (bin/"dnsrend").write <<~EOS
+	 #!/bin/sh
+	 /usr/bin/env perl -Tw -I "#{libexec}/lib/perl5" #{libexec}/dnsrend "$@"
+	 EOS

@@ -8,7 +8,14 @@ description :
 	 Microsoft Team Explorer Everywhere command-line Client
 build_deps :
 link_deps :
+	 :java
 conflicts :
+	 tiny-fugue
 patches :
 EOF_patch :
 install :
+	 libexec.install "tf", "lib"
+	 (libexec/"native").install "native/macosx"
+	 bin.write_exec_script libexec/"tf"
+	 prefix.install "ThirdPartyNotices.html"
+	 share.install "help"

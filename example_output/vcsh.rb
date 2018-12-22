@@ -12,3 +12,6 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "vcsh"
+	 man1.install "vcsh.1"
+	 zsh_completion.install "_vcsh"

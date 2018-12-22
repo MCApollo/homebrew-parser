@@ -19,3 +19,6 @@ install :
 	 s.gsub! "/var/run/redis.pid", var/"run/redis.pid"
 	 s.gsub! "dir ./", "dir #{var}/db/redis/"
 	 s.sub!  /^bind .*$/, "bind 127.0.0.1 ::1"
+	 end
+	 etc.install "redis.conf"
+	 etc.install "sentinel.conf" => "redis-sentinel.conf"

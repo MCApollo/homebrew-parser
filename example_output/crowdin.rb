@@ -8,7 +8,10 @@ description :
 	 Command-line tool that allows to manage your resources with crowdin.com
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "crowdin-cli.jar"
+	 bin.write_jar_script libexec/"crowdin-cli.jar", "crowdin"

@@ -12,3 +12,4 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "ip_relay.pl" => "ip_relay"

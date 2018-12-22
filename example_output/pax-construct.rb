@@ -8,7 +8,12 @@ description :
 	 Tools to setup and develop OSGi projects quickly
 build_deps :
 link_deps :
+	 maven
 conflicts :
 patches :
 EOF_patch :
 install :
+	 rm_rf Dir["bin/*.bat"]
+	 prefix.install_metafiles "bin"
+	 libexec.install Dir["*"]
+	 bin.write_exec_script Dir["#{libexec}/bin/*"].select { |f| File.executable? f }

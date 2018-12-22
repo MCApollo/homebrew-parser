@@ -8,6 +8,8 @@ description :
 	 Workflow Execution Engine using Workflow Description Language
 build_deps :
 link_deps :
+	 akka
+	 :java
 conflicts :
 patches :
 EOF_patch :
@@ -20,3 +22,4 @@ install :
 	 libexec.install Dir["cromwell-*.jar"][0]
 	 resource("womtool").stage do
 	 libexec.install Dir["womtool-*.jar"][0]
+	 end

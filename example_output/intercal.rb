@@ -15,3 +15,4 @@ install :
 	 if build.head?
 	 cd "buildaux" do
 	 system "./regenerate-build-system.sh"
+	 end

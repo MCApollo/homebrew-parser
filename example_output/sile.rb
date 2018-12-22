@@ -32,3 +32,5 @@ install :
 	 system "luarocks", "make", "#{r.name}-#{r.version}-0.rockspec", "--tree=#{luapath}"
 	 else
 	 system "luarocks", "build", r.name, "--tree=#{luapath}"
+	 end
+	 end

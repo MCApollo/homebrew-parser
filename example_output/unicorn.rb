@@ -21,3 +21,4 @@ install :
 	 system "make", "install"
 	 cd "bindings/python" do
 	 system "python", *Language::Python.setup_install_args(prefix)
+	 end

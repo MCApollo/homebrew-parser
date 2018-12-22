@@ -8,7 +8,14 @@ description :
 	 Command-line interface clients for Atlassian products
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 Dir.glob("*.sh") do |f|
+	 cmd = File.basename(f, ".sh")
+	 inreplace cmd + ".sh", "`dirname $0`", share
+	 bin.install cmd + ".sh" => cmd
+	 end
+	 share.install "lib", "license"

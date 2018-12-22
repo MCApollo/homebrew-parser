@@ -12,3 +12,4 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 system "./install.sh", bin

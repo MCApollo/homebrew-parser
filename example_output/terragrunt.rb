@@ -20,3 +20,4 @@ install :
 	 cd "src/github.com/gruntwork-io/terragrunt" do
 	 system "dep", "ensure", "-vendor-only"
 	 system "go", "build", "-o", bin/"terragrunt", "-ldflags", "-X main.VERSION=v#{version}"
+	 end

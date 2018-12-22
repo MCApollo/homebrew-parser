@@ -27,3 +27,4 @@ install :
 	 system "make", "build"
 	 bin.install "build/landscaper"
 	 prefix.install_metafiles
+	 end

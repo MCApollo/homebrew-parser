@@ -20,3 +20,9 @@ install :
 	 cd "Project/QtCreator/qctools-lib" do
 	 system "qmake", "qctools-lib.pro"
 	 system "make"
+	 end
+	 cd "Project/QtCreator/qctools-cli" do
+	 system "qmake", "qctools-cli.pro"
+	 system "make"
+	 bin.install "qcli"
+	 end

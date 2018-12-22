@@ -29,3 +29,15 @@ install :
 	 bin.mkpath
 	 Dir.glob("Darwin*/bin/*") do |file|
 	 cp file, bin unless file.include? ".dylib"
+	 end
+	 include_target = include + "nss"
+	 include_target.mkpath
+	 Dir.glob("public/{dbm,nss}/*") { |file| cp file, include_target }
+	 lib.mkpath
+	 libexec.mkpath
+	 Dir.glob("Darwin*/lib/*") do |file|
+	 if file.include? ".chk"
+	 cp file, libexec
+	 else
+	 cp file, lib
+	 end

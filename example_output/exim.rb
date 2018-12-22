@@ -31,3 +31,17 @@ install :
 	 s << "TRANSPORT_LMTP=yes\n"
 	 s << "LOOKUP_INCLUDE=-I#{HOMEBREW_PREFIX}/include\n"
 	 s << "LOOKUP_LIBS=-L#{HOMEBREW_PREFIX}/lib\n"
+	 end
+	 bdb4 = Formula["berkeley-db@4"]
+	 mv Dir["OS/unsupported/*Darwin*"], "OS"
+	 inreplace "OS/Makefile-Darwin" do |s|
+	 s.remove_make_var! %w[CC CFLAGS]
+	 s.gsub! "
+	 s.gsub! "DBMLIB =", "DBMLIB=#{bdb4.lib}/libdb-4.dylib"
+	 end
+	 ENV.append "CFLAGS", ENV.cppflags
+	 ENV.deparallelize
+	 system "make"
+	 system "make", "INSTALL_ARG=-no_chown", "install"
+	 man8.install "doc/exim.8"
+	 (bin/"exim_ctl").write startup_script

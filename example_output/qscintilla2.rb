@@ -26,3 +26,32 @@ install :
 	 s.gsub! "$$[QT_INSTALL_TRANSLATIONS]", prefix/"trans"
 	 s.gsub! "$$[QT_INSTALL_DATA]", prefix/"data"
 	 s.gsub! "$$[QT_HOST_DATA]", prefix/"data"
+	 end
+	 inreplace "features/qscintilla2.prf" do |s|
+	 s.gsub! "$$[QT_INSTALL_LIBS]", lib
+	 s.gsub! "$$[QT_INSTALL_HEADERS]", include
+	 end
+	 system "qmake", "qscintilla.pro", *args
+	 system "make"
+	 system "make", "install"
+	 end
+	 ENV["QMAKEFEATURES"] = prefix/"data/mkspecs/features"
+	 cd "Python" do
+	 Language::Python.each_python(build) do |python, version|
+	 (share/"sip").mkpath
+	 system python, "configure.py", "-o", lib, "-n", include,
+	 "--apidir=#{prefix}/qsci",
+	 "--destdir=#{lib}/python#{version}/site-packages/PyQt5",
+	 "--stubsdir=#{lib}/python#{version}/site-packages/PyQt5",
+	 "--qsci-sipdir=#{share}/sip",
+	 "--qsci-incdir=#{include}",
+	 "--qsci-libdir=#{lib}",
+	 "--pyqt=PyQt5",
+	 "--pyqt-sipdir=#{Formula["pyqt"].opt_share}/sip/Qt5",
+	 "--sip-incdir=#{Formula["sip"].opt_include}",
+	 "--spec=#{spec}"
+	 system "make"
+	 system "make", "install"
+	 system "make", "clean"
+	 end
+	 end

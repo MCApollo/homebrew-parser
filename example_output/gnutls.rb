@@ -31,3 +31,9 @@ install :
 	 IO.popen("openssl x509 -inform pem -checkend 0 -noout", "w") do |openssl_io|
 	 openssl_io.write(cert)
 	 openssl_io.close_write
+	 end
+	 $CHILD_STATUS.success?
+	 end
+	 openssldir = etc/"openssl"
+	 openssldir.mkpath
+	 (openssldir/"cert.pem").atomic_write(valid_certs.join("\n"))

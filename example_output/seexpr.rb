@@ -19,3 +19,4 @@ install :
 	 system "cmake", "..", *std_cmake_args
 	 system "make", "doc"
 	 system "make", "install"
+	 end

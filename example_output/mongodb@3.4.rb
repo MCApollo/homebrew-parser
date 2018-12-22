@@ -26,5 +26,14 @@ install :
 	 inreplace "build.sh" do |s|
 	 s.gsub! "$(git describe)", version.to_s
 	 s.gsub! "$(git rev-parse HEAD)", "homebrew"
+	 end
+	 args = %w[]
+	 if build.with? "openssl"
+	 args << "ssl"
+	 ENV["LIBRARY_PATH"] = Formula["openssl"].opt_lib
+	 ENV["CPATH"] = Formula["openssl"].opt_include
+	 end
+	 args << "sasl" if build.with? "sasl"
+	 system "./build.sh", *args
 	 (var/"mongodb").mkpath
 	 (var/"log/mongodb").mkpath

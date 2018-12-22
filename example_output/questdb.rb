@@ -8,7 +8,12 @@ description :
 	 Time Series Database
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 inreplace "questdb.sh", "1.7+", "1.8"
+	 rm_rf "questdb.exe"
+	 libexec.install Dir["*"]
+	 bin.install_symlink "#{libexec}/questdb.sh" => "questdb"

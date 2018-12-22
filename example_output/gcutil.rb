@@ -12,3 +12,5 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "gcutil", "lib"
+	 bin.install_symlink libexec/"gcutil"

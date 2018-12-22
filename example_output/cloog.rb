@@ -21,3 +21,12 @@ install :
 	 "--with-gmp=system",
 	 "--with-gmp-prefix=#{Formula["gmp"].opt_prefix}"
 	 system "make", "install"
+	 end
+	 system "./configure", "--disable-dependency-tracking",
+	 "--disable-silent-rules",
+	 "--prefix=#{prefix}",
+	 "--with-gmp=system",
+	 "--with-gmp-prefix=#{Formula["gmp"].opt_prefix}",
+	 "--with-isl=system",
+	 "--with-isl-prefix=#{libexec}"
+	 system "make", "install"

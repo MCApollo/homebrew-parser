@@ -8,7 +8,10 @@ description :
 	 JavaScript optimizing compiler
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install Dir["*"]
+	 bin.write_jar_script libexec.children.first, "closure-compiler"

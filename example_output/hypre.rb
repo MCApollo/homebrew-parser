@@ -28,3 +28,4 @@ install :
 	 "--with-MPI",
 	 "--enable-bigint"
 	 system "make", "install"
+	 end

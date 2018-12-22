@@ -8,7 +8,10 @@ description :
 	 Switch between rubies without reference to patch levels
 build_deps :
 link_deps :
+	 rbenv
+	 rbenv-whatis
 conflicts :
 patches :
 EOF_patch :
 install :
+	 prefix.install Dir["*"]

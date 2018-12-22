@@ -18,3 +18,4 @@ install :
 	 cd "src/github.com/iawia002/annie" do
 	 system "go", "build", "-o", bin/"annie"
 	 prefix.install_metafiles
+	 end

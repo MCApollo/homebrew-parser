@@ -8,7 +8,11 @@ description :
 	 Use Jetty without an installed distribution
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install Dir["*"]
+	 bin.mkpath
+	 bin.write_jar_script libexec/"jetty-runner-#{version}.jar", "jetty-runner"

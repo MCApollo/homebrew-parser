@@ -33,3 +33,19 @@ install :
 	 venv = virtualenv_create(libexec, "python3")
 	 resources.each do |r|
 	 venv.pip_install_and_link r
+	 end
+	 args = %W[
+	 --disable-debug
+	 --disable-dependency-tracking
+	 --prefix=#{prefix}
+	 PYTHON=python3
+	 PYTHON_LIBS=-undefined\ dynamic_lookup
+	 --with-python-module-path=#{lib}/python#{xy}/site-packages
+	 --with-boost-python=boost_python#{xy.to_s.delete(".")}-mt
+	 ]
+	 args << "--with-expat=#{MacOS.sdk_path}/usr" if MacOS.sdk_path_if_needed
+	 system "./configure", *args
+	 system "make", "install"
+	 site_packages = "lib/python#{xy}/site-packages"
+	 pth_contents = "import site; site.addsitedir('#{libexec/site_packages}')\n"
+	 (prefix/site_packages/"homebrew-graph-tool.pth").write pth_contents

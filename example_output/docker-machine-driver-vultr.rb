@@ -21,3 +21,4 @@ install :
 	 system "make"
 	 bin.install "build/docker-machine-driver-vultr-v#{version}" => "docker-machine-driver-vultr"
 	 prefix.install_metafiles
+	 end

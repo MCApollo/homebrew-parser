@@ -12,3 +12,5 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "keychain"
+	 man1.install "keychain.1"

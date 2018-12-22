@@ -17,3 +17,7 @@ install :
 	 r.verify_download_integrity(r.fetch)
 	 system "gem", "install", r.cached_download, "--no-document",
 	 "--install-dir", libexec
+	 end
+	 bin.install "ghi"
+	 bin.env_script_all_files(libexec/"bin", :GEM_HOME => ENV["GEM_HOME"])
+	 man1.install "man/ghi.1"

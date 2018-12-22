@@ -22,3 +22,4 @@ install :
 	 system "dep", "ensure", "-vendor-only"
 	 system "go", "build", "-tags", "noautoupgrade nofirstrun", "-o", bin/"akamai"
 	 prefix.install_metafiles
+	 end

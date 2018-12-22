@@ -22,3 +22,9 @@ install :
 	 resource("Crypt::OpenSSL::Bignum").stage do
 	 system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
 	 system "make", "install"
+	 end
+	 ENV["PREFIX"] = prefix
+	 ENV["ETCPREFIX"] = prefix
+	 system "make", "install"
+	 inreplace pkgshare/"keytrans", "#!/usr/bin/perl -T",
+	 "#!/usr/bin/perl -T -I#{libexec}/lib/perl5"

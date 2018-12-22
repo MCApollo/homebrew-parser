@@ -18,3 +18,9 @@ install :
 	 system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
 	 system "make"
 	 system "make", "install"
+	 end
+	 end
+	 inreplace "asciiquarium", "#!/usr/bin/env perl", "#!/usr/bin/perl"
+	 chmod 0755, "asciiquarium"
+	 bin.install "asciiquarium"
+	 bin.env_script_all_files(libexec/"bin", :PERL5LIB => ENV["PERL5LIB"])

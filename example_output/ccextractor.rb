@@ -15,3 +15,5 @@ install :
 	 cd "mac" do
 	 system "./build.command"
 	 bin.install "ccextractor"
+	 end
+	 (pkgshare/"examples").install "docs/ccextractor.cnf.sample"

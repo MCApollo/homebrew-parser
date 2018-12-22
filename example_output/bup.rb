@@ -18,3 +18,9 @@ install :
 	 resources.each do |r|
 	 r.stage do
 	 system "python", *Language::Python.setup_install_args(libexec/"vendor")
+	 end
+	 end
+	 system "make", "AC_CPP_PROG=xcrun cpp"
+	 system "make", "install", "DESTDIR=#{prefix}", "PREFIX="
+	 mv bin/"bup", libexec/"bup.py"
+	 (bin/"bup").write_env_script libexec/"bup.py", :PYTHONPATH => ENV["PYTHONPATH"]

@@ -32,3 +32,12 @@ install :
 	 "FORTRAN=gfortran", "LOADER=gfortran",
 	 "SLICOTLIB=../libslicot64_pic.a"
 	 (buildpath/"slicot").install "libslicot_pic.a", "libslicot64_pic.a"
+	 end
+	 system "autoreconf", "-fvi" if build.head?
+	 system "./configure", "--disable-debug",
+	 "--disable-dependency-tracking",
+	 "--disable-silent-rules",
+	 "--prefix=#{prefix}",
+	 "--disable-matlab",
+	 "--with-slicot=#{buildpath}/slicot"
+	 system "make", "install"

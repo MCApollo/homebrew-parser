@@ -12,3 +12,5 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "checkstyle-#{version}-all.jar"
+	 bin.write_jar_script libexec/"checkstyle-#{version}-all.jar", "checkstyle"

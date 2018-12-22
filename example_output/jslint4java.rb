@@ -12,3 +12,6 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 doc.install Dir["docs/*"]
+	 libexec.install Dir["*.jar"]
+	 bin.write_jar_script Dir[libexec/"jslint4java*.jar"].first, "jslint4java"

@@ -25,3 +25,4 @@ install :
 	 mkdir "macbuild" do
 	 system "../configure", *args
 	 system "make", "install"
+	 end

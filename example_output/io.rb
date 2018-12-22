@@ -39,3 +39,6 @@ install :
 	 inreplace "addons/CMakeLists.txt" do |s|
 	 if build.without? "python"
 	 s.gsub! "add_subdirectory(Python)", "#add_subdirectory(Python)"
+	 end
+	 s.gsub!(/(add_subdirectory\(Font\))/, '#\1')
+	 s.gsub!(/(add_subdirectory\(Memcached\))/, '#\1')

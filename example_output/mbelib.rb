@@ -18,3 +18,4 @@ install :
 	 system "make"
 	 system "make", "test"
 	 system "make", "install"
+	 end

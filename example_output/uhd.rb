@@ -20,3 +20,10 @@ install :
 	 ENV.prepend_create_path "PYTHONPATH", libexec/"vendor/lib/python2.7/site-packages"
 	 resource("Mako").stage do
 	 system "python", *Language::Python.setup_install_args(libexec/"vendor")
+	 end
+	 mkdir "host/build" do
+	 system "cmake", "..", *std_cmake_args
+	 system "make"
+	 system "make", "test"
+	 system "make", "install"
+	 end

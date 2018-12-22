@@ -19,3 +19,4 @@ install :
 	 mkdir "build" do
 	 system "cmake", "..", *std_cmake_args, "-DBUILD_STATIC_AND_SHARED=on"
 	 system "make", "install"
+	 end

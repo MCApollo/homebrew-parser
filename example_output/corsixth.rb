@@ -28,3 +28,13 @@ install :
 	 resources.each do |r|
 	 r.stage do
 	 system "luarocks", "build", r.name, "--tree=#{luapath}"
+	 end
+	 end
+	 system "cmake", ".", "-DLUA_INCLUDE_DIR=#{Formula["lua"].opt_include}/lua",
+	 "-DLUA_LIBRARY=#{Formula["lua"].opt_lib}/liblua.dylib",
+	 "-DLUA_PROGRAM_PATH=#{Formula["lua"].opt_bin}/lua",
+	 *std_cmake_args
+	 system "make"
+	 prefix.install "CorsixTH/CorsixTH.app"
+	 env = { :LUA_PATH => ENV["LUA_PATH"], :LUA_CPATH => ENV["LUA_CPATH"] }
+	 (bin/"CorsixTH").write_env_script(prefix/"CorsixTH.app/Contents/MacOS/CorsixTH", env)

@@ -32,3 +32,4 @@ install :
 	 system "make", "install"
 	 pkgshare.install bin/"tutorials/hbr_tutorial_0"
 	 rm_rf "#{bin}/tutorials"
+	 end

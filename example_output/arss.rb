@@ -17,3 +17,4 @@ install :
 	 cd "src" do
 	 system "cmake", ".", *std_cmake_args
 	 system "make", "install"
+	 end

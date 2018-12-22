@@ -21,3 +21,4 @@ install :
 	 system "make", "vegeta"
 	 bin.install "vegeta"
 	 prefix.install_metafiles
+	 end

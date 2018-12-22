@@ -18,3 +18,9 @@ install :
 	 s.change_make_var! "DESTDIR", prefix
 	 s.change_make_var! "CC", ENV.cc
 	 s.gsub! "-o 0 -g 0", ""
+	 end
+	 inreplace "mkhexgrid.cpp" do |s|
+	 s.sub! "catch (exception &e)", "catch (std::exception &e)"
+	 end
+	 system "make"
+	 system "make", "install"

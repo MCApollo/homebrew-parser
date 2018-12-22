@@ -26,3 +26,25 @@ install :
 	 resources.each do |r|
 	 r.stage do
 	 system "python3", *Language::Python.setup_install_args(libexec/"vendor")
+	 end
+	 end
+	 jansson = Formula["jansson"]
+	 libnet = Formula["libnet"]
+	 libmagic = Formula["libmagic"]
+	 args = %W[
+	 --disable-dependency-tracking
+	 --disable-silent-rules
+	 --prefix=#{prefix}
+	 --sysconfdir=#{etc}
+	 --localstatedir=#{var}
+	 --with-libjansson-includes=#{jansson.opt_include}
+	 --with-libjansson-libraries=#{jansson.opt_lib}
+	 --with-libmagic-includes=#{libmagic.opt_include}
+	 --with-libmagic-libraries=#{libmagic.opt_lib}
+	 --with-libnet-includes=#{libnet.opt_include}
+	 --with-libnet-libs=#{libnet.opt_lib}
+	 ]
+	 system "./configure", *args
+	 system "make", "install-full"
+	 bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])
+	 inreplace etc/"suricata/suricata.yaml", %r{magic-file: /.+/magic}, "magic-file: #{libmagic.opt_share}/misc/magic"

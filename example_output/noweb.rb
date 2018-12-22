@@ -29,3 +29,5 @@ install :
 	 "LIB=#{lib}",
 	 "MAN=#{man}",
 	 "TEXINPUTS=#{texpath}"
+	 end
+	 end

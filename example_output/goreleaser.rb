@@ -19,3 +19,4 @@ install :
 	 system "go", "build", "-ldflags", "-X main.version=#{version}",
 	 "-o", bin/"goreleaser"
 	 prefix.install_metafiles
+	 end

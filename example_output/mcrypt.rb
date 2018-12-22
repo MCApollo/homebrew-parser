@@ -33,3 +33,8 @@ install :
 	 system "./configure", "--prefix=#{prefix}",
 	 "--mandir=#{man}"
 	 system "make", "install"
+	 end
+	 system "./configure", "--prefix=#{prefix}",
+	 "--with-libmcrypt-prefix=#{prefix}",
+	 "--mandir=#{man}"
+	 system "make", "install"

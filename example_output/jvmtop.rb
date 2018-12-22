@@ -8,7 +8,13 @@ description :
 	 Console application for monitoring all running JVMs on a machine
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 rm Dir["*.bat"]
+	 mv "jvmtop.sh", "jvmtop"
+	 chmod 0755, "jvmtop"
+	 libexec.install Dir["*"]
+	 (bin/"jvmtop").write_env_script(libexec/"jvmtop", Language::Java.java_home_env)

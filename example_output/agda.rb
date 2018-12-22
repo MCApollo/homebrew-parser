@@ -22,3 +22,11 @@ install :
 	 cabal_install "--only-dependencies"
 	 cabal_install
 	 system "GenerateEverything"
+	 end
+	 end
+	 cd lib/"agda" do
+	 system bin/"agda", "-i", ".", "-i", "src", "--html", "--vim", "README.agda"
+	 end
+	 if build.with? "emacs"
+	 system bin/"agda-mode", "compile"
+	 elisp.install_symlink Dir["#{share}/*/Agda-#{version}/emacs-mode/*"]

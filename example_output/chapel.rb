@@ -21,3 +21,8 @@ install :
 	 system "make", "test-venv"
 	 system "make", "mason"
 	 system "make", "cleanall"
+	 end
+	 prefix.install_metafiles
+	 bin.install Dir[libexec/"bin/darwin/*"]
+	 bin.env_script_all_files libexec/"bin/darwin/", :CHPL_HOME => libexec
+	 man1.install_symlink Dir["#{libexec}/man/man1/*.1"]

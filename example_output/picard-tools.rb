@@ -8,7 +8,10 @@ description :
 	 Tools for manipulating HTS data and formats
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "picard.jar"
+	 bin.write_jar_script libexec/"picard.jar", "picard"

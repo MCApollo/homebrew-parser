@@ -8,7 +8,9 @@ description :
 	 C++ standard library algorithms with support for execution policies
 build_deps :
 link_deps :
+	 tbb
 conflicts :
 patches :
 EOF_patch :
 install :
+	 include.install Dir["include/*"]

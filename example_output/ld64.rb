@@ -33,3 +33,6 @@ install :
 	 inreplace "Makefile" do |s|
 	 s.change_make_var! "CFLAGS", ENV.cflags
 	 s.change_make_var! "CXXFLAGS", ENV.cxxflags
+	 end
+	 system "make", *args
+	 system "make", "install", "PREFIX=#{prefix}"

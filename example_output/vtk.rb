@@ -64,3 +64,5 @@ install :
 	 args << "-DPYTHON_LIBRARY='#{python_prefix}/lib/lib#{python_version}.dylib'"
 	 else
 	 odie "No libpythonX.Y.{dylib|a} file found!"
+	 end
+	 args << "-DVTK_INSTALL_PYTHON_MODULE_DIR='#{py_site_packages}/'"

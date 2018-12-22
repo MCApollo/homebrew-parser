@@ -17,3 +17,8 @@ install :
 	 inreplace "configure" do |s|
 	 s.gsub! /PYTHON_CPPFLAGS=.*/, %Q(PYTHON_CPPFLAGS="#{`python-config --includes`.strip}")
 	 s.gsub! /PYTHON_LDFLAGS=.*/, 'PYTHON_LDFLAGS="-Wl,-undefined,dynamic_lookup"'
+	 end
+	 system "./configure", "--disable-dependency-tracking",
+	 "--prefix=#{prefix}",
+	 "--enable-python"
+	 system "make", "install"

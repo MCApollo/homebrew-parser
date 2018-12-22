@@ -15,4 +15,9 @@ install :
 	 inreplace "defs.h", "#define OMEGALIB \"./omegalib/\"", "#define OMEGALIB \"#{libexec}/\""
 	 inreplace "Makefile" do |s|
 	 s.remove_make_var! ["CC", "CFLAGS", "LDFLAGS"]
+	 end
+	 ENV.append_to_cflags "-DUNIX -DSYSV"
+	 system "make"
+	 bin.install "omega"
+	 libexec.install Dir["omegalib/*"]
 	 ln_s prefix/"license.txt", libexec/"license.txt"

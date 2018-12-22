@@ -33,3 +33,13 @@ install :
 	 %w[perm logfile].each do |f|
 	 touch f
 	 libexec.install f
+	 end
+	 libexec.install %w[jhelp jhh jcmdhelp jhistory jopthelp jwizhelp dungeon license data jdata.base joracles options jrumors.tru jrumors.fal quest.dat jquest.txt]
+	 libexec.install Dir["*.lev"]
+	 end
+	 ENV.append_to_cflags "-I../include"
+	 cd "src" do
+	 system "make"
+	 end
+	 bin.install "src/jnethack"
+	 (libexec+"save").mkpath

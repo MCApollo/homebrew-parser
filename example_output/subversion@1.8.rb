@@ -69,3 +69,6 @@ install :
 	 if MacOS.version >= :sierra || !MacOS::CLT.installed?
 	 args << "APR=#{Formula["apr"].opt_prefix}"
 	 args << "APU=#{Formula["apr-util"].opt_prefix}"
+	 end
+	 scons(*args)
+	 scons "install"

@@ -25,3 +25,5 @@ install :
 	 system "make"
 	 bin.install "aescrypt"
 	 bin.install "aescrypt_keygen"
+	 end
+	 man1.install "man/aescrypt.1"

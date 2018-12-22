@@ -12,3 +12,6 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 rm_f Dir["bin/*.bat"]
+	 libexec.install Dir["*"]
+	 bin.install_symlink libexec/"bin/mvnsh"

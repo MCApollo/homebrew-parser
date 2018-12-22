@@ -21,3 +21,4 @@ install :
 	 system "./configure", "--prefix=#{prefix}"
 	 system "make"
 	 system "make", "install"
+	 end

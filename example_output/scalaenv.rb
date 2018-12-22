@@ -17,3 +17,5 @@ install :
 	 var_dir = "#{var_lib}/#{dir}"
 	 mkdir_p var_dir
 	 ln_sf var_dir, "#{prefix}/#{dir}"
+	 end
+	 (var_lib/"plugins").install_symlink "#{prefix}/default-plugins/scala-install"

@@ -28,3 +28,4 @@ install :
 	 system "make"
 	 system "make", "test" if build.bottle?
 	 system "make", "install"
+	 end

@@ -23,3 +23,4 @@ install :
 	 system "glide", "install"
 	 system "go", "build", "-ldflags", ldflags, "-o", bin/"jabba"
 	 prefix.install_metafiles
+	 end

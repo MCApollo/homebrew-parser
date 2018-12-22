@@ -55,3 +55,16 @@ install :
 	 (libexec/"wheel").cd { system "#{bin}/python", *setup_args }
 	 %w[pip pip2 pip2.7 easy_install easy_install-2.7 wheel].each do |e|
 	 (HOMEBREW_PREFIX/"bin").install_symlink bin/e
+	 end
+	 include_dirs = [HOMEBREW_PREFIX/"include", Formula["openssl"].opt_include,
+	 Formula["sqlite"].opt_include]
+	 library_dirs = [HOMEBREW_PREFIX/"lib", Formula["openssl"].opt_lib,
+	 Formula["sqlite"].opt_lib]
+	 cfg = lib_cellar/"distutils/distutils.cfg"
+	 cfg.atomic_write <<~EOS
+	 [install]
+	 prefix=#{HOMEBREW_PREFIX}
+	 [build_ext]
+	 include_dirs=#{include_dirs.join ":"}
+	 library_dirs=#{library_dirs.join ":"}
+	 EOS

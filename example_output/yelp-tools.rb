@@ -26,5 +26,8 @@ install :
 	 "--prefix=#{prefix}"
 	 system "make", "install"
 	 ENV.append_path "PKG_CONFIG_PATH", "#{share}/pkgconfig"
+	 end
+	 system "./configure", "--prefix=#{prefix}"
+	 system "make", "install"
 	 system "#{Formula["gtk+3"].opt_bin}/gtk3-update-icon-cache",
 	 "-f", "-t", "#{HOMEBREW_PREFIX}/share/icons/hicolor"

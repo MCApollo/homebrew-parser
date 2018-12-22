@@ -24,3 +24,4 @@ install :
 	 "-ldflags",
 	 "'-X=github.com/deis/workflow-cli/version.Version=v#{version}'"
 	 bin.install "build/deis"
+	 end

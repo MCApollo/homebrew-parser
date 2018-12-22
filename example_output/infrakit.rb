@@ -20,3 +20,4 @@ install :
 	 system "make", "cli"
 	 bin.install "build/infrakit"
 	 prefix.install_metafiles
+	 end

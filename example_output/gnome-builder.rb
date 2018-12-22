@@ -36,7 +36,6 @@ EOF_patch :
 	 +++ b/src/libide/meson.build
 	 @@ -160,37 +160,6 @@ if get_option('with_editorconfig')
 	 ]
-	 endif
 	 -
 	 -python3 = find_program('python3')
 	 -
@@ -132,5 +131,7 @@ install :
 	 system "meson", *args, ".."
 	 system "ninja"
 	 system "ninja", "install"
+	 end
+	 ln_s Dir.glob("#{lib}/gnome-builder/*dylib"), lib
 	 system "#{Formula["glib"].opt_bin}/glib-compile-schemas", "#{HOMEBREW_PREFIX}/share/glib-2.0/schemas"
 	 system "#{Formula["gtk+3"].opt_bin}/gtk3-update-icon-cache", "-f", "-t", "#{HOMEBREW_PREFIX}/share/icons/hicolor"

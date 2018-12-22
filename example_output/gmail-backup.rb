@@ -12,3 +12,7 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "gmail-backup.py" => "gmail-backup"
+	 libexec.install Dir["*"]
+	 ENV.prepend_path "PYTHONPATH", libexec
+	 bin.env_script_all_files(libexec, :PYTHONPATH => ENV["PYTHONPATH"])

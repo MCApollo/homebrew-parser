@@ -31,3 +31,24 @@ install :
 	 deps.each do |r|
 	 resource(r).stage do
 	 system "python3", *Language::Python.setup_install_args(libexec)
+	 end
+	 end
+	 components.each do |item|
+	 cd item do
+	 system "python3", *Language::Python.setup_install_args(libexec)
+	 end
+	 end
+	 File.open(site_packages/"azure/__init__.py", "w") {}
+	 File.open(site_packages/"azure/cli/__init__.py", "w") {}
+	 File.open(site_packages/"azure/cli/command_modules/__init__.py", "w") {}
+	 File.open(site_packages/"azure/mgmt/__init__.py", "w") {}
+	 (bin/"az").write <<~EOS
+	 #!/usr/bin/env bash
+	 export PYTHONPATH="#{ENV["PYTHONPATH"]}"
+	 if command -v python#{xy} >/dev/null 2>&1; then
+	 python#{xy} -m azure.cli \"$@\"
+	 else
+	 python3 -m azure.cli \"$@\"
+	 fi
+	 EOS
+	 bash_completion.install "az.completion" => "az"

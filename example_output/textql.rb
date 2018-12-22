@@ -23,3 +23,4 @@ install :
 	 "-o", bin/"textql", "./textql"
 	 man1.install "man/textql.1"
 	 prefix.install_metafiles
+	 end

@@ -26,3 +26,21 @@ install :
 	 "--includedir=#{include}/mediaconch"]
 	 system "./configure", *args
 	 system "make", "install"
+	 end
+	 cd "MediaInfoLib/Project/GNU/Library" do
+	 args = ["--disable-debug",
+	 "--disable-dependency-tracking",
+	 "--enable-static",
+	 "--enable-shared",
+	 "--with-libcurl",
+	 "--prefix=#{prefix}",
+	 "--libdir=#{lib}/mediaconch",
+	 "--includedir=#{include}/mediaconch"]
+	 system "./configure", *args
+	 system "make", "install"
+	 end
+	 cd "MediaConch/Project/GNU/CLI" do
+	 system "./configure", "--disable-debug", "--disable-dependency-tracking",
+	 "--prefix=#{prefix}"
+	 system "make", "install"
+	 end

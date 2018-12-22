@@ -41,3 +41,4 @@ install :
 	 prefix.install_metafiles
 	 man1.install Dir["documentation/man/*.1"]
 	 pkgshare.install "examples"
+	 end

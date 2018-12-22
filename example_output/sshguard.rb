@@ -26,3 +26,4 @@ install :
 	 s.gsub! %r{^#LOGREADER="/usr/bin/log}, "LOGREADER=\"/usr/bin/log"
 	 else
 	 s.gsub! /^#FILES.*$/, "FILES=#{log_path}"
+	 end

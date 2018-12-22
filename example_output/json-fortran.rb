@@ -20,3 +20,4 @@ install :
 	 "-DUSE_GNU_INSTALL_CONVENTION:BOOL=TRUE",
 	 "-DENABLE_UNICODE:BOOL=TRUE"
 	 system "make", "install"
+	 end

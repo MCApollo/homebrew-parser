@@ -12,3 +12,5 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "repo"
+	 doc.install (buildpath/"docs").children

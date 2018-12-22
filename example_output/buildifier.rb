@@ -20,3 +20,5 @@ install :
 	 inreplace "buildifier/buildifier.go" do |s|
 	 s.gsub! /^(var buildifierVersion = ")redacted/, "\\1#{version}"
 	 s.gsub! /^(var buildScmRevision = ")redacted/, "\\1#{commit}"
+	 end
+	 system "go", "build", "-o", bin/"buildifier", "buildifier/buildifier.go"

@@ -15,3 +15,4 @@ install :
 	 cd "b2sum" do
 	 system "make", "NO_OPENMP=1"
 	 system "make", "install", "PREFIX=#{prefix}", "MANDIR=#{man}"
+	 end

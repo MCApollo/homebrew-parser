@@ -17,3 +17,4 @@ install :
 	 Pathname.glob(libexec/"bin/*") do |f|
 	 next if f.directory?
 	 bin.install_symlink f => "viewvc-#{f.basename}"
+	 end

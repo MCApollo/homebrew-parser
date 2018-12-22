@@ -21,3 +21,4 @@ install :
 	 system "godep", "restore"
 	 system "go", "build", "-o", bin/"srclib", "./cmd/srclib"
 	 prefix.install_metafiles
+	 end

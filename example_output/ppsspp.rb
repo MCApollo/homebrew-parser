@@ -28,3 +28,4 @@ install :
 	 prefix.install "PPSSPPSDL.app"
 	 bin.write_exec_script "#{prefix}/PPSSPPSDL.app/Contents/MacOS/PPSSPPSDL"
 	 mv "#{bin}/PPSSPPSDL", "#{bin}/ppsspp"
+	 end

@@ -23,3 +23,4 @@ install :
 	 bin.install "dst/platypus_clt" => "platypus"
 	 cd "build/UninstalledProducts/macosx/ScriptExec.app/Contents" do
 	 pkgshare.install "Resources/MainMenu.nib", "MacOS/ScriptExec"
+	 end

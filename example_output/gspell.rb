@@ -40,7 +40,6 @@ EOF_patch :
 	 +libgspell_core_la_LDFLAGS += \
 	 +	-framework Cocoa
 	 +
-	 endif
 	 if HAVE_INTROSPECTION
 install :
 	 system "autoreconf", "-i"

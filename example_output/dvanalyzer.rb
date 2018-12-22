@@ -18,3 +18,15 @@ install :
 	 "--disable-shared"]
 	 system "./configure", *args
 	 system "make"
+	 end
+	 cd "MediaInfoLib/Project/GNU/Library" do
+	 args = ["--disable-debug",
+	 "--enable-static",
+	 "--disable-shared"]
+	 system "./configure", *args
+	 system "make"
+	 end
+	 cd "AVPS_DV_Analyzer/Project/GNU/CLI" do
+	 system "./configure",  "--disable-debug", "--enable-staticlibs", "--prefix=#{prefix}"
+	 system "make", "install"
+	 end

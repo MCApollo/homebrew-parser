@@ -18,3 +18,4 @@ install :
 	 mkdir "build" do
 	 system "cmake", "..", "-DCMAKE_INSTALL_SYSCONFDIR=#{etc}", *std_cmake_args
 	 system "make", "install"
+	 end

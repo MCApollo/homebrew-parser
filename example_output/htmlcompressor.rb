@@ -12,3 +12,5 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "htmlcompressor-#{version}.jar"
+	 bin.write_jar_script libexec/"htmlcompressor-#{version}.jar", "htmlcompressor"

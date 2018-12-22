@@ -8,7 +8,10 @@ description :
 	 Download and assemble multipart binaries from newsgroups
 build_deps :
 link_deps :
+	 uudeview
 conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "brag"
+	 man1.install "brag.1"

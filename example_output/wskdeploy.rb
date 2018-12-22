@@ -21,3 +21,4 @@ install :
 	 system "go", "build", "-o", bin/"wskdeploy",
 	 "-ldflags", "-X main.Version=#{version}"
 	 prefix.install_metafiles
+	 end

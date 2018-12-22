@@ -24,3 +24,7 @@ install :
 	 r.verify_download_integrity(r.fetch)
 	 system "gem", "install", r.cached_download, "--ignore-dependencies",
 	 "--no-document", "--norc", "--install-dir", libexec
+	 end
+	 system "gem", "install", "--ignore-dependencies", "--norc",
+	 "--no-document", "kontena-cli-#{version}.gem"
+	 end

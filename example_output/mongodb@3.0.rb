@@ -25,3 +25,5 @@ install :
 	 args << "ssl"
 	 ENV["LIBRARY_PATH"] = "#{Formula["openssl"].opt_prefix}/lib"
 	 ENV["CPATH"] = "#{Formula["openssl"].opt_prefix}/include"
+	 end
+	 system "./build.sh", *args

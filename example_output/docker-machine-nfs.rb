@@ -12,3 +12,4 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "docker-machine-nfs.sh" => "docker-machine-nfs"

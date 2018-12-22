@@ -12,3 +12,5 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "bin/repl"
+	 man1.install "man/repl.1"

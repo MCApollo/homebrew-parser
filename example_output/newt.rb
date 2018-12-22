@@ -21,3 +21,6 @@ install :
 	 s.gsub! "libnewt.$(SOEXT).$(VERSION)", "libnewt.$(VERSION).dylib"
 	 s.gsub! "`$$pyconfig --ldflags`", '"-undefined dynamic_lookup"'
 	 s.gsub! "`$$pyconfig --libs`", '""'
+	 end
+	 system "./configure", *args
+	 system "make", "install"

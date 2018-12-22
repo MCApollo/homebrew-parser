@@ -18,3 +18,4 @@ install :
 	 ["pgrep/pgrep", "pkill/pkill", "pfind/pfind"].each do |prog|
 	 bin.install prog
 	 man1.install prog + ".1"
+	 end

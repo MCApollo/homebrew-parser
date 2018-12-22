@@ -18,3 +18,10 @@ install :
 	 Language::Go.stage_deps resources, buildpath/"src"
 	 cd "src/github.com/robfig/glock" do
 	 system "go", "install"
+	 end
+	 cd "src/github.com/jwilder/docker-gen" do
+	 system buildpath/"bin/glock", "sync", "github.com/jwilder/docker-gen"
+	 system "go", "build", "-ldflags", "-X main.buildVersion=#{version}", "-o",
+	 bin/"docker-gen", "./cmd/docker-gen"
+	 prefix.install_metafiles
+	 end

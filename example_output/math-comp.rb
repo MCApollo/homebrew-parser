@@ -23,3 +23,5 @@ install :
 	 system "make", "-f", "Makefile.coq", "MAKEFLAGS=#{ENV["MAKEFLAGS"]}"
 	 system "make", "install", "MAKEFLAGS=#{ENV["MAKEFLAGS"]}"
 	 elisp.install "ssreflect/pg-ssr.el"
+	 end
+	 doc.install Dir["docs/*"]

@@ -8,7 +8,9 @@ description :
 	 -like behavior
 build_deps :
 link_deps :
+	 tmux
 conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "tmux-cssh"

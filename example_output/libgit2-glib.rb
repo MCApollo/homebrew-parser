@@ -33,3 +33,4 @@ install :
 	 system "ninja"
 	 system "ninja", "install"
 	 libexec.install Dir["examples/*"]
+	 end

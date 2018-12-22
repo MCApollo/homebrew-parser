@@ -30,3 +30,4 @@ install :
 	 resource("freedink-data").stage do
 	 inreplace "Makefile", "xargs -0r", "xargs -0"
 	 system "make", "install", "PREFIX=#{prefix}"
+	 end

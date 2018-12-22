@@ -8,7 +8,11 @@ description :
 	 Database version control to control migrations
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 rm Dir["*.cmd"]
+	 libexec.install Dir["*"]
+	 bin.install_symlink Dir["#{libexec}/flyway"]

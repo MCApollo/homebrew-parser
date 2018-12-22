@@ -12,3 +12,8 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "kobalt-#{version}/kobalt"
+	 (bin/"kobaltw").write <<~EOS
+	 #!/bin/bash
+	 java -jar #{libexec}/kobalt/wrapper/kobalt-wrapper.jar $*
+	 EOS

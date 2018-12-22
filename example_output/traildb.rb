@@ -20,3 +20,9 @@ install :
 	 "--disable-shared", "--prefix=#{judyprefix}"
 	 ENV.deparallelize do
 	 system "make", "-j1", "install"
+	 end
+	 end
+	 ENV["PREFIX"] = prefix
+	 ENV.append "CFLAGS", "-I#{judyprefix}/include"
+	 ENV.append "LDFLAGS", "-L#{judyprefix}/lib"
+	 system "./waf", "configure", "install"

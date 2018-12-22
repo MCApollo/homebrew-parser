@@ -22,3 +22,4 @@ install :
 	 system "./build.bash"
 	 bin.install "gocryptfs"
 	 prefix.install_metafiles
+	 end

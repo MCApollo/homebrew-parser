@@ -8,7 +8,14 @@ description :
 	 Tool for Java static analysis (FindBugs's successor)
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 if build.head?
+	 system "gradle", "build"
+	 system "gradle", "installDist"
+	 libexec.install Dir["spotbugs/build/install/spotbugs/*"]
+	 else
+	 libexec.install Dir["*"]

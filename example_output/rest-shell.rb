@@ -12,3 +12,5 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install Dir["*"]
+	 bin.write_exec_script libexec/"bin/rest-shell"

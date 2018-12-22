@@ -21,3 +21,4 @@ install :
 	 "INCS=#{ENV.cppflags}",
 	 "LDFLAGS=#{ENV.ldflags}",
 	 "install"
+	 end

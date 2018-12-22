@@ -20,3 +20,7 @@ install :
 	 inreplace "Makefile" do |s|
 	 s.change_make_var! "SUBDIRS", "schroedinger doc tools"
 	 s.change_make_var! "DIST_SUBDIRS", "schroedinger doc tools"
+	 end
+	 system "make", "install"
+	 end
+	 end

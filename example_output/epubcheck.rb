@@ -12,3 +12,6 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 jarname = "epubcheck.jar"
+	 libexec.install jarname, "lib"
+	 bin.write_jar_script libexec/jarname, "epubcheck"

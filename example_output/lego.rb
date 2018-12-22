@@ -19,3 +19,4 @@ install :
 	 system "go", "build", "-o", bin/"lego", "-ldflags",
 	 "-X main.version=#{version}"
 	 prefix.install_metafiles
+	 end

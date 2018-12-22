@@ -8,7 +8,11 @@ description :
 	 DITA Open Toolkit is an implementation of the OASIS DITA specification
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 rm_f Dir["bin/*.bat", "config/env.bat", "startcmd.*"]
+	 libexec.install Dir["*"]
+	 bin.install_symlink libexec/"bin/dita"

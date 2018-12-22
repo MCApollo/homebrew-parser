@@ -43,3 +43,4 @@ install :
 	 inreplace "#{etc}/libvirt/libvirtd.conf" do |s|
 	 s.gsub! "/etc/", "#{HOMEBREW_PREFIX}/etc/"
 	 s.gsub! "/var/", "#{HOMEBREW_PREFIX}/var/"
+	 end

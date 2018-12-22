@@ -16,3 +16,7 @@ install :
 	 ENV.prepend_create_path "PYTHONPATH", libexec/"lib/python2.7/site-packages"
 	 resource("mysql-connector-python").stage do
 	 system "python", "setup.py", "install", "--prefix=" + libexec
+	 end
+	 system "python", "setup.py", "install", "--prefix=" + libexec
+	 bin.install Dir[libexec/"bin/*"]
+	 bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])

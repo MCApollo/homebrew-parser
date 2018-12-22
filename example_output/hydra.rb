@@ -23,3 +23,8 @@ install :
 	 s.gsub! "/opt/*ssl/include", Formula["openssl"].opt_include
 	 s.gsub! "libsvn", "oh_no_you_dont"
 	 s.gsub! "libssh", "certainly_not" if build.without? "libssh"
+	 end
+	 system "./configure", "--prefix=#{prefix}"
+	 bin.mkpath
+	 system "make", "all", "install"
+	 share.install prefix/"man"

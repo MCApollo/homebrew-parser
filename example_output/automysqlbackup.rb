@@ -12,3 +12,11 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 inreplace "automysqlbackup" do |s|
+	 s.gsub! "/etc", etc
+	 s.gsub! "/var", var
+	 end
+	 inreplace "automysqlbackup.conf", "/var", var
+	 conf_path = (etc/"automysqlbackup")
+	 conf_path.install "automysqlbackup.conf" unless (conf_path/"automysqlbackup.conf").exist?
+	 sbin.install "automysqlbackup"

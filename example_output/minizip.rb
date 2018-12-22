@@ -22,3 +22,8 @@ install :
 	 s.sub! "-L$(zlib_top_builddir)", "$(zlib_top_builddir)/libz.a"
 	 s.sub! "-version-info 1:0:0 -lz", "-version-info 1:0:0"
 	 s.sub! "libminizip.la -lz", "libminizip.la"
+	 end
+	 system "autoreconf", "-fi"
+	 system "./configure", "--prefix=#{prefix}"
+	 system "make", "install"
+	 end

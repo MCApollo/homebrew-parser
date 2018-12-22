@@ -16,3 +16,4 @@ install :
 	 mkdir "build" do
 	 system "cmake", "..", "-DCMAKE_OSX_SYSROOT=#{MacOS.sdk_path}", *std_cmake_args
 	 system "make", "install"
+	 end

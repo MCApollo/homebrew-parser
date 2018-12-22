@@ -23,3 +23,6 @@ install :
 	 cd "../core/src/"
 	 Dir.glob "./zxing/**/*.h" do |header|
 	 (include/File.dirname(header)).install header
+	 end
+	 end
+	 system "make", "install" if build.head?

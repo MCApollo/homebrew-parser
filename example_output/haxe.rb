@@ -30,3 +30,6 @@ install :
 	 "opam", "install", "haxe", "--deps-only"
 	 system "opam", "config", "exec", "--",
 	 "make", "ADD_REVISION=1"
+	 end
+	 else
+	 system "make", "OCAMLOPT=ocamlopt.opt"

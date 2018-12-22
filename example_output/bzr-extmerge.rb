@@ -8,7 +8,9 @@ description :
 	 External merge tool support for Bazaar
 build_deps :
 link_deps :
+	 bazaar
 conflicts :
 patches :
 EOF_patch :
 install :
+	 (share/"bazaar/plugins/extmerge").install Dir["*"]

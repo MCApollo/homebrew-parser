@@ -21,3 +21,4 @@ install :
 	 cd "src/github.com/cortesi/modd" do
 	 system "go", "install", ".../cmd/modd"
 	 prefix.install_metafiles
+	 end

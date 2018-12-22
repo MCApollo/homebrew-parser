@@ -22,3 +22,8 @@ install :
 	 inreplace "build/libraries.py" do |s|
 	 s.gsub! /\((distroRoot), \)/, "(\\1, '/usr', '#{MacOS.sdk_path}/System/Library/Frameworks/Tcl.framework')"
 	 s.gsub! "lib/tcl", "."
+	 end
+	 system "./configure"
+	 system "make"
+	 prefix.install Dir["derived/**/openMSX.app"]
+	 bin.write_exec_script "#{prefix}/openMSX.app/Contents/MacOS/openmsx"

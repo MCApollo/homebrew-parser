@@ -23,3 +23,22 @@ install :
 	 args = ["install", "PREFIX=#{prefix}", "INSTALL_STRIP_FLAG=-S"]
 	 cd "source/mupen64plus-core/projects/unix" do
 	 system "make", *args
+	 end
+	 cd "source/mupen64plus-audio-sdl/projects/unix" do
+	 system "make", *args, "NO_SRC=1", "NO_SPEEX=1"
+	 end
+	 cd "source/mupen64plus-input-sdl/projects/unix" do
+	 system "make", *args
+	 end
+	 cd "source/mupen64plus-rsp-hle/projects/unix" do
+	 system "make", *args
+	 end
+	 cd "source/mupen64plus-video-glide64mk2/projects/unix" do
+	 system "make", *args
+	 end
+	 cd "source/mupen64plus-video-rice/projects/unix" do
+	 system "make", *args
+	 end
+	 cd "source/mupen64plus-ui-console/projects/unix" do
+	 system "make", *args
+	 end

@@ -17,3 +17,8 @@ install :
 	 s.change_make_var! "LDFLAGS",
 	 "-L. -L./external/stage/lib -lboost_regex -lboost_system -lboost_filesystem " \
 	 "-lboost_program_options -lc -lm -lcrypto -lboost_thread -lpthread"
+	 end
+	 system "make", "boost"
+	 system "make", "stream"
+	 bin.install "sdhash"
+	 man1.install Dir["man/*.1"]

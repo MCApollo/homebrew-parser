@@ -19,3 +19,4 @@ install :
 	 cd dir do
 	 system "go", "build", "-o", bin/"jira", "-ldflags", "-w -s", "cmd/jira/main.go"
 	 prefix.install_metafiles
+	 end

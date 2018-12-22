@@ -24,3 +24,4 @@ install :
 	 mkdir "build" do
 	 system "cmake", "..", *std_cmake_args, "-DWANT_DOCS=OFF"
 	 system "make", "install"
+	 end

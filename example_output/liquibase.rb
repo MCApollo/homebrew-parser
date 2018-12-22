@@ -12,3 +12,9 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 rm_f Dir["*.bat"]
+	 chmod 0755, "liquibase"
+	 prefix.install_metafiles
+	 libexec.install Dir["*"]
+	 bin.install_symlink libexec/"liquibase"
+	 (libexec/"lib").install_symlink Dir["#{libexec}/sdk/lib-sdk/slf4j*"]

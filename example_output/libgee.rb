@@ -21,3 +21,7 @@ install :
 	 "@HAVE_INTROSPECTION_TRUE@girdir = $(datadir)/gir-1.0"
 	 s.gsub! "@HAVE_INTROSPECTION_TRUE@typelibdir = @INTROSPECTION_TYPELIBDIR@",
 	 "@HAVE_INTROSPECTION_TRUE@typelibdir = $(libdir)/girepository-1.0"
+	 end
+	 system "./configure", "--prefix=#{prefix}",
+	 "--disable-dependency-tracking"
+	 system "make", "install"

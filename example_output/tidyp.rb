@@ -20,3 +20,4 @@ install :
 	 system "#{bin}/tidyp -xml-config > tidyp-config.xml"
 	 system "/usr/bin/xsltproc tidyp1.xsl tidyp1.xml > tidyp.1"
 	 man1.install gzip("tidyp.1")
+	 end

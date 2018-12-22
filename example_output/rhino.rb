@@ -9,6 +9,11 @@ description :
 build_deps :
 link_deps :
 conflicts :
+	 nut
 patches :
 EOF_patch :
 install :
+	 rhino_jar = "rhino-#{version}.jar"
+	 libexec.install "lib/#{rhino_jar}"
+	 bin.write_jar_script libexec/rhino_jar, "rhino"
+	 doc.install Dir["docs/*"]

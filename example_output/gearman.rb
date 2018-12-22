@@ -28,3 +28,19 @@ install :
 	 Dir["tests/**/*.cc", "libtest/main.cc"].each do |test_file|
 	 next unless /std::unique_ptr/ =~ File.read(test_file)
 	 inreplace test_file, "std::unique_ptr", "std::auto_ptr"
+	 end
+	 args = [
+	 "--prefix=#{prefix}",
+	 "--localstatedir=#{var}",
+	 "--disable-silent-rules",
+	 "--disable-dependency-tracking",
+	 "--disable-libdrizzle",
+	 "--with-boost=#{Formula["boost"].opt_prefix}",
+	 "--with-sqlite3",
+	 ]
+	 if build.with? "cyassl"
+	 args << "--enable-ssl" << "--enable-cyassl"
+	 elsif build.with? "openssl"
+	 args << "--enable-ssl" << "--with-openssl=#{Formula["openssl"].opt_prefix}" << "--disable-cyassl"
+	 else
+	 args << "--disable-ssl" << "--disable-cyassl"

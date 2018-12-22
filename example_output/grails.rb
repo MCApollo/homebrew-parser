@@ -12,3 +12,6 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 rm_f Dir["bin/*.bat", "bin/cygrails", "*.bat"]
+	 libexec.install Dir["*"]
+	 bin.install_symlink Dir["#{libexec}/bin/*"]

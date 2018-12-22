@@ -23,3 +23,4 @@ install :
 	 system "meson", "--prefix=#{prefix}", ".."
 	 system "ninja"
 	 system "ninja", "install"
+	 end

@@ -21,3 +21,14 @@ install :
 	 libtelnet_dst = buildpath/"telnet.tproj/build/Products"
 	 libtelnet_dst.install "build/Release/libtelnet.a"
 	 libtelnet_dst.install "build/Release/usr/local/include/libtelnet/"
+	 end
+	 system "make", "-C", "telnet.tproj",
+	 "OBJROOT=build/Intermediates",
+	 "SYMROOT=build/Products",
+	 "DSTROOT=build/Archive",
+	 "CFLAGS=$(CC_Flags) -isystembuild/Products/",
+	 "LDFLAGS=$(LD_Flags) -Lbuild/Products/",
+	 "RC_ARCHS=x86_64",
+	 "install"
+	 bin.install "telnet.tproj/build/Archive/usr/local/bin/telnet"
+	 man1.install "telnet.tproj/telnet.1"

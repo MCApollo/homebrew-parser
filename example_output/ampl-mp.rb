@@ -23,3 +23,4 @@ install :
 	 %w[errchk.h jac2dim.h obj_adj.h].each { |h| cp "src/asl/solvers/#{h}", include/"asl" }
 	 resource("miniampl").stage do
 	 (pkgshare/"example").install "src/miniampl.c", Dir["examples/wb.*"]
+	 end

@@ -24,3 +24,4 @@ install :
 	 "-DLCB_BUILD_LIBEV=ON",
 	 "-DLCB_BUILD_LIBUV=ON"
 	 system "make", "install"
+	 end

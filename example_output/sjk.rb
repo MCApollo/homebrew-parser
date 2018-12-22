@@ -8,7 +8,10 @@ description :
 	 Swiss Java Knife
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "sjk-plus-#{version}.jar"
+	 bin.write_jar_script "#{libexec}/sjk-plus-#{version}.jar", "sjk"

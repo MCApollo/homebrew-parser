@@ -12,3 +12,6 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 mv "READ_ME.txt", "README"
+	 doc.install "README"
+	 bin.install "linklint-#{version}" => "linklint"

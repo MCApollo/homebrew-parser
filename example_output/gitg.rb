@@ -41,12 +41,10 @@ EOF_patch :
 	 +    dependency(gio_system_pkg)
 	 ]
 	 cflags += '-xobjective-c'
-	 endif
 	 foreach test_ldflag: test_ldflags
 	 -  if cc.has_argument(test_ldflag)
 	 ldflags += test_ldflag
 	 -  endif
-	 endforeach
 	 libgitg = shared_library(
 	 diff --git a/meson.build b/meson.build
 	 index 0790c5e..61c7417 100644
@@ -60,5 +58,6 @@ install :
 	 system "meson", "--prefix=#{prefix}", "-Dpython=false", ".."
 	 system "ninja"
 	 system "ninja", "install"
+	 end
 	 system "#{Formula["glib"].opt_bin}/glib-compile-schemas", "#{HOMEBREW_PREFIX}/share/glib-2.0/schemas"
 	 system "#{Formula["gtk+3"].opt_bin}/gtk3-update-icon-cache", "-f", "-t", "#{HOMEBREW_PREFIX}/share/icons/hicolor"

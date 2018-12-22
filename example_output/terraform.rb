@@ -28,3 +28,4 @@ install :
 	 system "make", "tools", "test", "bin"
 	 bin.install "pkg/darwin_#{arch}/terraform"
 	 prefix.install_metafiles
+	 end

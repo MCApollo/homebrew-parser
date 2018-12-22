@@ -16,3 +16,4 @@ install :
 	 cd "tools/bcp" do
 	 system "b2"
 	 prefix.install "../../dist/bin"
+	 end

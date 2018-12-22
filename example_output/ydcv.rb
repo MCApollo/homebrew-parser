@@ -12,3 +12,5 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "src/ydcv.py" => "ydcv"
+	 zsh_completion.install "contrib/zsh_completion" => "_ydcv"

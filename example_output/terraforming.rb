@@ -17,3 +17,9 @@ install :
 	 r.verify_download_integrity(r.fetch)
 	 system "gem", "install", r.cached_download, "--no-document",
 	 "--install-dir", libexec
+	 end
+	 system "gem", "build", "terraforming.gemspec"
+	 system "gem", "install", "--ignore-dependencies",
+	 "terraforming-#{version}.gem"
+	 bin.install libexec/"bin/terraforming"
+	 bin.env_script_all_files(libexec/"bin", :GEM_HOME => ENV["GEM_HOME"])

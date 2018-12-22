@@ -19,3 +19,10 @@ install :
 	 r.stage do
 	 system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
 	 system "make", "install"
+	 end
+	 end
+	 inreplace "innotop", "#!/usr/bin/env perl", "#!/usr/bin/perl"
+	 system "perl", "Makefile.PL", "INSTALL_BASE=#{prefix}"
+	 system "make", "install"
+	 share.install prefix/"man"
+	 bin.env_script_all_files(libexec/"bin", :PERL5LIB => ENV["PERL5LIB"])

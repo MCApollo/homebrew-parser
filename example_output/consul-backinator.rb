@@ -24,3 +24,4 @@ install :
 	 "-X main.appVersion=#{version}", "-o",
 	 bin/"consul-backinator"
 	 prefix.install_metafiles
+	 end

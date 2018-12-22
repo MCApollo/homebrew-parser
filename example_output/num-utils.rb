@@ -19,3 +19,4 @@ install :
 	 system "pod2man", p, "#{p}.1"
 	 bin.install p
 	 man1.install "#{p}.1"
+	 end

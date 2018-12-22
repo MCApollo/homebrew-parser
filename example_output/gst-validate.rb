@@ -31,3 +31,8 @@ install :
 	 system "./configure", *args
 	 system "make"
 	 system "make", "install"
+	 end
+	 else
+	 system "./configure", *args
+	 system "make"
+	 system "make", "install"

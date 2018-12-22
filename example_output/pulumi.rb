@@ -26,3 +26,4 @@ install :
 	 (bash_completion/"pulumi").write output
 	 output = Utils.popen_read("#{bin}/pulumi gen-completion zsh")
 	 (zsh_completion/"_pulumi").write output
+	 end

@@ -25,3 +25,4 @@ install :
 	 "-DLUA_LIBRARY=#{Formula["lua"].opt_lib}/liblua.dylib",
 	 *std_cmake_args
 	 system "make", "install"
+	 end

@@ -20,3 +20,4 @@ install :
 	 "-ldflags",
 	 "-X github.com/open-policy-agent/opa/version.Version=#{version}"
 	 prefix.install_metafiles
+	 end

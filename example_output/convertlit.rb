@@ -16,3 +16,7 @@ install :
 	 inreplace "clit18/Makefile" do |s|
 	 s.gsub! "-I ../libtommath-0.30", "#{HOMEBREW_PREFIX}/include"
 	 s.gsub! "../libtommath-0.30/libtommath.a", "#{HOMEBREW_PREFIX}/lib/libtommath.a"
+	 end
+	 system "make", "-C", "lib"
+	 system "make", "-C", "clit18"
+	 bin.install "clit18/clit"

@@ -19,3 +19,4 @@ install :
 	 cabal_sandbox_add_source "elm-format"
 	 cabal_install "--only-dependencies", "elm-format"
 	 cabal_install "--prefix=#{prefix}", "elm-format"
+	 end

@@ -24,4 +24,5 @@ install :
 	 s.gsub! "@@WORKINGDIRECTORY@@", bin
 	 s.gsub! "@@VDIRSYNCER@@", bin/name
 	 s.gsub! "@@SYNCINTERVALL@@", "60"
+	 end
 	 inreplace prefix/"vdirsyncer.plist", "@@LOCALE@@", ENV["LC_ALL"] || ENV["LANG"] || "en_US.UTF-8"

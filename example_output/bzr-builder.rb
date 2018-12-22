@@ -8,7 +8,9 @@ description :
 	 Bazaar plugin to construct a branch based on a recipe
 build_deps :
 link_deps :
+	 bazaar
 conflicts :
 patches :
 EOF_patch :
 install :
+	 (share/"bazaar/plugins/builder").install Dir["*"]

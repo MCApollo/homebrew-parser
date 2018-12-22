@@ -22,3 +22,11 @@ install :
 	 ]
 	 system "cmake", ".", *args
 	 system "make", "install"
+	 end
+	 libbctoolbox = (libexec/"lib/libbctoolbox.dylib").readlink
+	 MachO::Tools.change_dylib_id("#{libexec}/lib/libbctoolbox.dylib",
+	 "#{libexec}/lib/#{libbctoolbox}")
+	 ENV.prepend_path "PKG_CONFIG_PATH", libexec/"lib/pkgconfig"
+	 system "./configure", "--disable-debug", "--disable-dependency-tracking",
+	 "--prefix=#{prefix}"
+	 system "make", "install"

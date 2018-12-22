@@ -19,6 +19,8 @@ install :
 	 confdir = etc/"i2pd"
 	 rm_rf prefix/"etc"
 	 confdir.install doc/"i2pd.conf", doc/"subscriptions.txt", doc/"tunnels.conf"
+	 end
+	 def post_install
 	 datadir = var/"lib/i2pd"
 	 if datadir.exist?
 	 rm datadir/"certificates"

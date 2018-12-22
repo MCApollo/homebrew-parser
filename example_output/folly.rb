@@ -38,3 +38,4 @@ install :
 	 system "cmake", "..", *args, "-DBUILD_SHARED_LIBS=OFF"
 	 system "make"
 	 lib.install "libfolly.a", "folly/libfollybenchmark.a"
+	 end

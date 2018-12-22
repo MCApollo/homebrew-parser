@@ -8,7 +8,13 @@ description :
 	 Implementation of Java Servlet and JavaServer Pages
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 rm_rf Dir["bin/*.{cmd,bat]}"]
+	 libexec.install Dir["*"]
+	 (libexec+"logs").mkpath
+	 bin.mkpath
+	 Dir["#{libexec}/bin/*.sh"].each { |f| ln_s f, bin }

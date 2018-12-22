@@ -19,3 +19,6 @@ install :
 	 inreplace "pincaster.conf" do |s|
 	 s.gsub! "/var/db/pincaster/pincaster.db", "#{var}/db/pincaster/pincaster.db"
 	 s.gsub! "
+	 end
+	 etc.install "pincaster.conf"
+	 (var/"db/pincaster/").mkpath

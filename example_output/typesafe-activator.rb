@@ -8,7 +8,12 @@ description :
 	 Tools for working with Lightbend Reactive Platform
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 rm Dir["bin/*.bat"]
+	 libexec.install Dir["libexec/*"]
+	 bin.install Dir["bin/*"]
+	 chmod 0755, bin/"activator"

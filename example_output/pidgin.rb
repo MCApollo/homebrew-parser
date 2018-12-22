@@ -48,3 +48,4 @@ install :
 	 ENV.append_path "PKG_CONFIG_PATH", "#{lib}/pkgconfig"
 	 system "./configure", "--prefix=#{prefix}", "--mandir=#{man}"
 	 system "make", "install"
+	 end

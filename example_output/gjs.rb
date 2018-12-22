@@ -42,3 +42,21 @@ install :
 	 system "make"
 	 system "make", "install"
 	 rm Dir["#{bin}/*"]
+	 end
+	 cd(include.to_s) do
+	 `find . -type l`.chomp.split.each do |link|
+	 header = File.readlink(link)
+	 rm link
+	 cp header, link
+	 end
+	 end
+	 ENV.append_path "PKG_CONFIG_PATH", "#{lib}/pkgconfig"
+	 rm "#{lib}/libjs_static.ajs"
+	 end
+	 system "./configure", "--disable-debug",
+	 "--disable-dependency-tracking",
+	 "--disable-silent-rules",
+	 "--without-dbus-tests",
+	 "--disable-profiler",
+	 "--prefix=#{prefix}"
+	 system "make", "install"

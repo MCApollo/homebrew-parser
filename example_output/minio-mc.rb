@@ -30,3 +30,4 @@ install :
 	 -X #{proj}/cmd.ReleaseTag=#{minio_release}
 	 -X #{proj}/cmd.CommitID=#{minio_commit}
 	 EOS
+	 end

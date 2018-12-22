@@ -24,3 +24,4 @@ install :
 	 bash_completion.install "git-flow-completion.bash"
 	 zsh_completion.install "git-flow-completion.zsh"
 	 fish_completion.install "git.fish"
+	 end

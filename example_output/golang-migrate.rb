@@ -19,3 +19,4 @@ install :
 	 system "make", "build-cli", "VERSION=v#{version}"
 	 bin.install "cli/build/migrate.darwin-amd64" => "migrate"
 	 prefix.install_metafiles
+	 end

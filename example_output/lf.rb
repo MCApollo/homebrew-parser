@@ -21,3 +21,4 @@ install :
 	 system "dep", "ensure", "-vendor-only"
 	 system "./gen/build.sh", "-o", bin/"lf"
 	 prefix.install_metafiles
+	 end

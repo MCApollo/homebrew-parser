@@ -17,3 +17,5 @@ install :
 	 mkdir "build" do
 	 system "cmake", "../src", "-DBUILD_EXAMPLES:BOOL=OFF", "-DBUILD_TEST:BOOL=OFF", *std_cmake_args
 	 system "make", "install"
+	 end
+	 pkgshare.install "src/examples"

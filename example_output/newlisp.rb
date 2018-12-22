@@ -17,3 +17,8 @@ install :
 	 inreplace "guiserver/newlisp-edit.lsp" do |s|
 	 s.gsub! "#!/usr/local/bin/newlisp", "#!/usr/bin/env newlisp"
 	 s.gsub! "/usr/local/bin/newlisp", "#{opt_bin}/newlisp"
+	 end
+	 system "./configure-alt", "--prefix=#{prefix}", "--mandir=#{man}"
+	 system "make"
+	 system "make", "check"
+	 system "make", "install"

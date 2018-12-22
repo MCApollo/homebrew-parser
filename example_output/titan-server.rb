@@ -12,3 +12,7 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install %w[bin conf data ext javadocs lib log scripts]
+	 bin.install_symlink libexec/"bin/titan.sh" => "titan"
+	 bin.install_symlink libexec/"bin/gremlin.sh" => "titan-gremlin"
+	 bin.install_symlink libexec/"bin/gremlin-server.sh" => "titan-gremlin-server"

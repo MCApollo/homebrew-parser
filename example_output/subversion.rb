@@ -62,3 +62,6 @@ install :
 	 ]
 	 scons(*args)
 	 scons "install"
+	 end
+	 if build.with? "java"
+	 ENV.deparallelize

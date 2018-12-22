@@ -8,7 +8,12 @@ description :
 	 CommonJS-based JavaScript runtime
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 rm Dir["bin/*.cmd"]
+	 libexec.install Dir["*"]
+	 bin.install Dir["#{libexec}/bin/*"]
+	 bin.env_script_all_files(libexec/"bin", Language::Java.java_home_env("1.8"))

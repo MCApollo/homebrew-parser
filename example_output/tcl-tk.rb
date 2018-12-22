@@ -25,3 +25,19 @@ install :
 	 system "make", "install"
 	 system "make", "install-private-headers"
 	 ln_s bin/"tclsh#{version.to_f}", bin/"tclsh"
+	 end
+	 ENV.prepend_path "PATH", bin
+	 resource("tk").stage do
+	 cd "unix" do
+	 system "./configure", *args, "--enable-aqua=yes",
+	 "--without-x", "--with-tcl=#{lib}"
+	 system "make"
+	 system "make", "install"
+	 system "make", "install-private-headers"
+	 ln_s bin/"wish#{version.to_f}", bin/"wish"
+	 end
+	 end
+	 resource("tcllib").stage do
+	 system "./configure", "--prefix=#{prefix}", "--mandir=#{man}"
+	 system "make", "install"
+	 end

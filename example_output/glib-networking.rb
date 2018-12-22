@@ -26,4 +26,5 @@ install :
 	 ".."
 	 system "ninja", "-v"
 	 system "ninja", "install", "-v"
+	 end
 	 system Formula["glib"].opt_bin/"gio-querymodules", HOMEBREW_PREFIX/"lib/gio/modules"

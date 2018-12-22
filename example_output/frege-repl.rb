@@ -8,7 +8,11 @@ description :
 	 REPL (read-eval-print loop) for Frege
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 rm_f Dir["bin/*.bat"]
+	 libexec.install "bin", "lib"
+	 bin.install_symlink "#{libexec}/bin/frege-repl"

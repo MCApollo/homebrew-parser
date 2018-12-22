@@ -12,3 +12,8 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 doc.install Dir["docs/*"]
+	 libexec.install Dir["*"]
+	 bin.write_exec_script Dir["#{libexec}/bin/*"]
+	 (etc/"alluxio").install libexec/"conf/alluxio-env.sh.template" => "alluxio-env.sh"
+	 ln_sf "#{etc}/alluxio/alluxio-env.sh", "#{libexec}/conf/alluxio-env.sh"

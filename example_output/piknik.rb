@@ -24,3 +24,4 @@ install :
 	 system "go", "build", "-o", bin/"piknik", "."
 	 (prefix/"etc/profile.d").install "zsh.aliases" => "piknik.sh"
 	 prefix.install_metafiles
+	 end

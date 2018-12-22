@@ -18,3 +18,4 @@ install :
 	 ln_sf buildpath, buildpath/"src/github.com/sramsay/wu"
 	 cd "src/github.com/sramsay/wu" do
 	 system "go", "build", "-o", bin/"wu", "-ldflags", "-X main.Version=#{version}"
+	 end

@@ -49,4 +49,9 @@ install :
 	 system "make"
 	 system "make", "check"
 	 ENV.deparallelize { system "make", "install" }
+	 end
+	 args = ["--with-gmp-includes=#{gmp}/include",
+	 "--with-gmp-libraries=#{gmp}/lib"]
+	 if DevelopmentTools.clang_build_version >= 703 && DevelopmentTools.clang_build_version < 800
+	 args << "--with-nm=#{`xcrun --find nm-classic`.chomp}"
 	 system "#{bin}/ghc-pkg", "recache"

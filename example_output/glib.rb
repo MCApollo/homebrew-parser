@@ -52,4 +52,5 @@ install :
 	 "Libs: -L${libdir} -lglib-2.0 -L#{gettext}/lib -lintl"
 	 s.gsub! "Cflags: -I${includedir}/glib-2.0 -I${libdir}/glib-2.0/include",
 	 "Cflags: -I${includedir}/glib-2.0 -I${libdir}/glib-2.0/include -I#{gettext}/include"
+	 end
 	 (HOMEBREW_PREFIX/"lib/gio/modules").mkpath

@@ -21,3 +21,4 @@ install :
 	 system "go", "build", "-o", bin/"slackcat",
 	 "-ldflags", "-X main.version=#{version}"
 	 prefix.install_metafiles
+	 end

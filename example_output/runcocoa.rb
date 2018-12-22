@@ -12,3 +12,5 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "runcocoa.sh" => "runcocoa"
+	 bin.install "runc.sh" => "runc"

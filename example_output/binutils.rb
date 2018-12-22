@@ -28,3 +28,4 @@ install :
 	 system "make", "install"
 	 Dir["#{bin}/*"].each do |f|
 	 bin.install_symlink f => "g" + File.basename(f)
+	 end

@@ -22,7 +22,6 @@ EOF_patch :
 	 if(APPLE)
 	 -        set_target_properties(${LIBRARY_NAME} PROPERTIES FRAMEWORK true)
 	 set_target_properties(${LIBRARY_NAME} PROPERTIES LINK_FLAGS "-framework Carbon")
-	 endif()
 	 if(UNIX)
 install :
 	 system "cmake", ".", *std_cmake_args

@@ -18,3 +18,10 @@ install :
 	 bin.install %w[pbmtojbg jbgtopbm pbmtojbg85 jbgtopbm85]
 	 man1.install %w[pbmtojbg.1 jbgtopbm.1]
 	 man5.install %w[pbm.5 pgm.5]
+	 end
+	 cd "libjbig" do
+	 lib.install Dir["lib*.a"]
+	 (prefix/"src").install Dir["j*.c", "j*.txt"]
+	 include.install Dir["j*.h"]
+	 end
+	 pkgshare.install "examples", "contrib"

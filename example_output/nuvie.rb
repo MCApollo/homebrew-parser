@@ -19,4 +19,13 @@ install :
 	 s.gsub! 'config_path.append("/Library/Preferences/Nuvie Preferences");', "config_path = \"#{var}/nuvie/nuvie.cfg\";"
 	 s.gsub! "/Library/Application Support/Nuvie Support/", "#{var}/nuvie/game/"
 	 s.gsub! "/Library/Application Support/Nuvie/", "#{var}/nuvie/"
+	 end
+	 system "./autogen.sh" if build.head?
+	 system "./configure", "--disable-debug",
+	 "--disable-dependency-tracking",
+	 "--disable-sdltest",
+	 "--prefix=#{prefix}"
+	 system "make"
+	 bin.install "nuvie"
+	 pkgshare.install "data"
 	 (var/"nuvie/game").mkpath

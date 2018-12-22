@@ -21,3 +21,4 @@ install :
 	 system "make", "dlite"
 	 bin.install "dlite"
 	 prefix.install_metafiles
+	 end

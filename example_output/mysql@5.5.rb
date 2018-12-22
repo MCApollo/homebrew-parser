@@ -43,6 +43,21 @@ install :
 	 system "make", "install"
 	 (prefix/"mysql-test").cd do
 	 system "./mysql-test-run.pl", "status", "--vardir=#{Dir.mktmpdir}"
+	 end
+	 rm_rf prefix/"mysql-test"
+	 rm_rf prefix/"data"
+	 bin.install_symlink prefix/"scripts/mysql_install_db"
+	 inreplace "#{prefix}/support-files/mysql.server",
+	 /^(PATH=".*)(")/,
+	 "\\1:#{HOMEBREW_PREFIX}/bin\\2"
+	 bin.install_symlink prefix/"support-files/mysql.server"
+	 libexec.install bin/"mysqlaccess"
+	 libexec.install bin/"mysqlaccess.conf"
+	 (buildpath/"my.cnf").write <<~EOS
+	 [mysqld]
+	 bind-address = 127.0.0.1
+	 EOS
+	 etc.install "my.cnf"
 	 datadir.mkpath
 	 unless (datadir/"mysql/general_log.CSM").exist?
 	 ENV["TMPDIR"] = nil

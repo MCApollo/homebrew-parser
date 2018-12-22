@@ -16,3 +16,4 @@ install :
 	 system "make"
 	 bin.install %w[primer3_core ntdpal ntthal oligotm long_seq_tm_test]
 	 pkgshare.install "primer3_config"
+	 end

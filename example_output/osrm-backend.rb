@@ -24,3 +24,5 @@ install :
 	 system "cmake", "..", "-DENABLE_CCACHE:BOOL=OFF", *std_cmake_args
 	 system "make"
 	 system "make", "install"
+	 end
+	 pkgshare.install "profiles"

@@ -16,3 +16,4 @@ install :
 	 system "make"
 	 system "make", "DESTDIR=#{prefix}/", "install"
 	 system "make", "DESTDIR=#{share}/", "maninstall"
+	 end

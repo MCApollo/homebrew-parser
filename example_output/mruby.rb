@@ -17,3 +17,5 @@ install :
 	 cd "build/host/" do
 	 lib.install Dir["lib/*.a"]
 	 prefix.install %w[bin mrbgems mrblib]
+	 end
+	 prefix.install "include"

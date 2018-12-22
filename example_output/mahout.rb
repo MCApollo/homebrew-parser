@@ -8,7 +8,12 @@ description :
 	 Library to help build scalable machine learning libraries
 build_deps :
 link_deps :
+	 hadoop
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 if build.head?
+	 chmod 755, "./bin"
+	 system "mvn", "-DskipTests", "clean", "install"

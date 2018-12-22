@@ -25,3 +25,11 @@ install :
 	 %w[all lib-install daemon-install client-install modules-install
 	 check].each do |target|
 	 system "make", target, "PREFIX=#{prefix}", "ETCDIR=#{etc}/kresd"
+	 end
+	 cp "etc/config.personal", "config"
+	 inreplace "config", /^\s*user\(/, "-- user("
+	 (etc/"kresd").install "config"
+	 (etc/"kresd").install "etc/root.hints"
+	 (etc/"kresd").install "etc/icann-ca.pem"
+	 (buildpath/"root.keys").write(root_keys)
+	 (var/"kresd").install "root.keys"

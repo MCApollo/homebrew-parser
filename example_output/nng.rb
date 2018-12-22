@@ -19,3 +19,4 @@ install :
 	 system "cmake", "..", "-GNinja", "-DNNG_ENABLE_DOC=ON", "-DBUILD_SHARED_LIBS=ON", *std_cmake_args
 	 system "ninja"
 	 system "ninja", "install"
+	 end

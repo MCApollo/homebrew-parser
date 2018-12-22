@@ -18,3 +18,4 @@ install :
 	 cd "src/github.com/prydonius/karn" do
 	 system "go", "build", "-o", bin/"karn", "./cmd/karn/karn.go"
 	 prefix.install_metafiles
+	 end

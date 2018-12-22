@@ -29,3 +29,9 @@ install :
 	 "#{pkgshare}/.bibclean.key"
 	 s.gsub! /[$][(]bindir[)].*bibclean.isbn/,
 	 "#{pkgshare}/.bibclean.isbn"
+	 end
+	 system "make", "all"
+	 system "make", "check"
+	 system "make", "install"
+	 ENV.prepend_path "PATH", pkgshare
+	 bin.env_script_all_files(pkgshare, :PATH => ENV["PATH"])

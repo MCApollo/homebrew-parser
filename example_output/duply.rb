@@ -8,7 +8,9 @@ description :
 	 Frontend to the duplicity backup system
 build_deps :
 link_deps :
+	 duplicity
 conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "duply"

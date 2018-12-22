@@ -31,3 +31,9 @@ install :
 	 mkdir "build" do
 	 system "cmake", "..", *std_cmake_args
 	 system "make", "install"
+	 end
+	 libexec.install bin/"openrct2"
+	 (bin/"openrct2").write <<~EOS
+	 #!/bin/bash
+	 exec "#{libexec}/openrct2" "$@" "--openrct-data-path=#{pkgshare}"
+	 EOS

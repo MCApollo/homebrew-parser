@@ -20,3 +20,4 @@ install :
 	 system "dep", "ensure", "-vendor-only"
 	 system "go", "build", "-o", bin/"leaps", "./cmd/leaps"
 	 prefix.install_metafiles
+	 end

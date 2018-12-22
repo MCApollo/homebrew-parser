@@ -31,6 +31,9 @@ install :
 	 ENV.prepend_create_path "PYTHONPATH", libexec/"lib/python#{xy}/site-packages"
 	 cd "python" do
 	 system "python3", *Language::Python.setup_install_args(libexec)
+	 end
+	 bin.install Dir[libexec/"bin/*"]
+	 bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])
 	 (var/"run/watchman").mkpath
 	 chmod 042777, var/"run/watchman"
 	 home = ENV["HOME"]

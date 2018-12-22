@@ -29,3 +29,27 @@ install :
 	 cd "build" do
 	 system "make"
 	 system "make", "install"
+	 end
+	 end
+	 system "opam", "init", "--no-setup"
+	 system "opam", "config", "exec", "opam", "install",
+	 "ocamlfind", "batteries", "stdint", "zarith", "yojson", "fileutils",
+	 "pprint", "menhir", "ulex", "ppx_deriving", "ppx_deriving_yojson",
+	 "process"
+	 system "opam", "config", "exec", "--", "make", "-C", "src/ocaml-output"
+	 (libexec/"bin").install "bin/fstar.exe"
+	 (bin/"fstar.exe").write <<~EOS
+	 #!/bin/sh
+	 #{libexec}/bin/fstar.exe --smt #{libexec}/bin/z3 "$@"
+	 EOS
+	 (libexec/"ulib").install Dir["ulib/*"]
+	 (libexec/"contrib").install Dir["ucontrib/*"]
+	 (libexec/"examples").install Dir["examples/*"]
+	 (libexec/"tutorial").install Dir["doc/tutorial/*"]
+	 (libexec/"src").install Dir["src/*"]
+	 prefix.install "LICENSE-fsharp.txt"
+	 prefix.install_symlink libexec/"ulib"
+	 prefix.install_symlink libexec/"contrib"
+	 prefix.install_symlink libexec/"examples"
+	 prefix.install_symlink libexec/"tutorial"
+	 prefix.install_symlink libexec/"src"

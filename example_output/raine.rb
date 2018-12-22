@@ -36,3 +36,10 @@ install :
 	 touch ["AUTHORS", "NEWS"]
 	 File.rename "CHANGELOG", "ChangeLog"
 	 system "autoreconf", "-ivf"
+	 end
+	 args = configure_args(r.name)
+	 args << "--prefix=#{buildpath}"
+	 system "./configure", *args
+	 system "make"
+	 system "make", "install"
+	 end

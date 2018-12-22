@@ -21,3 +21,5 @@ install :
 	 cflags = s.get_make_var "CFLAGS"
 	 cflags = cflags << " -fexceptions"
 	 s.change_make_var! "CFLAGS", cflags
+	 end
+	 system "make", "install"

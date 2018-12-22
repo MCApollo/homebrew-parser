@@ -27,3 +27,4 @@ install :
 	 man1.install Dir["man/*.1"]
 	 man5.install Dir["man/*.5"]
 	 doc.install Dir["man/*.html"]
+	 end

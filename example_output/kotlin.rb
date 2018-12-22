@@ -12,3 +12,7 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "bin", "build.txt", "lib"
+	 rm Dir["#{libexec}/bin/*.bat"]
+	 bin.install_symlink Dir["#{libexec}/bin/*"]
+	 prefix.install "license"

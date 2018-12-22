@@ -12,3 +12,5 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "avro-tools-#{version}.jar"
+	 bin.write_jar_script libexec/"avro-tools-#{version}.jar", "avro-tools"

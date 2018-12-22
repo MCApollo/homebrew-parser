@@ -22,3 +22,13 @@ install :
 	 system "go", "install",
 	 "-ldflags", "-X main.version=#{version} -X main.commit=#{revision}",
 	 "./cmd/..."
+	 end
+	 inreplace kapacitor_path/"etc/kapacitor/kapacitor.conf" do |s|
+	 s.gsub! "/var/lib/kapacitor", "#{var}/kapacitor"
+	 s.gsub! "/var/log/kapacitor", "#{var}/log"
+	 end
+	 bin.install "bin/kapacitord"
+	 bin.install "bin/kapacitor"
+	 etc.install kapacitor_path/"etc/kapacitor/kapacitor.conf" => "kapacitor.conf"
+	 (var/"kapacitor/replay").mkpath
+	 (var/"kapacitor/tasks").mkpath

@@ -20,3 +20,5 @@ install :
 	 res = resources.map(&:name).to_set - ["er_example"]
 	 res.each do |r|
 	 venv.pip_install resource(r)
+	 end
+	 venv.pip_install_and_link buildpath

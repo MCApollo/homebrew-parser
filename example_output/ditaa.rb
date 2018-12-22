@@ -8,7 +8,10 @@ description :
 	 Convert ASCII diagrams into proper bitmap graphics
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "ditaa-#{version}-standalone.jar"
+	 bin.write_jar_script libexec/"ditaa-#{version}-standalone.jar", "ditaa"

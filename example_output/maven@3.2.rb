@@ -8,7 +8,18 @@ description :
 	 Java-based project management
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 rm_f Dir["bin/*.bat"]
+	 chmod 0644, "conf/settings.xml"
+	 prefix.install_metafiles
+	 libexec.install Dir["*"]
+	 Pathname.glob("#{libexec}/bin/*") do |file|
+	 next if file.directory?
+	 basename = file.basename
+	 next if basename.to_s == "m2.conf"
+	 (bin/basename).write_env_script file, Language::Java.overridable_java_home_env
+	 end

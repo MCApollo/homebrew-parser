@@ -26,3 +26,13 @@ install :
 	 system "make", "libuv.dylib", "SO_LDFLAGS=-Wl,-install_name,#{libexec}/libuv/lib/libuv.dylib"
 	 (libexec/"libuv/lib").install "libuv.dylib"
 	 (libexec/"libuv").install "include"
+	 end
+	 ENV.prepend "LDFLAGS", "-L#{libexec}/libuv/lib"
+	 ENV.prepend "CFLAGS", "-I#{libexec}/libuv/include"
+	 ENV.prepend "CPPFLAGS", "-I#{libexec}/libuv/include"
+	 system "./configure", "--disable-debug",
+	 "--disable-dependency-tracking",
+	 "--prefix=#{prefix}",
+	 "JDK=#{ENV["JAVA_HOME"]}"
+	 system "make", "install"
+	 pkgshare.install "samples"

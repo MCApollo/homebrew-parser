@@ -29,5 +29,6 @@ install :
 	 -X #{proj}/cmd.ReleaseTag=#{release}
 	 -X #{proj}/cmd.CommitID=#{commit}
 	 EOS
+	 end
 	 (var/"minio").mkpath
 	 (etc/"minio").mkpath

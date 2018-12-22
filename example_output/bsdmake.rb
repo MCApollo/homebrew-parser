@@ -29,3 +29,10 @@ install :
 	 inreplace "mk/bsd.own.mk" do |s|
 	 s.gsub! "@INSTALL_USER@", `id -un`.chomp
 	 s.gsub! "@INSTALL_GROUP@", `id -gn`.chomp
+	 end
+	 ENV.append "CFLAGS", "-D__FBSDID=__RCSID"
+	 ENV.append "CFLAGS", "-mdynamic-no-pic"
+	 system "make", "-f", "Makefile.dist"
+	 bin.install "pmake" => "bsdmake"
+	 man1.install "make.1" => "bsdmake.1"
+	 (share/"mk/bsdmake").install Dir["mk/*"]

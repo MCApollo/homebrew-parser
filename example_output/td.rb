@@ -19,3 +19,4 @@ install :
 	 cd "src/github.com/Swatto/td" do
 	 system "go", "install"
 	 prefix.install_metafiles
+	 end

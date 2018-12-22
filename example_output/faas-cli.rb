@@ -25,3 +25,4 @@ install :
 	 "-installsuffix", "cgo", "-o", bin/"faas-cli"
 	 bin.install_symlink "faas-cli" => "faas"
 	 prefix.install_metafiles
+	 end

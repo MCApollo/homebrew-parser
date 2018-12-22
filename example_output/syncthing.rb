@@ -23,3 +23,4 @@ install :
 	 man5.install Dir["man/*.5"]
 	 man7.install Dir["man/*.7"]
 	 prefix.install_metafiles
+	 end

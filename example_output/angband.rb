@@ -29,3 +29,5 @@ install :
 	 if build.with? "cocoa"
 	 cd "src" do
 	 system "make", "-f", "Makefile.osx"
+	 end
+	 prefix.install "Angband.app"

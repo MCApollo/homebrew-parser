@@ -30,3 +30,6 @@ install :
 	 realpath = f.realpath
 	 rm f
 	 ln_s realpath, f
+	 end
+	 inreplace lib_python_path/"orig-prefix.txt",
+	 Formula["python"].opt_prefix, Formula["python"].prefix.realpath

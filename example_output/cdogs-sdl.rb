@@ -25,3 +25,11 @@ install :
 	 bin.write_exec_script "#{prefix}/cdogs-sdl.app/Contents/MacOS/cdogs-sdl"
 	 pkgshare.install %w[data dogfights graphics missions music sounds]
 	 doc.install Dir["doc/*"]
+	 end
+	 test do
+	 server = fork do
+	 system "#{bin}/cdogs-sdl"
+	 end
+	 sleep 5
+	 Process.kill("TERM", server)
+	 end

@@ -27,3 +27,4 @@ install :
 	 g++ g++2 g++3 g++-3.3 g++-4.0 g++-4.2 g++-4.3 g++-4.4 g++-4.5 g++-4.6 g++-4.7 g++-4.8 g++-4.9 g++-5 g++-6 g++-7
 	 ].each do |prog|
 	 libexec.install_symlink bin/"ccache" => prog
+	 end

@@ -32,3 +32,10 @@ install :
 	 system "./artifacts/mono-msbuild/msbuild", "mono/build/install.proj",
 	 "/p:MonoInstallPrefix=#{prefix}", "/p:Configuration=Release-MONO",
 	 "/p:IgnoreDiffFailure=true"
+	 end
+	 if build.with? "fsharp"
+	 resource("fsharp").stage do
+	 ENV.prepend_path "PKG_CONFIG_PATH", lib/"pkgconfig"
+	 system "make"
+	 system "make", "install"
+	 end

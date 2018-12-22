@@ -28,4 +28,5 @@ install :
 	 system "meson", "--prefix=#{prefix}", ".."
 	 system "ninja"
 	 system "ninja", "install"
+	 end
 	 system "#{Formula["glib"].opt_bin}/glib-compile-schemas", "#{HOMEBREW_PREFIX}/share/glib-2.0/schemas"

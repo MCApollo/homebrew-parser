@@ -8,7 +8,11 @@ description :
 	 Java-based open source tool to apply and share code conventions
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 rm_f Dir["bin/*.bat"]
+	 libexec.install Dir["*"]
+	 bin.install_symlink libexec+"bin/walkmod"

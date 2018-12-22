@@ -25,3 +25,4 @@ install :
 	 system "meson", "--prefix=#{prefix}", "-Dpython3-girdir=#{lib}/python#{pyver}/site-packages/gi/overrides", ".."
 	 system "ninja"
 	 system "ninja", "install"
+	 end

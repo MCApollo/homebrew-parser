@@ -41,3 +41,5 @@ install :
 	 doc.install Dir["build/text/*"]
 	 system "make", "man"
 	 man1.install "build/man/MAME.1" => "mame.1"
+	 end
+	 pkgshare.install %w[artwork bgfx hash ini keymaps plugins samples uismall.bdf]

@@ -19,3 +19,6 @@ install :
 	 resources.each do |r|
 	 r.stage do
 	 system "python", *Language::Python.setup_install_args(libexec)
+	 end
+	 end
+	 (bin/"headphones").write(startup_script)

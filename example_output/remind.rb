@@ -17,3 +17,7 @@ install :
 	 inreplace "src/init.c" do |s|
 	 s.gsub! "sleep(5);", ""
 	 s.gsub! /rkrphgvba\(.\);/, ""
+	 end
+	 system "./configure", "--disable-debug", "--disable-dependency-tracking",
+	 "--prefix=#{prefix}"
+	 system "make", "install"

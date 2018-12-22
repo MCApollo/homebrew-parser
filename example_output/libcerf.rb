@@ -17,3 +17,4 @@ install :
 	 system "cmake", "..", *std_cmake_args
 	 system "make", "install"
 	 mv prefix/"man", share
+	 end

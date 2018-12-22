@@ -22,3 +22,6 @@ install :
 	 system "make", "install"
 	 cd "tests" do
 	 system "make"
+	 end
+	 share.install "tests"
+	 end

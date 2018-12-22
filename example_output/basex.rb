@@ -8,7 +8,15 @@ description :
 	 Light-weight XML database and XPath/XQuery processor
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 rm Dir["bin/*.bat"]
+	 rm_rf "repo"
+	 rm_rf "data"
+	 rm_rf "etc"
+	 prefix.install_metafiles
+	 libexec.install Dir["*"]
+	 bin.install_symlink Dir["#{libexec}/bin/*"]

@@ -12,3 +12,7 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 rm Dir["bin/*.bat"]
+	 libexec.install Dir["*"]
+	 mv "#{libexec}/bin/roo.sh", "#{libexec}/bin/roo"
+	 bin.write_exec_script Dir["#{libexec}/bin/*"]

@@ -17,3 +17,15 @@ EOF_patch :
 install :
 	 mkdir "GraphBLAS/build" do
 	 system "cmake", "..", *std_cmake_args
+	 end
+	 args = [
+	 "INSTALL=#{prefix}",
+	 "BLAS=-framework Accelerate",
+	 "LAPACK=$(BLAS)",
+	 "MY_METIS_LIB=-L#{Formula["metis"].opt_lib} -lmetis",
+	 "MY_METIS_INC=#{Formula["metis"].opt_include}",
+	 ]
+	 system "make", "library", *args
+	 system "make", "install", *args
+	 lib.install Dir["**/*.a"]
+	 pkgshare.install "KLU/Demo/klu_simple.c"

@@ -20,3 +20,4 @@ install :
 	 system "make", "compress", "VERSION=#{version}"
 	 bin.install "bin/gomplate-slim" => "gomplate"
 	 prefix.install_metafiles
+	 end

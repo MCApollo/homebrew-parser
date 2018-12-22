@@ -8,7 +8,10 @@ description :
 	 Compiler for generating binary data parsers
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install Dir["*"]
+	 bin.install_symlink libexec/"bin/kaitai-struct-compiler"

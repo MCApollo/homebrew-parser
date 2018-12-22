@@ -66,3 +66,16 @@ install :
 	 s.remove_make_var! "CC"
 	 s.change_make_var! "CFLAGS", "#{ENV.cflags} -DLUA_COMPAT_5_2 $(SYSCFLAGS) $(MYCFLAGS)"
 	 s.change_make_var! "MYLDFLAGS", ENV.ldflags
+	 end
+	 inreplace "src/luaconf.h", "/usr/local", HOMEBREW_PREFIX
+	 system "make", "macosx", "INSTALL_TOP=#{prefix}", "INSTALL_INC=#{include}/lua", "INSTALL_MAN=#{man1}"
+	 system "make", "install", "INSTALL_TOP=#{prefix}", "INSTALL_INC=#{include}/lua", "INSTALL_MAN=#{man1}"
+	 (lib/"pkgconfig/lua.pc").write pc_file
+	 bin.install_symlink "lua" => "lua5.3"
+	 bin.install_symlink "lua" => "lua-5.3"
+	 bin.install_symlink "luac" => "luac5.3"
+	 bin.install_symlink "luac" => "luac-5.3"
+	 (include/"lua5.3").install_symlink Dir[include/"lua/*"]
+	 lib.install_symlink "liblua.5.3.dylib" => "liblua5.3.dylib"
+	 (lib/"pkgconfig").install_symlink "lua.pc" => "lua5.3.pc"
+	 (lib/"pkgconfig").install_symlink "lua.pc" => "lua-5.3.pc"

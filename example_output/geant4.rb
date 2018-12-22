@@ -24,3 +24,7 @@ install :
 	 ]
 	 system "cmake", *args
 	 system "make", "install"
+	 end
+	 resources.each do |r|
+	 (share/"Geant4-#{version}/data/#{r.name}#{r.version}").install r
+	 end

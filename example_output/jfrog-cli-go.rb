@@ -19,3 +19,4 @@ install :
 	 cd "src/github.com/jfrog/jfrog-cli-go" do
 	 system "go", "build", "-o", bin/"jfrog", "jfrog-cli/jfrog/main.go"
 	 prefix.install_metafiles
+	 end

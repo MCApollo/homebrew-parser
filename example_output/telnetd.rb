@@ -18,3 +18,14 @@ install :
 	 libtelnet_dst = buildpath/"telnetd.tproj/build/Products"
 	 libtelnet_dst.install "build/Release/libtelnet.a"
 	 libtelnet_dst.install "build/Release/usr/local/include/libtelnet/"
+	 end
+	 system "make", "-C", "telnetd.tproj",
+	 "OBJROOT=build/Intermediates",
+	 "SYMROOT=build/Products",
+	 "DSTROOT=build/Archive",
+	 "CC=#{ENV.cc}",
+	 "CFLAGS=$(CC_Flags) -isystembuild/Products/",
+	 "LDFLAGS=$(LD_Flags) -Lbuild/Products/",
+	 "RC_ARCHS=x86_64"
+	 sbin.install "telnetd.tproj/build/Products/telnetd"
+	 man8.install "telnetd.tproj/telnetd.8"

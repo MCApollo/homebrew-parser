@@ -19,3 +19,10 @@ install :
 	 system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
 	 system "make"
 	 system "make", "install"
+	 end
+	 end
+	 chmod 0755, "pulledpork.pl"
+	 bin.install "pulledpork.pl"
+	 bin.env_script_all_files(libexec/"bin", :PERL5LIB => ENV["PERL5LIB"])
+	 doc.install Dir["doc/*"]
+	 (etc/"pulledpork").install Dir["etc/*"]

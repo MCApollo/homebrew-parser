@@ -38,3 +38,6 @@ install :
 	 mkdir "stage"
 	 cd "liblwgeom" do
 	 system "make", "install", "DESTDIR=#{buildpath}/stage"
+	 end
+	 lib.install Dir["stage/**/lib/*"]
+	 include.install Dir["stage/**/include/*"]

@@ -17,3 +17,6 @@ install :
 	 s.change_make_var! "PREFIX", prefix
 	 s.change_make_var! "CONFIG_DIR", etc
 	 s.change_make_var! "MAN_PREFIX", share
+	 end
+	 system "make", "frotz"
+	 system "make", "install"

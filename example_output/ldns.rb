@@ -27,3 +27,8 @@ install :
 	 inreplace "Makefile" do |s|
 	 s.change_make_var! "PYTHON_LDFLAGS", "-undefined dynamic_lookup"
 	 s.gsub! /(\$\(PYTHON_LDFLAGS\).*) -no-undefined/, "\\1"
+	 end
+	 system "make"
+	 system "make", "install"
+	 system "make", "install-pyldns"
+	 (lib/"pkgconfig").install "packaging/libldns.pc"

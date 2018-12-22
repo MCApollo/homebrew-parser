@@ -16,3 +16,11 @@ install :
 	 s.gsub! /^(exec_prefix)=\$\{prefix\}$/, '\1=@\1@'
 	 s.gsub! %r{^(includedir)=\$\{prefix\}/include$}, '\1=@\1@'
 	 s.gsub! %r{^(libdir)=\$\{exec_prefix\}/lib$}, '\1=@\1@'
+	 end
+	 system "./configure", "--prefix=#{prefix}",
+	 "--includedir=#{include}/ossp",
+	 "--without-perl",
+	 "--without-php",
+	 "--without-pgsql"
+	 system "make"
+	 system "make", "install"

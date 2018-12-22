@@ -19,5 +19,25 @@ install :
 	 ENV.prepend_create_path "PYTHONPATH", buildpath/"vendor/lib/python2.7/site-packages"
 	 resource("virtualenv").stage do
 	 system "python", *Language::Python.setup_install_args(buildpath/"vendor")
+	 end
+	 ENV.prepend_path "PATH", buildpath/"vendor/bin"
+	 cd "src/github.com/elastic/beats/heartbeat" do
+	 system "make"
+	 system "make", "PIP_INSTALL_COMMANDS=--no-binary :all", "python-env"
+	 system "make", "DEV_OS=darwin", "update"
+	 (etc/"heartbeat").install Dir["heartbeat.*", "fields.yml"]
+	 (libexec/"bin").install "heartbeat"
+	 prefix.install "_meta/kibana"
+	 end
+	 prefix.install_metafiles buildpath/"src/github.com/elastic/beats"
+	 (bin/"heartbeat").write <<~EOS
+	 #!/bin/sh
+	 exec #{libexec}/bin/heartbeat \
+	 --path.config #{etc}/heartbeat \
+	 --path.data #{var}/lib/heartbeat \
+	 --path.home #{prefix} \
+	 --path.logs #{var}/log/heartbeat \
+	 "$@"
+	 EOS
 	 (var/"lib/heartbeat").mkpath
 	 (var/"log/heartbeat").mkpath

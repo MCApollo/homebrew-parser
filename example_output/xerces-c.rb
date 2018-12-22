@@ -19,3 +19,5 @@ install :
 	 system "make"
 	 system "ctest", "-V"
 	 system "make", "install"
+	 end
+	 (bin/"MemParse").unlink

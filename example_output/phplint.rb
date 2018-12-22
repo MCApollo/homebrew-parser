@@ -8,7 +8,11 @@ description :
 	 Validator and documentator for PHP 5 and 7 programs
 build_deps :
 link_deps :
+	 php
 conflicts :
 patches :
 EOF_patch :
 install :
+	 inreplace "php", "/opt/php/bin/php", Formula["php"].opt_bin/"php"
+	 libexec.install "modules", "php", "phpl", "stdlib", "utils"
+	 bin.install_symlink libexec/"phpl"

@@ -21,3 +21,6 @@ install :
 	 "install -d $(PREFIX)/lib/lua/5.1"
 	 s.gsub! "$(DESTDIR)$(INSTALL_CMOD)/radio.so",
 	 "$(PREFIX)/lib/lua/5.1/radio.so"
+	 end
+	 system "make", "install", "PREFIX=#{prefix}"
+	 end

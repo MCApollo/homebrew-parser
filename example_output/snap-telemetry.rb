@@ -24,3 +24,9 @@ install :
 	 system "go", "build", "-o", "snapteld", "-ldflags", "-w -X main.gitversion=#{version}"
 	 sbin.install "snapteld"
 	 prefix.install_metafiles
+	 end
+	 snaptel = buildpath/"src/github.com/intelsdi-x/snap/cmd/snaptel"
+	 cd snaptel do
+	 system "go", "build", "-o", "snaptel", "-ldflags", "-w -X main.gitversion=#{version}"
+	 bin.install "snaptel"
+	 end

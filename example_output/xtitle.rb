@@ -12,3 +12,6 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "xtitle.sh" => "xtitle"
+	 bin.install "xtctl.sh" => "xtctl"
+	 man1.install "xtitle.man" => "xtitle.1"

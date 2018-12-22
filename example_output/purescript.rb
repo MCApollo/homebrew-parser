@@ -18,3 +18,5 @@ install :
 	 if build.head?
 	 cabal_install "hpack"
 	 system "./.cabal-sandbox/bin/hpack"
+	 end
+	 install_cabal_package "-f", "release", :using => ["alex", "happy"]

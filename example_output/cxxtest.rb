@@ -17,3 +17,7 @@ install :
 	 ENV.prepend_create_path "PYTHONPATH", lib/"python#{xy}/site-packages"
 	 cd "./python" do
 	 system "python3", *Language::Python.setup_install_args(prefix)
+	 end
+	 bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])
+	 include.install "cxxtest"
+	 doc.install Dir["doc/*"]

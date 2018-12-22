@@ -18,3 +18,4 @@ install :
 	 system "cmake", "..", *std_cmake_args,
 	 "-DBUILD_OPENNI2_DRIVER=ON"
 	 system "make", "install"
+	 end

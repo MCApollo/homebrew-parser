@@ -30,3 +30,13 @@ install :
 	 ruby_site = lib/"ruby/site_ruby"
 	 ENV["RUBY_LIB"] = ENV["RUBY_LIB_ARCH"] = ruby_site
 	 args << "--with-ruby"
+	 end
+	 if build.with? "python@2"
+	 ENV.delete("PYTHONDONTWRITEBYTECODE")
+	 (lib/"python2.7/site-packages").mkpath
+	 ENV["PYTHON_LIB"] = lib/"python2.7/site-packages"
+	 ENV.append_path "PYTHONPATH",
+	 Formula["sphinx-doc"].opt_libexec/"lib/python2.7/site-packages"
+	 ENV.append_path "PYTHONPATH",
+	 Formula["sphinx-doc"].opt_libexec/"vendor/lib/python2.7/site-packages"
+	 args << "--with-python"

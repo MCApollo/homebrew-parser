@@ -23,3 +23,4 @@ install :
 	 ENV.deparallelize { system "make", "full" }
 	 bin.install Dir["build/*"]
 	 prefix.install_metafiles
+	 end

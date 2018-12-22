@@ -8,7 +8,11 @@ description :
 	 Web interface for MySQL and MariaDB
 build_deps :
 link_deps :
+	 php
 conflicts :
 patches :
 EOF_patch :
 install :
+	 pkgshare.install Dir["*"]
+	 etc.install pkgshare/"config.sample.inc.php" => "phpmyadmin.config.inc.php"
+	 ln_s etc/"phpmyadmin.config.inc.php", pkgshare/"config.inc.php"

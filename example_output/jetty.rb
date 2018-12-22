@@ -8,7 +8,20 @@ description :
 	 Java servlet engine and webserver
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install Dir["*"]
+	 (libexec+"logs").mkpath
+	 bin.mkpath
+	 Dir.glob("#{libexec}/bin/*.sh") do |f|
+	 scriptname = File.basename(f, ".sh")
+	 (bin+scriptname).write <<~EOS
+	 #!/bin/bash
+	 JETTY_HOME=#{libexec}
+	 #{f} "$@"
+	 EOS
+	 chmod 0755, bin+scriptname
+	 end

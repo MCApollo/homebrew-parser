@@ -33,3 +33,4 @@ install :
 	 s.gsub! "::tr1", ""
 	 else
 	 s.gsub! "s2) {", "s2) const {"
+	 end

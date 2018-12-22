@@ -20,3 +20,13 @@ install :
 	 system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
 	 system "make"
 	 system "make", "install"
+	 end
+	 end
+	 resource("URI::Find").stage do
+	 system "perl", "Build.PL", "--install_base", libexec
+	 system "./Build"
+	 system "./Build", "install"
+	 end
+	 system "make", "prefix=#{prefix}"
+	 system "make", "prefix=#{prefix}", "install"
+	 bin.env_script_all_files(libexec/"bin", :PERL5LIB => ENV["PERL5LIB"])

@@ -34,3 +34,11 @@ install :
 	 languages = []
 	 available_languages.each do |lang|
 	 languages << lang if build.with? "lang-#{lang}"
+	 end
+	 languages.concat(available_languages) if build.with? "all-langs"
+	 languages.each do |lang|
+	 resource(lang).stage do
+	 system "./configure", "--vars", "ASPELL=#{bin}/aspell", "PREZIP=#{bin}/prezip"
+	 system "make", "install"
+	 end
+	 end

@@ -36,3 +36,15 @@ install :
 	 cd "src" do
 	 inreplace "Makefile" do |s|
 	 s.change_make_var! "CFLAGS", "#{s.get_make_var("CFLAGS")} #{ENV["CFLAGS"]}"
+	 end
+	 system "ulimit -s 16384 && make"
+	 if MacOS.version >= :lion
+	 opoo <<~EOS
+	 `make check` fails so we are skipping it.
+	 However, there will likely be other issues present.
+	 Please take them upstream to the clisp project itself.
+	 EOS
+	 else
+	 system "make", "check"
+	 end
+	 system "make", "install"

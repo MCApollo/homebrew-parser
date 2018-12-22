@@ -8,7 +8,12 @@ description :
 	 Easy to use, powerful, and reliable system to process and distribute data
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install Dir["*"]
+	 ENV["NIFI_HOME"] = libexec
+	 bin.install libexec/"bin/nifi.sh" => "nifi"
+	 bin.env_script_all_files libexec/"bin/", :NIFI_HOME => libexec

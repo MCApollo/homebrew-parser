@@ -29,3 +29,4 @@ install :
 	 system "ruby", "extconf.rb"
 	 system "make"
 	 lib_ncurses.install "lib/ncurses_sugar.rb", "ncurses_bin.bundle"
+	 end

@@ -23,3 +23,4 @@ install :
 	 "--disable-silent-rules",
 	 "--prefix=#{prefix}"
 	 system "make", "install"
+	 end

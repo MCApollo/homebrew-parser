@@ -31,3 +31,4 @@ install :
 	 system "make", "install-gcc"
 	 system "make", "all-target-libgcc"
 	 system "make", "install-target-libgcc"
+	 end

@@ -8,7 +8,10 @@ description :
 	 Putmail queue package
 build_deps :
 link_deps :
+	 putmail
 conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "putmail_dequeue.py", "putmail_enqueue.py"
+	 man1.install Dir["man/man1/*.1"]

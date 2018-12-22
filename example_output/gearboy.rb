@@ -18,3 +18,9 @@ install :
 	 inreplace "Gearboy.pro" do |s|
 	 s.gsub! "/usr/local/include", Formula["sdl2"].include
 	 s.gsub! "/usr/local/lib", Formula["sdl2"].lib
+	 end
+	 system "#{Formula["qt"].bin}/qmake", "PREFIX=#{prefix}", "CONFIG+=c++11"
+	 system "make"
+	 prefix.install "Gearboy.app"
+	 bin.write_exec_script "#{prefix}/Gearboy.app/Contents/MacOS/Gearboy"
+	 end

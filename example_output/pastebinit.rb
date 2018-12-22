@@ -17,3 +17,9 @@ install :
 	 inreplace "pastebinit" do |s|
 	 s.gsub! "/usr/bin/python3", Formula["python"].opt_bin/"python3"
 	 s.gsub! "/usr/local/etc/pastebin.d", etc/"pastebin.d"
+	 end
+	 system "docbook2man", "pastebinit.xml"
+	 bin.install "pastebinit"
+	 etc.install "pastebin.d"
+	 man1.install "PASTEBINIT.1" => "pastebinit.1"
+	 libexec.install %w[po utils]

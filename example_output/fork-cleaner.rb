@@ -22,3 +22,4 @@ install :
 	 system "make"
 	 bin.install "fork-cleaner"
 	 prefix.install_metafiles
+	 end

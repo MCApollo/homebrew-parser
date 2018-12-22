@@ -7,7 +7,15 @@ url :
 description :
 build_deps :
 link_deps :
+	 mono
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "ASF.exe"
+	 (bin/"asf").write <<~EOS
+	 #!/bin/bash
+	 mono #{libexec}/ASF.exe "$@"
+	 EOS
+	 etc.install "config" => "asf"
+	 libexec.install_symlink etc/"asf" => "config"

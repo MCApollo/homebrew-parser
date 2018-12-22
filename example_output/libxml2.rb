@@ -23,3 +23,4 @@ install :
 	 cd "python" do
 	 inreplace "setup.py", "includes_dir = [", "includes_dir = ['#{include}', '#{MacOS.sdk_path}/usr/include',"
 	 system "python", "setup.py", "install", "--prefix=#{prefix}"
+	 end

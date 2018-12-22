@@ -18,3 +18,4 @@ install :
 	 resource("completion").stage do
 	 bash_completion.install "git-flow-completion.bash"
 	 zsh_completion.install "git-flow-completion.zsh"
+	 end

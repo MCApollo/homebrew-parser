@@ -8,7 +8,9 @@ description :
 	 See your latest local git branches, formatted real fancy
 build_deps :
 link_deps :
+	 :macos
 conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "git-recent"

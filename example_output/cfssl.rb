@@ -21,3 +21,4 @@ install :
 	 system "go", "build", "-o", "#{bin}/cfssl", "cmd/cfssl/cfssl.go"
 	 system "go", "build", "-o", "#{bin}/cfssljson", "cmd/cfssljson/cfssljson.go"
 	 system "go", "build", "-o", "#{bin}/cfsslmkbundle", "cmd/mkbundle/mkbundle.go"
+	 end

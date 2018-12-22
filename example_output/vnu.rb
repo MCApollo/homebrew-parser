@@ -8,7 +8,10 @@ description :
 	 Nu Markup Checker: command-line and server HTML validator
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "vnu.jar"
+	 bin.write_jar_script libexec/"vnu.jar", "vnu"

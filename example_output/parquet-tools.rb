@@ -17,3 +17,4 @@ install :
 	 system "mvn", "clean", "package", "-Plocal"
 	 libexec.install "target/parquet-tools-#{version}.jar"
 	 bin.write_jar_script libexec/"parquet-tools-#{version}.jar", "parquet-tools"
+	 end

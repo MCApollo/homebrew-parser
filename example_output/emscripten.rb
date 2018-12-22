@@ -41,3 +41,8 @@ install :
 	 system "cmake", "..", *cmake_args
 	 system "make"
 	 system "make", "install"
+	 end
+	 %w[em++ em-config emar emcc emcmake emconfigure emlink.py emmake
+	 emranlib emrun emscons].each do |emscript|
+	 bin.install_symlink libexec/emscript
+	 end

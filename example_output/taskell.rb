@@ -18,3 +18,4 @@ install :
 	 cabal_install "hpack"
 	 system "./.cabal-sandbox/bin/hpack"
 	 install_cabal_package
+	 end

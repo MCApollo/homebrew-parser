@@ -8,6 +8,7 @@ description :
 	 CFML embedded server, package manager, and app scaffolding tools
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :

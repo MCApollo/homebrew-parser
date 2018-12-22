@@ -20,3 +20,4 @@ install :
 	 cd srcpath do
 	 system "go", "build", "-o", bin/"goreman"
 	 prefix.install_metafiles
+	 end

@@ -21,3 +21,5 @@ install :
 	 system "nkf", "-w", "--overwrite", file
 	 prefix.install "#{file}.eng" => file
 	 prefix.install file => "#{file}.ja"
+	 end
+	 pkgshare.install "_fdrc" => "fd2rc.dist"

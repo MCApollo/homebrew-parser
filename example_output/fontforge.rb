@@ -38,3 +38,4 @@ install :
 	 cd "contrib/fonttools" do
 	 system "make"
 	 bin.install Dir["*"].select { |f| File.executable? f }
+	 end

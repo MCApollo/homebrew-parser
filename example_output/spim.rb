@@ -19,3 +19,4 @@ install :
 	 system "make", "install", "BIN_DIR=#{bin}",
 	 "EXCEPTION_DIR=#{share}",
 	 "MAN_DIR=#{man1}"
+	 end

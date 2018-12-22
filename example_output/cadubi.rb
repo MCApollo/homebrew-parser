@@ -12,3 +12,7 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 inreplace "cadubi", "$Bin/help.txt", "#{doc}/help.txt"
+	 bin.install "cadubi"
+	 doc.install "help.txt"
+	 man1.install "cadubi.1"

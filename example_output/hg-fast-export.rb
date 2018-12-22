@@ -12,3 +12,6 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "hg-fast-export.py", "hg-fast-export.sh",
+	 "hg-reset.py", "hg-reset.sh",
+	 "hg2git.py"

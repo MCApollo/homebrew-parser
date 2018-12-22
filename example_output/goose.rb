@@ -20,3 +20,4 @@ install :
 	 system "dep", "ensure"
 	 system "go", "build", "-o", bin/"goose", ".../cmd/goose"
 	 prefix.install_metafiles
+	 end

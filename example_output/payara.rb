@@ -8,7 +8,15 @@ description :
 	 Java EE application server forked from GlassFish
 build_deps :
 link_deps :
+	 :java
 conflicts :
+	 glassfish
 patches :
 EOF_patch :
 install :
+	 rm_f Dir["**/*.{bat,exe}"]
+	 inreplace "bin/asadmin", /AS_INSTALL=.*/,
+	 "AS_INSTALL=#{libexec}/glassfish"
+	 libexec.install Dir["*"]
+	 bin.install Dir["#{libexec}/bin/*"]
+	 bin.env_script_all_files(libexec/"bin", Language::Java.java_home_env("1.8"))

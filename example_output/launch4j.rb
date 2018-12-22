@@ -12,3 +12,5 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install Dir["*"] - ["src", "web"]
+	 bin.write_jar_script libexec/"launch4j.jar", "launch4j"

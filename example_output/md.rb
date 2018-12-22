@@ -16,3 +16,4 @@ install :
 	 system ENV.cc, ENV.cflags, "-o", "md", "md.c"
 	 bin.install "md"
 	 man1.install "md.1"
+	 end

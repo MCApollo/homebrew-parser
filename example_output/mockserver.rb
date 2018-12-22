@@ -8,7 +8,14 @@ description :
 	 Mock HTTP server and proxy
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install Dir["*"]
+	 bin.install_symlink "#{libexec}/bin/run_mockserver.sh" => "mockserver"
+	 lib.install_symlink "#{libexec}/lib" => "mockserver"
+	 mockserver_log = var/"log/mockserver"
+	 mockserver_log.mkpath
+	 libexec.install_symlink mockserver_log => "log"

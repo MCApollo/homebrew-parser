@@ -20,3 +20,5 @@ EOF_patch :
 	 +MYAPP_HOME="$MYAPP_HOME/libexec"
 	 cd "$saveddir"
 install :
+	 bin.install "bin/osmosis"
+	 libexec.install %w[lib config script]

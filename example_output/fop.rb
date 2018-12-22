@@ -8,6 +8,7 @@ description :
 	 XSL-FO print formatter for making PDF or PS documents
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
@@ -19,3 +20,4 @@ install :
 	 bin.write_exec_script executable
 	 resource("hyph").stage do
 	 (libexec/"build").install "fop-hyph.jar"
+	 end

@@ -12,3 +12,4 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 prefix.install Dir["*.{sh,py}"]

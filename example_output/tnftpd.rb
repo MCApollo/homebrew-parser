@@ -24,3 +24,4 @@ install :
 	 etc.install "examples/ftpd.conf"
 	 etc.install "examples/ftpusers"
 	 prefix.install_metafiles
+	 end

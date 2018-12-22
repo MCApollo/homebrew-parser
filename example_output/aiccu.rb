@@ -45,7 +45,6 @@ EOF_patch :
 	 -	@mkdir -p ${DESTDIR}${diretc}init.d
 	 -	@cp doc/${PROJECT}.init.rpm ${DESTDIR}${diretc}init.d/${PROJECT}
 	 -	@cp doc/${PROJECT}.conf ${DESTDIR}${diretc}${PROJECT}.conf
-	 endif
 	 -	@echo "Installation into ${DESTDIR}/ completed"
 	 +	@echo "Installation into ${DESTDIR}${prefix}/ completed"
 	 help:

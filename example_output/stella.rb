@@ -26,3 +26,8 @@ install :
 	 s.gsub! /(LIBRARY_SEARCH_PATHS) = ("\$\(LIBRARY_SEARCH_PATHS\)");/,
 	 "\\1 = (#{sdl2.opt_lib}, #{libpng.opt_lib}, \\2);"
 	 s.gsub! /(OTHER_LDFLAGS) = "((-\w+)*)"/, '\1 = "-lSDL2 -lpng \2"'
+	 end
+	 xcodebuild "SYMROOT=build"
+	 prefix.install "build/Release/Stella.app"
+	 bin.write_exec_script "#{prefix}/Stella.app/Contents/MacOS/Stella"
+	 end

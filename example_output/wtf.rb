@@ -12,3 +12,8 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 inreplace %w[wtf wtf.6], "/usr/share", share
+	 bin.install "wtf"
+	 man6.install "wtf.6"
+	 (share+"misc").install %w[acronyms acronyms.comp]
+	 (share+"misc").install "acronyms-o.real" => "acronyms-o"

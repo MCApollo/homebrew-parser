@@ -22,3 +22,4 @@ install :
 	 "--prefix=#{prefix}",
 	 "--with-liblzma"
 	 system "make", "install"
+	 end

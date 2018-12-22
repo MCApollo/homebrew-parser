@@ -19,3 +19,4 @@ install :
 	 cd "src/github.com/hashicorp/envconsul" do
 	 system "go", "build", "-o", bin/"envconsul"
 	 prefix.install_metafiles
+	 end

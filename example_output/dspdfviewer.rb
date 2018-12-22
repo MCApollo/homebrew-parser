@@ -44,3 +44,21 @@ install :
 	 macho = MachO.open(f)
 	 macho.change_dylib("@rpath/#{libpoppler}", "#{libexec}/lib/#{libpoppler}")
 	 macho.write!
+	 end
+	 resource("font-data").stage do
+	 system "make", "install", "prefix=#{libexec}"
+	 end
+	 end
+	 ENV.prepend_path "PKG_CONFIG_PATH", "#{libexec}/lib/pkgconfig"
+	 ENV.prepend "LDFLAGS", "-L#{libexec}/lib"
+	 mkdir "build" do
+	 system "cmake", "..", *std_cmake_args,
+	 "-DRunDualScreenTests=OFF",
+	 "-DUsePrerenderedPDF=ON",
+	 "-DUseQtFive=ON"
+	 system "make", "install"
+	 end
+	 libpoppler = (libexec/"lib/libpoppler-qt5.dylib").readlink
+	 macho = MachO.open(bin/"dspdfviewer")
+	 macho.change_dylib("@rpath/#{libpoppler}", "#{libexec}/lib/#{libpoppler}")
+	 macho.write!

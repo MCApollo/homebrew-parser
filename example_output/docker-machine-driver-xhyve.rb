@@ -28,3 +28,4 @@ install :
 	 system "make", "build", "CC=#{ENV.cc}"
 	 bin.install "bin/docker-machine-driver-xhyve"
 	 prefix.install_metafiles
+	 end

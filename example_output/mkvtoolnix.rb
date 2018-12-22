@@ -33,3 +33,22 @@ install :
 	 features.each do |feature|
 	 extra_includes << "#{Formula[feature].opt_include};"
 	 extra_libs << "#{Formula[feature].opt_lib};"
+	 end
+	 extra_includes.chop!
+	 extra_libs.chop!
+	 args = %W[
+	 --disable-debug
+	 --prefix=#{prefix}
+	 --with-boost=#{Formula["boost"].opt_prefix}
+	 --with-docbook-xsl-root=#{Formula["docbook-xsl"].opt_prefix}/docbook-xsl
+	 --with-extra-includes=#{extra_includes}
+	 --with-extra-libs=#{extra_libs}
+	 ]
+	 if build.with?("qt")
+	 qt = Formula["qt"]
+	 args << "--with-moc=#{qt.opt_bin}/moc"
+	 args << "--with-uic=#{qt.opt_bin}/uic"
+	 args << "--with-rcc=#{qt.opt_bin}/rcc"
+	 args << "--enable-qt"
+	 else
+	 args << "--disable-qt"

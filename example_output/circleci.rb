@@ -28,3 +28,4 @@ install :
 	 system "go", "build", "-ldflags", ldflags.join(" "),
 	 "-o", bin/"circleci"
 	 prefix.install_metafiles
+	 end

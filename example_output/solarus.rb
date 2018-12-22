@@ -23,3 +23,4 @@ install :
 	 mkdir "build" do
 	 system "cmake", "..", "-DSOLARUS_GUI=OFF", *std_cmake_args
 	 system "make", "install"
+	 end

@@ -19,3 +19,12 @@ install :
 	 inreplace "Makefile.in" do |s|
 	 s.change_make_var! "CFLAGS", ENV.cflags
 	 s.change_make_var! "CXXFLAGS", ENV.cflags
+	 end
+	 args = %W[
+	 --disable-dependency-tracking
+	 --prefix=#{prefix}
+	 --with-charset=UTF8
+	 --with-posset=IPA
+	 ]
+	 system "./configure", *args
+	 system "make", "install"

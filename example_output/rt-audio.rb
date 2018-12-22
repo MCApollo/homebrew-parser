@@ -17,3 +17,7 @@ install :
 	 system "cmake", "..", *std_cmake_args
 	 system "make"
 	 lib.install "librtaudio_static.a", "librtaudio.dylib"
+	 end
+	 include.install "RtAudio.h", Dir["include/*"]
+	 prefix.install "contrib", "tests"
+	 doc.install Dir["doc/*"]

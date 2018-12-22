@@ -17,3 +17,5 @@ install :
 	 "openssl/Makefile:"
 	 ENV.deparallelize do
 	 system "make", "static"
+	 end
+	 system "make", "install", "PREFIX=#{prefix}"

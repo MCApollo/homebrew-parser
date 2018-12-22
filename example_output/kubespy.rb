@@ -20,3 +20,4 @@ install :
 	 system "make", "build"
 	 bin.install "kubespy"
 	 prefix.install_metafiles
+	 end

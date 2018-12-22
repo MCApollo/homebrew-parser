@@ -8,7 +8,14 @@ description :
 	 Full-stack web app framework in Scala
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install Dir["*"]
+	 (bin/"skinny").write <<~EOS
+	 #!/bin/bash
+	 export PATH=#{bin}:$PATH
+	 PREFIX="#{libexec}" exec "#{libexec}/skinny" "$@"
+	 EOS

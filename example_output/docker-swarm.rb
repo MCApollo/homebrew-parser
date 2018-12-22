@@ -18,3 +18,4 @@ install :
 	 cd "src/github.com/docker/swarm" do
 	 system "go", "build", "-o", bin/"docker-swarm"
 	 prefix.install_metafiles
+	 end

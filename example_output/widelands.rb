@@ -37,3 +37,4 @@ install :
 	 #!/bin/sh
 	 exec #{prefix}/widelands "$@"
 	 EOS
+	 end

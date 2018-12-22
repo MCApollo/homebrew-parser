@@ -37,3 +37,4 @@ install :
 	 system "make", "install.info"
 	 resource("htmldoc").stage do
 	 (pkgshare/"htmldoc").install Dir["Doc/*.html"]
+	 end

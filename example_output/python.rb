@@ -60,3 +60,29 @@ install :
 	 "--install-lib=#{site_packages}",
 	 "--single-version-externally-managed",
 	 "--record=installed.txt"
+	 end
+	 end
+	 rm_rf [bin/"pip", bin/"easy_install"]
+	 mv bin/"wheel", bin/"wheel3"
+	 {
+	 "easy_install" => "easy_install-#{xy}",
+	 "pip"          => "pip3",
+	 "wheel"        => "wheel3",
+	 }.each do |unversioned_name, versioned_name|
+	 (libexec/"bin").install_symlink (bin/versioned_name).realpath => unversioned_name
+	 end
+	 %W[pip3 pip#{xy} easy_install-#{xy} wheel3].each do |e|
+	 (HOMEBREW_PREFIX/"bin").install_symlink bin/e
+	 end
+	 include_dirs = [HOMEBREW_PREFIX/"include", Formula["openssl"].opt_include,
+	 Formula["sqlite"].opt_include]
+	 library_dirs = [HOMEBREW_PREFIX/"lib", Formula["openssl"].opt_lib,
+	 Formula["sqlite"].opt_lib]
+	 cfg = prefix/"Frameworks/Python.framework/Versions/#{xy}/lib/python#{xy}/distutils/distutils.cfg"
+	 cfg.atomic_write <<~EOS
+	 [install]
+	 prefix=#{HOMEBREW_PREFIX}
+	 [build_ext]
+	 include_dirs=#{include_dirs.join ":"}
+	 library_dirs=#{library_dirs.join ":"}
+	 EOS

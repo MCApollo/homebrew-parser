@@ -27,3 +27,4 @@ install :
 	 system "make", "bin"
 	 bin.install "bin/serf"
 	 prefix.install_metafiles
+	 end

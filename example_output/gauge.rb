@@ -21,3 +21,4 @@ install :
 	 cd dir do
 	 system "go", "run", "build/make.go"
 	 system "go", "run", "build/make.go", "--install", "--prefix", prefix
+	 end

@@ -23,3 +23,4 @@ install :
 	 if build.with? "ivy"
 	 resource("ivy").stage do
 	 (libexec/"lib").install Dir["ivy-*.jar"]
+	 end

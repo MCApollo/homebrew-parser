@@ -21,3 +21,4 @@ install :
 	 system "cmake", "..", "-G", "Unix Makefiles", *args
 	 system "make"
 	 system "make", "install"
+	 end

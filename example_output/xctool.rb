@@ -23,3 +23,4 @@ install :
 	 bin.install_symlink "#{libexec}/bin/xctool"
 	 Dir.glob("#{libexec}/lib/*.dylib") do |lib_file|
 	 system "/usr/bin/codesign", "-f", "-s", "-", lib_file
+	 end

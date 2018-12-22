@@ -18,3 +18,4 @@ install :
 	 mkdir "build" do
 	 system "cmake", "..", "-DBASH_COMPLETION_COMPLETIONSDIR:PATH=#{bash_completion}", *std_cmake_args
 	 system "make", "install"
+	 end

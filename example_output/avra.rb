@@ -21,3 +21,5 @@ install :
 	 system "./bootstrap"
 	 system "./configure", "--prefix=#{prefix}"
 	 system "make", "install"
+	 end
+	 pkgshare.install Dir["includes/*"]

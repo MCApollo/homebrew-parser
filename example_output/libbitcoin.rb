@@ -27,3 +27,12 @@ install :
 	 "--enable-module-recovery",
 	 "--with-bignum=no"
 	 system "make", "install"
+	 end
+	 ENV.prepend_path "PKG_CONFIG_PATH", "#{libexec}/lib/pkgconfig"
+	 system "./autogen.sh"
+	 system "./configure", "--disable-dependency-tracking",
+	 "--disable-silent-rules",
+	 "--prefix=#{prefix}",
+	 "--with-png",
+	 "--with-qrencode"
+	 system "make", "install"

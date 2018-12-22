@@ -38,3 +38,5 @@ install :
 	 cd "tests" do
 	 system "make", "testbits"
 	 system "./testbits"
+	 end
+	 system "make", "install"

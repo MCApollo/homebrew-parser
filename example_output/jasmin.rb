@@ -8,7 +8,12 @@ description :
 	 Assembler for the Java Virtual Machine
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 rm_rf Dir["*.bat"]
+	 libexec.install Dir["*.jar"]
+	 prefix.install %w[Readme.txt license-ant.txt license-jasmin.txt]
+	 bin.write_jar_script libexec/"jasmin.jar", "jasmin"

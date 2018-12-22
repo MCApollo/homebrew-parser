@@ -16,3 +16,6 @@ install :
 	 inreplace "Makefile" do |s|
 	 s.change_make_var! "CC", ENV.cc
 	 s.gsub! "-o$@", "-o $@"
+	 end
+	 system "make"
+	 bin.install "nInvaders"

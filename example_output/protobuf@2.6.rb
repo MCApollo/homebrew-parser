@@ -39,3 +39,16 @@ install :
 	 %w[six python-dateutil pytz python-gflags google-apputils].each do |package|
 	 resource(package).stage do
 	 system "python", *Language::Python.setup_install_args(buildpath/"homebrew")
+	 end
+	 end
+	 touch buildpath/"homebrew/lib/python2.7/site-packages/google/__init__.py"
+	 chdir "python" do
+	 ENV.append_to_cflags "-I#{include}"
+	 ENV.append_to_cflags "-L#{lib}"
+	 args = Language::Python.setup_install_args libexec
+	 args << "--cpp_implementation"
+	 system "python", *args
+	 end
+	 site_packages = "lib/python2.7/site-packages"
+	 pth_contents = "import site; site.addsitedir('#{libexec/site_packages}')\n"
+	 (prefix/site_packages/"homebrew-protobuf.pth").write pth_contents

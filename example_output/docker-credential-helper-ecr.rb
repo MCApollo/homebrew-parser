@@ -20,3 +20,4 @@ install :
 	 system "make", "build"
 	 bin.install "bin/local/docker-credential-ecr-login"
 	 prefix.install_metafiles
+	 end

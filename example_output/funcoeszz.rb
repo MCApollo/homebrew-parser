@@ -8,7 +8,9 @@ description :
 	 Dozens of command-line mini-applications (Portuguese)
 build_deps :
 link_deps :
+	 bash
 conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "funcoeszz-#{version}.sh" => "funcoeszz"

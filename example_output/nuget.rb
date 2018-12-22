@@ -8,7 +8,13 @@ description :
 	 Package manager for Microsoft development platform including .NET
 build_deps :
 link_deps :
+	 mono
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "NuGet.exe" => "nuget.exe"
+	 (bin/"nuget").write <<~EOS
+	 #!/bin/bash
+	 mono #{libexec}/nuget.exe "$@"
+	 EOS

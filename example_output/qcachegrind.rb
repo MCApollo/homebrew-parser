@@ -20,3 +20,4 @@ install :
 	 system "make"
 	 prefix.install "qcachegrind.app"
 	 bin.install_symlink prefix/"qcachegrind.app/Contents/MacOS/qcachegrind"
+	 end

@@ -42,5 +42,11 @@ install :
 	 system "meson", *args, ".."
 	 system "ninja", "-v"
 	 system "ninja", "install"
+	 end
+	 inreplace lib/"pkgconfig/gdk-pixbuf-#{gdk_so_ver}.pc" do |s|
+	 libv = s.get_make_var "gdk_pixbuf_binary_version"
+	 s.change_make_var! "gdk_pixbuf_binarydir",
+	 HOMEBREW_PREFIX/"lib/gdk-pixbuf-#{gdk_so_ver}"/libv
+	 end
 	 ENV["GDK_PIXBUF_MODULEDIR"] = "#{module_dir}/loaders"
 	 system "#{bin}/gdk-pixbuf-query-loaders", "--update-cache"

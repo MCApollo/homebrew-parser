@@ -22,3 +22,4 @@ install :
 	 mkdir "build" do
 	 system "cmake", "..", "-DENABLE_NETCDF=OFF", "-DENABLE_PNG=ON", *std_cmake_args
 	 system "make", "install"
+	 end

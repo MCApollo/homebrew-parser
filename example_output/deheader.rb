@@ -22,3 +22,4 @@ install :
 	 system "make"
 	 bin.install "deheader"
 	 man1.install "deheader.1"
+	 end

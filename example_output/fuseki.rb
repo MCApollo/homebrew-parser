@@ -12,5 +12,17 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 prefix.install "bin"
+	 %w[fuseki-server fuseki].each do |exe|
+	 libexec.install exe
+	 (bin/exe).write_env_script(libexec/exe,
+	 :FUSEKI_BASE => var/"fuseki",
+	 :FUSEKI_HOME => libexec,
+	 :FUSEKI_LOGS => var/"log/fuseki",
+	 :FUSEKI_RUN  => var/"run")
+	 end
+	 libexec.install "fuseki-server.jar",
+	 "fuseki.war",
+	 "webapp"
 	 (var/"fuseki").mkpath
 	 (var/"log/fuseki").mkpath

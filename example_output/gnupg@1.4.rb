@@ -31,3 +31,7 @@ install :
 	 %w[curl finger hkp ldap].each do |cmd|
 	 cmd.prepend("gpgkeys_")
 	 (libexec/"gnupg").install_symlink (cmd + "1") => cmd
+	 end
+	 %w[gpg-zip gpg gpgsplit gpgv].each do |cmd|
+	 (libexec/"gpgbin").install_symlink bin/(cmd + "1") => cmd
+	 end

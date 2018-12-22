@@ -17,3 +17,7 @@ install :
 	 cd "libiconv_hook/lib" do
 	 system "./configure", "--disable-shared"
 	 system "make"
+	 end
+	 system "make", "LDFLAGS=-liconv -liconv_hook -lmrss -L#{buildpath}/libiconv_hook/lib/.libs"
+	 man1.install "rsstail.1"
+	 bin.install "rsstail"

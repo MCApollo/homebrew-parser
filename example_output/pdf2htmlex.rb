@@ -44,3 +44,26 @@ install :
 	 "--disable-python-extension"
 	 system "make"
 	 system "make", "install"
+	 end
+	 ENV.prepend_path "PKG_CONFIG_PATH", "#{libexec}/fontforge/lib/pkgconfig"
+	 ENV.prepend_path "PATH", "#{libexec}/fontforge/bin"
+	 resource("poppler").stage do
+	 inreplace "poppler.pc.in", "Cflags: -I${includedir}/poppler",
+	 "Cflags: -I${includedir}/poppler -I${includedir}"
+	 system "./configure", "--disable-dependency-tracking",
+	 "--prefix=#{libexec}/poppler",
+	 "--enable-xpdf-headers",
+	 "--enable-poppler-glib",
+	 "--disable-gtk-test",
+	 "--enable-introspection=no",
+	 "--disable-poppler-qt4"
+	 system "make", "install"
+	 resource("poppler-data").stage do
+	 system "make", "install", "prefix=#{libexec}/poppler"
+	 end
+	 end
+	 ENV.prepend_path "PKG_CONFIG_PATH", "#{libexec}/poppler/lib/pkgconfig"
+	 ENV.prepend_path "PATH", "#{libexec}/poppler/bin"
+	 system "cmake", ".", *std_cmake_args
+	 system "make"
+	 system "make", "install"

@@ -16,3 +16,7 @@ install :
 	 ENV["PYTHONPATH"] = libexec+"lib/python2.7/site-packages"
 	 resources.each do |r|
 	 r.stage { system "python", *Language::Python.setup_install_args(libexec) }
+	 end
+	 system "python", *Language::Python.setup_install_args(libexec)
+	 bin.install Dir[libexec/"bin/*js*"]
+	 bin.env_script_all_files(libexec+"bin", :PYTHONPATH => ENV["PYTHONPATH"])

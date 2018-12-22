@@ -8,7 +8,12 @@ description :
 	 Managed application runtime for building applications
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 rm_f Dir["bin/*.bat"]
+	 rm_f Dir["bin/*.ps1"]
+	 libexec.install Dir["*"]
+	 mkdir_p libexec/"standalone/log"

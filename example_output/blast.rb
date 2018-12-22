@@ -20,3 +20,4 @@ install :
 	 "--without-boost"
 	 system "make"
 	 system "make", "install"
+	 end

@@ -22,3 +22,4 @@ install :
 	 bash_completion.install Dir["contrib/completion/bash/*.bash"]
 	 zsh_completion.install "contrib/completion/zsh/_docker-machine"
 	 prefix.install_metafiles
+	 end

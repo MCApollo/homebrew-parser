@@ -8,7 +8,10 @@ description :
 	 Simulator for HTTP-based APIs
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "wiremock-standalone-#{version}.jar"
+	 bin.write_jar_script libexec/"wiremock-standalone-#{version}.jar", "wiremock"

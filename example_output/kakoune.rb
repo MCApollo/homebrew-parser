@@ -18,3 +18,4 @@ install :
 	 ENV["XML_CATALOG_FILES"] = "#{etc}/xml/catalog"
 	 cd "src" do
 	 system "make", "install", "debug=no", "PREFIX=#{prefix}"
+	 end

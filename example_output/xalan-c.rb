@@ -26,3 +26,4 @@ install :
 	 "--prefix=#{prefix}"
 	 system "make", "install"
 	 rm Dir["#{lib}/*.dylib.*"]
+	 end

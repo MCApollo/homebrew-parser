@@ -54,3 +54,12 @@ install :
 	 %w[GIF VGIF LATEX PNG TPNG PS
 	 VPS CPS VCPS XWINDOW XSERVE].each do |drv|
 	 inreplace "drivers.list", %r{^! (.*\/#{drv} .*)}, '  \1'
+	 end
+	 system "../makemake .. darwin; make; make cpg; make pgplot.html"
+	 bin.install "pgxwin_server", "pgbind"
+	 lib.install Dir["*.dylib", "*.a"]
+	 include.install Dir["*.h"]
+	 share.install Dir["*.txt", "*.dat"]
+	 doc.install Dir["*.doc", "*.html"]
+	 (share/"examples").install Dir["*demo*", "../examples/pgdemo*.f", "../cpg/cpgdemo*.c", "../drivers/*/pg*demo.*"]
+	 end

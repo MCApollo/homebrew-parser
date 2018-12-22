@@ -17,3 +17,6 @@ install :
 	 system "/bin/sh", "build.sh"
 	 build_bin = buildpath/"bin"
 	 build_bin.install "bin/nim"
+	 end
+	 else
+	 system "/bin/sh", "build.sh"

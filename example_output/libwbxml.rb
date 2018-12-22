@@ -21,3 +21,4 @@ install :
 	 mkdir "build" do
 	 system "cmake", "..", *std_cmake_args, "-DBUILD_DOCUMENTATION=ON"
 	 system "make", "install"
+	 end

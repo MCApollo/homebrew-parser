@@ -19,3 +19,4 @@ install :
 	 cabal_sandbox_add_source "elm-compiler"
 	 cabal_install "--only-dependencies", "elm"
 	 cabal_install "--prefix=#{prefix}", "elm"
+	 end

@@ -19,3 +19,4 @@ install :
 	 cd "src/github.com/mitchellh/gox" do
 	 system "go", "build", "-o", bin/"gox"
 	 prefix.install_metafiles
+	 end

@@ -12,3 +12,7 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "srdb.class.php"
+	 libexec.install "srdb.cli.php" => "srdb"
+	 chmod 0755, libexec/"srdb"
+	 bin.install_symlink libexec/"srdb"

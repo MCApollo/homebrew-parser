@@ -9,6 +9,8 @@ description :
 build_deps :
 link_deps :
 conflicts :
+	 sleuthkit
 patches :
 EOF_patch :
 install :
+	 bin.install "ffind"

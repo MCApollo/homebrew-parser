@@ -24,3 +24,6 @@ install :
 	 ENV.prepend_create_path "PYTHONPATH", libexec/"vendor/lib/python2.7/site-packages"
 	 resource("Cheetah").stage do
 	 system "python", *Language::Python.setup_install_args(libexec/"vendor")
+	 end
+	 system "cmake", ".", *std_cmake_args
+	 system "make", "install"

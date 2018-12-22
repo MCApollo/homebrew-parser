@@ -26,3 +26,10 @@ install :
 	 ENV.prepend_create_path "PYTHONPATH", libexec/"vendor/lib/python#{pyver}/site-packages"
 	 resource("Cython").stage do
 	 system "python3", *Language::Python.setup_install_args(libexec/"vendor")
+	 end
+	 inreplace "setup.py", /(version)=.+,$/, "\\1='#{version}',"
+	 ENV.prepend_create_path "PYTHONPATH", libexec/"lib/python#{pyver}/site-packages"
+	 system "python3", *Language::Python.setup_install_args(libexec)
+	 inreplace "#{libexec}/bin/pytouhou", /('path'): '\.'/, "\\1: '#{pkgshare}/game'"
+	 bin.install Dir[libexec/"bin/*"]
+	 bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])

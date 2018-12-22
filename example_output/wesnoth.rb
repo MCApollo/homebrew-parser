@@ -34,3 +34,7 @@ install :
 	 args << "wesnothd"
 	 args << "-j#{ENV.make_jobs}"
 	 scons *args
+	 end
+	 test do
+	 system bin/"wesnoth", "-p", pkgshare/"data/campaigns/tutorial/", testpath
+	 end

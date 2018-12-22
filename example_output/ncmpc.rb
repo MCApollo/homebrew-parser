@@ -31,3 +31,4 @@ install :
 	 mkdir "build" do
 	 system "meson", "--prefix=#{prefix}", ".."
 	 system "ninja", "install"
+	 end

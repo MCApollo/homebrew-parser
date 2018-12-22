@@ -38,3 +38,9 @@ install :
 	 "--with-sdl-prefix=#{Formula["sdl"].opt_prefix}"
 	 %w[. src src/imlib src/lisp src/net src/sdlport].each do |p|
 	 inreplace "#{p}/Makefile", "-lGL", "-framework OpenGL"
+	 end
+	 system "make"
+	 bin.install "src/abuse-tool"
+	 libexec.install "src/abuse" => "abuse-bin"
+	 pkgshare.install Dir["data/*"] - %w[data/Makefile data/Makefile.am data/Makefile.in]
+	 (bin/"abuse").write startup_script

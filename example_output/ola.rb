@@ -23,3 +23,19 @@ install :
 	 system "./configure", "--disable-dependency-tracking",
 	 "--prefix=#{buildpath}/vendor/protobuf-c"
 	 system "make", "install"
+	 end
+	 ENV.prepend_path "PKG_CONFIG_PATH", buildpath/"vendor/protobuf-c/lib/pkgconfig"
+	 protobuf_pth = Formula["protobuf@3.1"].opt_lib/"python2.7/site-packages/homebrew-protobuf.pth"
+	 (buildpath/".brew_home/Library/Python/2.7/lib/python/site-packages").install_symlink protobuf_pth
+	 args = %W[
+	 --disable-fatal-warnings
+	 --disable-dependency-tracking
+	 --disable-silent-rules
+	 --prefix=#{prefix}
+	 --disable-unittests
+	 --enable-python-libs
+	 --enable-rdm-tests
+	 ]
+	 system "autoreconf", "-fvi" if build.head?
+	 system "./configure", *args
+	 system "make", "install"

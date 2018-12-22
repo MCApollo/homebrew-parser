@@ -12,3 +12,8 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 if build.head?
+	 system "lein", "uberjar"
+	 bltool_jar = Dir["target/bltool-*-standalone.jar"][0]
+	 else
+	 bltool_jar = "bltool.jar"

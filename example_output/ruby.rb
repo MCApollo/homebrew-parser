@@ -36,6 +36,23 @@ install :
 	 s.gsub! 'prepare "extension scripts", vendorlibdir', ""
 	 s.gsub! 'prepare "extension objects", sitearchlibdir', ""
 	 s.gsub! 'prepare "extension objects", vendorarchlibdir', ""
+	 end
+	 system "make"
+	 system "make", "install"
+	 elisp.install Dir["misc/*.el"].reject { |f| f == "misc/ruby-mode.el" }
+	 resource("rubygems").stage do
+	 ENV.prepend_path "PATH", bin
+	 system "#{bin}/ruby", "setup.rb", "--prefix=#{buildpath}/vendor_gem"
+	 rg_in = lib/"ruby/#{api_version}"
+	 rm_rf rg_in/"rubygems"
+	 rm_f rg_in/"rubygems.rb"
+	 rm_f rg_in/"ubygems.rb"
+	 rm_f bin/"gem"
+	 rg_in.install Dir[buildpath/"vendor_gem/lib/*"]
+	 bin.install buildpath/"vendor_gem/bin/gem" => "gem"
+	 (libexec/"gembin").install buildpath/"vendor_gem/bin/bundle" => "bundle"
+	 (libexec/"gembin").install_symlink "bundle" => "bundler"
+	 end
 	 rm_f %W[
 	 #{rubygems_bindir}/bundle
 	 #{rubygems_bindir}/bundler
@@ -47,3 +64,4 @@ install :
 	 config_file.write rubygems_config(api_version)
 	 %w[sitearchdir vendorarchdir].each do |dir|
 	 mkdir_p `#{bin}/ruby -rrbconfig -e 'print RbConfig::CONFIG["#{dir}"]'`
+	 end

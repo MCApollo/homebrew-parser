@@ -33,3 +33,8 @@ install :
 	 inreplace share/"dart/cmake/dart_dartTargets.cmake" do |s|
 	 s.gsub! Formula["fcl"].prefix.realpath, Formula["fcl"].opt_prefix
 	 s.gsub! Formula["libccd"].prefix.realpath, Formula["libccd"].opt_prefix
+	 end
+	 inreplace share/"dart/cmake/dart_utils-urdfTargets.cmake" do |s|
+	 s.gsub! Formula["urdfdom"].prefix.realpath, Formula["urdfdom"].opt_prefix
+	 s.gsub! Formula["urdfdom_headers"].prefix.realpath, Formula["urdfdom_headers"].opt_prefix
+	 end

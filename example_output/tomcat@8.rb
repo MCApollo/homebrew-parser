@@ -8,7 +8,12 @@ description :
 	 Implementation of Java Servlet and JavaServer Pages
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 rm_rf Dir["bin/*.bat"]
+	 prefix.install %w[NOTICE LICENSE RELEASE-NOTES RUNNING.txt]
+	 libexec.install Dir["*"]
+	 bin.install_symlink "#{libexec}/bin/catalina.sh" => "catalina"

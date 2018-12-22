@@ -20,3 +20,11 @@ install :
 	 \t2\tACCESS='SEQUENTIAL',ERR=1900)"
 	 s.gsub! "FILE='dtext',STATUS='OLD',", "FILE='#{opt_pkgshare}/dtext',"
 	 s.gsub! "1\tFORM='UNFORMATTED',ACCESS='DIRECT',", "1\tSTATUS='OLD',FORM='UNFORMATTED',ACCESS='DIRECT',"
+	 end
+	 system "make"
+	 bin.install "dungeon"
+	 end
+	 pkgshare.install "dindx"
+	 pkgshare.install "dtext"
+	 man.install "dungeon.txt"
+	 man.install "hints.txt"

@@ -20,3 +20,4 @@ install :
 	 system "dep", "ensure", "-vendor-only"
 	 system "go", "build", "-o", bin/"iron"
 	 prefix.install_metafiles
+	 end

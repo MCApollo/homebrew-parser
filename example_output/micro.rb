@@ -19,3 +19,4 @@ install :
 	 system "make", "build-quick"
 	 bin.install "micro"
 	 prefix.install_metafiles
+	 end

@@ -8,7 +8,9 @@ description :
 	 Bazaar plugin to incrementally upload changes to a dumb server
 build_deps :
 link_deps :
+	 bazaar
 conflicts :
 patches :
 EOF_patch :
 install :
+	 (share/"bazaar/plugins/upload").install Dir["*"]

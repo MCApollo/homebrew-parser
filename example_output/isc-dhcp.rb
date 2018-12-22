@@ -29,3 +29,25 @@ install :
 	 }
 	 path_opts.each do |symbol, path|
 	 ENV.append "CFLAGS", "-D#{symbol}='\"#{path}\"'"
+	 end
+	 ENV.append "CFLAGS", "-D__APPLE_USE_RFC_3542" if MacOS.version >= :lion
+	 system "./configure", "--disable-dependency-tracking",
+	 "--prefix=#{prefix}",
+	 "--localstatedir=#{dhcpd_dir}"
+	 ENV.deparallelize { system "make", "-C", "bind" }
+	 inreplace "Makefile", "SUBDIRS = ${top_srcdir}/bind", "SUBDIRS = "
+	 system "make"
+	 system "make", "install"
+	 Dir.open("#{prefix}/etc") do |dir|
+	 dir.each do |f|
+	 file = "#{dir.path}/#{f}"
+	 File.rename(file, "#{file}.sample") if File.file?(file)
+	 end
+	 end
+	 dhcpd_dir.mkpath
+	 %w[dhcpd dhcpd6 dhclient dhclient6].each do |f|
+	 file = "#{dhcpd_dir}/#{f}.leases"
+	 File.new(file, File::CREAT|File::RDONLY).close
+	 end
+	 (prefix+"homebrew.mxcl.dhcpd6.plist").write plist_dhcpd6
+	 (prefix+"homebrew.mxcl.dhcpd6.plist").chmod 0644

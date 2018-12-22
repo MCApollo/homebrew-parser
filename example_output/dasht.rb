@@ -8,7 +8,13 @@ description :
 	 Search API docs offline, in your terminal or browser
 build_deps :
 link_deps :
+	 socat
+	 sqlite
+	 w3m
+	 wget
 conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install Dir["bin/*"]
+	 man.install "man/man1"

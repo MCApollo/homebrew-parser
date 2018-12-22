@@ -21,3 +21,12 @@ install :
 	 r.stage do
 	 system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
 	 system "make", "install"
+	 end
+	 end
+	 inreplace ["get_iplayer", "get_iplayer.cgi"] do |s|
+	 s.gsub!(/^(my \$version_text);/i, "\\1 = \"#{pkg_version}-homebrew\";")
+	 s.gsub! "#!/usr/bin/env perl", "#!/usr/bin/perl"
+	 end
+	 bin.install "get_iplayer", "get_iplayer.cgi"
+	 bin.env_script_all_files(libexec/"bin", :PERL5LIB => ENV["PERL5LIB"])
+	 man1.install "get_iplayer.1"

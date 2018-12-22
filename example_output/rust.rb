@@ -29,3 +29,4 @@ install :
 	 chmod 0664, dylib
 	 MachO::Tools.change_dylib_id(dylib, "@rpath/#{File.basename(dylib)}")
 	 chmod 0444, dylib
+	 end

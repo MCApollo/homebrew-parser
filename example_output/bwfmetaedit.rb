@@ -15,3 +15,4 @@ install :
 	 cd "Project/GNU/CLI" do
 	 system "./configure",  "--disable-debug", "--prefix=#{prefix}"
 	 system "make", "install"
+	 end

@@ -23,3 +23,4 @@ install :
 	 system "script/build", "rack"
 	 bin.install "rack"
 	 prefix.install_metafiles
+	 end

@@ -22,3 +22,4 @@ install :
 	 system "go", "build", "-o", bin/"dashing", "-ldflags",
 	 "-X main.version=#{version}"
 	 prefix.install_metafiles
+	 end

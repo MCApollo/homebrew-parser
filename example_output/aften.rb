@@ -16,3 +16,4 @@ install :
 	 mkdir "default" do
 	 system "cmake", "-DSHARED=ON", "..", *std_cmake_args
 	 system "make", "install"
+	 end

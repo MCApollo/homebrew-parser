@@ -21,3 +21,4 @@ install :
 	 system "make", "build"
 	 bin.install "bettercap"
 	 prefix.install_metafiles
+	 end

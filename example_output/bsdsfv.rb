@@ -26,3 +26,6 @@ install :
 	 s.change_make_var! "INSTALL_PREFIX", prefix
 	 s.change_make_var! "INDENT", "indent"
 	 s.gsub! "	${INSTALL_PROGRAM} bsdsfv ${INSTALL_PREFIX}/bin", "	${INSTALL_PROGRAM} bsdsfv #{bin}/"
+	 end
+	 system "make", "all"
+	 system "make", "install"

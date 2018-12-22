@@ -26,3 +26,9 @@ install :
 	 system "autoreconf", "--install"
 	 system "./configure", *configure_args
 	 system "make", "install"
+	 end
+	 cd "src/cxx/autotools" do
+	 system "autoreconf", "--install"
+	 system "./configure", *configure_args
+	 system "make", "install"
+	 end

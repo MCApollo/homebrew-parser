@@ -25,3 +25,5 @@ install :
 	 zsh_completion.install "etc/zsh/site-functions/_prototool"
 	 man1.install Dir["share/man/man1/*.1"]
 	 prefix.install_metafiles
+	 end
+	 end

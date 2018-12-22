@@ -18,3 +18,4 @@ install :
 	 (buildpath/"nad").install r
 	 elsif build.with? "vdatum"
 	 pkgshare.install r
+	 end

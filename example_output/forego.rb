@@ -19,3 +19,4 @@ install :
 	 system "go", "build", "-o", bin/"forego", "-ldflags",
 	 "-X main.Version=#{version} -X main.allowUpdate=false"
 	 prefix.install_metafiles
+	 end

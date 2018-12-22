@@ -19,3 +19,4 @@ install :
 	 cd "src/github.com/rakyll/statik" do
 	 system "go", "build", "-o", bin/"statik"
 	 prefix.install_metafiles
+	 end

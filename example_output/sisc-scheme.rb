@@ -12,3 +12,9 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install Dir["*"]
+	 (bin/"sisc").write <<~EOS
+	 #!/bin/sh
+	 SISC_HOME=#{libexec}
+	 exec #{libexec}/sisc "$@"
+	 EOS

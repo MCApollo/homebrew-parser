@@ -18,3 +18,4 @@ install :
 	 system "./configure", "--prefix=#{prefix}",
 	 "--disable-sdltest"
 	 system "make", "install"
+	 end

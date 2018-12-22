@@ -22,3 +22,4 @@ install :
 	 system "go", "build"
 	 bin.install "terraform-provisioner-ansible"
 	 prefix.install_metafiles
+	 end

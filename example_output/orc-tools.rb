@@ -12,3 +12,5 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "orc-tools-#{version}-uber.jar"
+	 bin.write_jar_script libexec/"orc-tools-#{version}-uber.jar", "orc-tools"

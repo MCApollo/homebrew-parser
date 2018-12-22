@@ -23,3 +23,6 @@ install :
 	 system "./configure"
 	 system "make"
 	 lib.install Dir[".libs/*{.a,.dylib}"]
+	 end
+	 include.install Dir["include/*"]
+	 libexec.install "data"

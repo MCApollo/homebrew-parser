@@ -20,3 +20,4 @@ install :
 	 system "go", "build", "-ldflags", "-X main.Version=v#{version}",
 	 "-o", bin/"helmfile", "-v", "github.com/roboll/helmfile"
 	 prefix.install_metafiles
+	 end

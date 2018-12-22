@@ -20,3 +20,4 @@ install :
 	 system "make"
 	 bin.install "bin/slacknimate"
 	 prefix.install_metafiles
+	 end

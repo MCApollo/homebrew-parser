@@ -19,3 +19,16 @@ install :
 	 inreplace "config/rules.mk",
 	 "-install_name @executable_path/$(SHARED_LIBRARY) ",
 	 "-install_name #{lib}/$(SHARED_LIBRARY) "
+	 end
+	 mkdir "brew-build" do
+	 system "../js/src/configure", "--prefix=#{prefix}",
+	 "--enable-readline",
+	 "--enable-threadsafe",
+	 "--with-system-nspr",
+	 "--with-nspr-prefix=#{Formula["nspr"].opt_prefix}",
+	 "--enable-macos-target=#{MacOS.version}"
+	 inreplace "js-config", /JS_CONFIG_LIBS=.*?$/, "JS_CONFIG_LIBS=''"
+	 system "make"
+	 system "make", "install"
+	 bin.install "shell/js"
+	 end

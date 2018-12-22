@@ -19,3 +19,4 @@ install :
 	 xcodebuild "SYMROOT=build"
 	 prefix.install "build/Default/magnetiX.app"
 	 bin.write_exec_script "#{prefix}/magnetiX.app/Contents/MacOS/magnetiX"
+	 end

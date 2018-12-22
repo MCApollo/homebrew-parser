@@ -18,3 +18,4 @@ install :
 	 system "./configure", "--disable-debug", "--disable-dependency-tracking",
 	 "--with-ssl=#{Formula["openssl"].opt_prefix}", "--prefix=#{prefix}"
 	 system "make", "install"
+	 end

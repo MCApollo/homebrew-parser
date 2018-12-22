@@ -8,7 +8,9 @@ description :
 	 Resolves abbreviations and aliases to Ruby versions
 build_deps :
 link_deps :
+	 rbenv
 conflicts :
 patches :
 EOF_patch :
 install :
+	 prefix.install Dir["*"]

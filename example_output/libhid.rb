@@ -23,7 +23,6 @@ EOF_patch :
 	 +AM_LDFLAGS += -framework IOKit -framework "CoreFoundation"
 	 else
 	 OS_SUPPORT =
-	 endif
 	 --- libhid-0.2.16/src/Makefile.in.org	2014-01-02 19:20:35.000000000 +0200
 	 +++ libhid-0.2.16/src/Makefile.in	2014-01-02 19:21:24.000000000 +0200
 	 @@ -39,7 +39,7 @@ POST_UNINSTALL = :

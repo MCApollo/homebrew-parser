@@ -17,5 +17,13 @@ EOF_patch :
 install :
 	 resource("uthash").stage do
 	 (buildpath/"uthash/include").install "src/uthash.h"
+	 end
+	 ENV.prepend "CPPFLAGS", "-I#{buildpath}/uthash/include"
+	 system "autoreconf", "-fiv" if build.head?
+	 system "./configure", "--prefix=#{prefix}",
+	 "--sysconfdir=#{etc}/burp",
+	 "--sbindir=#{bin}",
+	 "--localstatedir=#{var}"
+	 system "make", "install-all"
 	 (var/"run").mkpath
 	 (var/"spool/burp").mkpath

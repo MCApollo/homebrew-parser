@@ -8,7 +8,9 @@ description :
 	 Turn scanned negative images into positives
 build_deps :
 link_deps :
+	 imagemagick
 conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "negfix8"

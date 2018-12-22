@@ -21,3 +21,4 @@ install :
 	 inreplace "config/config.mk", "
 	 system "make"
 	 bin.install Dir["clients/icommands/bin/*"].select { |f| File.executable? f }
+	 end

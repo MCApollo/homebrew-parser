@@ -8,7 +8,10 @@ description :
 	 Graph database supporting RDF data model, Sesame, and Blueprint APIs
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "blazegraph.jar"
+	 bin.write_jar_script libexec/"blazegraph.jar", "blazegraph"

@@ -15,3 +15,4 @@ install :
 	 cd "src" do
 	 system "make", "-f", "Makefile.osx"
 	 bin.install "vpcs"
+	 end

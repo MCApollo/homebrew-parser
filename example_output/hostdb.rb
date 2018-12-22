@@ -12,3 +12,6 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install Dir["bin/*"]
+	 doc.install Dir["docs/*"]
+	 pkgshare.install "examples"

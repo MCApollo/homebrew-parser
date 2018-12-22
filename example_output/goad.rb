@@ -21,3 +21,4 @@ install :
 	 system "make", "build"
 	 bin.install "build/goad"
 	 prefix.install_metafiles
+	 end

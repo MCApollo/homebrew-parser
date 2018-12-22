@@ -42,3 +42,47 @@ install :
 	 system "../configure", *args
 	 system "make"
 	 system "make", "install"
+	 end
+	 end
+	 ENV.prepend_path "PATH", "#{arch_dir}/bin"
+	 mkdir "mingw-w64-headers/build-#{arch}" do
+	 system "../configure", "--host=#{target}", "--prefix=#{arch_dir}/#{target}"
+	 system "make"
+	 system "make", "install"
+	 end
+	 ln_s "#{arch_dir}/#{target}", "#{arch_dir}/mingw"
+	 resource("gcc").stage buildpath/"gcc"
+	 args = %W[
+	 --target=#{target}
+	 --prefix=#{arch_dir}
+	 --with-bugurl=https://github.com/Homebrew/homebrew-core/issues
+	 --enable-languages=c,c++,fortran
+	 --with-ld=#{arch_dir}/bin/#{target}-ld
+	 --with-as=#{arch_dir}/bin/#{target}-as
+	 --with-gmp=#{Formula["gmp"].opt_prefix}
+	 --with-mpfr=#{Formula["mpfr"].opt_prefix}
+	 --with-mpc=#{Formula["libmpc"].opt_prefix}
+	 --with-isl=#{Formula["isl"].opt_prefix}
+	 --disable-multilib
+	 ]
+	 if build.with? "posix"
+	 args << "--enable-threads=posix"
+	 else
+	 args << "--enable-threads=win32"
+	 end
+	 mkdir "#{buildpath}/gcc/build-#{arch}" do
+	 system "../configure", *args
+	 system "make", "all-gcc"
+	 system "make", "install-gcc"
+	 end
+	 args = %W[
+	 CC=#{target}-gcc
+	 CXX=#{target}-g++
+	 CPP=#{target}-cpp
+	 --host=#{target}
+	 --prefix=#{arch_dir}/#{target}
+	 ]
+	 if arch == "i686"
+	 args << "--enable-lib32" << "--disable-lib64"
+	 elsif arch == "x86_64"
+	 args << "--disable-lib32" << "--enable-lib64"

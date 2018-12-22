@@ -23,3 +23,4 @@ install :
 	 system "hack/build-all.bash"
 	 bin.install "release/dep-darwin-#{arch}" => "dep"
 	 prefix.install_metafiles
+	 end

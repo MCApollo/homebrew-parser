@@ -21,3 +21,5 @@ install :
 	 arch = MacOS.prefer_64_bit? ? "amd64" : "386"
 	 system "gox", "-arch", arch, "-os", "darwin", "./..."
 	 bin.install "pup_darwin_#{arch}" => "pup"
+	 end
+	 prefix.install_metafiles dir

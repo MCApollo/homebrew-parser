@@ -26,3 +26,14 @@ install :
 	 next if r.name == "Cython"
 	 r.stage do
 	 system "python3", *Language::Python.setup_install_args(libexec/"vendor")
+	 end
+	 end
+	 ENV.prepend_create_path "PYTHONPATH", libexec/"lib/python#{xy}/site-packages"
+	 saved_python_path = ENV["PYTHONPATH"]
+	 ENV.prepend_create_path "PYTHONPATH", buildpath/"cython/lib/python#{xy}/site-packages"
+	 resource("Cython").stage do
+	 system "python3", *Language::Python.setup_install_args(buildpath/"cython")
+	 end
+	 system "python3", *Language::Python.setup_install_args(libexec)
+	 bin.install Dir[libexec/"bin/*"]
+	 bin.env_script_all_files(libexec/"bin", :PYTHONPATH => saved_python_path)

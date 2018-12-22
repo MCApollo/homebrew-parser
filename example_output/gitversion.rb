@@ -8,7 +8,13 @@ description :
 	 Easy semantic versioning for projects using Git
 build_deps :
 link_deps :
+	 mono
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install Dir["*"]
+	 (bin/"gitversion").write <<~EOS
+	 #!/bin/sh
+	 exec "mono" "#{libexec}/GitVersion.exe" "$@"
+	 EOS

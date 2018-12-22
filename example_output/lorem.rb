@@ -11,3 +11,4 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "lorem"

@@ -31,4 +31,7 @@ install :
 	 inreplace "src/Makefile" do |s|
 	 s.gsub! "$(LIBEXECDIR)", "$(SBINDIR)"
 	 s.gsub! "$(DESTDIR)/usr/local/sbin", "$(SBINDIR)"
+	 end
+	 system "make", "all"
+	 system "make", "install", "install-config"
 	 (var/"run").mkpath

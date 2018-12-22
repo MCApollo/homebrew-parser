@@ -30,3 +30,4 @@ install :
 	 system "make", "lib/libglui.a"
 	 lib.install "lib/libglui.a"
 	 include.install "include/GL"
+	 end

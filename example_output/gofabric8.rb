@@ -19,3 +19,5 @@ install :
 	 cd dir do
 	 system "make", "install", "REV=homebrew"
 	 prefix.install_metafiles
+	 end
+	 bin.install "bin/gofabric8"

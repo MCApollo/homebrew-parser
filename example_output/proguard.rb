@@ -12,3 +12,7 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "lib/proguard.jar"
+	 libexec.install "lib/proguardgui.jar"
+	 bin.write_jar_script libexec/"proguard.jar", "proguard"
+	 bin.write_jar_script libexec/"proguardgui.jar", "proguardgui"

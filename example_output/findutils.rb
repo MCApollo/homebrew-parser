@@ -35,4 +35,6 @@ install :
 	 f = Pathname.new(p)
 	 gnupath = "gnu" + f.relative_path_from(base).dirname
 	 (libexec/gnupath).install_symlink f => f.basename.sub(/^g/, "")
+	 end
+	 end
 	 (var/"locate").mkpath

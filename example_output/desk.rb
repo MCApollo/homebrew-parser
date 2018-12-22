@@ -12,3 +12,7 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "desk"
+	 bash_completion.install "shell_plugins/bash/desk"
+	 zsh_completion.install "shell_plugins/zsh/_desk"
+	 fish_completion.install "shell_plugins/fish/desk.fish"

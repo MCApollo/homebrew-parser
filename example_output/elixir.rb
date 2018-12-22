@@ -18,3 +18,5 @@ install :
 	 Dir.glob("lib/*/ebin") do |path|
 	 app = File.basename(File.dirname(path))
 	 (lib/app).install path
+	 end
+	 system "make", "install_man", "PREFIX=#{prefix}"

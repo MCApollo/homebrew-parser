@@ -8,7 +8,9 @@ description :
 	 Ultimate terminal divider powered by tmux
 build_deps :
 link_deps :
+	 tmux
 conflicts :
 patches :
 EOF_patch :
 install :
+	 system "./install.sh", prefix

@@ -8,7 +8,14 @@ description :
 	 Programming language for writing large programs in teams
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 man1.install Dir["doc/man/man1/*"]
+	 doc.install Dir["doc/*"]
+	 bin.install "bin/ceylon"
+	 bin.install "bin/ceylon-sh-setup"
+	 libexec.install Dir["*"]
+	 bin.env_script_all_files(libexec/"bin", Language::Java.java_home_env("1.8"))

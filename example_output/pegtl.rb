@@ -12,3 +12,6 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 prefix.install "include"
+	 rm "src/example/pegtl/CMakeLists.txt"
+	 (pkgshare/"examples").install (buildpath/"src/example/pegtl").children

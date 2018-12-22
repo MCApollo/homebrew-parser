@@ -20,3 +20,4 @@ install :
 	 cd "src/github.com/cortesi/devd" do
 	 system "go", "build", "-o", bin/"devd", ".../cmd/devd"
 	 prefix.install_metafiles
+	 end

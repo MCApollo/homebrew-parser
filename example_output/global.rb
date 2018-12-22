@@ -31,3 +31,4 @@ install :
 	 etc.install "gtags.conf"
 	 cd share/"gtags" do
 	 rm %w[README COPYING LICENSE INSTALL ChangeLog AUTHORS]
+	 end

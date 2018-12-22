@@ -23,3 +23,7 @@ install :
 	 mkdir "build" do
 	 system "cmake", "..", *std_cmake_args, "-DCMAKE_INSTALL_MANDIR:PATH=#{man}"
 	 system "make", "all", "lpass-test", "test", "install", "install-doc"
+	 end
+	 bash_completion.install "contrib/lpass_bash_completion"
+	 zsh_completion.install "contrib/lpass_zsh_completion" => "_lpass"
+	 fish_completion.install "contrib/completions-lpass.fish"

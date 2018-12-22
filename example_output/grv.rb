@@ -24,3 +24,4 @@ install :
 	 system "make", "build-only"
 	 bin.install "grv"
 	 prefix.install_metafiles
+	 end

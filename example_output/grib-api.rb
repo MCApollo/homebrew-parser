@@ -25,3 +25,4 @@ install :
 	 "-DENABLE_PNG=ON",
 	 "-DPNG_PNG_INCLUDE_DIR=#{Formula["libpng"].opt_include}"
 	 system "make", "install"
+	 end

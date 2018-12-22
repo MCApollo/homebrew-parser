@@ -8,7 +8,11 @@ description :
 	 Script to simplify the creation of jooby apps
 build_deps :
 link_deps :
+	 :java
+	 maven
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "jooby"
+	 (bin/"jooby").write_env_script libexec/"jooby", Language::Java.java_home_env("1.8")

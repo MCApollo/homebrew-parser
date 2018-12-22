@@ -24,7 +24,6 @@ EOF_patch :
 	 +         result:='/usr/lib/'+startupfile
 	 +       else if sysutils.fileexists('/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/') then
 	 +         result:='/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/'+startupfile
-	 end
 	 else
 	 result:='';
 install :

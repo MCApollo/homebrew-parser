@@ -22,3 +22,4 @@ install :
 	 "golang.org/x/net/websocket"
 	 system "go", "build", "-o", bin/"termshare"
 	 prefix.install_metafiles
+	 end

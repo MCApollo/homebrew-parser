@@ -34,3 +34,4 @@ install :
 	 system "repo", "sync"
 	 system "sh", "build.sh", "-v"
 	 mv "godeps/bin", prefix
+	 end

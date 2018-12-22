@@ -18,3 +18,4 @@ install :
 	 "--disable-werror"
 	 system "make"
 	 system "make", "install"
+	 end

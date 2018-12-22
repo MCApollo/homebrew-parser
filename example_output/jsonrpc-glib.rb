@@ -25,3 +25,4 @@ install :
 	 system "meson", "--prefix=#{prefix}", "-Dwith_vapi=true", ".."
 	 system "ninja"
 	 system "ninja", "install"
+	 end

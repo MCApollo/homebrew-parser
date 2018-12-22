@@ -12,3 +12,4 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install Dir["pkgroot/usr/local/vfuse/bin/*"]

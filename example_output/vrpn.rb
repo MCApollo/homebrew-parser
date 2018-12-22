@@ -21,3 +21,4 @@ install :
 	 "-DVRPN_BUILD_CLIENTS:BOOL=OFF",
 	 "-DVRPN_BUILD_JAVA:BOOL=OFF"
 	 system "make", "install"
+	 end

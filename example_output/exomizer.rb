@@ -15,3 +15,4 @@ install :
 	 cd "src" do
 	 system "make"
 	 bin.install %w[exobasic exomizer]
+	 end

@@ -21,3 +21,4 @@ install :
 	 "-s -w -X github.com/heptio/sonobuoy/pkg/buildinfo.Version=#{version}",
 	 "./"
 	 prefix.install_metafiles
+	 end

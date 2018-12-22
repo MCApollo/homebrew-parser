@@ -8,7 +8,9 @@ description :
 	 Build tooling for Clojure
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "boot.sh" => "boot"

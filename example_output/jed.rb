@@ -17,3 +17,4 @@ install :
 	 if build.head?
 	 cd "autoconf" do
 	 system "make"
+	 end

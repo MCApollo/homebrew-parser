@@ -26,3 +26,4 @@ install :
 	 system "make", "libespeak.so", "DATADIR=#{share}/espeak-data", "PREFIX=#{prefix}"
 	 lib.install "libespeak.so.1.1.48" => "libespeak.dylib"
 	 MachO::Tools.change_dylib_id("#{lib}/libespeak.dylib", "#{lib}/libespeak.dylib")
+	 end

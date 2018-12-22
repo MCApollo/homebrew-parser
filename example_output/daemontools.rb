@@ -15,3 +15,4 @@ install :
 	 cd "daemontools-#{version}" do
 	 system "package/compile"
 	 bin.install Dir["command/*"]
+	 end

@@ -12,3 +12,5 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install Dir["*.jar", "doc", "notices"]
+	 bin.write_jar_script libexec/"saxon9he.jar", "saxon"

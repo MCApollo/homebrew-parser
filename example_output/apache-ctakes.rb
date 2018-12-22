@@ -8,7 +8,13 @@ description :
 	 NLP system for extraction of information from EMR clinical text
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 rm_f Dir["bin/*.bat", "bin/*.cmd", "bin/ctakes.profile", "bin/ctakes-ytex",
+	 "libexec/*.bat", "libexec/*.cmd"]
+	 libexec.install %w[bin config desc lib resources]
+	 pkgshare.install_symlink libexec/"resources/org/apache/ctakes/examples"
+	 bin.write_exec_script Dir["#{libexec}/bin/*"]

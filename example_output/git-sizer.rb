@@ -18,3 +18,4 @@ install :
 	 cd "src/github.com/github/git-sizer" do
 	 system "go", "build", "-o", bin/"git-sizer"
 	 prefix.install_metafiles
+	 end

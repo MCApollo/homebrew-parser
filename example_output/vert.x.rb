@@ -8,7 +8,11 @@ description :
 	 Toolkit for building reactive applications on the JVM
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 rm_f Dir["bin/*.bat"]
+	 libexec.install %w[bin conf lib]
+	 bin.install_symlink "#{libexec}/bin/vertx"

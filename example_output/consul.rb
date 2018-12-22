@@ -25,3 +25,4 @@ install :
 	 system "make"
 	 bin.install "bin/consul"
 	 prefix.install_metafiles
+	 end

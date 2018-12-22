@@ -20,5 +20,8 @@ install :
 	 cd "applications/yapp" do
 	 system "make"
 	 system "make", "install"
+	 end
+	 (lib/"yaws/examples/ebin").mkpath
+	 (lib/"yaws/examples/include").mkpath
 	 (var/"log/yaws").mkpath
 	 (var/"yaws/www").mkpath

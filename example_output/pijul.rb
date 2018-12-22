@@ -19,3 +19,4 @@ install :
 	 ENV["OPENSSL_DIR"] = Formula["openssl"].opt_prefix
 	 cd "pijul" do
 	 system "cargo", "install", "--root", prefix, "--path", "."
+	 end

@@ -12,3 +12,5 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "shml.sh"
+	 bin.install_symlink bin/"shml.sh" => "shml"

@@ -18,3 +18,4 @@ install :
 	 system "cmake", ".", "-DEIGEN3_INCLUDE_DIR=#{Formula["eigen"].opt_include}/eigen3",
 	 *std_cmake_args
 	 system "make", "install"
+	 end

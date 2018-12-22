@@ -26,3 +26,4 @@ install :
 	 "--prefix=#{buildpath}/grep"
 	 system "make", "install"
 	 ENV["GREP"] = "#{buildpath}/grep/bin/grep"
+	 end

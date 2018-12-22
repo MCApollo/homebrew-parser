@@ -23,3 +23,4 @@ install :
 	 system bin/"hugo", "gen", "man"
 	 man1.install Dir["man/*.1"]
 	 prefix.install_metafiles
+	 end

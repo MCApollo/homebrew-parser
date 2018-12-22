@@ -14,3 +14,11 @@ EOF_patch :
 install :
 	 resource("baksmali-jar").stage do
 	 libexec.install "baksmali-#{version}.jar" => "baksmali.jar"
+	 end
+	 libexec.install "smali-#{version}.jar" => "smali.jar"
+	 %w[smali baksmali].each do |r|
+	 libexec.install resource(r)
+	 inreplace libexec/r, /^libdir=.*$/, "libdir=\"#{libexec}\""
+	 chmod 0755, libexec/r
+	 bin.install_symlink libexec/r
+	 end

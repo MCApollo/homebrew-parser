@@ -25,3 +25,4 @@ install :
 	 system "go", "build", "-ldflags", ldflags.join(" "), "-o",
 	 bin/"svcat", "./cmd/svcat"
 	 prefix.install_metafiles
+	 end

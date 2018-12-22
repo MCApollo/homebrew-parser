@@ -15,3 +15,4 @@ install :
 	 cd "src" do
 	 system "make", "CXX=#{ENV.cxx}", "-f", "../build/mac/Makefile"
 	 bin.install "bin/astyle"
+	 end

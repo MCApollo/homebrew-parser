@@ -36,3 +36,12 @@ install :
 	 %w[Markdown Cheetah MarkupSafe Mako six].each do |r|
 	 resource(r).stage do
 	 system "python", *Language::Python.setup_install_args(libexec/"vendor")
+	 end
+	 end
+	 begin
+	 ENV["SDKROOT"] = MacOS.sdk_path if MacOS.version == :sierra
+	 resource("lxml").stage do
+	 system "python", *Language::Python.setup_install_args(libexec/"vendor")
+	 end
+	 ensure
+	 ENV.delete("SDKROOT")

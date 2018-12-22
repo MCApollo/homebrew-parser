@@ -22,3 +22,4 @@ install :
 	 system "make", "dev"
 	 bin.install "bin/vault"
 	 prefix.install_metafiles
+	 end

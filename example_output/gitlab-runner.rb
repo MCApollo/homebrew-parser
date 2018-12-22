@@ -30,3 +30,4 @@ install :
 	 EOS
 	 bin.install "gitlab-runner"
 	 prefix.install_metafiles
+	 end

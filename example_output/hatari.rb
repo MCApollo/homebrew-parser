@@ -24,3 +24,4 @@ install :
 	 bin.write_exec_script "#{prefix}/Hatari.app/Contents/MacOS/hatari"
 	 resource("emutos").stage do
 	 (prefix/"Hatari.app/Contents/Resources").install "etos512k.img" => "tos.img"
+	 end

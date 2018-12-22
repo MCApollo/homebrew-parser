@@ -8,7 +8,13 @@ description :
 	 Maxwell's daemon, a mysql-to-json kafka producer
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install Dir["*"]
+	 %w[maxwell maxwell-bootstrap].each do |f|
+	 bin.install libexec/"bin/#{f}"
+	 end
+	 bin.env_script_all_files(libexec/"bin", Language::Java.java_home_env("1.8"))

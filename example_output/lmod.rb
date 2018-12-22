@@ -23,3 +23,7 @@ install :
 	 resources.each do |r|
 	 r.stage do
 	 system "luarocks", "make", "--tree=#{luapath}"
+	 end
+	 end
+	 system "./configure", "--with-siteControlPrefix=yes", "--prefix=#{prefix}"
+	 system "make", "install"

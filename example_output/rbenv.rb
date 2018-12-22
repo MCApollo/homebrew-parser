@@ -17,3 +17,4 @@ install :
 	 s.gsub! '"${BASH_SOURCE%/*}"/../libexec', libexec
 	 if HOMEBREW_PREFIX.to_s != "/usr/local"
 	 s.gsub! ":/usr/local/etc/rbenv.d", ":#{HOMEBREW_PREFIX}/etc/rbenv.d\\0"
+	 end

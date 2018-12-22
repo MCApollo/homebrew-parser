@@ -12,3 +12,9 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 system "make", "PREFIX=#{prefix}" if build.head?
+	 bin.install "youtube-dl"
+	 man1.install "youtube-dl.1"
+	 bash_completion.install "youtube-dl.bash-completion"
+	 zsh_completion.install "youtube-dl.zsh" => "_youtube-dl"
+	 fish_completion.install "youtube-dl.fish"

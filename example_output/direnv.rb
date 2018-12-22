@@ -18,3 +18,4 @@ install :
 	 cd "src/github.com/direnv/direnv" do
 	 system "make", "install", "DESTDIR=#{prefix}"
 	 prefix.install_metafiles
+	 end

@@ -8,7 +8,10 @@ description :
 	 XProc (XML Pipeline Language) implementation
 build_deps :
 link_deps :
+	 saxon
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install Dir["*"]
+	 bin.write_jar_script libexec/"xmlcalabash-#{version}.jar", "calabash", "-Xmx1024m"

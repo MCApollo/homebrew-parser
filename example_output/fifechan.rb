@@ -20,3 +20,4 @@ install :
 	 mkdir "build" do
 	 system "cmake", "..", "-DENABLE_SDL_CONTRIB=ON", *std_cmake_args
 	 system "make", "install"
+	 end

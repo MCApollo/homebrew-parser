@@ -20,3 +20,7 @@ install :
 	 venv = virtualenv_create(libexec)
 	 resource("m2crypto").stage do
 	 system libexec/"bin/python", "setup.py", "build_ext", "--openssl=#{Formula["openssl"].opt_prefix}", "install"
+	 end
+	 venv.pip_install resources.reject { |r| r.name == "m2crypto" }
+	 system libexec/"bin/python", "setup.py", "build"
+	 system libexec/"bin/python", "setup.py", "install", "--prefix=#{libexec}", "--install-data=#{prefix}", "--install-scripts=#{bin}"

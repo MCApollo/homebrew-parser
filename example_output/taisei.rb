@@ -27,3 +27,4 @@ install :
 	 system "meson", "--prefix=#{prefix}", "-Ddocs=false", ".."
 	 system "ninja"
 	 system "ninja", "install"
+	 end

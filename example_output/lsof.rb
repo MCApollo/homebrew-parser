@@ -28,3 +28,4 @@ install :
 	 bin.install "lsof"
 	 man8.install "lsof.8"
 	 prefix.install_metafiles
+	 end

@@ -24,3 +24,4 @@ install :
 	 system "go", "build", "-o", "#{bin}/docker-machine-driver-hyperkit",
 	 "-ldflags", "-X main.version=#{version}"
 	 prefix.install_metafiles
+	 end

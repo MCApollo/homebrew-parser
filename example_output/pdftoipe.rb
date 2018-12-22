@@ -19,3 +19,4 @@ install :
 	 system "make"
 	 bin.install "pdftoipe"
 	 man1.install "pdftoipe.1"
+	 end

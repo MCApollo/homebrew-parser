@@ -29,3 +29,5 @@ install :
 	 system "make", "install"
 	 Pathname.glob("#{lib}/*.dylib") do |dylib|
 	 lib.install_symlink dylib.basename => "#{dylib.basename(".dylib")}.so"
+	 end
+	 (share/"gdb/auto-load").install Dir["#{lib}/*-gdb.scm"]

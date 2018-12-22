@@ -12,3 +12,5 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install Dir["*.jar"]
+	 bin.write_jar_script libexec/"briss-#{version}.jar", "briss"

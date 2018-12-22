@@ -16,3 +16,4 @@ install :
 	 system "./configure", "--disable-assembly", "--prefix=#{prefix}"
 	 system "make"
 	 system "make", "install"
+	 end

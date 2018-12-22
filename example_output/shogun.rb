@@ -35,3 +35,6 @@ install :
 	 ENV.prepend_create_path "PYTHONPATH", libexec/"vendor/lib/python2.7/site-packages"
 	 resource("numpy").stage do
 	 system "python", *Language::Python.setup_install_args(libexec/"vendor")
+	 end
+	 if MacOS.version >= :high_sierra
+	 ENV["LAPACKE_PATH"] = Formula["lapack"].opt_lib

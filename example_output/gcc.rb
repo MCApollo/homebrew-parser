@@ -56,3 +56,8 @@ install :
 	 elsif MacOS.version >= :mojave
 	 args << "--with-native-system-header-dir=/usr/include"
 	 args << "--with-sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
+	 end
+	 system "../configure", *args
+	 make_args = []
+	 if build.bottle?
+	 make_args << "BOOT_LDFLAGS=-Wl,-headerpad_max_install_names"

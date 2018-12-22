@@ -29,5 +29,11 @@ install :
 	 ]
 	 if ENV.compiler == "gcc-6"
 	 ENV.append "V8_CXXFLAGS", "-O3 -g -fno-delete-null-pointer-checks"
+	 end
+	 system "cmake", "..", *args
+	 system "make", "install"
+	 %w[arangod arango-dfdb arangosh foxx-manager].each do |f|
+	 inreplace etc/"arangodb3/#{f}.conf", pkgshare, opt_pkgshare
+	 end
 	 (var/"lib/arangodb3").mkpath
 	 (var/"log/arangodb3").mkpath

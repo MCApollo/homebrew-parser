@@ -25,3 +25,4 @@ install :
 	 system "make"
 	 ENV.deparallelize
 	 system "make", "install"
+	 end

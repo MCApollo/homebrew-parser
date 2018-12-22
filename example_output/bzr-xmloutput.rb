@@ -8,7 +8,9 @@ description :
 	 Bazaar plugin that provides a option to generate XML output
 build_deps :
 link_deps :
+	 bazaar
 conflicts :
 patches :
 EOF_patch :
 install :
+	 (share/"bazaar/plugins/xmloutput").install Dir["*"]

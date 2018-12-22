@@ -42,3 +42,5 @@ install :
 	 inreplace "dist/install.sh" do |s|
 	 s.gsub! '"/usr/local"', prefix
 	 s.gsub! '"${PREFIX}/man"', man
+	 end
+	 system "make", "install"

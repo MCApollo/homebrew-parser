@@ -8,7 +8,11 @@ description :
 	 Search results clustering engine
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install Dir["*"]
+	 bin.install libexec/"dcs.sh" => "carrot2"
+	 inreplace bin/"carrot2", "java", "cd #{libexec} && exec java"

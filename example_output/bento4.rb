@@ -22,3 +22,11 @@ install :
 	 next if f.end_with? ".dylib"
 	 next if f.end_with? "Test"
 	 File.file?(f) && File.executable?(f)
+	 end
+	 bin.install programs
+	 end
+	 rm Dir["Source/Python/wrappers/*.bat"]
+	 inreplace Dir["Source/Python/wrappers/*"],
+	 "BASEDIR=$(dirname $0)", "BASEDIR=#{libexec}/Python/wrappers"
+	 libexec.install "Source/Python"
+	 bin.install_symlink Dir[libexec/"Python/wrappers/*"]

@@ -19,3 +19,4 @@ install :
 	 "-DWITH_SYMBOL_VERSIONING=OFF",
 	 *std_cmake_args
 	 system "make", "install"
+	 end

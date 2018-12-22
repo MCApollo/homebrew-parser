@@ -8,7 +8,10 @@ description :
 	 Word Clouds in Java
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "kumo-cli-#{version}.jar"
+	 bin.write_jar_script libexec/"kumo-cli-#{version}.jar", "kumo"

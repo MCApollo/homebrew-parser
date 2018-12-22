@@ -12,3 +12,5 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 (buildpath/"saxon-b").install Dir["*.jar", "doc", "notices"]
+	 share.install Dir["*"]

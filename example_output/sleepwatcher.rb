@@ -21,3 +21,13 @@ install :
 	 s.gsub! /^(.*?CFLAGS_X86.*?[.]x86)/, "#\\1"
 	 s.gsub! /^(\t(lipo|rm).*?[.](ppc|x86))/, "#\\1"
 	 s.gsub! "-o root -g wheel", ""
+	 end
+	 cd "sources" do
+	 mv "../sleepwatcher.8", "."
+	 system "make", "install", "PREFIX=#{prefix}"
+	 end
+	 (prefix + "etc/sleepwatcher").install Dir["config/rc.*"]
+	 inreplace Dir["config/*.plist"], "/usr/local/sbin", HOMEBREW_PREFIX/"sbin"
+	 inreplace "config/de.bernhard-baehr.sleepwatcher-20compatibility.plist",
+	 "/etc", etc/"sleepwatcher"
+	 prefix.install Dir["config/*.plist"]

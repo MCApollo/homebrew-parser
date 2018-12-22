@@ -33,3 +33,4 @@ install :
 	 "-I#{Formula["libpng"].include}"
 	 prefix.install "XU4.app"
 	 bin.write_exec_script "#{prefix}/XU4.app/Contents/MacOS/u4"
+	 end

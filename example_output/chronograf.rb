@@ -29,3 +29,4 @@ install :
 	 system "make", "chronograf"
 	 bin.install "chronograf"
 	 prefix.install_metafiles
+	 end

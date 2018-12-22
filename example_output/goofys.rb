@@ -25,3 +25,4 @@ install :
 	 "-X main.Version=#{commit}"
 	 bin.install "goofys"
 	 prefix.install_metafiles
+	 end

@@ -20,3 +20,4 @@ install :
 	 "-X github.com/prest/prest/vendor/github.com/prest/helpers.PrestVersionNumber=#{version}",
 	 "-o", bin/"prest"
 	 prefix.install_metafiles
+	 end

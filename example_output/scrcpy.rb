@@ -26,3 +26,4 @@ install :
 	 "-Dprebuilt_server=#{buildpath}/prebuilt-server.jar",
 	 ".."
 	 system "ninja", "install"
+	 end

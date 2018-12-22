@@ -8,7 +8,11 @@ description :
 	 Quality control tool for high throughput sequence data
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install Dir["*"]
+	 chmod 0755, libexec/"fastqc"
+	 bin.install_symlink libexec/"fastqc"

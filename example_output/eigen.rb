@@ -18,3 +18,5 @@ install :
 	 args << "-Dpkg_config_libdir=#{lib}" << ".."
 	 system "cmake", *args
 	 system "make", "install"
+	 end
+	 (share/"cmake/Modules").install "cmake/FindEigen3.cmake"

@@ -8,6 +8,7 @@ description :
 	 Command-line tool to manipulate Android App Bundles
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :

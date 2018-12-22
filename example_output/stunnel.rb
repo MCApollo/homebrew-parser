@@ -31,3 +31,4 @@ install :
 	 system "#{Formula["openssl"].opt_bin}/openssl", *args
 	 chmod 0600, "stunnel.pem"
 	 (etc/"stunnel").install "stunnel.pem"
+	 end

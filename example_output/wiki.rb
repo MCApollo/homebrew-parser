@@ -22,3 +22,4 @@ install :
 	 bin.install "build/wiki"
 	 man1.install "_doc/wiki.1"
 	 prefix.install_metafiles
+	 end

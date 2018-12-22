@@ -21,3 +21,4 @@ install :
 	 system "glide", "install"
 	 system "go", "build", "-o", bin/"peco", "cmd/peco/peco.go"
 	 prefix.install_metafiles
+	 end

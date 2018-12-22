@@ -8,7 +8,11 @@ description :
 	 Ammonite is a cleanroom re-implementation of the Scala REPL
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install Dir["*"].shift => "amm"
+	 chmod 0555, libexec/"amm"
+	 bin.install_symlink libexec/"amm"

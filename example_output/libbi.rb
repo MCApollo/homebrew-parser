@@ -25,3 +25,12 @@ install :
 	 system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}", perl_flags
 	 system "make"
 	 system "make", "install"
+	 end
+	 end
+	 (include/"thrust").install resource("thrust")
+	 system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}", "INSTALLSITESCRIPT=#{bin}"
+	 inreplace "script/libbi", "#!/usr/bin/env perl", "#!/usr/bin/perl"
+	 system "make"
+	 system "make", "install"
+	 pkgshare.install "Test.bi", "test.conf"
+	 bin.env_script_all_files(libexec+"bin", :PERL5LIB => ENV["PERL5LIB"])

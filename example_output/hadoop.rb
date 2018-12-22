@@ -8,7 +8,15 @@ description :
 	 Framework for distributed processing of large data sets
 build_deps :
 link_deps :
+	 :java
 conflicts :
+	 yarn
 patches :
 EOF_patch :
 install :
+	 rm_f Dir["bin/*.cmd", "sbin/*.cmd", "libexec/*.cmd", "etc/hadoop/*.cmd"]
+	 libexec.install %w[bin sbin libexec share etc]
+	 bin.write_exec_script Dir["#{libexec}/bin/*"]
+	 sbin.write_exec_script Dir["#{libexec}/sbin/*"]
+	 libexec.write_exec_script Dir["#{libexec}/libexec/*.sh"]
+	 chmod 0755, Dir["#{libexec}/*.sh"]

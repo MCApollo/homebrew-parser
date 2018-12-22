@@ -17,3 +17,27 @@ install :
 	 ascii_val = value.dup
 	 ascii_val.force_encoding("ASCII-8BIT") if ascii_val.respond_to? :force_encoding
 	 ascii_val =~ /[\x80-\xff]/n
+	 end
+	 tmpdir = Pathname.new(Dir.mktmpdir)
+	 tmpdir.install resource("bootstrap64")
+	 command = "#{tmpdir}/src/runtime/sbcl"
+	 core = "#{tmpdir}/output/sbcl.core"
+	 xc_cmdline = "#{command} --core #{core} --disable-debugger --no-userinit --no-sysinit"
+	 args = [
+	 "--prefix=#{prefix}",
+	 "--xc-host=#{xc_cmdline}",
+	 "--with-sb-core-compression",
+	 "--with-sb-ldb",
+	 "--with-sb-thread",
+	 ]
+	 ENV["SBCL_MACOSX_VERSION_MIN"] = MacOS.version
+	 system "./make.sh", *args
+	 ENV["INSTALL_ROOT"] = prefix
+	 system "sh", "install.sh"
+	 bin.env_script_all_files(libexec/"bin", :SBCL_SOURCE_ROOT => pkgshare/"src")
+	 pkgshare.install %w[contrib src]
+	 (lib/"sbcl/sbclrc").write <<~EOS
+	 (setf (logical-pathname-translations "SYS")
+	 '(("SYS:SRC;**;*.*.*" #p"#{pkgshare}/src/**/*.*")
+	 ("SYS:CONTRIB;**;*.*.*" #p"#{pkgshare}/contrib/**/*.*")))
+	 EOS

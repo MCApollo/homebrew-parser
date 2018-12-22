@@ -56,3 +56,5 @@ install :
 	 #!/bin/bash
 	 exec "#{libexec}/d8" --icu-data-file="#{libexec}/icudtl.dat" "$@"
 	 EOS
+	 end
+	 end

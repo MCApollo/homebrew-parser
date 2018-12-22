@@ -17,3 +17,7 @@ install :
 	 ENV["OCAMLPARAM"] = "safe-string=0,_"
 	 inreplace "Makefile.in" do |s|
 	 s.remove_make_var! "STRLIB"
+	 end
+	 system "./configure", "--prefix=#{prefix}"
+	 system "make"
+	 system "make", "install"

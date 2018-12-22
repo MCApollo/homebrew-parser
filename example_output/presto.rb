@@ -8,6 +8,7 @@ description :
 	 Distributed SQL query engine for big data
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
@@ -45,4 +46,5 @@ install :
 	 EOS
 	 resource("presto-cli").stage do
 	 bin.install "presto-cli-#{version}-executable.jar" => "presto"
+	 end
 	 (var/"presto/data").mkpath

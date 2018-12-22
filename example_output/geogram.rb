@@ -21,3 +21,5 @@ install :
 	 system "./configure.sh"
 	 cd "build/Darwin-clang-dynamic-Release" do
 	 system "make", "install"
+	 end
+	 (share/"cmake/Modules").install Dir[lib/"cmake/modules/*"]

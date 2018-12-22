@@ -37,7 +37,6 @@ EOF_patch :
 	 -LDFLAGS += -Wl,-soname,libopenzwave.so.$(VERSION)
 	 +LDFLAGS += -shared -Wl,-soname,$(SHARED_LIB_NAME)
 	 LIBS 	+= -ludev
-	 endif
 	 @@ -74,10 +82,10 @@ indep := $(notdir $(filter-out $(top_srcdir)/cpp/src/vers.cpp, $(wildcard $(top_
 	 aes := $(notdir $(wildcard $(top_srcdir)/cpp/src/aes/*.c))
 	 -default: $(LIBDIR)/libopenzwave.a $(LIBDIR)/libopenzwave.so.$(VERSION)
@@ -65,7 +64,6 @@ EOF_patch :
 	 $(top_builddir)/libopenzwave.pc: $(top_srcdir)/cpp/build/libopenzwave.pc.in
 	 @@ -155,10 +163,10 @@ doc: $(top_builddir)/Doxyfile
 	 @cd $(top_builddir); $(DOXYGEN)
-	 endif
 	 -install: $(LIBDIR)/libopenzwave.so.$(VERSION) doc $(top_builddir)/libopenzwave.pc
 	 +install: $(LIBDIR)/$(SHARED_LIB_NAME) doc $(top_builddir)/libopenzwave.pc
 	 install -d $(DESTDIR)/$(instlibdir)/

@@ -20,3 +20,4 @@ EOF_patch :
 	 eval 'exec perl $0 ${1+"$@"}'
 	 if 0;
 install :
+	 bin.install "chcase"

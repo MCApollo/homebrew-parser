@@ -40,3 +40,4 @@ install :
 	 resource("DBI").stage do
 	 system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
 	 system "make", "install"
+	 end

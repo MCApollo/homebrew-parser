@@ -25,3 +25,14 @@ install :
 	 "self.openssl = '#{Formula["openssl"].opt_prefix}'"
 	 s.gsub! "platform.system() == \"Linux\"",
 	 "platform.system() == \"Darwin\" or \\0"
+	 end
+	 venv.pip_install "."
+	 end
+	 resource("pycurl").stage do
+	 system libexec/"bin/pip", "install",
+	 "--install-option=--libcurl-dll=/usr/lib/libcurl.dylib", "-v",
+	 "--no-binary", ":all:", "--ignore-installed", "."
+	 end
+	 inreplace "osc/conf.py", "'/etc/ssl/certs'", "'#{etc}/openssl/cert.pem'"
+	 venv.pip_install_and_link buildpath
+	 mv bin/"osc-wrapper.py", bin/"osc"

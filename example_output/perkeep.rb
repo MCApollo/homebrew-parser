@@ -20,3 +20,5 @@ install :
 	 cd "src/perkeep.org" do
 	 system "go", "run", "make.go"
 	 prefix.install_metafiles
+	 end
+	 bin.install Dir["bin/*"].select { |f| File.executable? f }

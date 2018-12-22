@@ -24,3 +24,9 @@ install :
 	 "LIBRARY_SEARCH_PATHS = (\"$(inherited)\", #{sdl2.lib}, #{sdl2_ttf.lib}); " \
 	 "HEADER_SEARCH_PATHS = (#{sdl2.include}/SDL2, #{sdl2.include}, #{sdl2_ttf.include},"
 	 s.gsub! "buildSettings = {", 'buildSettings ={ OTHER_LDFLAGS = "-lSDL2 -lSDL2_ttf";'
+	 end
+	 inreplace "np2sdl2/compiler.h", "#define RESOURCE_US", ""
+	 inreplace "np2sdl2/main.m", "[pstrBundlePath UTF8String]", '"./"'
+	 xcodebuild "SYMROOT=build"
+	 bin.install "build/Release/np2sdl2.app/Contents/MacOS/np2sdl2" => "np2"
+	 end

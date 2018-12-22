@@ -17,3 +17,4 @@ install :
 	 mkdir "build" do
 	 system "cmake", "..", "-DBUILD_APPS=OFF", *std_cmake_args
 	 system "make", "install"
+	 end

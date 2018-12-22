@@ -18,3 +18,4 @@ install :
 	 cd "src/github.com/buger/goreplay" do
 	 system "go", "build", "-o", bin/"gor", "-ldflags", "-X main.VERSION=#{version}"
 	 prefix.install_metafiles
+	 end

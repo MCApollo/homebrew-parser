@@ -7,7 +7,17 @@ url :
 description :
 build_deps :
 link_deps :
+	 mono
 conflicts :
+	 coffeescript
 patches :
 EOF_patch :
 install :
+	 libexec.install Dir["*.dll"]
+	 libexec.install Dir["*.exe"]
+	 libexec.install Dir["*.xml"]
+	 bin.mkpath
+	 (bin/"cake").write <<~EOS
+	 #!/bin/bash
+	 mono #{libexec}/Cake.exe "$@"
+	 EOS

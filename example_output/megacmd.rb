@@ -18,3 +18,4 @@ install :
 	 cd "src/github.com/t3rm1n4l/megacmd" do
 	 system "go", "build", "-o", bin/"megacmd"
 	 prefix.install_metafiles
+	 end

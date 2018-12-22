@@ -30,3 +30,17 @@ install :
 	 system "cmake", buildpath/"source", *high_bit_depth_args
 	 system "make"
 	 mv "libx265.a", buildpath/"8bit/libx265_main10.a"
+	 end
+	 mkdir "12bit" do
+	 system "cmake", buildpath/"source", "-DMAIN12=ON", *high_bit_depth_args
+	 system "make"
+	 mv "libx265.a", buildpath/"8bit/libx265_main12.a"
+	 end
+	 cd "8bit" do
+	 system "cmake", buildpath/"source", *args
+	 system "make"
+	 mv "libx265.a", "libx265_main.a"
+	 system "libtool", "-static", "-o", "libx265.a", "libx265_main.a",
+	 "libx265_main10.a", "libx265_main12.a"
+	 system "make", "install"
+	 end

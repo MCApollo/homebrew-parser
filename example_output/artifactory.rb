@@ -8,10 +8,19 @@ description :
 	 Manages binaries
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 rm_f Dir["bin/*.bat"]
+	 rm_f Dir["bin/*.exe"]
+	 inreplace "bin/artifactory.sh",
+	 'export ARTIFACTORY_HOME="$(cd "$(dirname "${artBinDir}")" && pwd)"',
+	 "export ARTIFACTORY_HOME=#{libexec}"
+	 libexec.install Dir["*"]
+	 bin.install_symlink libexec/"bin/artifactory.sh"
+	 bin.install_symlink libexec/"bin/artifactory.default"
 	 data = var/"artifactory"
 	 data.mkpath
 	 libexec.install_symlink data => "data"

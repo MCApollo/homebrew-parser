@@ -8,6 +8,7 @@ description :
 	 Graphical interface to Sleuth Kit investigation tools
 build_deps :
 link_deps :
+	 sleuthkit
 conflicts :
 patches :
 EOF_patch :

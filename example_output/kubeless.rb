@@ -23,3 +23,4 @@ install :
 	 system "go", "build", "-o", bin/"kubeless", "-ldflags",
 	 ldflags.join(" "), "./cmd/kubeless"
 	 prefix.install_metafiles
+	 end

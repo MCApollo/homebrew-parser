@@ -23,3 +23,5 @@ install :
 	 cd "build" do
 	 system "make"
 	 bin.install "multimarkdown"
+	 end
+	 bin.install Dir["scripts/*"].reject { |f| f =~ /\.bat$/ }

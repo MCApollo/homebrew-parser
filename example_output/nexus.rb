@@ -12,3 +12,9 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 rm_f Dir["bin/*.bat"]
+	 inreplace "nexus-#{version}/conf/nexus.properties",
+	 "nexus-work=${bundleBasedir}/../sonatype-work/nexus",
+	 "nexus-work=#{var}/nexus"
+	 libexec.install Dir["nexus-#{version}/*"]
+	 bin.install_symlink libexec/"bin/nexus"

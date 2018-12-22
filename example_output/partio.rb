@@ -23,3 +23,4 @@ install :
 	 system "make"
 	 system "make", "doc"
 	 system "make", "install"
+	 end

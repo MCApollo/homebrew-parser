@@ -18,3 +18,4 @@ install :
 	 cd "src/github.com/FiloSottile/mkcert" do
 	 system "go", "build", "-o", bin/"mkcert"
 	 prefix.install_metafiles
+	 end

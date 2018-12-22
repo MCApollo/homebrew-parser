@@ -21,3 +21,13 @@ install :
 	 resources.each do |r|
 	 r.stage do
 	 system "python3", *Language::Python.setup_install_args(libexec/"vendor")
+	 end
+	 end
+	 ENV.prepend_create_path "PYTHONPATH", libexec/"lib/python#{xy}/site-packages"
+	 system "python3", *Language::Python.setup_install_args(libexec)
+	 bin.install Dir[libexec/"bin/*"]
+	 env = {
+	 :PATH       => "#{Formula["jq"].opt_bin}:$PATH",
+	 :PYTHONPATH => ENV["PYTHONPATH"],
+	 }
+	 bin.env_script_all_files(libexec/"bin", env)

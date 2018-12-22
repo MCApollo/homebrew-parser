@@ -20,3 +20,4 @@ install :
 	 "-w -X main.VERSION=v#{version}",
 	 "-o", bin/"rke"
 	 prefix.install_metafiles
+	 end

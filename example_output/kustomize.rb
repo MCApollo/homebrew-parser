@@ -27,3 +27,4 @@ install :
 	 system "go", "install", "-ldflags", ldflags.join(" ")
 	 bin.install buildpath/"bin/kustomize"
 	 prefix.install_metafiles
+	 end

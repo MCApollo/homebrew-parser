@@ -8,7 +8,9 @@ description :
 	 Share gems across multiple rbenv Ruby installs
 build_deps :
 link_deps :
+	 rbenv
 conflicts :
 patches :
 EOF_patch :
 install :
+	 prefix.install Dir["*"]

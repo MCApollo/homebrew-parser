@@ -23,3 +23,4 @@ install :
 	 system "cmake", *args, ".."
 	 system "make"
 	 system "make", "install"
+	 end

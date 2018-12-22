@@ -28,3 +28,5 @@ install :
 	 ]
 	 deps_to_install.each do |dep|
 	 (libexec+dep).install Dir["#{dep}/*"]
+	 end
+	 end

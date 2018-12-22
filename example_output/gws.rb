@@ -8,7 +8,11 @@ description :
 	 Manage workspaces composed of git repositories
 build_deps :
 link_deps :
+	 bash
 conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "src/gws"
+	 bash_completion.install "completions/bash"
+	 zsh_completion.install "completions/zsh"

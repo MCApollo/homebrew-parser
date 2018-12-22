@@ -12,3 +12,8 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 system "tar", "xf", "zsh-lovers_#{version}_all.deb"
+	 system "tar", "xf", "data.tar.xz"
+	 system "gunzip", *Dir["usr/**/*.gz"]
+	 prefix.install_metafiles "usr/share/doc/zsh-lovers"
+	 prefix.install "usr/share"

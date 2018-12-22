@@ -22,3 +22,5 @@ install :
 	 virtualenv_install_with_resources
 	 Pathname.glob(libexec/"lib/python*/site-packages/prettytable-0.7.2-py*.egg-info").each do |prettytable_path|
 	 chmod_R("a+r", prettytable_path)
+	 end
+	 man1.install Dir["docs/man/man1/*.1"]

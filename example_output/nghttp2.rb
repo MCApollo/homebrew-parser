@@ -44,3 +44,8 @@ install :
 	 ENV.prepend_create_path "PYTHONPATH", lib/"python#{pyver}/site-packages"
 	 resource("Cython").stage do
 	 system "python3", *Language::Python.setup_install_args(buildpath/"cython")
+	 end
+	 cd "python" do
+	 system buildpath/"cython/bin/cython", "nghttp2.pyx"
+	 system "python3", *Language::Python.setup_install_args(prefix)
+	 end

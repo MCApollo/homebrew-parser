@@ -27,6 +27,7 @@ install :
 	 (pkgshare/"assets").install "docs", "static", "templates"
 	 system "gzip", "-d", "data/30kmoviedata.nq.gz"
 	 (pkgshare/"samples").install "data/testdata.nq", "data/30kmoviedata.nq"
+	 end
 	 unless File.exist? var/"cayley"
 	 (var/"cayley").mkpath
 	 system bin/"cayley", "init", "--config=#{etc}/cayley.yml"

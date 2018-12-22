@@ -28,3 +28,10 @@ EOF_patch :
 install :
 	 open("user-config.jam", "a") do |file|
 	 file.write "using darwin : : #{ENV.cxx} ;\n"
+	 end
+	 bootstrap_args = ["--prefix=#{prefix}", "--libdir=#{lib}"]
+	 if build.with? "icu4c"
+	 icu4c_prefix = Formula["icu4c"].opt_prefix
+	 bootstrap_args << "--with-icu=#{icu4c_prefix}"
+	 else
+	 bootstrap_args << "--without-icu"

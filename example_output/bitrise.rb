@@ -19,3 +19,4 @@ install :
 	 cd bitrise_go_path do
 	 prefix.install_metafiles
 	 system "go", "build", "-o", bin/"bitrise"
+	 end

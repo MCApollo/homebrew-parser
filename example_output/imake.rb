@@ -29,3 +29,4 @@ install :
 	 system "./configure", "--with-config-dir=#{lib}/X11/config",
 	 "--prefix=#{HOMEBREW_PREFIX}"
 	 system "make", "install"
+	 end

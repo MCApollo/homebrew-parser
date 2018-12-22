@@ -28,3 +28,12 @@ install :
 	 s.gsub! "FREETYPE_ROOT = None",
 	 "FREETYPE_ROOT = ('#{Formula["freetype"].opt_prefix}/lib', " \
 	 "'#{Formula["freetype"].opt_prefix}/include')"
+	 end
+	 begin
+	 deleted = ENV.delete "SDKROOT"
+	 unless MacOS::CLT.installed?
+	 ENV.append "CFLAGS", "-I#{MacOS.sdk_path}/System/Library/Frameworks/Tk.framework/Versions/8.5/Headers"
+	 end
+	 venv.pip_install Pathname.pwd
+	 ensure
+	 ENV["SDKROOT"] = deleted

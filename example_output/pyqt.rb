@@ -32,3 +32,4 @@ install :
 	 system "make"
 	 system "make", "install"
 	 system "make", "clean"
+	 end

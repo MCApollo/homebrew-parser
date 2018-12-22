@@ -26,3 +26,7 @@ install :
 	 system "make", "install", *args
 	 cd "doc" do
 	 system "make", "info", "html"
+	 end
+	 man1.install "doc/proofgeneral.1"
+	 info.install "doc/ProofGeneral.info", "doc/PG-adapting.info"
+	 doc.install "doc/ProofGeneral", "doc/PG-adapting"

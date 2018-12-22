@@ -8,7 +8,11 @@ description :
 	 Lexical analyzer generator for Java, written in Java
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 pkgshare.install "examples"
+	 libexec.install "lib/jflex-full-#{version}.jar" => "jflex-#{version}.jar"
+	 bin.write_jar_script libexec/"jflex-#{version}.jar", "jflex"

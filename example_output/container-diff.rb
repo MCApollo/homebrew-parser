@@ -19,3 +19,4 @@ install :
 	 cd "src/github.com/GoogleContainerTools/container-diff" do
 	 system "make"
 	 bin.install "out/container-diff"
+	 end

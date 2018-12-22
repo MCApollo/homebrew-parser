@@ -49,3 +49,4 @@ install :
 	 system "perl", "Makefile.PL", "INSTALL_BASE=#{prefix}"
 	 system "make"
 	 system "make", "install"
+	 end

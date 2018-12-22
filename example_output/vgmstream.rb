@@ -18,3 +18,4 @@ install :
 	 system "make"
 	 bin.install "test" => "vgmstream"
 	 lib.install "../src/libvgmstream.a"
+	 end

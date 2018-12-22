@@ -8,7 +8,12 @@ description :
 	 Java EE application server
 build_deps :
 link_deps :
+	 :java
 conflicts :
+	 payara
 patches :
 EOF_patch :
 install :
+	 rm_rf Dir["bin/*.bat"]
+	 libexec.install Dir["*", ".org.opensolaris,pkg"]
+	 bin.install_symlink Dir["#{libexec}/bin/*"]

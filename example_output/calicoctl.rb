@@ -23,3 +23,4 @@ install :
 	 system "make", "binary"
 	 bin.install "dist/calicoctl-darwin-amd64" => "calicoctl"
 	 prefix.install_metafiles
+	 end

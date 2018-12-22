@@ -19,3 +19,4 @@ install :
 	 system "go", "build", "-ldflags", "-X main.Version=#{version}"
 	 bin.install "aws-okta"
 	 prefix.install_metafiles
+	 end

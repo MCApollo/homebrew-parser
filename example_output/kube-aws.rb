@@ -19,3 +19,4 @@ install :
 	 cd dir do
 	 system "make", "OUTPUT_PATH=#{bin}/kube-aws"
 	 prefix.install_metafiles
+	 end

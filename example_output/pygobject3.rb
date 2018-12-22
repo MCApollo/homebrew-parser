@@ -28,3 +28,5 @@ install :
 	 ".."
 	 system "ninja", "-v"
 	 system "ninja", "install"
+	 end
+	 end

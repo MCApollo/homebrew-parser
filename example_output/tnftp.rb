@@ -21,3 +21,4 @@ install :
 	 bin.install "src/ftp"
 	 man1.install "src/ftp.1"
 	 prefix.install_metafiles
+	 end

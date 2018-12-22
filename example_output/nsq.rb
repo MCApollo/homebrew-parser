@@ -20,5 +20,6 @@ install :
 	 system "dep", "ensure", "--vendor-only"
 	 system "make", "DESTDIR=#{prefix}", "PREFIX=", "install"
 	 prefix.install_metafiles
+	 end
 	 (var/"log").mkpath
 	 (var/"nsq").mkpath

@@ -62,6 +62,7 @@ class HomebrewParser(object):
 		patchMode	= False # Keep URLs of patches
 		isData		= False # Expect patch file at EOF
 		installMode	= False # Keep install instructions
+		endCount	= 0	# Part of installMode
 		# We `shouldLoop` if this is met.
 		LoopRegex = re.compile(
 			r'^(?:bottle|head|test)')
@@ -74,10 +75,20 @@ class HomebrewParser(object):
 			if line == '':
 				continue
 			elif line.startswith('end'):
-				# Reset vars
+				if installMode and endCount > 0:
+					if Debug:
+						print('endCount --> ', endCount)
+					# Dirty-ish way to keep track if this is the right 'end' to stop on.
+					# Append line because the cont will stop the parsing here.
+					endCount -= 1
+					self.formula['install'].append(line)
+					continue
+			# Reset vars
 				shouldLoop	= False
 				patchMode	= False
 				installMode	= False
+				endCount	= 0
+				continue
 			# Patch & Install modes used here:
 			elif shouldLoop and not line.startswith('end'):
 				if patchMode and line.startswith('url'):
@@ -93,12 +104,22 @@ class HomebrewParser(object):
 				if installMode:
 					if Debug:
 						print('install ', line)
+					if ' do' in line:
+						if Debug:
+							print('install --> do')
+						endCount += 1
 					self.formula['install'].append(line)
 				continue
 
 			if LoopRegex.search(line): # (bottle|head|test)
-				shouldLoop = True
-				continue # XXX: Add more keywords to this regex
+				# Edge cases:
+				if line.endswith(':unneeded'):
+					continue #--> bottle :unneeded
+				else:
+					if Debug:
+						print('LoogRegex --> Fowarding')
+					shouldLoop = True
+					continue # XXX: Add more keywords to this regex
 			elif line.startswith('class'): # Grabs Name
 				try:
 					match = re.compile(r'(?:class )([A-Za-z0-9]*)').match(line).groups()

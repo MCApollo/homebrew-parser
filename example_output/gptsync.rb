@@ -16,3 +16,4 @@ install :
 	 system "make", "-f", "Makefile.unix", "CC=#{ENV.cc}"
 	 sbin.install "gptsync", "showpart"
 	 man8.install "gptsync.8"
+	 end

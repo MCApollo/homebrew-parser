@@ -16,3 +16,4 @@ install :
 	 mkdir "build" do
 	 system "cmake", "..", "-DBUILD_SHARED_LIBS=ON", *std_cmake_args
 	 system "make", "install"
+	 end

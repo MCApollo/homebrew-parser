@@ -28,3 +28,4 @@ install :
 	 system "make", "man", "html"
 	 man1.install "build/man/alot.1"
 	 doc.install Dir["build/html/*"]
+	 end

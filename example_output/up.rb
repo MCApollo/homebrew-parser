@@ -19,3 +19,4 @@ install :
 	 cd dir do
 	 system "go", "build", "-o", bin/"up", "up.go"
 	 prefix.install_metafiles
+	 end

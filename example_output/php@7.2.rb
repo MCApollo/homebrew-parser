@@ -112,3 +112,43 @@ install :
 	 ].each do |f|
 	 chmod 0755, f
 	 pear_files.concat(Dir["#{f}/*"])
+	 end
+	 chmod 0644, pear_files
+	 pecl_path = HOMEBREW_PREFIX/"lib/php/pecl"
+	 ln_s pecl_path, prefix/"pecl" unless (prefix/"pecl").exist?
+	 extension_dir = Utils.popen_read("#{bin}/php-config --extension-dir").chomp
+	 php_basename = File.basename(extension_dir)
+	 php_ext_dir = opt_prefix/"lib/php"/php_basename
+	 pear_path = HOMEBREW_PREFIX/"share/pear@#{php_version}"
+	 cp_r pkgshare/"pear/.", pear_path
+	 {
+	 "php_ini"  => etc/"php/#{php_version}/php.ini",
+	 "php_dir"  => pear_path,
+	 "doc_dir"  => pear_path/"doc",
+	 "ext_dir"  => pecl_path/php_basename,
+	 "bin_dir"  => opt_bin,
+	 "data_dir" => pear_path/"data",
+	 "cfg_dir"  => pear_path/"cfg",
+	 "www_dir"  => pear_path/"htdocs",
+	 "man_dir"  => HOMEBREW_PREFIX/"share/man",
+	 "test_dir" => pear_path/"test",
+	 "php_bin"  => opt_bin/"php",
+	 }.each do |key, value|
+	 value.mkpath if key =~ /(?<!bin|man)_dir$/
+	 system bin/"pear", "config-set", key, value, "system"
+	 end
+	 system bin/"pear", "update-channels"
+	 %w[
+	 opcache
+	 ].each do |e|
+	 ext_config_path = etc/"php/#{php_version}/conf.d/ext-#{e}.ini"
+	 extension_type = (e == "opcache") ? "zend_extension" : "extension"
+	 if ext_config_path.exist?
+	 inreplace ext_config_path,
+	 /#{extension_type}=.*$/, "#{extension_type}=#{php_ext_dir}/#{e}.so"
+	 else
+	 ext_config_path.write <<~EOS
+	 [#{e}]
+	 #{extension_type}="#{php_ext_dir}/#{e}.so"
+	 EOS
+	 end

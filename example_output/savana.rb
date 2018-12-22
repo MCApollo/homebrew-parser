@@ -12,3 +12,8 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 rm_rf Dir["bin/*.{bat,cmd}"]
+	 prefix.install %w[COPYING COPYING.LESSER licenses svn-hooks]
+	 libexec.install %w[bin lib logging.properties]
+	 bin.write_exec_script libexec/"bin/sav"
+	 bash_completion.install "etc/bash_completion" => "savana-completion.bash"

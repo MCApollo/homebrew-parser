@@ -25,3 +25,6 @@ install :
 	 res = resources.map(&:name).to_set - ["cffi"]
 	 res.each do |r|
 	 venv.pip_install resource(r)
+	 end
+	 venv.pip_install_and_link buildpath
+	 bin.install_symlink "#{libexec}/bin/kv-cli"

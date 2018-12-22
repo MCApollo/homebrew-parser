@@ -20,3 +20,8 @@ install :
 	 arg_var = (arg == "pg") ? "postgresql" : arg
 	 bool = build.with?(arg) ? "ON" : "OFF"
 	 args << "-DWITH_#{arg_var.upcase}:BOOL=#{bool}"
+	 end
+	 mkdir "build" do
+	 system "cmake", *args
+	 system "make", "install"
+	 end

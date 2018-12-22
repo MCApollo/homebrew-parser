@@ -22,3 +22,4 @@ install :
 	 system "make", "local", "VERSION=#{version}"
 	 bin.install "carina"
 	 prefix.install_metafiles
+	 end

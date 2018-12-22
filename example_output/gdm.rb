@@ -20,3 +20,4 @@ install :
 	 cd "src/github.com/sparrc/gdm" do
 	 system "go", "build", "-o", bin/"gdm",
 	 "-ldflags", "-X main.Version=#{version}"
+	 end

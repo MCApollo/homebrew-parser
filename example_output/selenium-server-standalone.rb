@@ -12,3 +12,5 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "selenium-server-standalone-#{version}.jar"
+	 bin.write_jar_script libexec/"selenium-server-standalone-#{version}.jar", "selenium-server"

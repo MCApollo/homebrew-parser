@@ -19,3 +19,6 @@ install :
 	 cabal_install "hpack"
 	 system "./.cabal-sandbox/bin/hpack"
 	 install_cabal_package :using => ["alex", "happy"]
+	 end
+	 system "make", "-C", "docs", "man"
+	 man1.install Dir["docs/_build/man/*.1"]

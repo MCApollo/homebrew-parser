@@ -19,3 +19,4 @@ install :
 	 system "make"
 	 tag = `./bin/dist tag`.chomp
 	 bin.install "tmp/dist/arx-#{tag}/arx" => "arx"
+	 end

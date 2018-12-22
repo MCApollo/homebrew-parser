@@ -8,7 +8,12 @@ description :
 	 Manage code quality
 build_deps :
 link_deps :
+	 :java
 conflicts :
+	 sonarqube-lts
 patches :
 EOF_patch :
 install :
+	 rm_rf Dir["bin/{linux,windows}-*"]
+	 libexec.install Dir["*"]
+	 bin.install_symlink "#{libexec}/bin/macosx-universal-64/sonar.sh" => "sonar"

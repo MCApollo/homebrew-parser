@@ -37,3 +37,4 @@ install :
 	 system "./configure", "--prefix=#{prefix}", "--without-python"
 	 system "make"
 	 system "make", "install"
+	 end

@@ -21,3 +21,8 @@ install :
 	 s.gsub! "-lX11", ""
 	 s.gsub! "-lpangox-1.0", ""
 	 s.gsub! "GTKCFLAGS =", "GTKCFLAGS = -I#{buildpath}/brew_include"
+	 end
+	 args = []
+	 args << "OMPLIB=" << "OMPCFLAGS=" if ENV.compiler == :clang
+	 system "make", *args
+	 bin.install "gabedit"

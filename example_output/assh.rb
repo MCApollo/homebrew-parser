@@ -18,3 +18,4 @@ install :
 	 cd "src/github.com/moul/advanced-ssh-config/cmd/assh" do
 	 system "go", "build", "-o", bin/"assh"
 	 prefix.install_metafiles
+	 end

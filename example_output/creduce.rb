@@ -24,3 +24,11 @@ install :
 	 system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
 	 system "make"
 	 system "make", "install"
+	 end
+	 end
+	 system "./configure", "--prefix=#{prefix}",
+	 "--disable-dependency-tracking",
+	 "--bindir=#{libexec}"
+	 system "make"
+	 system "make", "install"
+	 (bin/"creduce").write_env_script("#{libexec}/creduce", :PERL5LIB => ENV["PERL5LIB"])

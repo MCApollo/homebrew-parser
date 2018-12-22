@@ -19,3 +19,12 @@ install :
 	 resources.each do |r|
 	 r.stage do
 	 system "python3", *Language::Python.setup_install_args(libexec/"vendor")
+	 end
+	 end
+	 system "python3", *Language::Python.setup_install_args(libexec)
+	 bin.install Dir[libexec/"bin/*"]
+	 env = {
+	 :PATH       => "#{libexec}/vendor/bin:$PATH",
+	 :PYTHONPATH => ENV["PYTHONPATH"],
+	 }
+	 bin.env_script_all_files(libexec/"bin", env)

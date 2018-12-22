@@ -18,3 +18,4 @@ install :
 	 cd "src/github.com/trivago/gollum" do
 	 system "go", "build", "-o", bin/"gollum"
 	 prefix.install_metafiles
+	 end

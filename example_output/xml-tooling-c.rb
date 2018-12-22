@@ -35,3 +35,9 @@ install :
 	 "--without-librtmp",
 	 "--disable-ares"
 	 system "make", "install"
+	 end
+	 ENV.prepend_path "PKG_CONFIG_PATH", libexec/"curl/lib/pkgconfig"
+	 system "./configure", "--disable-debug",
+	 "--disable-dependency-tracking",
+	 "--prefix=#{prefix}"
+	 system "make", "install"

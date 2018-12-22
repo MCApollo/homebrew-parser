@@ -20,3 +20,4 @@ install :
 	 "SUPPORTDIR=#{pkgshare}",
 	 "CFGDIR=#{pkgshare}/cfg",
 	 "install"
+	 end

@@ -12,3 +12,6 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "export-chrome-bookmarks"
+	 bin.install "export-chrome-history"
+	 pkgshare.install "test"

@@ -18,3 +18,8 @@ install :
 	 r.verify_download_integrity(r.fetch)
 	 system "gem", "install", r.cached_download, "--ignore-dependencies",
 	 "--no-document", "--install-dir", libexec
+	 end
+	 system "gem", "build", "braid.gemspec"
+	 system "gem", "install", "--ignore-dependencies", "braid-#{version}.gem"
+	 bin.install libexec/"bin/braid"
+	 bin.env_script_all_files(libexec/"bin", :GEM_HOME => ENV["GEM_HOME"])

@@ -21,3 +21,4 @@ install :
 	 system "make", "build"
 	 bin.install "shellz"
 	 prefix.install_metafiles
+	 end

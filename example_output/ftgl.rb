@@ -20,3 +20,4 @@ install :
 	 "--with-glut-inc=/dev/null",
 	 "--with-glut-lib=/dev/null"
 	 system "make", "install"
+	 end

@@ -17,3 +17,5 @@ install :
 	 system "cmake", "..", *std_cmake_args,
 	 "-Dcppad_prefix=#{prefix}"
 	 system "make", "install"
+	 end
+	 pkgshare.install "example"

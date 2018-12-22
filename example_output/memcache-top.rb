@@ -12,3 +12,4 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "memcache-top-v#{version}" => "memcache-top"

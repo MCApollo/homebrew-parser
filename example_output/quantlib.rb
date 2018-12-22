@@ -22,3 +22,4 @@ install :
 	 "--enable-intraday"
 	 system "make", "install"
 	 prefix.install_metafiles
+	 end

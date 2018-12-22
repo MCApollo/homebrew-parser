@@ -18,3 +18,4 @@ install :
 	 mkdir "build" do
 	 system "cmake", "../cmake", *std_cmake_args
 	 system "make", "install"
+	 end

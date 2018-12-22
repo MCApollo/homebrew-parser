@@ -17,3 +17,5 @@ install :
 	 cabal_sandbox do
 	 cabal_install "hpack"
 	 system "./.cabal-sandbox/bin/hpack"
+	 end
+	 install_cabal_package

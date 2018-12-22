@@ -16,3 +16,4 @@ install :
 	 system "make", "SOEXT=.dylib"
 	 system "make", "test", "SOEXT=.dylib"
 	 system "make", "install", "SOEXT=.dylib", "prefix=#{prefix}"
+	 end

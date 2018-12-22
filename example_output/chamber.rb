@@ -25,3 +25,4 @@ install :
 	 system "go", "build", "-o", bin/"chamber",
 	 "-ldflags", "-X main.Version=#{version}"
 	 prefix.install_metafiles
+	 end

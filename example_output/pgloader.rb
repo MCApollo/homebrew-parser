@@ -19,3 +19,10 @@ EOF_patch :
 install :
 	 resources.each do |resource|
 	 resource.stage buildpath/"lib"/resource.name
+	 end
+	 ENV["CL_SOURCE_REGISTRY"] = "#{buildpath}/lib//:#{buildpath}//"
+	 ENV["ASDF_OUTPUT_TRANSLATIONS"] = "/:/"
+	 system "make", "pgloader-standalone", "BUILDAPP=buildapp"
+	 bin.install "build/bin/pgloader"
+	 system "make", "-C", "docs", "man"
+	 man1.install "docs/_build/man/pgloader.1"

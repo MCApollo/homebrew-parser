@@ -40,3 +40,4 @@ install :
 	 "DEVELOPER_DIR=#{devdir}", "SDKROOT=#{MacOS.sdk_path}",
 	 "SDK_VER=#{MacOS.version}", "MARCH=#{MacOS.preferred_arch}",
 	 *args
+	 end

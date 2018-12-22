@@ -9,6 +9,8 @@ description :
 build_deps :
 link_deps :
 conflicts :
+	 cheat
 patches :
 EOF_patch :
 install :
+	 system "./install.sh", "--prefix=#{prefix}", "all"

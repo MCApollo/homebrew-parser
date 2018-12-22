@@ -12,3 +12,5 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "biz.aQute.bnd-#{version}.jar"
+	 bin.write_jar_script libexec/"biz.aQute.bnd-#{version}.jar", "bnd"

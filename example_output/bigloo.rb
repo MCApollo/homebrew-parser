@@ -36,3 +36,11 @@ install :
 	 system "./configure", *args
 	 cd "libunistring" do
 	 system "make", "install"
+	 end
+	 cd "pcre" do
+	 system "make", "install"
+	 end
+	 system "make"
+	 system "make", "install"
+	 manpages = %w[bgldepend bglmake bglpp bgltags bglafile bgljfile bglmco bglprof]
+	 manpages.each { |m| man1.install "manuals/#{m}.man" => "#{m}.1" }

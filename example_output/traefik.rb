@@ -23,3 +23,8 @@ install :
 	 cd "webui" do
 	 system "yarn", "install"
 	 system "yarn", "run", "build"
+	 end
+	 system "go", "generate"
+	 system "go", "build", "-o", bin/"traefik", "./cmd/traefik"
+	 prefix.install_metafiles
+	 end

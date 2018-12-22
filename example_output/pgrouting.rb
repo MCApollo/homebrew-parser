@@ -23,3 +23,6 @@ install :
 	 system "cmake", "-DWITH_DD=ON", "..", *std_cmake_args
 	 system "make"
 	 system "make", "install", "DESTDIR=#{buildpath}/stage"
+	 end
+	 lib.install Dir["stage/**/lib/*"]
+	 (share/"postgresql/extension").install Dir["stage/**/share/postgresql/extension/*"]

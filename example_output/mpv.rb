@@ -39,3 +39,26 @@ install :
 	 ENV.prepend_create_path "PYTHONPATH", buildpath/"vendor/lib/python#{xy}/site-packages"
 	 resource("docutils").stage do
 	 system "python3", *Language::Python.setup_install_args(buildpath/"vendor")
+	 end
+	 ENV.prepend_path "PATH", buildpath/"vendor/bin"
+	 args = %W[
+	 --prefix=#{prefix}
+	 --enable-html-build
+	 --enable-javascript
+	 --enable-libmpv-shared
+	 --enable-lua
+	 --confdir=#{etc}/mpv
+	 --datadir=#{pkgshare}
+	 --mandir=#{man}
+	 --docdir=#{doc}
+	 ]
+	 args << "--enable-libarchive" if build.with? "libarchive"
+	 args << "--enable-libbluray" if build.with? "libbluray"
+	 args << "--enable-dvdnav" if build.with? "libdvdnav"
+	 args << "--enable-dvdread" if build.with? "libdvdread"
+	 args << "--enable-pulse" if build.with? "pulseaudio"
+	 if build.with? "lgpl"
+	 args << "--enable-lgpl"
+	 else
+	 args << "--enable-zsh-comp"
+	 args << "--zshdir=#{zsh_completion}"

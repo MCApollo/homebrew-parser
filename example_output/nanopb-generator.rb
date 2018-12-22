@@ -21,3 +21,4 @@ install :
 	 "#!/usr/bin/python"
 	 libexec.install "nanopb_generator.py", "protoc-gen-nanopb", "proto"
 	 bin.install_symlink libexec/"protoc-gen-nanopb", libexec/"nanopb_generator.py"
+	 end

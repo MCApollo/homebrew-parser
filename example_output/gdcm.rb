@@ -48,3 +48,5 @@ install :
 	 ]
 	 system "cmake", "..", *args
 	 system "make", "install"
+	 end
+	 end

@@ -12,3 +12,5 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "cssembed-#{version}.jar"
+	 bin.write_jar_script libexec/"cssembed-#{version}.jar", "cssembed"

@@ -8,7 +8,10 @@ description :
 	 Statistical NLP parser
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install Dir["*"]
+	 bin.write_exec_script Dir["#{libexec}/*.sh"]

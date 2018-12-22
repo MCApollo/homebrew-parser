@@ -8,7 +8,15 @@ description :
 	 SDK for Groovy: a Java-based scripting language
 build_deps :
 link_deps :
+	 :java
 conflicts :
+	 groovy
 patches :
 EOF_patch :
 install :
+	 ENV["GROOVY_HOME"] = libexec
+	 rm_f Dir["bin/*.bat"]
+	 prefix.install_metafiles
+	 bin.install Dir["bin/*"]
+	 libexec.install "conf", "lib", "src", "doc"
+	 bin.env_script_all_files(libexec+"bin", :GROOVY_HOME => ENV["GROOVY_HOME"])

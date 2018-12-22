@@ -9,6 +9,7 @@ description :
 build_deps :
 link_deps :
 conflicts :
+	 wrk
 patches :
 EOF_patch :
 install :

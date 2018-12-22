@@ -8,7 +8,9 @@ description :
 	 Bazaar support for external branches like svn:externals
 build_deps :
 link_deps :
+	 bazaar
 conflicts :
 patches :
 EOF_patch :
 install :
+	 (share/"bazaar/plugins/externals").install Dir["*"]

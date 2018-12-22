@@ -27,3 +27,14 @@ install :
 	 dependencies.each do |r|
 	 resource(r).stage do
 	 system "python3", *Language::Python.setup_install_args(libexec/"vendor")
+	 end
+	 end
+	 ENV.prepend_create_path "PYTHONPATH", libexec/"lib/python#{xy}/site-packages"
+	 linked.each do |r|
+	 resource(r).stage do
+	 system "python3", *Language::Python.setup_install_args(libexec)
+	 end
+	 end
+	 bin.install Dir["#{libexec}/bin/*"]
+	 bin.env_script_all_files(libexec/"bin", :JUPYTER_PATH => ENV["JUPYTER_PATH"], :PYTHONPATH => ENV["PYTHONPATH"])
+	 rm_rf Dir["#{libexec}/share/jupyter/kernels"]

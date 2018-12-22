@@ -22,3 +22,7 @@ install :
 	 system "cmake", "..", "-DBINDINGS=cpp", "-DTOOLS=#{tools}",
 	 "-DPLUGINS=NODEP", *std_cmake_args
 	 system "make", "install"
+	 end
+	 bash_completion.install "scripts/kdb-bash-completion" => "kdb"
+	 fish_completion.install "scripts/kdb.fish"
+	 zsh_completion.install "scripts/kdb_zsh_completion" => "_kdb"

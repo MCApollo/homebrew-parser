@@ -28,3 +28,4 @@ install :
 	 prefix.install_metafiles
 	 system "hack/generate-docs.sh"
 	 man1.install Dir["docs/man/man1/*.1"]
+	 end

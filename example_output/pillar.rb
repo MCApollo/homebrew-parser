@@ -18,3 +18,8 @@ install :
 	 s.gsub! "$JAVA ", "`/usr/libexec/java_home --version 1.8`/bin/java "
 	 s.gsub! "${PILLAR_ROOT}/lib/pillar.jar", "#{libexec}/pillar-assembly-#{version}.jar"
 	 s.gsub! "${PILLAR_ROOT}/conf", "#{etc}/pillar-log4j.properties"
+	 end
+	 system "sbt", "assembly"
+	 bin.install "src/main/bash/pillar"
+	 etc.install "src/main/resources/pillar-log4j.properties"
+	 libexec.install "target/scala-2.10/pillar-assembly-#{version}.jar"

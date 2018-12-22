@@ -19,3 +19,4 @@ install :
 	 cd "src/github.com/github/smimesign" do
 	 system "go", "build", "-o", bin/"smimesign", "-ldflags", "-X main.versionString=#{version}"
 	 prefix.install_metafiles
+	 end

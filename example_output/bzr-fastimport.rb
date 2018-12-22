@@ -16,3 +16,5 @@ EOF_patch :
 install :
 	 resource("python-fastimport").stage do
 	 system "python", *Language::Python.setup_install_args(libexec/"vendor")
+	 end
+	 (share/"bazaar/plugins/fastimport").install Dir["*"]

@@ -21,3 +21,4 @@ install :
 	 "-DLAPACKE:BOOL=ON",
 	 *std_cmake_args
 	 system "make", "install"
+	 end

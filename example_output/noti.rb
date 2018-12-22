@@ -20,3 +20,4 @@ install :
 	 system "go", "build"
 	 bin.install "noti"
 	 prefix.install_metafiles
+	 end

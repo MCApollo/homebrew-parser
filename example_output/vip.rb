@@ -37,3 +37,4 @@ install :
 	 bin.install "vip"
 	 resource("man").stage do
 	 man1.install "vip.man" => "vip.1"
+	 end

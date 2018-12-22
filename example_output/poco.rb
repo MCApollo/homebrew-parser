@@ -19,3 +19,4 @@ install :
 	 system "cmake", "..", *std_cmake_args, "-DENABLE_DATA_MYSQL=OFF",
 	 "-DENABLE_DATA_ODBC=OFF"
 	 system "make", "install"
+	 end

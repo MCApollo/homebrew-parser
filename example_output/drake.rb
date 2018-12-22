@@ -17,3 +17,4 @@ install :
 	 bin.install "drake-pkg" => "drake"
 	 resource("jar").stage do
 	 libexec.install "drake.jar" => jar
+	 end

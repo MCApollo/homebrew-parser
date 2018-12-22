@@ -18,3 +18,14 @@ install :
 	 resource("stemmer").stage do
 	 system "make", "dist_libstemmer_c"
 	 system "tar", "xzf", "dist/libstemmer_c.tgz", "-C", buildpath
+	 end
+	 args = %W[
+	 --prefix=#{prefix}
+	 --disable-dependency-tracking
+	 --localstatedir=#{var}
+	 --with-libstemmer
+	 ]
+	 if build.with? "mysql"
+	 args << "--with-mysql"
+	 else
+	 args << "--without-mysql"

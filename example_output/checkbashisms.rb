@@ -12,3 +12,9 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 inreplace "scripts/checkbashisms.pl" do |s|
+	 s.gsub! "###VERSION###", version
+	 s.gsub! "#!/usr/bin/perl", "#!/usr/bin/perl -T"
+	 end
+	 bin.install "scripts/checkbashisms.pl" => "checkbashisms"
+	 man1.install "scripts/checkbashisms.1"

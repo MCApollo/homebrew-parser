@@ -8,6 +8,7 @@ description :
 	 Distributed search & analytics engine
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :

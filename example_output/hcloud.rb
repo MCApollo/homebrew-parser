@@ -20,3 +20,8 @@ install :
 	 system "go", "build", "-o", bin/"hcloud", "-ldflags", ldflags,
 	 "./cmd/hcloud"
 	 prefix.install_metafiles
+	 end
+	 output = Utils.popen_read("#{bin}/hcloud completion bash")
+	 (bash_completion/"hcloud").write output
+	 output = Utils.popen_read("#{bin}/hcloud completion zsh")
+	 (zsh_completion/"_hcloud").write output

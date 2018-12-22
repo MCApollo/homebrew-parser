@@ -48,3 +48,4 @@ install :
 	 pkgshare.install "basis/libraries"
 	 pkgshare.install "nwpw/libraryps"
 	 pkgshare.install Dir["data/*"]
+	 end

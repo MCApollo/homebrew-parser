@@ -71,3 +71,6 @@ install :
 	 "--prefix=#{prefix}"
 	 inreplace "man/Makefile" do |s|
 	 s.change_make_var! "mandir", "/share/man"
+	 end
+	 system "make", "libs"
+	 system "make", "install"

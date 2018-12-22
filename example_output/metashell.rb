@@ -17,3 +17,8 @@ install :
 	 mkdir "3rd/templight/build" do
 	 system "cmake", "../llvm", "-DLLVM_ENABLE_TERMINFO=OFF", *std_cmake_args
 	 system "make", "templight"
+	 end
+	 mkdir "build" do
+	 system "cmake", "..", *std_cmake_args
+	 system "make", "install"
+	 end

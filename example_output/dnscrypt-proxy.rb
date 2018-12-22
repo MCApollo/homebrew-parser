@@ -22,3 +22,4 @@ install :
 	 sbin/"dnscrypt-proxy"
 	 pkgshare.install Dir["example*"]
 	 etc.install pkgshare/"example-dnscrypt-proxy.toml" => "dnscrypt-proxy.toml"
+	 end

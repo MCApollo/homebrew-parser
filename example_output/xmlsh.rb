@@ -12,3 +12,11 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 rm_rf %w[win32 cygwin]
+	 libexec.install Dir["*"]
+	 chmod 0755, "#{libexec}/unix/xmlsh"
+	 (bin/"xmlsh").write <<~EOS
+	 #!/bin/bash
+	 export XMLSH=#{libexec}
+	 exec #{libexec}/unix/xmlsh "$@"
+	 EOS

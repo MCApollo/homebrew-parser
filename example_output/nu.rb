@@ -23,3 +23,10 @@ install :
 	 ;; source files
 	 (set @framework_install_path "#{frameworks}")
 	 EOS
+	 end
+	 system "make"
+	 system "./mininush", "tools/nuke"
+	 bin.mkdir
+	 lib.mkdir
+	 include.mkdir
+	 system "./mininush", "tools/nuke", "install"

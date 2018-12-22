@@ -8,7 +8,13 @@ description :
 	 Git platform powered by Scala offering
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 if build.head?
+	 system "ant"
+	 libexec.install "war/target/gitbucket.war", "."
+	 else
+	 libexec.install "gitbucket.war"

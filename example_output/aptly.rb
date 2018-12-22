@@ -21,3 +21,4 @@ install :
 	 prefix.install_metafiles
 	 bash_completion.install "completion.d/aptly"
 	 zsh_completion.install "completion.d/_aptly"
+	 end

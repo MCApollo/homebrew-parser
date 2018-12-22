@@ -21,3 +21,6 @@ install :
 	 rcmds.split("\n").each do |r|
 	 bin.install("command/#{r.chomp}")
 	 man8.install("man/#{r.chomp}.8")
+	 end
+	 (var + "service").mkpath
+	 end

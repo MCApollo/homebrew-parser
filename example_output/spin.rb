@@ -16,3 +16,6 @@ install :
 	 cd "Src#{version}" do
 	 system "make"
 	 bin.install "spin"
+	 end
+	 bin.install "iSpin/ispin.tcl" => "ispin"
+	 man1.install "Man/spin.1"

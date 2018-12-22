@@ -20,3 +20,4 @@ install :
 	 "-X github.com/elves/elvish/buildinfo.Version=#{version}", "-o",
 	 bin/"elvish"
 	 prefix.install_metafiles
+	 end

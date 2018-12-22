@@ -8,7 +8,12 @@ description :
 	 Export and synchronize iPhoto library to a folder tree
 build_deps :
 link_deps :
+	 exiftool
 conflicts :
 patches :
 EOF_patch :
 install :
+	 unzip_dir = "#{name}-#{version}"
+	 inreplace "#{unzip_dir}/tilutil/exiftool.py", "/usr/bin/exiftool", "exiftool"
+	 prefix.install Dir["#{unzip_dir}/*"]
+	 bin.install_symlink prefix+"iphotoexport.py" => "iphotoexport"

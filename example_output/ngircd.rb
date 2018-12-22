@@ -26,3 +26,4 @@ install :
 	 inreplace prefix+"de.barton.ngircd.plist" do |s|
 	 s.gsub! ":SBINDIR:", sbin
 	 s.gsub! "/Library/Logs/ngIRCd.log", var/"Logs/ngIRCd.log"
+	 end

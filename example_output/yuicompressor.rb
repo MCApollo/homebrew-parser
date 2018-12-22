@@ -12,3 +12,5 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "yuicompressor-#{version}.jar"
+	 bin.write_jar_script libexec/"yuicompressor-#{version}.jar", "yuicompressor"

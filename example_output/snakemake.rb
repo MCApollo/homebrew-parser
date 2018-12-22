@@ -17,3 +17,21 @@ install :
 	 ENV.prepend_create_path "PYTHONPATH", buildpath/"cython/lib/python#{xy}/site-packages"
 	 resource("Cython").stage do
 	 system "python3", *Language::Python.setup_install_args(buildpath/"cython")
+	 end
+	 ENV.prepend_path "PATH", buildpath/"cython/bin"
+	 resource("datrie").stage do
+	 system "./update_c.sh"
+	 ENV.delete "PYTHONPATH"
+	 ENV.prepend_create_path "PYTHONPATH", libexec/"vendor/lib/python#{xy}/site-packages"
+	 system "python3", *Language::Python.setup_install_args(libexec/"vendor")
+	 end
+	 resources.each do |r|
+	 next if r.name == "datrie" || r.name == "Cython"
+	 r.stage do
+	 system "python3", *Language::Python.setup_install_args(libexec/"vendor")
+	 end
+	 end
+	 ENV.prepend_create_path "PYTHONPATH", libexec/"lib/python#{xy}/site-packages"
+	 system "python3", *Language::Python.setup_install_args(libexec)
+	 bin.install Dir[libexec/"bin/*"]
+	 bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])

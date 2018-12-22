@@ -26,3 +26,5 @@ install :
 	 mkdir "macbuild" do
 	 system "cmake", *args
 	 system "make", "install"
+	 end
+	 doc.install "doc/teapot.lyx"

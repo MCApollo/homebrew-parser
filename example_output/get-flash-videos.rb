@@ -19,3 +19,12 @@ install :
 	 system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
 	 system "make"
 	 system "make", "install"
+	 end
+	 end
+	 ENV.prepend_create_path "PERL5LIB", lib/"perl5"
+	 system "make"
+	 (lib/"perl5").install "blib/lib/FlashVideo"
+	 bin.install "bin/get_flash_videos"
+	 bin.env_script_all_files(libexec/"bin", :PERL5LIB => ENV["PERL5LIB"])
+	 chmod 0755, libexec/"bin/get_flash_videos"
+	 man1.install "blib/man1/get_flash_videos.1"

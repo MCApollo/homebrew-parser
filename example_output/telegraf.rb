@@ -21,4 +21,7 @@ install :
 	 system "dep", "ensure", "-vendor-only"
 	 system "go", "install", "-ldflags", "-X main.version=#{version}", "./..."
 	 prefix.install_metafiles
+	 end
+	 bin.install "bin/telegraf"
+	 etc.install dir/"etc/telegraf.conf" => "telegraf.conf"
 	 (etc/"telegraf.d").mkpath

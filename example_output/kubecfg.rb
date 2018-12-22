@@ -20,3 +20,8 @@ install :
 	 bin.install "kubecfg"
 	 pkgshare.install Dir["examples/*"], "testdata/kubecfg_test.jsonnet"
 	 prefix.install_metafiles
+	 end
+	 output = Utils.popen_read("#{bin}/kubecfg completion --shell bash")
+	 (bash_completion/"kubecfg").write output
+	 output = Utils.popen_read("#{bin}/kubecfg completion --shell zsh")
+	 (zsh_completion/"_kubecfg").write output

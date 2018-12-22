@@ -18,3 +18,11 @@ install :
 	 system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
 	 system "make"
 	 system "make", "install"
+	 end
+	 system "./configure", "--prefix=#{prefix}"
+	 system "make", "build"
+	 bin.install "vit"
+	 man1.install "vit.1"
+	 man5.install "vitrc.5"
+	 (prefix+"etc").install "commands" => "vit-commands"
+	 bin.env_script_all_files(libexec+"bin", :PERL5LIB => ENV["PERL5LIB"])

@@ -20,3 +20,4 @@ install :
 	 system "make", "build-darwin-amd64"
 	 bin.install "bin/darwin-amd64/terraform-docs"
 	 prefix.install_metafiles
+	 end

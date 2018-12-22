@@ -31,3 +31,4 @@ install :
 	 cd "./Extra" do
 	 man1.install "lsar.1", "unar.1"
 	 bash_completion.install "unar.bash_completion", "lsar.bash_completion"
+	 end

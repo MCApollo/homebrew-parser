@@ -21,3 +21,4 @@ install :
 	 system "godep", "restore"
 	 system "go", "build", "-o", bin/"pt", ".../cmd/pt"
 	 prefix.install_metafiles
+	 end

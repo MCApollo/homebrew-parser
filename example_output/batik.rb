@@ -12,3 +12,7 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "lib", Dir["*.jar"]
+	 bin.write_jar_script libexec/"batik-rasterizer-#{version}.jar", "batik-rasterizer"
+	 bin.write_jar_script libexec/"batik-#{version}.jar", "batik"
+	 bin.write_jar_script libexec/"batik-ttf2svg-#{version}.jar", "batik-ttf2svg"

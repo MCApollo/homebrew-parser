@@ -18,3 +18,4 @@ install :
 	 cd "src/github.com/kelseyhightower/compose2kube" do
 	 system "go", "build", "-o", bin/"compose2kube"
 	 prefix.install_metafiles
+	 end

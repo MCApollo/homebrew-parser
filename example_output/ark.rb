@@ -21,3 +21,4 @@ install :
 	 "-X github.com/heptio/ark/pkg/buildinfo.Version=#{version}",
 	 "./cmd/ark"
 	 prefix.install_metafiles
+	 end

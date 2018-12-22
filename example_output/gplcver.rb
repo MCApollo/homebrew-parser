@@ -16,3 +16,6 @@ install :
 	 s.gsub! "-mcpu=powerpc", ""
 	 s.change_make_var! "CFLAGS", "$(INCS) $(OPTFLGS) #{ENV.cflags}"
 	 s.change_make_var! "LFLAGS", ""
+	 end
+	 system "make", "-C", "src", "-f", "makefile.osx"
+	 bin.install "bin/cver"

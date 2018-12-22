@@ -17,3 +17,5 @@ install :
 	 venv = virtualenv_create(libexec, "python3")
 	 ["youtube_dl", "pafy"].each do |r|
 	 venv.pip_install resource(r)
+	 end
+	 venv.pip_install_and_link buildpath

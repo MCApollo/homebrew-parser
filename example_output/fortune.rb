@@ -19,3 +19,5 @@ install :
 	 s.gsub! "/usr/local/man", "/usr/local/share/man"
 	 s.gsub! "/usr/local", prefix
 	 s.change_make_var! "REGEXDEFS", "-DHAVE_REGEX_H -DPOSIX_REGEX"
+	 end
+	 system "make", "install"

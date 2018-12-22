@@ -19,3 +19,5 @@ install :
 	 venv = virtualenv_install_with_resources
 	 %w[acme certbot-apache certbot-nginx].each do |r|
 	 venv.pip_install buildpath/r
+	 end
+	 pkgshare.install "examples"

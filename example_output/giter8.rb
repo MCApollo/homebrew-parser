@@ -25,3 +25,8 @@ install :
 	 s.gsub! /^LJV=1.0.0$/, "LJV=1.0.1"
 	 s.gsub! /.*wget .*/, ""
 	 s.gsub! /^ +exec .*/, "exit"
+	 end
+	 system "sh", "-x", "setup.sh"
+	 end
+	 system conscript_home/"bin/cs", "foundweekends/giter8/#{version}"
+	 bin.install_symlink conscript_home/"bin/g8"

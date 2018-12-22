@@ -25,3 +25,10 @@ install :
 	 s.gsub! "/usr", HOMEBREW_PREFIX
 	 s.gsub! "/etc", etc
 	 s.gsub! "/var", var
+	 end
+	 system "glide", "install"
+	 system "make", "build"
+	 (etc/"graylog/collector-sidecar").install "collector_sidecar.yml"
+	 bin.install "graylog-collector-sidecar"
+	 prefix.install_metafiles
+	 end

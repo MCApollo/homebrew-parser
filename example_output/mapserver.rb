@@ -45,3 +45,10 @@ install :
 	 inreplace "mapscript/python/CMakeLists.txt" do |s|
 	 s.gsub! "${PYTHON_SITE_PACKAGES}", lib/"python2.7/site-packages"
 	 s.gsub! "${PYTHON_LIBRARIES}", "-Wl,-undefined,dynamic_lookup"
+	 end
+	 args << "-DWITH_PYTHON=ON"
+	 args << "-DCMAKE_SKIP_RPATH=ON"
+	 if build.with? "geos"
+	 args << "-DWITH_GEOS=ON"
+	 else
+	 args << "-DWITH_GEOS=OFF"

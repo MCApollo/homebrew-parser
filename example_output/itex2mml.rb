@@ -16,3 +16,4 @@ install :
 	 cd "itex-src" do
 	 system "make"
 	 system "make", "install", "prefix=#{prefix}", "BINDIR=#{bin}"
+	 end

@@ -35,6 +35,10 @@ install :
 	 s.gsub! 'prepare "extension scripts", vendorlibdir', ""
 	 s.gsub! 'prepare "extension objects", sitearchlibdir', ""
 	 s.gsub! 'prepare "extension objects", vendorarchlibdir', ""
+	 end
+	 system "make"
+	 system "make", "install"
+	 elisp.install Dir["misc/*.el"].reject { |f| f == "misc/ruby-mode.el" }
 	 rm_f %W[
 	 #{rubygems_bindir}/bundle
 	 #{rubygems_bindir}/bundler
@@ -46,3 +50,4 @@ install :
 	 config_file.write rubygems_config
 	 %w[sitearchdir vendorarchdir].each do |dir|
 	 mkdir_p `#{bin}/ruby -rrbconfig -e 'print RbConfig::CONFIG["#{dir}"]'`
+	 end

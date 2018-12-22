@@ -8,7 +8,12 @@ description :
 	 The Concurrency Intermediate Verification Language
 build_deps :
 link_deps :
+	 :java
+	 z3
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "lib/civl-1.7_3157.jar"
+	 bin.write_jar_script libexec/"civl-1.7_3157.jar", "civl"
+	 pkgshare.install "doc", "emacs", "examples", "licenses"

@@ -8,7 +8,12 @@ description :
 	 Generates static HTML overview page from Ansible facts
 build_deps :
 link_deps :
+	 libyaml
 conflicts :
 patches :
 EOF_patch :
 install :
+	 prefix.install_metafiles
+	 man1.install "ansible-cmdb.man.1" => "ansible-cmdb.1"
+	 libexec.install Dir["*"] - ["Makefile"]
+	 bin.write_exec_script libexec/"ansible-cmdb"

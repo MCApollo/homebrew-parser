@@ -21,3 +21,5 @@ install :
 	 "-DUSE_BUNDLED_DEPS=OFF",
 	 *std_cmake_args
 	 system "make", "install"
+	 end
+	 (pkgshare/"demos").install resource("sample_file").files("sample.scap")

@@ -8,7 +8,9 @@ description :
 	 Fuzzy text selector for files and anything else you need to select
 build_deps :
 link_deps :
+	 ruby
 conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "selecta"

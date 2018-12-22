@@ -16,3 +16,6 @@ EOF_patch :
 install :
 	 %w[src/libdwarf.c doc/dwarf.man doc/xdwarf.man.html].each do |f|
 	 inreplace f, "/etc/dwarfrc", etc/"dwarfrc"
+	 end
+	 system "make"
+	 system "make", "install", "BINDIR=#{bin}", "MANDIR=#{man1}"

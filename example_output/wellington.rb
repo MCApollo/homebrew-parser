@@ -24,3 +24,4 @@ install :
 	 "-X github.com/wellington/wellington/version.Version=#{version}",
 	 "-o", bin/"wt", "wt/main.go"
 	 prefix.install_metafiles
+	 end

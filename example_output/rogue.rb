@@ -19,3 +19,8 @@ install :
 	 inreplace "Makefile" do |s|
 	 s.gsub! "-if test -d $(man6dir) ; then $(INSTALL) -m 0644 rogue.6 $(DESTDIR)$(man6dir)/$(PROGRAM).6 ; fi", ""
 	 s.gsub! "-if test ! -d $(man6dir) ; then $(INSTALL) -m 0644 rogue.6 $(DESTDIR)$(mandir)/$(PROGRAM).6 ; fi", ""
+	 end
+	 system "make", "install"
+	 man6.install gzip("rogue.6")
+	 libexec.mkpath
+	 (var/"rogue").mkpath

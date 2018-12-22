@@ -29,3 +29,5 @@ install :
 	 cd "squashfs-tools" do
 	 system "make", *args
 	 bin.install %w[mksquashfs unsquashfs]
+	 end
+	 doc.install %w[ACKNOWLEDGEMENTS INSTALL OLD-READMEs PERFORMANCE.README README-4.3]

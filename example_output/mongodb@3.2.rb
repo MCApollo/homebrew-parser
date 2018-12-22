@@ -25,3 +25,6 @@ install :
 	 args << "ssl"
 	 ENV["LIBRARY_PATH"] = Formula["openssl"].opt_lib
 	 ENV["CPATH"] = Formula["openssl"].opt_include
+	 end
+	 args << "sasl" if build.with? "sasl"
+	 system "./build.sh", *args

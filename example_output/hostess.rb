@@ -18,3 +18,5 @@ install :
 	 dir.install buildpath.children
 	 cd dir/"cmd/hostess" do
 	 system "go", "install"
+	 end
+	 bin.install "bin/hostess"

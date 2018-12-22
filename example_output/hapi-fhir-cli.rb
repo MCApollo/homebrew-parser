@@ -8,6 +8,7 @@ description :
 	 Command-line interface for the HAPI FHIR library
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :

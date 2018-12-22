@@ -25,4 +25,11 @@ install :
 	 "@HAVE_INTROSPECTION_TRUE@girdir = $(datadir)/gir-1.0"
 	 s.gsub! "@HAVE_INTROSPECTION_TRUE@typelibdir = $(INTROSPECTION_TYPELIBDIR)",
 	 "@HAVE_INTROSPECTION_TRUE@typelibdir = $(libdir)/girepository-1.0"
+	 end
+	 system "./configure", "--disable-debug",
+	 "--disable-dependency-tracking",
+	 "--disable-silent-rules",
+	 "--prefix=#{prefix}",
+	 "--disable-schemas-compile"
+	 system "make", "install"
 	 system "#{Formula["glib"].opt_bin}/glib-compile-schemas", "#{HOMEBREW_PREFIX}/share/glib-2.0/schemas"

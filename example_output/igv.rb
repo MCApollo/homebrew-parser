@@ -8,7 +8,11 @@ description :
 	 Interactive Genomics Viewer
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 inreplace "igv.sh", /^prefix=.*/, "prefix=#{libexec}"
+	 libexec.install "igv.sh", "lib"
+	 (bin/"igv").write_env_script libexec/"igv.sh", Language::Java.java_home_env("1.8")

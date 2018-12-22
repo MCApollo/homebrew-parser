@@ -25,3 +25,9 @@ install :
 	 system "make", "man-pages"
 	 ensure
 	 ENV["SDKROOT"] = deleted
+	 end
+	 system "make", "install", "prefix=#{prefix}"
+	 prefix.install_metafiles
+	 bash_completion.install "etc/hub.bash_completion.sh"
+	 zsh_completion.install "etc/hub.zsh_completion" => "_hub"
+	 fish_completion.install "etc/hub.fish_completion" => "hub.fish"

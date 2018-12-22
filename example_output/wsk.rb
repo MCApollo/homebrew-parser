@@ -26,3 +26,4 @@ install :
 	 system "govendor", "sync"
 	 system "go", "build", "-o", bin/"wsk"
 	 prefix.install_metafiles
+	 end

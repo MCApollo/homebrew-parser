@@ -41,3 +41,4 @@ install :
 	 ENV.deparallelize do
 	 system "make"
 	 system "make", "install"
+	 end

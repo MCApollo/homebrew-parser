@@ -8,7 +8,9 @@ description :
 	 Automated installation of Microsoft IE AppCompat virtual machines
 build_deps :
 link_deps :
+	 unar
 conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "ievms.sh" => "ievms"

@@ -27,3 +27,4 @@ install :
 	 cd "out/native" do
 	 lib.install Dir["lib*"]
 	 bin.install "d8", "lineprocessor", "mksnapshot", "preparser", "process", "shell" => "v8"
+	 end

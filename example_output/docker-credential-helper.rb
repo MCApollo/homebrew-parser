@@ -21,3 +21,4 @@ install :
 	 system "make", "osxkeychain"
 	 bin.install "bin/docker-credential-osxkeychain"
 	 prefix.install_metafiles
+	 end

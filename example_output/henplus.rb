@@ -21,3 +21,5 @@ install :
 	 s.gsub! "$THISDIR/..", HOMEBREW_PREFIX
 	 s.gsub! "share/java/libreadline-java.jar",
 	 "share/libreadline-java/libreadline-java.jar"
+	 end
+	 system "ant", "install", "-Dprefix=#{prefix}"

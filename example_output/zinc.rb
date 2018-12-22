@@ -12,3 +12,6 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 rm_f Dir["bin/ng/{linux,win}*"]
+	 libexec.install Dir["*"]
+	 bin.install_symlink libexec/"bin/zinc"

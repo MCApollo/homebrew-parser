@@ -9,6 +9,8 @@ description :
 build_deps :
 link_deps :
 conflicts :
+	 bats
 patches :
 EOF_patch :
 install :
+	 system "./install.sh", prefix

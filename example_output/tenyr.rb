@@ -21,3 +21,4 @@ install :
 	 cd "build/homebrew" do
 	 bin.install "tsim", "tas", "tld"
 	 lib.install Dir["*.dylib"]
+	 end

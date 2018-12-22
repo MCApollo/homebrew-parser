@@ -29,3 +29,4 @@ install :
 	 ]
 	 cd "wxPython" do
 	 system "python", "setup.py", "install", "--prefix=#{prefix}", *args
+	 end

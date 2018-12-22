@@ -22,3 +22,20 @@ install :
 	 system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
 	 system "make"
 	 system "make", "install"
+	 end
+	 end
+	 build_pl.each do |name|
+	 resource(name).stage do
+	 system "perl", "Build.PL", "--install_base", libexec
+	 system "./Build"
+	 system "./Build", "install"
+	 end
+	 end
+	 ENV.prepend_path "PATH", libexec/"bin"
+	 system "perl", "Build.PL", "--install_base", libexec
+	 (buildpath/"bin").install_symlink buildpath/"script/perl-build"
+	 system "./Build"
+	 system "./Build", "install"
+	 %w[perl-build plenv-install plenv-uninstall].each do |cmd|
+	 (bin/cmd).write_env_script(libexec/"bin/#{cmd}", :PERL5LIB => ENV["PERL5LIB"])
+	 end

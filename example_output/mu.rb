@@ -25,3 +25,11 @@ install :
 	 system "./configure", "--prefix=#{prefix}/gmime", "--disable-introspection"
 	 system "make", "install"
 	 ENV.append_path "PKG_CONFIG_PATH", "#{prefix}/gmime/lib/pkgconfig"
+	 end
+	 ENV["EMACS"] = "no" if build.without? "emacs"
+	 system "autoreconf", "-ivf"
+	 system "./configure", "--disable-dependency-tracking",
+	 "--prefix=#{prefix}",
+	 "--with-lispdir=#{elisp}"
+	 system "make"
+	 system "make", "install"

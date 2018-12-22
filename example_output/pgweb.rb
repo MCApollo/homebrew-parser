@@ -21,3 +21,4 @@ install :
 	 system "make", "build"
 	 bin.install "pgweb"
 	 prefix.install_metafiles
+	 end

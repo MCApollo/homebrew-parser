@@ -18,3 +18,13 @@ install :
 	 system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
 	 system "make"
 	 system "make", "install"
+	 end
+	 end
+	 system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
+	 system "make", "install"
+	 doc.install "manual.pdf"
+	 (libexec+"bin").find.each do |path|
+	 next if path.directory?
+	 program = path.basename
+	 (bin+program).write_env_script("#{libexec}/bin/#{program}", :PERL5LIB => ENV["PERL5LIB"])
+	 end

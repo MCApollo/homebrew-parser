@@ -16,3 +16,4 @@ install :
 	 cd "src" do
 	 system "make", "PREFIX=#{prefix}", "CC=#{ENV.cc}", "world"
 	 system "make", "PREFIX=#{prefix}", "CC=#{ENV.cc}", "install"
+	 end

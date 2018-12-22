@@ -8,8 +8,15 @@ description :
 	 Transfer bulk data between Hadoop and structured datastores
 build_deps :
 link_deps :
+	 coreutils
+	 hadoop
+	 hbase
+	 hive
+	 :java
+	 zookeeper
 conflicts :
 patches :
+	 https://raw.githubusercontent.com/Homebrew/formula-patches/77adf73/sqoop/1.4.6.patch
 EOF_patch :
 install :
 	 libexec.install %w[bin conf lib]

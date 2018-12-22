@@ -16,3 +16,4 @@ install :
 	 cd "fon-flash" do
 	 system "make", "fon-flash"
 	 bin.install "fon-flash"
+	 end

@@ -12,3 +12,5 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "JsTestDriver-#{version}.jar"
+	 bin.write_jar_script libexec/"JsTestDriver-#{version}.jar", "js-test-driver"

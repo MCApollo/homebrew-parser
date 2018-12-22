@@ -8,7 +8,11 @@ description :
 	 Bootstrapping OSGi development
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install %w[amdatu-bootstrap bootstrap.jar conf]
+	 (bin/"amdatu-bootstrap").write_env_script libexec/"amdatu-bootstrap",
+	 Language::Java.java_home_env("1.8")

@@ -12,3 +12,5 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "txt2tags"
+	 man1.install "doc/English/manpage.man" => "txt2tags.1"

@@ -19,3 +19,4 @@ install :
 	 system "go", "build", "-o", bin/"pumba", "-ldflags",
 	 "-X main.Version=#{version}", "./cmd"
 	 prefix.install_metafiles
+	 end

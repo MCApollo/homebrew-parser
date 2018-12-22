@@ -20,3 +20,4 @@ install :
 	 system "go", "build", "-o", bin/"docker-ls", "./cli/docker-ls"
 	 system "go", "build", "-o", bin/"docker-rm", "./cli/docker-rm"
 	 prefix.install_metafiles
+	 end

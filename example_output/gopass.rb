@@ -20,3 +20,6 @@ install :
 	 prefix.install_metafiles
 	 ENV["PREFIX"] = prefix
 	 system "make", "install"
+	 end
+	 output = Utils.popen_read("#{bin}/gopass completion bash")
+	 (bash_completion/"gopass-completion").write output

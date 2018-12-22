@@ -21,3 +21,4 @@ install :
 	 system "make", "dep"
 	 system "go", "build", "-o", bin/"fn"
 	 prefix.install_metafiles
+	 end

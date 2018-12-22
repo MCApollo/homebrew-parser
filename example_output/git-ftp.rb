@@ -29,3 +29,9 @@ install :
 	 "--without-libmetalink",
 	 "--without-librtmp"
 	 system "make", "install"
+	 end
+	 system "make", "prefix=#{prefix}", "install"
+	 system "make", "-C", "man", "man"
+	 man1.install "man/git-ftp.1"
+	 (libexec/"bin").install bin/"git-ftp"
+	 (bin/"git-ftp").write_env_script(libexec/"bin/git-ftp", :PATH => "#{libexec}/bin:$PATH")

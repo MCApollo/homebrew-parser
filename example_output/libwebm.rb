@@ -18,3 +18,6 @@ install :
 	 system "make"
 	 lib.install "libwebm.a"
 	 bin.install %w[sample sample_muxer vttdemux webm2pes]
+	 end
+	 include.install Dir.glob("mkv*.hpp")
+	 include.install Dir.glob("vtt*.h")

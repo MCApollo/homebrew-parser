@@ -8,7 +8,11 @@ description :
 	 Yet Another Java Decompiler
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 jar_version = version.to_s.tr(".", "_")
+	 libexec.install "cfr_#{jar_version}.jar"
+	 bin.write_jar_script libexec/"cfr_#{jar_version}.jar", "cfr-decompiler"

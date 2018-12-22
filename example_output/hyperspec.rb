@@ -12,3 +12,4 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 doc.install Dir["*"]

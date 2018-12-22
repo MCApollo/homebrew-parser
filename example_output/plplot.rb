@@ -40,3 +40,12 @@ install :
 	 system "cmake", "..", *args
 	 system "make"
 	 system "make", "install"
+	 end
+	 cd (lib.to_s) do
+	 Dir["*.dylib"].select { |f| File.ftype(f) == "file" }.each do |f|
+	 MachO::Tools.dylibs(f).select { |d| d.start_with?("@rpath") }.each do |d|
+	 d_new = d.sub("@rpath", opt_lib.to_s)
+	 MachO::Tools.change_install_name(f, d, d_new)
+	 end
+	 end
+	 end

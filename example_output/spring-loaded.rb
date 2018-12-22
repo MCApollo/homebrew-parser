@@ -12,3 +12,4 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 (share/"java").install "springloaded-#{version}.RELEASE.jar" => "springloaded.jar"

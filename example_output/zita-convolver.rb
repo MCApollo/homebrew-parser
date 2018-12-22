@@ -15,3 +15,4 @@ EOF_patch :
 install :
 	 cd "libs" do
 	 system "make", "-f", "Makefile-osx", "install", "PREFIX=#{prefix}", "SUFFIX="
+	 end

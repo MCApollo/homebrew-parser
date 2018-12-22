@@ -21,3 +21,4 @@ install :
 	 cd path do
 	 system "go", "install", "-v", ".../MailHog"
 	 prefix.install_metafiles
+	 end

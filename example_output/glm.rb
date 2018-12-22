@@ -17,3 +17,9 @@ install :
 	 mkdir "build" do
 	 system "cmake", "..", *std_cmake_args
 	 system "make", "install"
+	 end
+	 cd "doc" do
+	 system "doxygen", "man.doxy"
+	 man.install "html"
+	 end
+	 doc.install Dir["doc/*"]

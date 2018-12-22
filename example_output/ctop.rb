@@ -20,3 +20,4 @@ install :
 	 system "make", "build"
 	 bin.install "ctop"
 	 prefix.install_metafiles
+	 end

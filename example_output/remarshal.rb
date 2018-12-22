@@ -16,3 +16,4 @@ install :
 	 virtualenv_install_with_resources
 	 ["toml", "yaml", "json"].permutation(2).each do |informat, outformat|
 	 bin.install_symlink "remarshal" => "#{informat}2#{outformat}"
+	 end

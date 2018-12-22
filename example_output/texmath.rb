@@ -16,3 +16,4 @@ EOF_patch :
 install :
 	 install_cabal_package "--enable-tests", :flags => ["executable"] do
 	 system "cabal", "test"
+	 end

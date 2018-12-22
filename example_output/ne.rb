@@ -16,3 +16,5 @@ install :
 	 ENV.deparallelize
 	 cd "src" do
 	 system "make"
+	 end
+	 system "make", "build", "PREFIX=#{prefix}", "install"

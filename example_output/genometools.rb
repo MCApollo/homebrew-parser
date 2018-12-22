@@ -25,3 +25,4 @@ install :
 	 "gtlib = CDLL(\"#{lib}/libgenometools\" + soext)"
 	 system "python3", *Language::Python.setup_install_args(prefix)
 	 system "python3", "-m", "unittest", "discover", "tests"
+	 end

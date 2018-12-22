@@ -48,3 +48,12 @@ EOF_patch :
 install :
 	 svn_binary = which_all("svn").reject do |bin|
 	 bin.to_s.start_with?("#{HOMEBREW_REPOSITORY}/Library/ENV/")
+	 end.first
+	 inreplace ["configure", "configure.in"], "\nORIGSVN=`which svn`",
+	 "\nORIGSVN=#{svn_binary}"
+	 system "./configure", "--prefix=#{prefix}",
+	 "--mandir=#{man}",
+	 "--sysconfdir=#{etc}"
+	 inreplace ["colorsvn.1", "colorsvn-original"], "/etc", etc
+	 system "make"
+	 system "make", "install"

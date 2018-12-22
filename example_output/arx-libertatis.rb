@@ -30,3 +30,4 @@ install :
 	 s.gsub! "${VERSION_0}", "1.1.2"
 	 s.gsub! "${GIT_SUFFIX_5}", "+Homebrew-1"
 	 s.gsub! "${VERSION_4}", "Rhaa Movis"
+	 end

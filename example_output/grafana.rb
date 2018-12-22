@@ -32,5 +32,6 @@ install :
 	 etc.install "conf/grafana.ini.example" => "grafana/grafana.ini.example"
 	 pkgshare.install "conf", "public", "tools", "vendor"
 	 prefix.install_metafiles
+	 end
 	 (var/"log/grafana").mkpath
 	 (var/"lib/grafana/plugins").mkpath

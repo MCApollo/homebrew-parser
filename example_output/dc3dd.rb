@@ -22,3 +22,18 @@ install :
 	 system "perl", "Makefile.PL", "INSTALL_BASE=#{buildpath}/gettext-pm"
 	 system "make"
 	 system "make", "install"
+	 end
+	 inreplace "lib/vasnprintf.c",
+	 "
+	 "
+	 chmod 0555, ["build-aux/install-sh", "configure"]
+	 args = %W[--disable-debug
+	 --disable-dependency-tracking
+	 --prefix=#{prefix}
+	 --infodir=#{info}]
+	 args << "gl_cv_func_stpncpy=yes" if MacOS.version >= :lion
+	 system "./configure", *args
+	 system "make"
+	 system "make", "install"
+	 prefix.install %w[Options_Reference.txt Sample_Commands.txt]
+	 end

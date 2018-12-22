@@ -12,3 +12,5 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install %w[bin conf lib]
+	 bin.write_exec_script libexec/"bin/whirr"

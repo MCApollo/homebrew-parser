@@ -20,3 +20,4 @@ install :
 	 cd dir do
 	 system "go", "build", "-o", bin/"gh-md-toc"
 	 prefix.install_metafiles
+	 end

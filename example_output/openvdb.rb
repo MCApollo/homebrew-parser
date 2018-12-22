@@ -47,3 +47,4 @@ install :
 	 ENV.append_to_cflags "-I #{buildpath}"
 	 cd "openvdb" do
 	 system "make", "install", *args
+	 end

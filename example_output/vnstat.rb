@@ -19,6 +19,14 @@ install :
 	 s.gsub! "/var/", "#{var}/", false
 	 s.gsub! "var/lib", "var/db", false
 	 s.gsub! "\"eth0\"", "\"en0\"", false
+	 end
+	 system "./configure", "--disable-dependency-tracking",
+	 "--disable-silent-rules",
+	 "--prefix=#{prefix}",
+	 "--sysconfdir=#{etc}",
+	 "--sbindir=#{bin}",
+	 "--localstatedir=#{var}"
+	 system "make", "install"
 	 (var/"db/vnstat").mkpath
 	 (var/"log/vnstat").mkpath
 	 (var/"run/vnstat").mkpath

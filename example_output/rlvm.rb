@@ -33,3 +33,12 @@ install :
 	 s.gsub! /(CheckForSystemLibrary\(config, library_dict), subcomponents/, '\1, []'
 	 s.gsub! "jpeglib.h", "jconfig.h"
 	 s.gsub! /(msgfmt)/, "#{Formula["gettext"].bin}/\\1"
+	 end
+	 inreplace "SConscript.cocoa" do |s|
+	 s.gsub! /(static_env\.ParseConfig)\("sdl-config --static-libs", MergeEverythingButSDLMain\)/,
+	 '\1("pkg-config --libs sdl SDL_image SDL_mixer SDL_ttf freetype2").Append(FRAMEWORKS=["OpenGL"])'
+	 s.gsub! /(full_static_build) = True/, '\1 = False'
+	 end
+	 scons "--release"
+	 prefix.install "build/rlvm.app"
+	 bin.write_exec_script "#{prefix}/rlvm.app/Contents/MacOS/rlvm"

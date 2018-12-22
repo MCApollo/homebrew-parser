@@ -12,3 +12,5 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install "moco-runner-#{version}-standalone.jar"
+	 bin.write_jar_script libexec/"moco-runner-#{version}-standalone.jar", "moco"

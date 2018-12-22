@@ -19,3 +19,4 @@ install :
 	 system "make", "binaries/osx_x86_64/tj"
 	 bin.install "binaries/osx_x86_64/tj"
 	 prefix.install_metafiles
+	 end

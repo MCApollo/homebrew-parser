@@ -26,3 +26,4 @@ install :
 	 args << "CC=#{ENV.cc}" if MacOS.version >= :mountain_lion
 	 system "make", *args
 	 system "make", "install"
+	 end

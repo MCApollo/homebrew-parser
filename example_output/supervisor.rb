@@ -19,5 +19,8 @@ install :
 	 s.gsub! %r{/tmp/supervisord\.pid}, var/"run/supervisord.pid"
 	 s.gsub! /^;\[include\]$/, "[include]"
 	 s.gsub! %r{^;files = relative/directory/\*\.ini$}, "files = #{etc}/supervisor.d/*.ini"
+	 end
+	 virtualenv_install_with_resources
+	 etc.install buildpath/"supervisor/skel/sample.conf" => "supervisord.ini"
 	 (var/"run").mkpath
 	 (var/"log").mkpath

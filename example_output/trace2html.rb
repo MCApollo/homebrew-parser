@@ -8,7 +8,10 @@ description :
 	 Utility from Google Trace Viewer to convert JSON traces to HTML
 build_deps :
 link_deps :
+	 python@2
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install Dir["*"]
+	 bin.install_symlink libexec/"tracing/trace2html"

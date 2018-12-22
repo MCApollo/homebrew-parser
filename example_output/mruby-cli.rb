@@ -18,3 +18,7 @@ install :
 	 MRuby::Build.new do |conf|
 	 toolchain :clang
 	 conf.gem File.expand_path(File.dirname(__FILE__))
+	 end
+	 EOS
+	 system "rake", "compile"
+	 bin.install "mruby/build/host/bin/mruby-cli"

@@ -8,7 +8,10 @@ description :
 	 Java suite of core NLP tools
 build_deps :
 link_deps :
+	 :java
 conflicts :
 patches :
 EOF_patch :
 install :
+	 libexec.install Dir["*"]
+	 bin.write_exec_script Dir["#{libexec}/*.sh"]

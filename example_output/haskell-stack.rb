@@ -25,3 +25,4 @@ install :
 	 system "stack", "-j#{jobs}", "--stack-yaml=stack-lts-12.yaml",
 	 "--system-ghc", "--no-install-ghc", "--local-bin-path=#{bin}",
 	 "install", "--flag", "stack:disable-git-info"
+	 end

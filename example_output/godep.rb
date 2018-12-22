@@ -18,3 +18,4 @@ install :
 	 cd "src/github.com/tools/godep" do
 	 system "go", "build", "-o", bin/"godep"
 	 prefix.install_metafiles
+	 end

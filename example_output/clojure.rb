@@ -8,7 +8,10 @@ description :
 	 The Clojure Programming Language
 build_deps :
 link_deps :
+	 :java
+	 rlwrap
 conflicts :
 patches :
 EOF_patch :
 install :
+	 system "./install.sh", prefix

@@ -15,3 +15,10 @@ install :
 	 cd "File-MMagic" do
 	 system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
 	 system "make", "install"
+	 end
+	 args = ["--disable-dependency-tracking",
+	 "--prefix=#{prefix}",
+	 "--mandir=#{man}",
+	 "--with-pmdir=#{libexec}/lib/perl5"]
+	 system "./configure", *args
+	 system "make", "install"

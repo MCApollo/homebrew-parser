@@ -18,3 +18,4 @@ install :
 	 system "./build.sh"
 	 bin.install "xidel"
 	 man1.install "meta/xidel.1"
+	 end

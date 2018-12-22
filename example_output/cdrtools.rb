@@ -20,3 +20,5 @@ install :
 	 (include/"schily").rmtree
 	 %w[libschily.a libdeflt.a libfind.a].each do |file|
 	 (lib/file).unlink
+	 end
+	 man5.rmtree

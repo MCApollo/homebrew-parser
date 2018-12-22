@@ -20,3 +20,4 @@ install :
 	 system "glide", "install"
 	 system "go", "build", "-o", bin/"frugal"
 	 prefix.install_metafiles
+	 end

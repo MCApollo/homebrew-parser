@@ -29,3 +29,12 @@ install :
 	 swat/scheme/other/btest.scm
 	 ].each do |f|
 	 inreplace f, "/usr/local", prefix
+	 end
+	 inreplace "microcode/configure" do |s|
+	 s.gsub! "/usr/local", prefix
+	 s.gsub! /SDK=MacOSX\${MACOSX}$/, "SDK=MacOSX#{MacOS.sdk.version}"
+	 end
+	 if build.without? "x11"
+	 inreplace "etc/make-liarc.sh" do |s|
+	 s.gsub! "run_configure", "run_configure --without-x"
+	 end

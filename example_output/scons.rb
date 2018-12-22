@@ -23,3 +23,4 @@ install :
 	 bin.children.each do |p|
 	 mv p, "#{libexec}/#{p.basename}.py"
 	 bin.install_symlink "#{libexec}/#{p.basename}.py" => p.basename
+	 end

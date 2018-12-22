@@ -33,3 +33,4 @@ install :
 	 output = Utils.popen_read("SHELL=zsh #{bin}/helm completion zsh")
 	 (zsh_completion/"_helm").write output
 	 prefix.install_metafiles
+	 end

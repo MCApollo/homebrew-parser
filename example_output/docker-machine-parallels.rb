@@ -20,3 +20,5 @@ install :
 	 cd path do
 	 system "make", "build"
 	 bin.install "bin/docker-machine-driver-parallels"
+	 end
+	 prefix.install_metafiles path

@@ -16,3 +16,7 @@ EOF_patch :
 install :
 	 inreplace "Makefile" do |s|
 	 s.gsub! /\-W /, "-W -DNOMLOCK $(CFLAGS) $(LDFLAGS)"
+	 end
+	 system "make"
+	 man1.install "ssss.1"
+	 bin.install %w[ssss-combine ssss-split]

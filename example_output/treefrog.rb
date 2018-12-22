@@ -19,3 +19,8 @@ install :
 	 cd "src" do
 	 system "make"
 	 system "make", "install"
+	 end
+	 cd "tools" do
+	 system "make"
+	 system "make", "install"
+	 end

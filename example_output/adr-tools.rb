@@ -12,3 +12,12 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 config = buildpath/"src/adr-config"
+	 config.unlink
+	 config.write <<~EOS
+	 #!/bin/bash
+	 echo 'adr_bin_dir=\"#{bin}\"'
+	 echo 'adr_template_dir=\"#{prefix}\"'
+	 EOS
+	 prefix.install Dir["src/*.md"]
+	 bin.install Dir["src/*"]

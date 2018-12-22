@@ -12,3 +12,5 @@ conflicts :
 patches :
 EOF_patch :
 install :
+	 bin.install "fatpack/pgcompact"
+	 doc.install %w[CHANGES.md LICENSE.md README.md TODO.md]

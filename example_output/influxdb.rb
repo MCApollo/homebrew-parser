@@ -24,3 +24,18 @@ install :
 	 system "go", "install",
 	 "-ldflags", "-X main.version=#{version} -X main.commit=#{revision} -X main.branch=master",
 	 "./..."
+	 end
+	 inreplace influxdb_path/"etc/config.sample.toml" do |s|
+	 s.gsub! "/var/lib/influxdb/data", "#{var}/influxdb/data"
+	 s.gsub! "/var/lib/influxdb/meta", "#{var}/influxdb/meta"
+	 s.gsub! "/var/lib/influxdb/wal", "#{var}/influxdb/wal"
+	 end
+	 bin.install "bin/influxd"
+	 bin.install "bin/influx"
+	 bin.install "bin/influx_tsm"
+	 bin.install "bin/influx_stress"
+	 bin.install "bin/influx_inspect"
+	 etc.install influxdb_path/"etc/config.sample.toml" => "influxdb.conf"
+	 (var/"influxdb/data").mkpath
+	 (var/"influxdb/meta").mkpath
+	 (var/"influxdb/wal").mkpath

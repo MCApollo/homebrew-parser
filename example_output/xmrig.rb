@@ -21,3 +21,5 @@ install :
 	 *std_cmake_args
 	 system "make"
 	 bin.install "xmrig"
+	 end
+	 pkgshare.install "src/config.json"

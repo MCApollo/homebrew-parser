@@ -20,3 +20,4 @@ install :
 	 cd armorpath do
 	 system "go", "build", "-o", bin/"armor", "cmd/armor/main.go"
 	 prefix.install_metafiles
+	 end
