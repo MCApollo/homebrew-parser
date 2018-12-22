@@ -21,6 +21,8 @@ EOF_patch :
 	 --- a/meson.build
 	 +++ b/meson.build
 	 @@ -145,14 +145,6 @@ if host_system == 'linux'
+	 endforeach
+	 endif
 	 -
 	 -if host_system == 'darwin'
 	 -  common_ldflags += [

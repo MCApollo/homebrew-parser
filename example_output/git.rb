@@ -35,4 +35,6 @@ install :
 	 /Applications/Xcode.app/Contents/Developer
 	 ].uniq.map do |p|
 	 "#{p}/Library/Perl/#{perl_version}/darwin-thread-multi-2level"
-	 end.join(":")
+	 end
+	 unless quiet_system ENV["PERL_PATH"], "-e", "use ExtUtils::MakeMaker"
+	 ENV["NO_PERL_MAKEMAKER"] = "1"

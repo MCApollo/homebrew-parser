@@ -23,3 +23,11 @@ install :
 	 bulkloader.py
 	 dev_appserver.py
 	 download_appstats.py
+	 gen_protorpc.py
+	 php_cli.py
+	 remote_api_shell.py
+	 run_tests.py
+	 wrapper_util.py
+	 ].each do |fn|
+	 bin.install_symlink share/name/fn
+	 end

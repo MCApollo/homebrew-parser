@@ -23,6 +23,7 @@ EOF_patch :
 	 +++ b/meson.build
 	 @@ -112,11 +112,6 @@ if host_system == 'linux' and cc.get_id() == 'gcc'
 	 common_ldflags = [ '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', '-Wl,-z,now', ]
+	 endif
 	 -
 	 -if host_system == 'darwin'
 	 -  common_ldflags += [ '-compatibility_version 1', '-current_version 1.0', ]

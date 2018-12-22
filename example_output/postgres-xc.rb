@@ -23,6 +23,7 @@ EOF_patch :
 	 shared_libpython = yes
 	 -override python_libspec = -framework Python
 	 -override python_additional_libs =
+	 endif
 install :
 	 ENV.append_to_cflags "-D_XOPEN_SOURCE"
 	 ENV.append "CFLAGS", "-D_FORTIFY_SOURCE=0 -O2" if MacOS.version >= :mavericks

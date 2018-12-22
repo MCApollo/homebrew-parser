@@ -28,6 +28,7 @@ EOF_patch :
 	 -    set(RP_NAME "${RP_NAME}-x86")
 	 set(BEA_LIBRARY "BeaEngine.x86.${RP_PLAT}.${EXTENSION_LIBRARY}")
 	 set(ARGTABLE_LIBRARY "argtable2.x86.${RP_PLAT}.${EXTENSION_LIBRARY}")
+	 endif(CMAKE_SIZEOF_VOID_P EQUAL 8 AND NOT(optX86BUILD))
 install :
 	 mkdir "build" do
 	 system "cmake", ".."

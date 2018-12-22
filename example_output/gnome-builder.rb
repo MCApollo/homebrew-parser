@@ -36,6 +36,7 @@ EOF_patch :
 	 +++ b/src/libide/meson.build
 	 @@ -160,37 +160,6 @@ if get_option('with_editorconfig')
 	 ]
+	 endif
 	 -
 	 -python3 = find_program('python3')
 	 -

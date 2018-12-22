@@ -66,6 +66,8 @@ class HomebrewParser(object):
 		# We `shouldLoop` if this is met.
 		LoopRegex = re.compile(
 			r'^(?:bottle|head|test)')
+		endRegex = re.compile(
+			r'^(?:^end$)')
 		''''''
 		for line in contents:
 			line = self.preprocess(line)
@@ -74,7 +76,7 @@ class HomebrewParser(object):
 				print('--> ', line)
 			if line == '':
 				continue
-			elif line.startswith('end'):
+			elif endRegex.match(line): # line.startswith('end') --> 'endif' edge case. line == 'end' would've work also.
 				if installMode and endCount > 0:
 					if Debug:
 						print('endCount --> ', endCount)

@@ -41,17 +41,8 @@ EOF_patch :
 	 +    dependency(gio_system_pkg)
 	 ]
 	 cflags += '-xobjective-c'
-	 foreach test_ldflag: test_ldflags
-	 -  if cc.has_argument(test_ldflag)
-	 ldflags += test_ldflag
-	 -  endif
-	 libgitg = shared_library(
-	 diff --git a/meson.build b/meson.build
-	 index 0790c5e..61c7417 100644
-	 --- a/meson.build
-	 +++ b/meson.build
-	 @@ -79,11 +79,9 @@ endif
-	 if gitg_debug
+	 endif
+	 endforeach
 install :
 	 ENV["DESTDIR"] = "/"
 	 mkdir "build" do

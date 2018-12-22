@@ -22,6 +22,7 @@ EOF_patch :
 	 +++ b/meson.build
 	 @@ -73,11 +73,6 @@ if host_machine.system() == 'linux'
 	 common_ldflags += cc.get_supported_link_arguments(test_ldflags)
+	 endif
 	 -
 	 -if host_machine.system() == 'darwin'
 	 -  common_ldflags += [ '-compatibility_version 1', '-current_version 1.0', ]
