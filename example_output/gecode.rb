@@ -23,3 +23,6 @@ install :
 	 ENV.append_path "PKG_CONFIG_PATH", "#{HOMEBREW_PREFIX}/opt/qt/lib/pkgconfig"
 	 else
 	 args << "--disable-qt"
+	 end
+	 system "./configure", *args
+	 system "make", "install"

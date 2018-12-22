@@ -30,3 +30,13 @@ install :
 	 if build.head?
 	 args << "--with-ruby"
 	 system "./autogen.sh"
+	 end
+	 system "./configure", *args
+	 system "make", "install"
+	 resource("groonga-normalizer-mysql").stage do
+	 ENV.prepend_path "PATH", bin
+	 ENV.prepend_path "PKG_CONFIG_PATH", lib/"pkgconfig"
+	 system "./configure", "--prefix=#{prefix}"
+	 system "make"
+	 system "make", "install"
+	 end

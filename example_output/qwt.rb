@@ -43,3 +43,7 @@ install :
 	 args << "macx-clang"
 	 else
 	 args << "macx-g++"
+	 end
+	 system "qmake", *args
+	 system "make"
+	 system "make", "install"

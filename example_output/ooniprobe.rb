@@ -30,6 +30,10 @@ install :
 	 EOS
 	 if MacOS.sdk_path_if_needed
 	 ENV.append "CPPFLAGS", "-I#{MacOS.sdk_path}/usr/include/ffi"
+	 end
+	 virtualenv_install_with_resources
+	 man1.install Dir["data/*.1"]
+	 pkgshare.install Dir["data/*"]
 	 return if (pkgshare/"decks-available").exist?
 	 ln_s pkgshare/"decks", pkgshare/"decks-available"
 	 ln_s pkgshare/"decks/web.yaml", pkgshare/"current.deck"

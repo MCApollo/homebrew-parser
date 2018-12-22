@@ -22,3 +22,6 @@ install :
 	 s.gsub! "-o $(BINUID) -g $(BINGID)", ""
 	 s.gsub! "-o $(MANUID) -g $(MANGID)", ""
 	 end
+	 end
+	 system "make", "test"
+	 system "make", "install", "PREFIX=#{prefix}"

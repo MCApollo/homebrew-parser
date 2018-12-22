@@ -23,3 +23,11 @@ install :
 	 args << "cxxflags=-std=c++11"
 	 if ENV.compiler == :clang
 	 args << "cxxflags=-stdlib=libc++" << "linkflags=-stdlib=libc++"
+	 end
+	 pyver = Language::Python.major_minor_version "python"
+	 system "./bootstrap.sh", "--prefix=#{prefix}", "--libdir=#{lib}",
+	 "--with-libraries=python", "--with-python=python"
+	 system "./b2", "--build-dir=build-python", "--stagedir=stage-python",
+	 "python=#{pyver}", *args
+	 lib.install Dir["stage-python/lib/*py*"]
+	 doc.install Dir["libs/python/doc/*"]

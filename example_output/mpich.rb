@@ -17,3 +17,11 @@ install :
 	 if build.head?
 	 ENV["MPICH_AUTOTOOLS_DIR"] = HOMEBREW_PREFIX + "bin"
 	 system "./autogen.sh"
+	 end
+	 system "./configure", "--disable-dependency-tracking",
+	 "--disable-silent-rules",
+	 "--prefix=#{prefix}",
+	 "--mandir=#{man}"
+	 system "make"
+	 system "make", "check"
+	 system "make", "install"

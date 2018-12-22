@@ -18,3 +18,10 @@ install :
 	 cd "autoconf" do
 	 system "make"
 	 end
+	 end
+	 system "./configure", "--prefix=#{prefix}",
+	 "--with-slang=#{Formula["s-lang"].opt_prefix}"
+	 system "make"
+	 system "make", "xjed" if build.with? "x11"
+	 ENV.deparallelize
+	 system "make", "install"

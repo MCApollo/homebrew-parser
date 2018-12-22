@@ -20,3 +20,10 @@ install :
 	 sdk = MacOS::CLT.installed? ? "" : MacOS.sdk_path
 	 ENV["LIBEDIT_CFLAGS"] = "-I#{sdk}/usr/include -I#{sdk}/usr/include/editline"
 	 ENV["LIBEDIT_LIBS"] = "-L/usr/lib -ledit -lcurses"
+	 end
+	 system "./configure", "--disable-dependency-tracking",
+	 "--disable-silent-rules",
+	 "--prefix=#{prefix}",
+	 "--without-net-snmp",
+	 "--sysconfdir=#{etc}/dnsdist"
+	 system "make", "install"

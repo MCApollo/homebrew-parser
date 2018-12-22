@@ -19,3 +19,5 @@ install :
 	 libexec.install Dir["spotbugs/build/install/spotbugs/*"]
 	 else
 	 libexec.install Dir["*"]
+	 end
+	 bin.install_symlink "#{libexec}/bin/spotbugs"

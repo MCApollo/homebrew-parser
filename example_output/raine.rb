@@ -43,3 +43,18 @@ install :
 	 system "make"
 	 system "make", "install"
 	 end
+	 end
+	 inreplace "makefile" do |s|
+	 s.gsub! /-lSDL_ttf/, "-lSDL_ttf -lfreetype -lbz2"
+	 s.gsub! /-lSDL_sound/, "-lSDL_sound -lFLAC -logg"
+	 s.gsub! /-l(SDL\w*|intl|muparser|freetype|png|FLAC|ogg)/, "#{buildpath}/lib/lib\\1.a"
+	 s.gsub! %r{/usr/local/lib/libpng.a}, "#{buildpath}/lib/libpng.a"
+	 s.gsub! %r{/usr/local/include/SDL/}, "#{buildpath}/include/SDL/"
+	 s.gsub! %r{-I/usr/local/include}, ENV.cflags
+	 end
+	 frameworks = %w[ApplicationServices AppKit AudioToolbox AudioUnit Carbon
+	 CoreFoundation CoreGraphics CoreServices Foundation IOKit]
+	 system "make", "LD=#{ENV.cxx} #{ENV.ldflags} #{frameworks.map { |f| "-framework #{f}" }.join(" ")}"
+	 system "make", "install"
+	 prefix.install "Raine.app"
+	 bin.write_exec_script "#{prefix}/Raine.app/Contents/MacOS/raine"

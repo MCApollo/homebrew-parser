@@ -14,3 +14,7 @@ EOF_patch :
 install :
 	 if build.with? "syntax-highlighting"
 	 inreplace "configure", '$ifsyntax = "\L$ifsyntax";', '$ifsyntax = "\Ly";'
+	 end
+	 system "./configure", "--prefix=#{prefix}", "--yes"
+	 man1.mkpath
+	 system "make", "install"

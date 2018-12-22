@@ -43,3 +43,14 @@ install :
 	 args << "--disable-hipe"
 	 else
 	 args << "--enable-hipe"
+	 end
+	 if build.with? "java"
+	 args << "--with-javac"
+	 else
+	 args << "--without-javac"
+	 end
+	 system "./configure", *args
+	 system "make"
+	 system "make", "install"
+	 (lib/"erlang").install resource("man").files("man")
+	 doc.install resource("html")

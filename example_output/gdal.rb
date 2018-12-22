@@ -86,3 +86,32 @@ install :
 	 args << "--with-mysql=#{Formula["mysql"].opt_prefix}/bin/mysql_config"
 	 else
 	 args << "--without-mysql"
+	 end
+	 supported_backends = %w[liblzma cfitsio hdf5 netcdf jasper xerces odbc
+	 dods-root epsilon webp podofo]
+	 if build.with? "complete"
+	 supported_backends.delete "liblzma"
+	 args << "--with-liblzma=yes"
+	 args.concat supported_backends.map { |b| "--with-" + b + "=" + HOMEBREW_PREFIX }
+	 elsif build.without? "unsupported"
+	 args.concat supported_backends.map { |b| "--without-" + b }
+	 end
+	 unsupported_backends = %w[gta ogdi fme hdf4 openjpeg fgdb ecw kakadu mrsid
+	 jp2mrsid mrsid_lidar msg oci ingres dwgdirect
+	 idb sde podofo rasdaman sosi]
+	 if build.without? "unsupported"
+	 args.concat unsupported_backends.map { |b| "--without-" + b }
+	 end
+	 system "./configure", *args
+	 system "make"
+	 system "make", "install"
+	 if build.stable?
+	 cd "swig/python" do
+	 system "python3", *Language::Python.setup_install_args(prefix)
+	 system "python2", *Language::Python.setup_install_args(prefix)
+	 end
+	 bin.install Dir["swig/python/scripts/*.py"]
+	 end
+	 system "make", "man" if build.head?
+	 system "make", "install-man", "INST_MAN=#{man}"
+	 Dir.glob("#{bin}/*.dox") { |p| rm p }

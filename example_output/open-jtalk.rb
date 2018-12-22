@@ -22,3 +22,11 @@ install :
 	 "--prefix=#{prefix}"
 	 if MacOS.version <= :mavericks
 	 inreplace "config.status", "-finput-charset=UTF-8 -fexec-charset=UTF-8", ""
+	 end
+	 system "make", "install"
+	 resource("voice").stage do
+	 (prefix/"voice/m100").install Dir["*"]
+	 end
+	 resource("mei").stage do
+	 (prefix/"voice").install "Voice/mei"
+	 end

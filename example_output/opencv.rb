@@ -72,3 +72,14 @@ install :
 	 if build.bottle?
 	 args += %w[-DENABLE_SSE41=OFF -DENABLE_SSE42=OFF -DENABLE_AVX=OFF
 	 -DENABLE_AVX2=OFF]
+	 end
+	 mkdir "build" do
+	 system "cmake", "..", *args
+	 system "make"
+	 system "make", "install"
+	 system "make", "clean"
+	 system "cmake", "..", "-DBUILD_SHARED_LIBS=OFF", *args
+	 system "make"
+	 lib.install Dir["lib/*.a"]
+	 lib.install Dir["3rdparty/**/*.a"]
+	 end

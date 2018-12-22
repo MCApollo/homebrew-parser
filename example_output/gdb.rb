@@ -35,3 +35,11 @@ install :
 	 ENV.append "CPPFLAGS", "-I#{Formula["python"].opt_libexec}"
 	 else
 	 args << "--with-python=/usr"
+	 end
+	 if build.with? "version-suffix"
+	 args << "--program-suffix=-#{version.to_s.slice(/^\d/)}"
+	 end
+	 system "./configure", *args
+	 system "make"
+	 inreplace ["bfd/Makefile", "opcodes/Makefile"], /^install:/, "dontinstall:"
+	 system "make", "install"

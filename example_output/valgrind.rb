@@ -21,3 +21,11 @@ install :
 	 args << "--enable-only64bit" << "--build=amd64-darwin"
 	 else
 	 args << "--enable-only32bit"
+	 end
+	 system "./autogen.sh" if build.head?
+	 unless MacOS::CLT.installed?
+	 inreplace "coregrind/Makefile.in", %r{(\s)(?=/usr/include/mach/)}, '\1'+MacOS.sdk_path.to_s
+	 end
+	 system "./configure", *args
+	 system "make"
+	 system "make", "install"

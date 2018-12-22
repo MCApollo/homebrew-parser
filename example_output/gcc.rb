@@ -61,3 +61,10 @@ install :
 	 make_args = []
 	 if build.bottle?
 	 make_args << "BOOT_LDFLAGS=-Wl,-headerpad_max_install_names"
+	 end
+	 system "make", *make_args
+	 system "make", "install"
+	 bin.install_symlink bin/"gfortran-#{version_suffix}" => "gfortran"
+	 end
+	 Dir.glob(man7/"*.7") { |file| add_suffix file, version_suffix }
+	 info.rmtree

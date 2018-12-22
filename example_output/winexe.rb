@@ -31,3 +31,10 @@ install :
 	 system "make"
 	 system "make", "install"
 	 end
+	 end
+	 cd "source4" do
+	 system "./autogen.sh"
+	 system "./configure", "--enable-fhs"
+	 system "make", "basics", "idl", "bin/winexe"
+	 bin.install "bin/winexe"
+	 end

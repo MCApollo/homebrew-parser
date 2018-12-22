@@ -27,3 +27,5 @@ install :
 	 else
 	 s.gsub! /^#FILES.*$/, "FILES=#{log_path}"
 	 end
+	 end
+	 etc.install "examples/sshguard.conf"

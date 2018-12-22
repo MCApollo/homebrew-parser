@@ -21,3 +21,4 @@ install :
 	 else
 	 system "make"
 	 bin.install "ems-flasher"
+	 end

@@ -26,3 +26,4 @@ install :
 	 def caveats
 	 unless Hardware::CPU.sse4?
 	 "MMseqs2 requires at least SSE4.1 CPU instruction support. The binary will not work correctly."
+	 end

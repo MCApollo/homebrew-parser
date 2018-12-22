@@ -16,3 +16,9 @@ install :
 	 cd "buildaux" do
 	 system "./regenerate-build-system.sh"
 	 end
+	 end
+	 system "./configure", "--disable-dependency-tracking",
+	 "--prefix=#{prefix}"
+	 system "make", "install"
+	 (etc/"intercal").install Dir["etc/*"]
+	 pkgshare.install "pit"

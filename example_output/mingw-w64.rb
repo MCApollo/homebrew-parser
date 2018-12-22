@@ -86,3 +86,28 @@ install :
 	 args << "--enable-lib32" << "--disable-lib64"
 	 elsif arch == "x86_64"
 	 args << "--disable-lib32" << "--enable-lib64"
+	 end
+	 mkdir "mingw-w64-crt/build-#{arch}" do
+	 system "../configure", *args
+	 system "make"
+	 system "make", "install"
+	 end
+	 args = %W[
+	 CC=#{target}-gcc
+	 CXX=#{target}-g++
+	 CPP=#{target}-cpp
+	 --host=#{target}
+	 --prefix=#{arch_dir}/#{target}
+	 ]
+	 mkdir "mingw-w64-libraries/winpthreads/build-#{arch}" do
+	 system "../configure", *args
+	 system "make"
+	 system "make", "install"
+	 end
+	 chdir "#{buildpath}/gcc/build-#{arch}" do
+	 system "make"
+	 system "make", "install"
+	 end
+	 mkdir_p bin
+	 Dir["#{arch_dir}/bin/*"].each { |f| ln_s f, bin }
+	 end

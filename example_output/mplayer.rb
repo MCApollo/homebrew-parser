@@ -41,3 +41,7 @@ install :
 	 if build.with? "libdvdread"
 	 ENV["LDFLAGS"] = "-L#{Formula["libdvdread"].opt_lib} -ldvdread"
 	 args << "--enable-dvdread"
+	 end
+	 system "./configure", *args
+	 system "make"
+	 system "make", "install"

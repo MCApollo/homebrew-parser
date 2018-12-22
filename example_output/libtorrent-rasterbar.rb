@@ -33,3 +33,6 @@ install :
 	 system "./bootstrap.sh", *args
 	 else
 	 system "./configure", *args
+	 end
+	 system "make", "install"
+	 libexec.install "examples"

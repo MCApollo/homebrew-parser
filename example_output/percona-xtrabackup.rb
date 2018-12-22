@@ -41,3 +41,9 @@ install :
 	 system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
 	 system "make", "install"
 	 end
+	 end
+	 resource("DBD::mysql").stage do
+	 system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
+	 system "make", "install"
+	 end
+	 bin.env_script_all_files(libexec/"bin", :PERL5LIB => ENV["PERL5LIB"])

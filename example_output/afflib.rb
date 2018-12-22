@@ -26,3 +26,9 @@ install :
 	 args << "--enable-fuse"
 	 else
 	 args << "--disable-fuse"
+	 end
+	 system "autoreconf", "-fiv"
+	 system "./configure", "--disable-dependency-tracking",
+	 "--prefix=#{prefix}",
+	 *args
+	 system "make", "install"

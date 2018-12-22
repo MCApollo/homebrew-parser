@@ -28,3 +28,9 @@ install :
 	 ENV["NOCONFIGURE"] = "yes"
 	 system "./autogen.sh"
 	 args << "--with-ptp-helper-permissions=none"
+	 end
+	 inreplace "configure", 'PLUGINDIR="$full_var"',
+	 "PLUGINDIR=\"#{HOMEBREW_PREFIX}/lib/gstreamer-1.0\""
+	 system "./configure", *args
+	 system "make"
+	 system "make", "install"

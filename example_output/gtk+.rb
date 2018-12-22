@@ -31,3 +31,7 @@ install :
 	 inreplace "autogen.sh", "libtoolize", "glibtoolize"
 	 ENV["NOCONFIGURE"] = "yes"
 	 system "./autogen.sh"
+	 end
+	 system "./configure", *args
+	 system "make", "install"
+	 inreplace bin/"gtk-builder-convert", %r{^#!/usr/bin/env python$}, "#!/usr/bin/python"

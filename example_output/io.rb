@@ -42,3 +42,18 @@ install :
 	 end
 	 s.gsub!(/(add_subdirectory\(Font\))/, '#\1')
 	 s.gsub!(/(add_subdirectory\(Memcached\))/, '#\1')
+	 end
+	 end
+	 mkdir "buildroot" do
+	 system "cmake", "..", "-DCMAKE_DISABLE_FIND_PACKAGE_ODE=ON",
+	 "-DCMAKE_DISABLE_FIND_PACKAGE_Theora=ON",
+	 *std_cmake_args
+	 system "make"
+	 output = `./_build/binaries/io ../libs/iovm/tests/correctness/run.io`
+	 if $CHILD_STATUS.exitstatus.nonzero?
+	 opoo "Test suite not 100% successful:\n#{output}"
+	 else
+	 ohai "Test suite ran successfully:\n#{output}"
+	 end
+	 system "make", "install"
+	 end

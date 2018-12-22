@@ -22,3 +22,11 @@ install :
 	 if MacOS.version == :el_capitan && MacOS::Xcode.installed? &&
 	 MacOS::Xcode.version >= "8.0"
 	 ENV.delete("SDKROOT")
+	 end
+	 system "./autogen.sh" if build.head?
+	 system "./configure", "--disable-dependency-tracking",
+	 "--disable-silent-rules",
+	 "--with-boost-libdir=#{Formula["boost"].opt_lib}",
+	 "--prefix=#{prefix}"
+	 system "make", "install"
+	 pkgshare.install "share/rpcauth"

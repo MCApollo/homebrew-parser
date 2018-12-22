@@ -51,3 +51,4 @@ install :
 	 (libexec/"lib").install Dir["lib/*.jar"]
 	 (libexec/"licenses/plugins/extras").install "LICENSE", "README", "NOTICE"
 	 end
+	 end

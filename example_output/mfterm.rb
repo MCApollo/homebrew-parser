@@ -20,3 +20,6 @@ install :
 	 if build.head?
 	 chmod 0755, "./autogen.sh"
 	 system "./autogen.sh"
+	 end
+	 system "./configure", "--prefix=#{prefix}", "--disable-dependency-tracking"
+	 system "make", "install"

@@ -18,3 +18,5 @@ install :
 	 if MacOS.version == :el_capitan && MacOS::Xcode.installed? &&
 	 MacOS::Xcode.version >= "8.0"
 	 ENV.delete("SDKROOT")
+	 end
+	 system "make", "PREFIX=#{prefix}", "INSTALLMAN=#{man}", "install"

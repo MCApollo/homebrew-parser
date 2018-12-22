@@ -16,3 +16,10 @@ install :
 	 if build.head?
 	 system "autoreconf", "--install"
 	 chmod 0755, "install-sh"
+	 end
+	 system "./configure", "--disable-dependency-tracking",
+	 "--prefix=#{prefix}"
+	 system "make", "install"
+	 resource("book").stage do
+	 doc.install "book_1.02.pgn"
+	 end

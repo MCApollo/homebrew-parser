@@ -44,3 +44,15 @@ install :
 	 args << "--with-sqlite3"
 	 else
 	 args << "--with-postgresql=#{brewed_or_shipped("pg_config")}"
+	 end
+	 end
+	 if MacOS.version == :el_capitan && MacOS::Xcode.installed? && MacOS::Xcode.version >= "8.0"
+	 inreplace "configure", "clock_gettime(CLOCK_REALTIME, &tp);",
+	 "undefinedgibberish(CLOCK_REALTIME, &tp);"
+	 end
+	 system "./configure", *args
+	 system "make", "install"
+	 if build.with? "server-proxy"
+	 db = build.with?("mysql") ? "mysql" : "postgresql"
+	 pkgshare.install "frontends/php", "database/#{db}"
+	 end

@@ -16,3 +16,8 @@ EOF_patch :
 install :
 	 if build.stable?
 	 (buildpath/"src/third_party/jansson").install resource("jansson")
+	 end
+	 system "cmake", ".", "-DOPENSSL_ROOT_DIR=#{Formula["openssl"].opt_prefix}",
+	 *std_cmake_args
+	 system "make", "install"
+	 pkgshare.install "examples"

@@ -33,3 +33,4 @@ install :
 	 if (bin/prog.basename).exist? || (sbin/prog.basename).exist?
 	 bash_completion.install prog
 	 end
+	 end

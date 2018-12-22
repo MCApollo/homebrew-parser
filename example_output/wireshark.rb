@@ -49,3 +49,19 @@ install :
 	 args << "-DBUILD_wireshark=OFF"
 	 args << "-DENABLE_APPLICATION_BUNDLE=OFF"
 	 args << "-DENABLE_QT5=OFF"
+	 end
+	 system "cmake", *args
+	 system "make", "install"
+	 if build.with? "qt"
+	 prefix.install bin/"Wireshark.app"
+	 bin.install_symlink prefix/"Wireshark.app/Contents/MacOS/Wireshark" => "wireshark"
+	 end
+	 (include/"wireshark").install Dir["*.h"]
+	 (include/"wireshark/epan").install Dir["epan/*.h"]
+	 (include/"wireshark/epan/crypt").install Dir["epan/crypt/*.h"]
+	 (include/"wireshark/epan/dfilter").install Dir["epan/dfilter/*.h"]
+	 (include/"wireshark/epan/dissectors").install Dir["epan/dissectors/*.h"]
+	 (include/"wireshark/epan/ftypes").install Dir["epan/ftypes/*.h"]
+	 (include/"wireshark/epan/wmem").install Dir["epan/wmem/*.h"]
+	 (include/"wireshark/wiretap").install Dir["wiretap/*.h"]
+	 (include/"wireshark/wsutil").install Dir["wsutil/*.h"]

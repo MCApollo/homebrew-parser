@@ -16,3 +16,12 @@ EOF_patch :
 install :
 	 if MacOS.version == :sierra || MacOS.version == :el_capitan
 	 ENV["SDKROOT"] = MacOS.sdk_path
+	 end
+	 ENV.append "CFLAGS", "-std=gnu89"
+	 ENV.prepend_path "PATH", "#{MacOS.sdk_path}/usr/bin"
+	 system "./bootstrap" if build.head?
+	 system "./configure", "--prefix=#{prefix}",
+	 "--with-lispdir=#{elisp}",
+	 "--disable-debug",
+	 "--disable-dependency-tracking"
+	 system "make", "install"

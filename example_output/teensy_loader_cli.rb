@@ -18,3 +18,6 @@ install :
 	 ENV["USE_LIBUSB"] = "YES"
 	 else
 	 ENV["SDK"] = MacOS.sdk_path || "/"
+	 end
+	 system "make"
+	 bin.install "teensy_loader_cli"

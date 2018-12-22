@@ -21,3 +21,14 @@ install :
 	 if build.head?
 	 ENV["NOCONFIGURE"] = "1"
 	 system "./autogen.sh"
+	 end
+	 system "./configure", "--disable-dependency-tracking",
+	 "--prefix=#{prefix}",
+	 "--enable-gobject=yes",
+	 "--enable-svg=yes",
+	 "--enable-tee=yes",
+	 "--enable-quartz-image",
+	 "--enable-xcb=no",
+	 "--enable-xlib=no",
+	 "--enable-xlib-xrender=no"
+	 system "make", "install"

@@ -44,3 +44,9 @@ install :
 	 args << "-DBUILD_apps_modeler=AUTO_OFF"
 	 else
 	 args << "-DBUILD_apps_modeler:BOOL=OFF"
+	 end
+	 mkdir "build" do
+	 system "cmake", "..", *args
+	 system "make", "install"
+	 prefix.install Dir["#{bin}/*.app"]
+	 end

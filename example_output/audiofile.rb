@@ -17,3 +17,9 @@ install :
 	 if build.head?
 	 inreplace "autogen.sh", "libtool", "glibtool"
 	 ENV["XML_CATALOG_FILES"] = "#{etc}/xml/catalog"
+	 end
+	 configure = build.head? ? "./autogen.sh" : "./configure"
+	 args = ["--disable-dependency-tracking", "--prefix=#{prefix}"]
+	 system configure, *args
+	 system "make"
+	 system "make", "install"

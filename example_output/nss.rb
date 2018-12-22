@@ -41,3 +41,7 @@ install :
 	 else
 	 cp file, lib
 	 end
+	 end
+	 rm lib/"libssl.a"
+	 (bin/"nss-config").write config_file
+	 (lib/"pkgconfig/nss.pc").write pc_file

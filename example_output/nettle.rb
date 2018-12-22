@@ -17,3 +17,10 @@ install :
 	 if DevelopmentTools.clang_build_version >= 1000
 	 inreplace "testsuite/symbols-test", "get_pc_thunk",
 	 "get_pc_thunk|(_*chkstk_darwin)"
+	 end
+	 system "./configure", "--disable-dependency-tracking",
+	 "--prefix=#{prefix}",
+	 "--enable-shared"
+	 system "make"
+	 system "make", "install"
+	 system "make", "check"

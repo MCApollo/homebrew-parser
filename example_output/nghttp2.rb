@@ -49,3 +49,4 @@ install :
 	 system buildpath/"cython/bin/cython", "nghttp2.pyx"
 	 system "python3", *Language::Python.setup_install_args(prefix)
 	 end
+	 end

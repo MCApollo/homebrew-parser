@@ -30,3 +30,4 @@ install :
 	 if build.with? "emacs"
 	 system bin/"agda-mode", "compile"
 	 elisp.install_symlink Dir["#{share}/*/Agda-#{version}/emacs-mode/*"]
+	 end

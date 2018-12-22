@@ -19,3 +19,6 @@ install :
 	 jar = Dir["apgdiff-*.jar"].first
 	 mv jar, ".."
 	 end
+	 end
+	 libexec.install jar
+	 bin.write_jar_script libexec/jar, "apgdiff"

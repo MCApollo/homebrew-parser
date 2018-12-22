@@ -15,3 +15,10 @@ install :
 	 if build.head?
 	 system "make", "-f", "Bootstrap.mak", "osx"
 	 system "./premake5", "gmake"
+	 end
+	 system "make", "-C", "build/gmake.macosx"
+	 if build.head?
+	 bin.install "bin/release/premake5"
+	 else
+	 bin.install "bin/release/premake4"
+	 end

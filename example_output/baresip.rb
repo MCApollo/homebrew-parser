@@ -17,3 +17,16 @@ install :
 	 if MacOS::Xcode.installed? && MacOS::Xcode.version.to_i >= 7
 	 ENV.delete("SDKROOT")
 	 ENV.delete("HOMEBREW_SDKROOT") if MacOS::Xcode.without_clt?
+	 end
+	 libre = Formula["libre"]
+	 system "make", "install", "PREFIX=#{prefix}",
+	 "LIBRE_MK=#{libre.opt_share}/re/re.mk",
+	 "LIBRE_INC=#{libre.opt_include}/re",
+	 "LIBRE_SO=#{libre.opt_lib}",
+	 "MOD_AUTODETECT=",
+	 "USE_AVCAPTURE=1",
+	 "USE_COREAUDIO=1",
+	 "USE_G711=1",
+	 "USE_OPENGL=1",
+	 "USE_STDIO=1",
+	 "USE_UUID=1"

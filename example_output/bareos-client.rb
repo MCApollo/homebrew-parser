@@ -35,3 +35,4 @@ install :
 	 lib/"bareos/defaultconfigs", etc/"bareos", "bareos-fd"
 	 system lib/"bareos/scripts/bareos-config", "deploy_config",
 	 lib/"bareos/defaultconfigs", etc/"bareos", "bconsole"
+	 end

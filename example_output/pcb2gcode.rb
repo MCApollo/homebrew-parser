@@ -46,3 +46,11 @@ install :
 	 system "./bootstrap.sh", *bootstrap_args
 	 system "./b2", "headers"
 	 system "./b2", *args
+	 end
+	 system "autoreconf", "-fvi" if build.head?
+	 system "./configure", "--disable-dependency-tracking",
+	 "--disable-silent-rules",
+	 "--prefix=#{prefix}",
+	 "--with-boost=#{buildpath}/boost",
+	 "--enable-static-boost"
+	 system "make", "install"

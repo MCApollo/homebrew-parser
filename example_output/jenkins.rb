@@ -17,3 +17,7 @@ install :
 	 system "mvn", "clean", "install", "-pl", "war", "-am", "-DskipTests"
 	 else
 	 system "jar", "xvf", "jenkins.war"
+	 end
+	 libexec.install Dir["**/jenkins.war", "**/jenkins-cli.jar"]
+	 bin.write_jar_script libexec/"jenkins.war", "jenkins", :java_version => "1.8"
+	 bin.write_jar_script libexec/"jenkins-cli.jar", "jenkins-cli", :java_version => "1.8"

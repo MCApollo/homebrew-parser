@@ -21,3 +21,9 @@ install :
 	 if MacOS.version == "10.11" && MacOS::Xcode.installed? && MacOS::Xcode.version >= "8.0"
 	 args << "-DHAVE_CLOCK_MONOTONIC_RAW:INTERNAL=0"
 	 args << "-DHAVE_CLOCK_MONOTONIC:INTERNAL=0"
+	 end
+	 mkdir "build" do
+	 system "cmake", "..", *args
+	 system "make"
+	 system "make", "install"
+	 end

@@ -18,3 +18,14 @@ install :
 	 if build.head?
 	 ENV["NOCONFIGURE"] = "1"
 	 system "./autogen.sh"
+	 end
+	 system "./configure", "--disable-dependency-tracking",
+	 "--disable-silent-rules",
+	 "--disable-trust-module",
+	 "--prefix=#{prefix}",
+	 "--sysconfdir=#{etc}",
+	 "--with-module-config=#{etc}/pkcs11/modules",
+	 "--without-libtasn1"
+	 system "make"
+	 system "make", "check"
+	 system "make", "install"

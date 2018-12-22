@@ -43,7 +43,20 @@ install :
 	 if build.with?("python")
 	 args << "--with-python"
 	 ENV["PYTHON"] = which("python3")
+	 end
+	 if MacOS.version >= :mavericks || MacOS::CLT.installed?
+	 args << "--with-tcl"
+	 if File.exist?("#{MacOS.sdk_path}/System/Library/Frameworks/Tcl.framework/tclConfig.sh")
+	 args << "--with-tclconfig=#{MacOS.sdk_path}/System/Library/Frameworks/Tcl.framework"
+	 end
+	 end
+	 system "./configure", *args
+	 system "make"
+	 system "make", "install-world", "datadir=#{pkgshare}",
+	 "libdir=#{lib}",
+	 "pkglibdir=#{lib}/postgresql"
 	 (var/"log").mkpath
 	 (var/"postgres").mkpath
 	 unless File.exist? "#{var}/postgres/PG_VERSION"
 	 system "#{bin}/initdb", "#{var}/postgres"
+	 end

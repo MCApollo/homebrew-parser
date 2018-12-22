@@ -18,3 +18,12 @@ install :
 	 if HOMEBREW_PREFIX.to_s != "/usr/local"
 	 s.gsub! ":/usr/local/etc/rbenv.d", ":#{HOMEBREW_PREFIX}/etc/rbenv.d\\0"
 	 end
+	 end
+	 system "src/configure"
+	 system "make", "-C", "src"
+	 if build.head?
+	 git_revision = `git rev-parse --short HEAD`.chomp
+	 inreplace "libexec/rbenv---version", /^(version=)"([^"]+)"/,
+	 %Q(\\1"\\2-g#{git_revision}")
+	 end
+	 prefix.install ["bin", "completions", "libexec", "rbenv.d"]

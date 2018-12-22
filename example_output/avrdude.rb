@@ -19,3 +19,8 @@ install :
 	 if build.head?
 	 inreplace "bootstrap", /libtoolize/, "glibtoolize"
 	 system "./bootstrap"
+	 end
+	 system "./configure", "--disable-dependency-tracking",
+	 "--prefix=#{prefix}"
+	 system "make"
+	 system "make", "install"

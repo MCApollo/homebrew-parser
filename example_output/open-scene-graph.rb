@@ -34,3 +34,21 @@ EOF_patch :
 install :
 	 if MacOS.version == :sierra || MacOS.version == :el_capitan
 	 ENV["SDKROOT"] = MacOS.sdk_path
+	 end
+	 args = std_cmake_args
+	 args << "-DBUILD_DOCUMENTATION=ON"
+	 args << "-DCMAKE_DISABLE_FIND_PACKAGE_FFmpeg=ON"
+	 args << "-DCMAKE_DISABLE_FIND_PACKAGE_GDAL=ON"
+	 args << "-DCMAKE_DISABLE_FIND_PACKAGE_TIFF=ON"
+	 args << "-DCMAKE_DISABLE_FIND_PACKAGE_cairo=ON"
+	 args << "-DCMAKE_CXX_FLAGS=-Wno-error=narrowing"
+	 args << "-DCMAKE_OSX_ARCHITECTURES=#{Hardware::CPU.arch_64_bit}"
+	 args << "-DOSG_DEFAULT_IMAGE_PLUGIN_FOR_OSX=imageio"
+	 args << "-DOSG_WINDOWING_SYSTEM=Cocoa"
+	 mkdir "build" do
+	 system "cmake", "..", *args
+	 system "make"
+	 system "make", "doc_openscenegraph"
+	 system "make", "install"
+	 doc.install Dir["#{prefix}/doc/OpenSceneGraphReferenceDocs/*"]
+	 end

@@ -36,3 +36,4 @@ install :
 	 "-o", "libsqlitefunctions.dylib",
 	 *ENV.cflags.to_s.split
 	 lib.install "libsqlitefunctions.dylib"
+	 end

@@ -29,3 +29,11 @@ install :
 	 args << "--with-mysql"
 	 else
 	 args << "--without-mysql"
+	 end
+	 if build.with? "postgresql"
+	 args << "--with-pgsql"
+	 else
+	 args << "--without-pgsql"
+	 end
+	 system "./configure", *args
+	 system "make", "install"

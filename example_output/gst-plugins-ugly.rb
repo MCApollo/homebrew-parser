@@ -45,3 +45,15 @@ install :
 	 if build.head?
 	 ENV["NOCONFIGURE"] = "yes"
 	 system "./autogen.sh"
+	 end
+	 if build.with? "opencore-amr"
+	 nbcflags = `pkg-config --cflags opencore-amrnb`.chomp
+	 wbcflags = `pkg-config --cflags opencore-amrwb`.chomp
+	 ENV["AMRNB_CFLAGS"] = nbcflags + "-I#{HOMEBREW_PREFIX}/include/opencore-amrnb"
+	 ENV["AMRWB_CFLAGS"] = wbcflags + "-I#{HOMEBREW_PREFIX}/include/opencore-amrwb"
+	 else
+	 args << "--disable-amrnb" << "--disable-amrwb"
+	 end
+	 system "./configure", *args
+	 system "make"
+	 system "make", "install"

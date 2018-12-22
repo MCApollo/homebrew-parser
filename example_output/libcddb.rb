@@ -16,3 +16,7 @@ EOF_patch :
 install :
 	 if MacOS.version == :yosemite && MacOS::Xcode.installed? && MacOS::Xcode.version >= "7.0"
 	 ENV.delete("SDKROOT")
+	 end
+	 system "./configure", "--disable-dependency-tracking",
+	 "--prefix=#{prefix}"
+	 system "make", "install"

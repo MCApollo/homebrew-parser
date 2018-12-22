@@ -23,3 +23,6 @@ install :
 	 resource("womtool").stage do
 	 libexec.install Dir["womtool-*.jar"][0]
 	 end
+	 end
+	 bin.write_jar_script Dir[libexec/"cromwell-*.jar"][0], "cromwell", "$JAVA_OPTS"
+	 bin.write_jar_script Dir[libexec/"womtool-*.jar"][0], "womtool"

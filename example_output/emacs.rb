@@ -31,3 +31,41 @@ install :
 	 args << "--with-xml2"
 	 else
 	 args << "--without-xml2"
+	 end
+	 if build.with? "dbus"
+	 args << "--with-dbus"
+	 else
+	 args << "--without-dbus"
+	 end
+	 if build.with? "imagemagick@6"
+	 args << "--with-imagemagick"
+	 else
+	 args << "--without-imagemagick"
+	 end
+	 args << "--with-modules" if build.with? "modules"
+	 args << "--with-rsvg" if build.with? "librsvg"
+	 args << "--without-pop" if build.with? "mailutils"
+	 if build.head?
+	 ENV.prepend_path "PATH", Formula["gnu-sed"].opt_libexec/"gnubin"
+	 system "./autogen.sh"
+	 end
+	 if build.with? "cocoa"
+	 args << "--with-ns" << "--disable-ns-self-contained"
+	 else
+	 args << "--without-ns"
+	 end
+	 system "./configure", *args
+	 system "make"
+	 system "make", "install"
+	 if build.with? "cocoa"
+	 prefix.install "nextstep/Emacs.app"
+	 (bin/"emacs").unlink
+	 (bin/"emacs").write <<~EOS
+	 #!/bin/bash
+	 exec #{prefix}/Emacs.app/Contents/MacOS/Emacs "$@"
+	 EOS
+	 end
+	 if build.without? "ctags"
+	 (bin/"ctags").unlink
+	 (man1/"ctags.1.gz").unlink
+	 end

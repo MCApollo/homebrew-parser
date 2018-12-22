@@ -37,3 +37,4 @@ install :
 	 venv.pip_install Pathname.pwd
 	 ensure
 	 ENV["SDKROOT"] = deleted
+	 end

@@ -35,3 +35,4 @@ install :
 	 bin.install buildpath/"bin/packer"
 	 zsh_completion.install "contrib/zsh-completion/_packer"
 	 prefix.install_metafiles
+	 end

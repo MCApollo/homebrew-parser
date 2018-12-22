@@ -25,6 +25,15 @@ install :
 	 rm_rf "docs"
 	 (prefix/"docbook/xml"/r.version).install Dir["*"]
 	 end
+	 end
 	 ENV["XML_CATALOG_FILES"] = "#{etc}/xml/catalog"
 	 unless File.file?("#{etc}/xml/catalog")
 	 system "xmlcatalog", "--noout", "--create", "#{etc}/xml/catalog"
+	 end
+	 %w[4.2 4.1.2 4.3 4.4 4.5 5.0].each do |version|
+	 catalog = prefix/"docbook/xml/#{version}/catalog.xml"
+	 system "xmlcatalog", "--noout", "--del",
+	 "file://#{catalog}", "#{etc}/xml/catalog"
+	 system "xmlcatalog", "--noout", "--add", "nextCatalog",
+	 "", "file://#{catalog}", "#{etc}/xml/catalog"
+	 end

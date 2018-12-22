@@ -20,3 +20,6 @@ install :
 	 pyarg = "-DBUILD_PYTHON_BINDINGS:BOOL=ON"
 	 else
 	 pyarg = "-DBUILD_PYTHON_BINDINGS:BOOL=OFF"
+	 end
+	 system "cmake", ".", *std_cmake_args, pyarg
+	 system "make", "install"

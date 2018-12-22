@@ -18,6 +18,25 @@ install :
 	 mkdir "tar"
 	 cd "tar"
 	 system "tar", "--strip-components=1", "-xf", Dir["../distribution/tar/build/distributions/elasticsearch-*.tar.gz"].first
+	 end
+	 rm_f Dir["bin/*.bat"]
+	 rm_f Dir["bin/*.exe"]
+	 libexec.install "bin", "config", "lib", "modules"
+	 inreplace libexec/"bin/elasticsearch-env",
+	 "if [ -z \"$ES_PATH_CONF\" ]; then ES_PATH_CONF=\"$ES_HOME\"/config; fi",
+	 "if [ -z \"$ES_PATH_CONF\" ]; then ES_PATH_CONF=\"#{etc}/elasticsearch\"; fi"
+	 inreplace "#{libexec}/config/elasticsearch.yml" do |s|
+	 s.gsub!(/#\s*cluster\.name\: .*/, "cluster.name: #{cluster_name}")
+	 s.sub!(%r{#\s*path\.data: /path/to.+$}, "path.data: #{var}/lib/elasticsearch/")
+	 s.sub!(%r{#\s*path\.logs: /path/to.+$}, "path.logs: #{var}/log/elasticsearch/")
+	 end
+	 (etc/"elasticsearch").install Dir[libexec/"config/*"]
+	 (libexec/"config").rmtree
+	 bin.install libexec/"bin/elasticsearch",
+	 libexec/"bin/elasticsearch-keystore",
+	 libexec/"bin/elasticsearch-plugin",
+	 libexec/"bin/elasticsearch-translog"
+	 bin.env_script_all_files(libexec/"bin", Language::Java.java_home_env("1.8"))
 	 (var/"lib/elasticsearch/#{cluster_name}").mkpath
 	 (var/"log/elasticsearch").mkpath
 	 ln_s etc/"elasticsearch", libexec/"config"

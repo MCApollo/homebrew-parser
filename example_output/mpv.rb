@@ -62,3 +62,11 @@ install :
 	 else
 	 args << "--enable-zsh-comp"
 	 args << "--zshdir=#{zsh_completion}"
+	 end
+	 system "./bootstrap.py"
+	 system "python3", "waf", "configure", *args
+	 system "python3", "waf", "install"
+	 if build.with? "bundle"
+	 system "python3", "TOOLS/osxbundle.py", "build/mpv"
+	 prefix.install "build/mpv.app"
+	 end

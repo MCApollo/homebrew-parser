@@ -52,3 +52,11 @@ install :
 	 fi
 	 EOS
 	 bash_completion.install "az.completion" => "az"
+	 end
+	 test do
+	 json_text = shell_output("#{bin}/az cloud show --name AzureCloud")
+	 azure_cloud = JSON.parse(json_text)
+	 assert_equal azure_cloud["name"], "AzureCloud"
+	 assert_equal azure_cloud["endpoints"]["management"], "https://management.core.windows.net/"
+	 assert_equal azure_cloud["endpoints"]["resourceManager"], "https://management.azure.com/"
+	 end

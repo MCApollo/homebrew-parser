@@ -19,3 +19,23 @@ install :
 	 if build.head?
 	 ENV["XML_CATALOG_FILES"] = "#{etc}/xml/catalog"
 	 system "./autogen.sh"
+	 end
+	 system "./configure", "--disable-dependency-tracking",
+	 "--prefix=#{prefix}",
+	 "--localstatedir=#{var}",
+	 "--with-macosx_ups",
+	 "--with-openssl",
+	 "--with-serial",
+	 "--with-usb",
+	 "--without-avahi",
+	 "--without-cgi",
+	 "--without-dev",
+	 "--without-doc",
+	 "--without-ipmi",
+	 "--without-libltdl",
+	 "--without-neon",
+	 "--without-nss",
+	 "--without-powerman",
+	 "--without-snmp",
+	 "--without-wrap"
+	 system "make", "install"

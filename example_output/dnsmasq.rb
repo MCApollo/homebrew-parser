@@ -32,6 +32,27 @@ install :
 	 inreplace "src/config.h", "/* #define HAVE_IDN */", "#define HAVE_IDN"
 	 ENV.append_to_cflags "-I#{Formula["gettext"].opt_include}"
 	 ENV.append "LDFLAGS", "-L#{Formula["gettext"].opt_lib} -lintl"
+	 end
+	 if build.with? "dnssec"
+	 inreplace "src/config.h", "/* #define HAVE_DNSSEC */", "#define HAVE_DNSSEC"
+	 inreplace "dnsmasq.conf.example" do |s|
+	 s.gsub! "#conf-file=%%PREFIX%%/share/dnsmasq/trust-anchors.conf",
+	 "conf-file=#{opt_pkgshare}/trust-anchors.conf"
+	 s.gsub! "#dnssec", "dnssec"
+	 end
+	 end
+	 ENV.append_to_cflags "-D__APPLE_USE_RFC_3542" if MacOS.version >= :lion
+	 inreplace "Makefile" do |s|
+	 s.change_make_var! "CFLAGS", ENV.cflags
+	 s.change_make_var! "LDFLAGS", ENV.ldflags
+	 end
+	 if build.with? "libidn"
+	 system "make", "install-i18n", "PREFIX=#{prefix}"
+	 else
+	 system "make", "install", "PREFIX=#{prefix}"
+	 end
+	 pkgshare.install "trust-anchors.conf" if build.with? "dnssec"
+	 etc.install "dnsmasq.conf.example" => "dnsmasq.conf"
 	 (var/"lib/misc/dnsmasq").mkpath
 	 (var/"run/dnsmasq").mkpath
 	 (etc/"dnsmasq.d/ppp").mkpath

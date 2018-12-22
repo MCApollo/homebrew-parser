@@ -26,3 +26,4 @@ install :
 	 end
 	 end
 	 system "make", "install" if build.head?
+	 end

@@ -23,3 +23,10 @@ install :
 	 if DevelopmentTools.clang_build_version >= 900
 	 inreplace "src/hardware/serialport/nullmodem.cpp",
 	 "setCD(clientsocket > 0)", "setCD(clientsocket != 0)"
+	 end
+	 system "./configure", "--prefix=#{prefix}",
+	 "--disable-dependency-tracking",
+	 "--disable-sdltest",
+	 "--enable-core-inline"
+	 chmod 0755, "install-sh"
+	 system "make", "install"

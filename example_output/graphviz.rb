@@ -39,3 +39,13 @@ install :
 	 system "./autogen.sh", *args
 	 else
 	 system "./configure", *args
+	 end
+	 system "make", "install"
+	 if build.with? "app"
+	 cd "macosx" do
+	 xcodebuild "SDKROOT=#{MacOS.sdk_path}", "-configuration", "Release", "SYMROOT=build", "PREFIX=#{prefix}",
+	 "ONLY_ACTIVE_ARCH=YES", "MACOSX_DEPLOYMENT_TARGET=#{MacOS.version}"
+	 end
+	 prefix.install "macosx/build/Release/Graphviz.app"
+	 end
+	 (bin/"gvmap.sh").unlink

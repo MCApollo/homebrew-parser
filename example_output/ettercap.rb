@@ -33,3 +33,8 @@ install :
 	 args << "-DGTK_BUILD_TYPE=GTK3" if build.with? "gtk+3"
 	 else
 	 args << "-DENABLE_GTK=OFF" << "-DINSTALL_DESKTOP=OFF"
+	 end
+	 mkdir "build" do
+	 system "cmake", "..", *args
+	 system "make", "install"
+	 end

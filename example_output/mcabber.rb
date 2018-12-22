@@ -23,3 +23,10 @@ install :
 	 cd "mcabber"
 	 inreplace "autogen.sh", "libtoolize", "glibtoolize"
 	 system "./autogen.sh"
+	 end
+	 system "./configure", "--disable-debug",
+	 "--disable-dependency-tracking",
+	 "--prefix=#{prefix}",
+	 "--enable-otr"
+	 system "make", "install"
+	 pkgshare.install %w[mcabberrc.example contrib]

@@ -42,3 +42,4 @@ install :
 	 else
 	 system "./configure", "--prefix=#{prefix}", "--disable-dependency-tracking"
 	 system "make", "install"
+	 end

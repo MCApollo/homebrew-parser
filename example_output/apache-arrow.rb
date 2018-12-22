@@ -21,3 +21,12 @@ install :
 	 args = []
 	 if build.with?("python") && build.with?("python@2")
 	 odie "Cannot provide both --with-python and --with-python@2"
+	 end
+	 Language::Python.each_python(build) do |python, _version|
+	 args << "-DARROW_PYTHON=1" << "-DPYTHON_EXECUTABLE=#{which python}"
+	 end
+	 cd "cpp" do
+	 system "cmake", ".", *std_cmake_args, *args
+	 system "make", "unittest"
+	 system "make", "install"
+	 end

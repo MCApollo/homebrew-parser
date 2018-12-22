@@ -48,3 +48,12 @@ install :
 	 args << "--with-x"
 	 else
 	 args << "--disable-x"
+	 end
+	 args << "--disable-osx_video" if MacOS.version == :snow_leopard
+	 if build.head?
+	 ENV["NOCONFIGURE"] = "yes"
+	 system "./autogen.sh"
+	 end
+	 system "./configure", *args
+	 system "make"
+	 system "make", "install"

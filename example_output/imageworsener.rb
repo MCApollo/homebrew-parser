@@ -17,3 +17,8 @@ install :
 	 if build.head?
 	 inreplace "./scripts/autogen.sh", "libtoolize", "glibtoolize"
 	 system "./scripts/autogen.sh"
+	 end
+	 system "./configure", "--disable-dependency-tracking",
+	 "--prefix=#{prefix}", "--without-webp"
+	 system "make", "install"
+	 pkgshare.install "tests"

@@ -15,3 +15,6 @@ install :
 	 if build.head?
 	 ENV["XML_CATALOG_FILES"] = "#{etc}/xml/catalog"
 	 system "make"
+	 end
+	 bin.install "ski"
+	 man6.install "ski.6"

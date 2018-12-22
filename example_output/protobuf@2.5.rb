@@ -34,3 +34,4 @@ install :
 	 site_packages = "lib/python2.7/site-packages"
 	 pth_contents = "import site; site.addsitedir('#{libexec/site_packages}')\n"
 	 (prefix/site_packages/"homebrew-protobuf.pth").write pth_contents
+	 end

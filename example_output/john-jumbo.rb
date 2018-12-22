@@ -45,3 +45,12 @@ install :
 	 system "./configure", *args
 	 system "make", "clean"
 	 system "make", "-s", "CC=#{ENV.cc}"
+	 end
+	 rm "README"
+	 prefix.install "doc/README"
+	 doc.install Dir["doc/*"]
+	 (share/"john").install Dir["run/*"]
+	 bin.install_symlink share/"john/john"
+	 bash_completion.install share/"john/john.bash_completion" => "john.bash"
+	 zsh_completion.install share/"john/john.zsh_completion" => "_john"
+	 mv share/"john/john.conf", share/"john/john.ini"

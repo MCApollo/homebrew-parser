@@ -49,3 +49,9 @@ install :
 	 if build.head?
 	 system "autoheader"
 	 system "autoconf"
+	 end
+	 system "./configure", "--prefix=#{prefix}",
+	 "--enable-macro-patterns",
+	 "--mandir=#{man}",
+	 "--with-readlib"
+	 system "make", "install"

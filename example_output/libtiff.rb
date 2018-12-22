@@ -26,3 +26,6 @@ install :
 	 args << "--with-lzma-lib-dir=#{Formula["xz"].opt_lib}"
 	 else
 	 args << "--disable-lzma"
+	 end
+	 system "./configure", *args
+	 system "make", "install"

@@ -18,3 +18,6 @@ install :
 	 libexec.install Dir["build/jadx/*"]
 	 else
 	 libexec.install Dir["*"]
+	 end
+	 bin.install_symlink libexec/"bin/jadx"
+	 bin.install_symlink libexec/"bin/jadx-gui"

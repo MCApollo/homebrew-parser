@@ -19,3 +19,7 @@ install :
 	 args = %W[--prefix=#{prefix} --without-x]
 	 if ENV.compiler == :clang && DevelopmentTools.clang_build_version < 421
 	 args << "--disable-assembly"
+	 end
+	 args << "--disable-haptic" << "--disable-joystick" if MacOS.version <= :snow_leopard
+	 system "./configure", *args
+	 system "make", "install"

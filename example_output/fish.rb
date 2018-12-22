@@ -30,6 +30,8 @@ install :
 	 SED=/usr/bin/sed
 	 ]
 	 system "./configure", *args
+	 end
+	 system "make", "install"
 	 (pkgshare/"vendor_functions.d").mkpath
 	 (pkgshare/"vendor_completions.d").mkpath
 	 (pkgshare/"vendor_conf.d").mkpath

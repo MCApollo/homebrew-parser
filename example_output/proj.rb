@@ -19,3 +19,8 @@ install :
 	 elsif build.with? "vdatum"
 	 pkgshare.install r
 	 end
+	 end
+	 system "./autogen.sh" if build.head?
+	 system "./configure", "--disable-dependency-tracking",
+	 "--prefix=#{prefix}"
+	 system "make", "install"

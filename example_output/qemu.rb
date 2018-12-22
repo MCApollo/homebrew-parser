@@ -39,3 +39,11 @@ install :
 	 args << "--disable-cocoa"
 	 else
 	 args << "--enable-cocoa"
+	 end
+	 args << "--smbd=#{HOMEBREW_PREFIX}/sbin/samba-dot-org-smbd"
+	 args << (build.with?("vde") ? "--enable-vde" : "--disable-vde")
+	 args << (build.with?("sdl2") ? "--enable-sdl" : "--disable-sdl")
+	 args << (build.with?("gtk+3") ? "--enable-gtk" : "--disable-gtk")
+	 args << (build.with?("libssh2") ? "--enable-libssh2" : "--disable-libssh2")
+	 system "./configure", *args
+	 system "make", "V=1", "install"

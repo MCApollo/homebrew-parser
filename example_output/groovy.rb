@@ -21,3 +21,6 @@ install :
 	 dst_path = File.join("lib", dst_file)
 	 mv src_path, dst_path
 	 end
+	 end
+	 libexec.install "bin", "conf", "lib"
+	 bin.install_symlink Dir["#{libexec}/bin/*"] - ["#{libexec}/bin/groovy.ico"]

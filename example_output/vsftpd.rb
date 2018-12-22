@@ -52,3 +52,12 @@ EOF_patch :
 install :
 	 if build.with? "openssl"
 	 inreplace "builddefs.h", "#undef VSF_BUILD_SSL", "#define VSF_BUILD_SSL"
+	 end
+	 inreplace "defs.h", "/etc/vsftpd.conf", "#{etc}/vsftpd.conf"
+	 inreplace "tunables.c", "/etc", etc
+	 inreplace "tunables.c", "/var", var
+	 system "make"
+	 sbin.install "vsftpd"
+	 etc.install "vsftpd.conf"
+	 man5.install "vsftpd.conf.5"
+	 man8.install "vsftpd.8"

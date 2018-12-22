@@ -55,3 +55,6 @@ install :
 	 system "../configure", *args
 	 system "make", "bootstrap"
 	 system "make", "install"
+	 end
+	 Dir.glob(man7/"*.7") { |file| add_suffix file, version_suffix }
+	 info.rmtree

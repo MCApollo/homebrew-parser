@@ -23,3 +23,7 @@ install :
 	 (buildpath/"conf-cc").write "gcc -O2 -include #{MacOS.sdk_path}/usr/include/errno.h"
 	 else
 	 (buildpath/"conf-cc").write "gcc -O2 -include /usr/include/errno.h"
+	 end
+	 bin.mkpath
+	 (prefix/"etc").mkpath
+	 system "make", "setup", "check"

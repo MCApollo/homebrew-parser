@@ -29,3 +29,6 @@ install :
 	 "-DOpenMP_omp_LIBRARY=#{libomp.lib}/libomp.dylib",
 	 ],
 	 )
+	 end
+	 system "cmake", ".", *configure_args, *std_cmake_args
+	 system "make", "install"

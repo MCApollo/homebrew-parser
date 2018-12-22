@@ -52,3 +52,8 @@ install :
 	 args << "--enable-qt"
 	 else
 	 args << "--disable-qt"
+	 end
+	 system "./autogen.sh" if build.head?
+	 system "./configure", *args
+	 system "rake", "-j#{ENV.make_jobs}"
+	 system "rake", "install"

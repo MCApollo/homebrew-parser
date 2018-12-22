@@ -38,3 +38,4 @@ install :
 	 resource("htmldoc").stage do
 	 (pkgshare/"htmldoc").install Dir["Doc/*.html"]
 	 end
+	 end

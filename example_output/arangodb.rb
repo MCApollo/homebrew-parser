@@ -35,5 +35,6 @@ install :
 	 %w[arangod arango-dfdb arangosh foxx-manager].each do |f|
 	 inreplace etc/"arangodb3/#{f}.conf", pkgshare, opt_pkgshare
 	 end
+	 end
 	 (var/"lib/arangodb3").mkpath
 	 (var/"log/arangodb3").mkpath

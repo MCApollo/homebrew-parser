@@ -20,3 +20,10 @@ install :
 	 system "gem", "install", "ronn"
 	 ENV.prepend_path "PATH", buildpath/"gem_home/bin"
 	 system "./bootstrap"
+	 end
+	 system "./configure", "--disable-dependency-tracking",
+	 "--disable-silent-rules",
+	 "--prefix=#{prefix}",
+	 "--with-libintl-prefix=#{Formula["gettext"].opt_prefix}",
+	 "--with-packager=Homebrew"
+	 system "make", "install"

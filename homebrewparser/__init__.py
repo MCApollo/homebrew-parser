@@ -67,7 +67,7 @@ class HomebrewParser(object):
 		LoopRegex = re.compile(
 			r'^(?:bottle|head|test)')
 		endRegex = re.compile(
-			r'^(?:^end$)')
+			r'^(?:^end)(?:$|\.\S+)')
 		''''''
 		for line in contents:
 			line = self.preprocess(line)
@@ -106,7 +106,7 @@ class HomebrewParser(object):
 				if installMode:
 					if Debug:
 						print('install ', line)
-					if ' do' in line:
+					if ' do' in line or line.startswith('if ') or line.startswith('unless '):
 						if Debug:
 							print('install --> do')
 						endCount += 1

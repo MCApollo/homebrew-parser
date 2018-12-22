@@ -30,3 +30,8 @@ install :
 	 if [[ -f $e ]]; then source $e; fi
 	 }
 	 EOS
+	 end
+	 def caveats; <<~EOS
+	 The "examples" directory has been installed to:
+	 #{HOMEBREW_PREFIX}/share/awscli/examples
+	 EOS

@@ -63,3 +63,4 @@ install :
 	 ENV["TMPDIR"] = nil
 	 system "#{bin}/mysql_install_db", "--verbose", "--user=#{ENV["USER"]}",
 	 "--basedir=#{prefix}", "--datadir=#{datadir}", "--tmpdir=/tmp"
+	 end

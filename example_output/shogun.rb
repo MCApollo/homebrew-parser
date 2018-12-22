@@ -38,3 +38,26 @@ install :
 	 end
 	 if MacOS.version >= :high_sierra
 	 ENV["LAPACKE_PATH"] = Formula["lapack"].opt_lib
+	 end
+	 libexec.install resource("jblas")
+	 python_executable = Formula["python@2"].opt_bin/"python2"
+	 python_prefix = Utils.popen_read("#{python_executable} -c 'import sys; print(sys.prefix)'").chomp
+	 python_include = Utils.popen_read("#{python_executable} -c 'from distutils import sysconfig; print(sysconfig.get_python_inc(True))'").chomp
+	 python_library = "#{python_prefix}/Python"
+	 mkdir "build" do
+	 system "cmake", "..", "-DBUILD_EXAMPLES=OFF",
+	 "-DBUNDLE_JSON=OFF",
+	 "-DBUNDLE_NLOPT=OFF",
+	 "-DENABLE_TESTING=OFF",
+	 "-DENABLE_COVERAGE=OFF",
+	 "-DBUILD_META_EXAMPLES=OFF",
+	 "-DINTERFACE_PYTHON=ON",
+	 "-DINTERFACE_JAVA=ON",
+	 "-DJBLAS=#{libexec}/jblas-#{resource("jblas").version}.jar",
+	 "-DLIB_INSTALL_DIR=#{lib}",
+	 "-DPYTHON_EXECUTABLE=#{python_executable}",
+	 "-DPYTHON_INCLUDE_DIR=#{python_include}",
+	 "-DPYTHON_LIBRARY=#{python_library}",
+	 *std_cmake_args
+	 system "make", "install"
+	 end

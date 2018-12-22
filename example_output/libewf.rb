@@ -18,3 +18,12 @@ install :
 	 if build.head?
 	 system "./synclibs.sh"
 	 system "./autogen.sh"
+	 end
+	 args = %W[
+	 --disable-dependency-tracking
+	 --disable-silent-rules
+	 --prefix=#{prefix}
+	 ]
+	 args << "--with-libfuse=no" if build.without? "osxfuse"
+	 system "./configure", *args
+	 system "make", "install"

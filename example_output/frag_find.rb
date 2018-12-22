@@ -16,3 +16,8 @@ install :
 	 if build.head?
 	 inreplace "bootstrap.sh", "./configure", ""
 	 system "./bootstrap.sh"
+	 end
+	 system "./configure", "--disable-dependency-tracking",
+	 "--prefix=#{prefix}"
+	 system "make", "install"
+	 libexec.install bin/"frag_find.jar"

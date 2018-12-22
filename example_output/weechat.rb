@@ -35,3 +35,12 @@ install :
 	 elsif build.with?("ruby") && MacOS.version >= :sierra
 	 args << "-DRUBY_EXECUTABLE=/usr/bin/ruby"
 	 args << "-DRUBY_LIB=/usr/lib/libruby.dylib"
+	 end
+	 args << "-DENABLE_LUA=OFF" if build.without? "lua"
+	 args << "-DENABLE_PERL=OFF" if build.without? "perl"
+	 args << "-DENABLE_ASPELL=OFF" if build.without? "aspell"
+	 args << "-DENABLE_PYTHON=OFF" if build.without? "python@2"
+	 mkdir "build" do
+	 system "cmake", "..", *args
+	 system "make", "install", "VERBOSE=1"
+	 end

@@ -20,3 +20,4 @@ install :
 	 system "./.cabal-sandbox/bin/hpack"
 	 end
 	 install_cabal_package "-f", "release", :using => ["alex", "happy"]
+	 end

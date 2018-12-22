@@ -18,6 +18,26 @@ install :
 	 ENV["MACOSX_DEPLOYMENT_TARGET"] = MacOS.version
 	 if MacOS.version <= :lion
 	 ENV.append_to_cflags "-Wno-deprecated-declarations"
+	 end
+	 args = %W[
+	 --prefix=#{prefix}
+	 --mandir=#{man}
+	 --localstatedir=#{var}
+	 --sysconfdir=#{etc}/trafficserver
+	 --with-openssl=#{Formula["openssl"].opt_prefix}
+	 --with-tcl=#{MacOS.sdk_path}/System/Library/Frameworks/Tcl.framework
+	 --with-group=admin
+	 --disable-silent-rules
+	 --enable-experimental-plugins
+	 ]
+	 system "autoreconf", "-fvi" if build.head?
+	 system "./configure", *args
+	 inreplace "rc/trafficserver.in", "@pkgsysuser@", "$USER"
+	 inreplace "lib/perl/Makefile",
+	 "Makefile.PL INSTALLDIRS=$(INSTALLDIRS)",
+	 "Makefile.PL INSTALLDIRS=$(INSTALLDIRS) INSTALLSITEMAN3DIR=#{man3}"
+	 system "make" if build.head?
+	 system "make", "install"
 	 (var/"log/trafficserver").mkpath
 	 (var/"trafficserver").mkpath
 	 config = etc/"trafficserver/records.config"

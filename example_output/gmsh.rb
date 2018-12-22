@@ -35,3 +35,12 @@ install :
 	 args << "-DENABLE_OCC=ON"
 	 else
 	 args << "-DENABLE_OCC=OFF"
+	 end
+	 args << "-DENABLE_FLTK=OFF" if build.without? "fltk"
+	 mkdir "build" do
+	 system "cmake", "..", *args
+	 system "make"
+	 system "make", "install"
+	 mkdir_p libexec
+	 mv bin/"onelab.py", libexec
+	 end

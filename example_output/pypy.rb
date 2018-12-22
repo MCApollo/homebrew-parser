@@ -44,3 +44,19 @@ install :
 	 rm_rf libexec/"site-packages/site-packages"
 	 mv Dir[libexec/"site-packages/*"], prefix_site_packages
 	 rm_rf libexec/"site-packages"
+	 end
+	 libexec.install_symlink prefix_site_packages
+	 scripts_folder.mkpath
+	 (distutils+"distutils.cfg").atomic_write <<~EOS
+	 [install]
+	 install-scripts=#{scripts_folder}
+	 EOS
+	 %w[setuptools pip].each do |pkg|
+	 resource(pkg).stage do
+	 system bin/"pypy", "-s", "setup.py", "--no-user-cfg", "install",
+	 "--force", "--verbose"
+	 end
+	 end
+	 bin.install_symlink scripts_folder/"easy_install" => "easy_install_pypy"
+	 bin.install_symlink scripts_folder/"pip" => "pip_pypy"
+	 %w[easy_install_pypy pip_pypy].each { |e| (HOMEBREW_PREFIX/"bin").install_symlink bin/e }

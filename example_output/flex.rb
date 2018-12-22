@@ -17,3 +17,9 @@ install :
 	 if build.head?
 	 ENV.prepend_path "PATH", Formula["gnu-sed"].opt_libexec/"gnubin"
 	 system "./autogen.sh"
+	 end
+	 system "./configure", "--disable-dependency-tracking",
+	 "--disable-silent-rules",
+	 "--enable-shared",
+	 "--prefix=#{prefix}"
+	 system "make", "install"

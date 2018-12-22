@@ -25,3 +25,33 @@ install :
 	 bootstrap_args << "--with-icu=#{icu4c_prefix}"
 	 else
 	 bootstrap_args << "--without-icu"
+	 end
+	 without_libraries = ["python", "mpi"]
+	 without_libraries << "log" if ENV.compiler == :gcc
+	 bootstrap_args << "--without-libraries=#{without_libraries.join(",")}"
+	 args = ["--prefix=#{prefix}",
+	 "--libdir=#{lib}",
+	 "-d2",
+	 "-j#{ENV.make_jobs}",
+	 "--layout=tagged",
+	 "--user-config=user-config.jam",
+	 "install"]
+	 if build.with? "single"
+	 args << "threading=multi,single"
+	 else
+	 args << "threading=multi"
+	 end
+	 if build.with? "static"
+	 args << "link=shared,static"
+	 else
+	 args << "link=shared"
+	 end
+	 if build.cxx11?
+	 args << "cxxflags=-std=c++11"
+	 if ENV.compiler == :clang
+	 args << "cxxflags=-stdlib=libc++" << "linkflags=-stdlib=libc++"
+	 end
+	 end
+	 system "./bootstrap.sh", *bootstrap_args
+	 system "./b2", "headers"
+	 system "./b2", *args

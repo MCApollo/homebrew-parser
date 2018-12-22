@@ -54,4 +54,34 @@ install :
 	 "--with-gmp-libraries=#{gmp}/lib"]
 	 if DevelopmentTools.clang_build_version >= 703 && DevelopmentTools.clang_build_version < 800
 	 args << "--with-nm=#{`xcrun --find nm-classic`.chomp}"
+	 end
+	 resource("binary").stage do
+	 binary = buildpath/"binary"
+	 system "./configure", "--prefix=#{binary}", *args
+	 ENV.deparallelize { system "make", "install" }
+	 ENV.prepend_path "PATH", binary/"bin"
+	 end
+	 if build.head?
+	 resource("cabal").stage do
+	 system "sh", "bootstrap.sh", "--sandbox"
+	 (buildpath/"bootstrap-tools/bin").install ".cabal-sandbox/bin/cabal"
+	 end
+	 ENV.prepend_path "PATH", buildpath/"bootstrap-tools/bin"
+	 cabal_sandbox do
+	 cabal_install "--only-dependencies", "happy", "alex"
+	 cabal_install "--prefix=#{buildpath}/bootstrap-tools", "happy", "alex"
+	 end
+	 system "./boot"
+	 end
+	 system "./configure", "--prefix=#{prefix}", *args
+	 system "make"
+	 if build.bottle?
+	 resource("testsuite").stage { buildpath.install Dir["*"] }
+	 cd "testsuite" do
+	 system "make", "clean"
+	 system "make", "CLEANUP=1", "THREADS=#{ENV.make_jobs}", "fast"
+	 end
+	 end
+	 ENV.deparallelize { system "make", "install" }
+	 Dir.glob(lib/"*/package.conf.d/package.cache") { |f| rm f }
 	 system "#{bin}/ghc-pkg", "recache"

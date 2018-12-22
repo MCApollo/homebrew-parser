@@ -31,3 +31,4 @@ install :
 	 unless File.exist? var/"cayley"
 	 (var/"cayley").mkpath
 	 system bin/"cayley", "init", "--config=#{etc}/cayley.yml"
+	 end

@@ -26,3 +26,7 @@ install :
 	 args << "--with-xpm" << "--with-x"
 	 else
 	 args << "--without-xpm" << "--without-x"
+	 end
+	 system "./configure", *args
+	 system "make", "install"
+	 pkgshare.install "fig2dev/tests/data/patterns.fig"

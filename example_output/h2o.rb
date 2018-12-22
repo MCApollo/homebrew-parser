@@ -26,3 +26,10 @@ install :
 	 if build.with? "libuv"
 	 system "make", "libh2o"
 	 lib.install "libh2o.a"
+	 end
+	 system "make", "install"
+	 (etc/"h2o").mkpath
+	 (var/"h2o").install "examples/doc_root/index.html"
+	 (buildpath/"brew/h2o.conf").write conf_example
+	 (etc/"h2o").install buildpath/"brew/h2o.conf"
+	 pkgshare.install "examples"

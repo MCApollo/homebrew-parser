@@ -19,3 +19,4 @@ install :
 	 else
 	 libexec.install "scalariform.jar"
 	 bin.write_jar_script libexec/"scalariform.jar", "scalariform"
+	 end

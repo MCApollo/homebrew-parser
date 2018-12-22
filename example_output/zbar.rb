@@ -45,3 +45,22 @@ install :
 	 inreplace "configure.ac", "-Werror", ""
 	 gettext = Formula["gettext"]
 	 system "autoreconf", "-fvi", "-I", "#{gettext.opt_share}/aclocal"
+	 end
+	 inreplace ["configure", "zbarimg/zbarimg.c"],
+	 "wand/MagickWand.h",
+	 "ImageMagick-7/MagickWand/MagickWand.h"
+	 args = %W[
+	 --disable-dependency-tracking
+	 --prefix=#{prefix}
+	 --without-python
+	 --without-qt
+	 --disable-video
+	 --without-gtk
+	 ]
+	 if build.with? "x11"
+	 args << "--with-x"
+	 else
+	 args << "--without-x"
+	 end
+	 system "./configure", *args
+	 system "make", "install"

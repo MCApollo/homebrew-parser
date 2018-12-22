@@ -19,3 +19,5 @@ install :
 	 system "./autogen.sh", *args
 	 else
 	 system "./configure", *args
+	 end
+	 system "make", "install"

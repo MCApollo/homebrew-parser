@@ -27,3 +27,8 @@ install :
 	 bin.install "aescrypt_keygen"
 	 end
 	 man1.install "man/aescrypt.1"
+	 end
+	 if build.without? "default-names"
+	 mv "#{bin}/aescrypt", "#{bin}/paescrypt"
+	 mv "#{bin}/aescrypt_keygen", "#{bin}/paescrypt_keygen"
+	 end

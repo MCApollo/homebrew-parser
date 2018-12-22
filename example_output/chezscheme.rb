@@ -20,3 +20,9 @@ install :
 	 s.gsub! "CLOCK_REALTIME", "UNDEFINED_GIBBERISH"
 	 s.gsub! "CLOCK_THREAD_CPUTIME_ID", "UNDEFINED_GIBBERISH"
 	 end
+	 end
+	 system "./configure",
+	 "--installprefix=#{prefix}",
+	 "--threads",
+	 "--installschemename=chez"
+	 system "make", "install"

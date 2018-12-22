@@ -21,3 +21,10 @@ install :
 	 system "./autogen.sh"
 	 else
 	 system "autoconf"
+	 end
+	 system "./configure", "--disable-dependency-tracking",
+	 "--disable-silent-rules",
+	 "--prefix=#{prefix}",
+	 "--with-boost=no"
+	 system "make", "install"
+	 pkgshare.install "src/examples"

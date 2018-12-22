@@ -118,3 +118,9 @@ install :
 	 args << "--enable-libopenjpeg"
 	 args << "--disable-decoder=jpeg2000"
 	 args << "--extra-cflags=" + `pkg-config --cflags libopenjp2`.chomp
+	 end
+	 args << "--enable-nonfree" if build.with?("fdk-aac") || build.with?("openssl")
+	 system "./configure", *args
+	 system "make", "install"
+	 system "make", "alltools"
+	 bin.install Dir["tools/*"].select { |f| File.executable? f }

@@ -17,3 +17,11 @@ install :
 	 if build.head?
 	 system "autoconf"
 	 system "autoheader"
+	 end
+	 system "./configure", "--prefix=#{prefix}",
+	 "--enable-pam",
+	 "--enable-zlib",
+	 "--enable-bundled-libtom",
+	 "--sysconfdir=#{etc}/dropbear"
+	 system "make"
+	 system "make", "install"

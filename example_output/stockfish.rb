@@ -17,3 +17,6 @@ install :
 	 else
 	 arch = Hardware::CPU.ppc? ? "ppc" : "x86"
 	 arch += "-" + (MacOS.prefer_64_bit? ? "64" : "32")
+	 end
+	 system "make", "-C", "src", "build", "ARCH=#{arch}"
+	 bin.install "src/stockfish"

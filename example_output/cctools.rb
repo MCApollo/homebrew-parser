@@ -29,3 +29,37 @@ install :
 	 ENV.deparallelize
 	 if build.with? "llvm"
 	 inreplace "libstuff/lto.c", "@@LLVM_LIBDIR@@", Formula["llvm"].opt_lib
+	 end
+	 args = %W[
+	 RC_ProjectSourceVersion=#{version}
+	 USE_DEPENDENCY_FILE=NO
+	 BUILD_DYLIBS=NO
+	 CC=#{ENV.cc}
+	 CXX=#{ENV.cxx}
+	 LTO=#{"-DLTO_SUPPORT" if build.with? "llvm"}
+	 RC_CFLAGS=#{ENV.cflags}
+	 TRIE=
+	 RC_OS="macos"
+	 DSTROOT=#{prefix}
+	 ]
+	 args << "SDK=-std=gnu99"
+	 if Hardware::CPU.intel?
+	 archs = "i386 x86_64"
+	 else
+	 archs = "ppc i386 x86_64"
+	 end
+	 args << "RC_ARCHS=#{archs}"
+	 system "make", "install_tools", *args
+	 man.install Dir["#{prefix}/usr/local/man/*"]
+	 prefix.install Dir["#{prefix}/usr/local/*"]
+	 bin.install Dir["#{prefix}/usr/bin/*"]
+	 (include/"mach-o").install Dir["#{prefix}/usr/include/mach-o/*"]
+	 man1.install Dir["#{prefix}/usr/share/man/man1/*"]
+	 man3.install Dir["#{prefix}/usr/share/man/man3/*"]
+	 man5.install Dir["#{prefix}/usr/share/man/man5/*"]
+	 if MacOS.version >= :snow_leopard
+	 (libexec/"as").install Dir["#{prefix}/usr/libexec/as/*"]
+	 else
+	 (libexec/"gcc/darwin").install Dir["#{prefix}/usr/libexec/gcc/darwin/*"]
+	 share.install Dir["#{prefix}/usr/share/gprof.*"]
+	 end

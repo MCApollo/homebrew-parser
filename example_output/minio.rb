@@ -30,5 +30,8 @@ install :
 	 -X #{proj}/cmd.CommitID=#{commit}
 	 EOS
 	 end
+	 end
+	 bin.install buildpath/"minio"
+	 prefix.install_metafiles
 	 (var/"minio").mkpath
 	 (etc/"minio").mkpath

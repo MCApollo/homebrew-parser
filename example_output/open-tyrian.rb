@@ -21,3 +21,6 @@ install :
 	 args << "TYRIAN_DIR=#{datadir}"
 	 else
 	 inreplace "src/file.c", "/usr/share/opentyrian/data", datadir
+	 end
+	 system "make", *args
+	 bin.install "opentyrian"

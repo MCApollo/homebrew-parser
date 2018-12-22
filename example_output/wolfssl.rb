@@ -71,3 +71,11 @@ install :
 	 args << "--enable-fastmath" << "--enable-fasthugemath"
 	 else
 	 args << "--disable-fastmath" << "--disable-fasthugemath"
+	 end
+	 args << "--enable-aesni" if Hardware::CPU.aes? && !build.bottle?
+	 ENV.append_to_cflags "-mdynamic-no-pic" if MacOS.prefer_64_bit?
+	 system "./autogen.sh"
+	 system "./configure", *args
+	 system "make"
+	 system "make", "check"
+	 system "make", "install"

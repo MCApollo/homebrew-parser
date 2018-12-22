@@ -21,3 +21,17 @@ install :
 	 cmd = "./autogen.sh"
 	 else
 	 cmd = "./configure"
+	 end
+	 system cmd, "--disable-dependency-tracking",
+	 "--prefix=#{prefix}",
+	 "--sysconfdir=#{etc}",
+	 "--localstatedir=#{var}/cherokee",
+	 "--with-wwwuser=#{ENV["USER"]}",
+	 "--with-wwwgroup=www",
+	 "--enable-internal-pcre",
+	 "--with-wwwroot=#{etc}/cherokee/htdocs",
+	 "--with-cgiroot=#{etc}/cherokee/cgi-bin"
+	 system "make", "install"
+	 prefix.install "org.cherokee.webserver.plist"
+	 (prefix+"org.cherokee.webserver.plist").chmod 0644
+	 (pkgshare/"admin/server.py").chmod 0755

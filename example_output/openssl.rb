@@ -18,6 +18,17 @@ install :
 	 arch = Hardware::CPU.arch_64_bit
 	 else
 	 arch = Hardware::CPU.arch_32_bit
+	 end
+	 depend_args = []
+	 depend_args << "MAKEDEPPROG=cc" if MacOS.version <= :snow_leopard
+	 args = []
+	 args << "CC=cc" if MacOS.version == :snow_leopard
+	 ENV.deparallelize
+	 system "perl", "./Configure", *(configure_args + arch_args[arch])
+	 system "make", "depend", *depend_args
+	 system "make", *args
+	 system "make", "test"
+	 system "make", "install", "MANDIR=#{man}", "MANSUFFIX=ssl"
 	 keychains = %w[
 	 /System/Library/Keychains/SystemRootCertificates.keychain
 	 ]
@@ -39,3 +50,4 @@ install :
 	 end
 	 else
 	 (openssldir/"cert.pem").atomic_write(valid_certs.join("\n"))
+	 end

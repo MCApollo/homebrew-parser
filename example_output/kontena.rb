@@ -28,3 +28,13 @@ install :
 	 system "gem", "install", "--ignore-dependencies", "--norc",
 	 "--no-document", "kontena-cli-#{version}.gem"
 	 end
+	 end
+	 bin.env_script_all_files(libexec/"bin", :GEM_HOME => ENV["GEM_HOME"])
+	 env = { :GEM_PATH => libexec, :KONTENA_EXTRA_BUILDTAGS => "homebrew" }
+	 if build.head?
+	 commit = Utils.popen_read("git", "rev-parse", "--short", "HEAD").chomp
+	 env[:KONTENA_EXTRA_BUILDTAGS].concat ",head-#{commit}"
+	 end
+	 (bin/"kontena").write_env_script(libexec/"bin/kontena", env)
+	 bash_completion.install "cli/lib/kontena/scripts/kontena.bash" => "kontena"
+	 zsh_completion.install "cli/lib/kontena/scripts/kontena.zsh" => "_kontena"

@@ -20,3 +20,6 @@ install :
 	 if build.head?
 	 cp "./debian/changelog", "./ChangeLog"
 	 system "autoreconf", "-fvi"
+	 end
+	 system "./configure", "--prefix=#{prefix}"
+	 system "make", "install"

@@ -32,3 +32,16 @@ install :
 	 args_static << "-DBUILD_BULLET2_DEMOS=OFF"
 	 else
 	 args_static << "-DBUILD_BULLET2_DEMOS=ON"
+	 end
+	 mkdir "build" do
+	 system "cmake", "..", *args_shared
+	 system "make", "install"
+	 system "make", "clean"
+	 system "cmake", "..", *args_static
+	 system "make", "install"
+	 if build.with? "demo"
+	 rm_rf Dir["examples/**/Makefile", "examples/**/*.cmake", "examples/**/CMakeFiles"]
+	 pkgshare.install "examples"
+	 (pkgshare/"examples").install "../data"
+	 end
+	 end

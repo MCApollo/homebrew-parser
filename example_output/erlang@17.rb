@@ -45,3 +45,10 @@ install :
 	 args << "--disable-hipe"
 	 else
 	 args << "--enable-hipe"
+	 end
+	 system "./configure", *args
+	 system "make"
+	 ENV.deparallelize
+	 system "make", "install"
+	 (lib/"erlang").install resource("man").files("man")
+	 doc.install resource("html")

@@ -28,3 +28,5 @@ install :
 	 else
 	 datadir.dirname.mkpath
 	 datadir.install_symlink pkgshare/"certificates", etc/"i2pd/i2pd.conf", etc/"i2pd/subscriptions.txt", etc/"i2pd/tunnels.conf"
+	 end
+	 (var/"log/i2pd").mkpath

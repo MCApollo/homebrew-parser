@@ -23,3 +23,7 @@ install :
 	 ENV.append "LDFLAGS", "-L#{Formula["apr"].opt_libexec}/lib"
 	 ENV.append "CFLAGS", "-I#{Formula["apr"].opt_libexec}/include/apr-1"
 	 ENV.append "CFLAGS", "-I#{Formula["apr-util"].opt_libexec}/include/apr-1"
+	 end
+	 system "./configure", "--prefix=#{prefix}"
+	 system "make"
+	 bin.install "apib", "apibmon"

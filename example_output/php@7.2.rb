@@ -99,6 +99,126 @@ EOF_patch :
 install :
 	 if MacOS.version == :el_capitan || MacOS.version == :sierra
 	 ENV["SDKROOT"] = MacOS.sdk_path
+	 end
+	 system "./buildconf", "--force"
+	 inreplace "configure" do |s|
+	 s.gsub! "APACHE_THREADED_MPM=`$APXS_HTTPD -V | grep 'threaded:.*yes'`",
+	 "APACHE_THREADED_MPM="
+	 s.gsub! "APXS_LIBEXECDIR='$(INSTALL_ROOT)'`$APXS -q LIBEXECDIR`",
+	 "APXS_LIBEXECDIR='$(INSTALL_ROOT)#{lib}/httpd/modules'"
+	 s.gsub! "-z `$APXS -q SYSCONFDIR`",
+	 "-z ''"
+	 s.gsub! "LIBEXECDIR='$APXS_LIBEXECDIR'",
+	 "LIBEXECDIR='" + "#{lib}/httpd/modules".gsub("@", "\\@") + "'"
+	 end
+	 inreplace "sapi/apache2handler/sapi_apache2.c",
+	 "You need to recompile PHP.",
+	 "Homebrew PHP does not support a thread-safe php binary. "\
+	 "To use the PHP apache sapi please change "\
+	 "your httpd config to use the prefork MPM"
+	 inreplace "sapi/fpm/php-fpm.conf.in", ";daemonize = yes", "daemonize = no"
+	 ENV.cxx11
+	 config_path = etc/"php/#{php_version}"
+	 (config_path/"pear.conf").delete if (config_path/"pear.conf").exist?
+	 ENV["lt_cv_path_SED"] = "sed"
+	 headers_path = "=#{MacOS.sdk_path_if_needed}/usr"
+	 args = %W[
+	 --prefix=#{prefix}
+	 --localstatedir=#{var}
+	 --sysconfdir=#{config_path}
+	 --with-config-file-path=#{config_path}
+	 --with-config-file-scan-dir=#{config_path}/conf.d
+	 --with-pear=#{pkgshare}/pear
+	 --enable-bcmath
+	 --enable-calendar
+	 --enable-dba
+	 --enable-dtrace
+	 --enable-exif
+	 --enable-ftp
+	 --enable-fpm
+	 --enable-intl
+	 --enable-mbregex
+	 --enable-mbstring
+	 --enable-mysqlnd
+	 --enable-opcache-file
+	 --enable-pcntl
+	 --enable-phpdbg
+	 --enable-phpdbg-webhelper
+	 --enable-shmop
+	 --enable-soap
+	 --enable-sockets
+	 --enable-sysvmsg
+	 --enable-sysvsem
+	 --enable-sysvshm
+	 --enable-wddx
+	 --enable-zip
+	 --with-apxs2=#{Formula["httpd"].opt_bin}/apxs
+	 --with-bz2#{headers_path}
+	 --with-curl=#{Formula["curl-openssl"].opt_prefix}
+	 --with-fpm-user=_www
+	 --with-fpm-group=_www
+	 --with-freetype-dir=#{Formula["freetype"].opt_prefix}
+	 --with-gd
+	 --with-gettext=#{Formula["gettext"].opt_prefix}
+	 --with-gmp=#{Formula["gmp"].opt_prefix}
+	 --with-iconv#{headers_path}
+	 --with-icu-dir=#{Formula["icu4c"].opt_prefix}
+	 --with-jpeg-dir=#{Formula["jpeg"].opt_prefix}
+	 --with-kerberos#{headers_path}
+	 --with-layout=GNU
+	 --with-ldap=#{Formula["openldap"].opt_prefix}
+	 --with-ldap-sasl#{headers_path}
+	 --with-libxml-dir#{headers_path}
+	 --with-libedit#{headers_path}
+	 --with-libzip
+	 --with-mhash#{headers_path}
+	 --with-mysql-sock=/tmp/mysql.sock
+	 --with-mysqli=mysqlnd
+	 --with-ndbm#{headers_path}
+	 --with-openssl=#{Formula["openssl"].opt_prefix}
+	 --with-password-argon2=#{Formula["argon2"].opt_prefix}
+	 --with-pdo-dblib=#{Formula["freetds"].opt_prefix}
+	 --with-pdo-mysql=mysqlnd
+	 --with-pdo-odbc=unixODBC,#{Formula["unixodbc"].opt_prefix}
+	 --with-pdo-pgsql=#{Formula["libpq"].opt_prefix}
+	 --with-pdo-sqlite=#{Formula["sqlite"].opt_prefix}
+	 --with-pgsql=#{Formula["libpq"].opt_prefix}
+	 --with-pic
+	 --with-png-dir=#{Formula["libpng"].opt_prefix}
+	 --with-pspell=#{Formula["aspell"].opt_prefix}
+	 --with-sodium=#{Formula["libsodium"].opt_prefix}
+	 --with-sqlite3=#{Formula["sqlite"].opt_prefix}
+	 --with-tidy=#{Formula["tidy-html5"].opt_prefix}
+	 --with-unixODBC=#{Formula["unixodbc"].opt_prefix}
+	 --with-webp-dir=#{Formula["webp"].opt_prefix}
+	 --with-xmlrpc
+	 --with-xsl#{headers_path}
+	 --with-zlib#{headers_path}
+	 ]
+	 system "./configure", *args
+	 system "make"
+	 system "make", "install"
+	 extension_dir = Utils.popen_read("#{bin}/php-config --extension-dir").chomp
+	 orig_ext_dir = File.basename(extension_dir)
+	 inreplace bin/"php-config", lib/"php", prefix/"pecl"
+	 inreplace "php.ini-development", %r{; ?extension_dir = "\./"},
+	 "extension_dir = \"#{HOMEBREW_PREFIX}/lib/php/pecl/#{orig_ext_dir}\""
+	 config_files = {
+	 "php.ini-development"   => "php.ini",
+	 "sapi/fpm/php-fpm.conf" => "php-fpm.conf",
+	 "sapi/fpm/www.conf"     => "php-fpm.d/www.conf",
+	 }
+	 config_files.each_value do |dst|
+	 dst_default = config_path/"#{dst}.default"
+	 rm dst_default if dst_default.exist?
+	 end
+	 config_path.install config_files
+	 unless (var/"log/php-fpm.log").exist?
+	 (var/"log").mkpath
+	 touch var/"log/php-fpm.log"
+	 end
+	 end
+	 def post_install
 	 pear_prefix = pkgshare/"pear"
 	 pear_files = %W[
 	 #{pear_prefix}/.depdblock
@@ -151,4 +271,5 @@ install :
 	 [#{e}]
 	 #{extension_type}="#{php_ext_dir}/#{e}.so"
 	 EOS
+	 end
 	 end

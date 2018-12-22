@@ -33,3 +33,4 @@ install :
 	 (libexec/"gnubin").install_symlink bin/"g#{cmd}" => cmd
 	 (libexec/"gnuman"/"man1").install_symlink man1/"g#{cmd}" => cmd
 	 end
+	 end

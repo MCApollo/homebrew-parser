@@ -33,3 +33,9 @@ install :
 	 system "./bootstrap"
 	 ENV["BISON"] = "#{Formula["bison"].opt_bin}/bison"
 	 ENV.append "LDFLAGS", "-lintl"
+	 end
+	 ENV["M4"] = "#{Formula["m4"].opt_bin}/m4"
+	 ENV["MAKE"] = "#{Formula["make"].opt_bin}/gmake"
+	 system "./configure", "--prefix=#{prefix}"
+	 system "make"
+	 system "make", "install"

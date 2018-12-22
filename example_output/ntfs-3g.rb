@@ -58,3 +58,8 @@ install :
 	 exit $?;
 	 EOS
 	 end
+	 end
+	 test do
+	 output = shell_output("#{bin}/ntfs-3g --version 2>&1")
+	 assert_match version.to_s, output
+	 end

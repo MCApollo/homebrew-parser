@@ -21,3 +21,8 @@ install :
 	 cd "#{libexec}" && java -DGEOSERVER_DATA_DIR=$1 -jar start.jar
 	 fi
 	 EOS
+	 end
+	 def caveats; <<~EOS
+	 To start geoserver:
+	 geoserver path/to/data/dir
+	 EOS

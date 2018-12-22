@@ -31,3 +31,12 @@ install :
 	 s.gsub! "${GIT_SUFFIX_5}", "+Homebrew-1"
 	 s.gsub! "${VERSION_4}", "Rhaa Movis"
 	 end
+	 end
+	 if build.head?
+	 (buildpath/"arx-libertatis-data").install resource("arx-libertatis-data")
+	 args << "-DDATA_FILES=#{buildpath}/arx-libertatis-data"
+	 end
+	 mkdir "build" do
+	 system "cmake", "..", *args
+	 system "make", "install"
+	 end

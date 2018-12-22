@@ -19,3 +19,6 @@ install :
 	 system "aclocal"
 	 system "autoconf"
 	 system "automake", "--add-missing"
+	 end
+	 system "./configure", "--prefix=#{prefix}"
+	 system "make", "install"

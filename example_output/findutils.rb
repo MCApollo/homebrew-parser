@@ -37,4 +37,5 @@ install :
 	 (libexec/gnupath).install_symlink f => f.basename.sub(/^g/, "")
 	 end
 	 end
+	 end
 	 (var/"locate").mkpath

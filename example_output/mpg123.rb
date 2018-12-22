@@ -23,3 +23,6 @@ install :
 	 args << "--with-cpu=x86-64"
 	 else
 	 args << "--with-cpu=sse_alone"
+	 end
+	 system "./configure", *args
+	 system "make", "install"

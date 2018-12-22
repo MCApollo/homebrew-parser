@@ -34,5 +34,9 @@ install :
 	 if build.with? "python@2"
 	 args << "--with-python-modules"
 	 ENV["PYTHONPROG"] = which("python2.7")
+	 end
+	 system "./configure", *args
+	 system "make"
+	 system "make", "install"
 	 (var/"db/net-snmp").mkpath
 	 (var/"log").mkpath

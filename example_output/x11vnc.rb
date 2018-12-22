@@ -37,3 +37,7 @@ install :
 	 args << "--with-x"
 	 else
 	 args << "--without-x"
+	 end
+	 system "./configure", *args
+	 system "make"
+	 system "make", "MKDIRPROG=mkdir -p", "install"

@@ -24,3 +24,10 @@ install :
 	 args << "--libcurl-dll=/usr/lib/libcurl.dylib"
 	 end
 	 system "python3", *args
+	 end
+	 resource("pyxdg").stage do
+	 system "python3", *Language::Python.setup_install_args(libexec/"vendor")
+	 end
+	 inreplace "fb", "#!/usr/bin/env python", "#!/usr/bin/env python3"
+	 system "make", "PREFIX=#{prefix}", "install"
+	 bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])

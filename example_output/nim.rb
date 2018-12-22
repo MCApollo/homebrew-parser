@@ -20,3 +20,18 @@ install :
 	 end
 	 else
 	 system "/bin/sh", "build.sh"
+	 end
+	 system "bin/nim", "c", "-d:release", "koch"
+	 system "./koch", "boot", "-d:release", "-d:useLinenoise"
+	 system "./koch", "tools"
+	 system "./koch", "geninstall"
+	 system "/bin/sh", "install.sh", prefix
+	 bin.install_symlink prefix/"nim/bin/nim"
+	 bin.install_symlink prefix/"nim/bin/nim" => "nimrod"
+	 target = prefix/"nim/bin"
+	 target.install "bin/nimsuggest"
+	 target.install "bin/nimble"
+	 target.install "bin/nimgrep"
+	 bin.install_symlink prefix/"nim/bin/nimsuggest"
+	 bin.install_symlink target/"nimble"
+	 bin.install_symlink target/"nimgrep"

@@ -23,3 +23,7 @@ install :
 	 system "make", "dist"
 	 else
 	 system "./configure", *args
+	 end
+	 system "make"
+	 system "make", "check"
+	 system "make", "install"

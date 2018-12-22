@@ -33,3 +33,4 @@ install :
 	 (libexec/"gnuman/man1").install_symlink man1/"ggrep.1" => "grep.1"
 	 (libexec/"gnuman/man1").install_symlink man1/"gegrep.1" => "egrep.1"
 	 (libexec/"gnuman/man1").install_symlink man1/"gfgrep.1" => "fgrep.1"
+	 end

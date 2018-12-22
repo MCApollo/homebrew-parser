@@ -30,4 +30,22 @@ install :
 	 "--with-gmp-libraries=#{gmp}/lib"]
 	 if DevelopmentTools.clang_build_version >= 703 && DevelopmentTools.clang_build_version < 800
 	 args << "--with-nm=#{`xcrun --find nm-classic`.chomp}"
+	 end
+	 resource("binary").stage do
+	 binary = buildpath/"binary"
+	 system "./configure", "--prefix=#{binary}", *args
+	 ENV.deparallelize { system "make", "install" }
+	 ENV.prepend_path "PATH", binary/"bin"
+	 end
+	 system "./configure", "--prefix=#{prefix}", *args
+	 system "make"
+	 if build.bottle?
+	 resource("testsuite").stage { buildpath.install Dir["*"] }
+	 cd "testsuite" do
+	 system "make", "clean"
+	 system "make", "CLEANUP=1", "THREADS=#{ENV.make_jobs}", "fast"
+	 end
+	 end
+	 ENV.deparallelize { system "make", "install" }
+	 Dir.glob(lib/"*/package.conf.d/package.cache") { |f| rm f }
 	 system "#{bin}/ghc-pkg", "recache"

@@ -16,3 +16,6 @@ install :
 	 if build.head?
 	 system "glibtoolize"
 	 system "autoreconf", "-i"
+	 end
+	 system "./configure", "--prefix=#{prefix}"
+	 system "make", "install"

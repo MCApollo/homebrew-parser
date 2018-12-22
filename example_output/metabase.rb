@@ -18,3 +18,9 @@ install :
 	 libexec.install "target/uberjar/metabase.jar"
 	 else
 	 libexec.install "metabase.jar"
+	 end
+	 (bin/"metabase").write <<~EOS
+	 #!/bin/bash
+	 export JAVA_HOME="$(#{Language::Java.java_home_cmd("1.8")})"
+	 exec java -jar "#{libexec}/metabase.jar" "$@"
+	 EOS

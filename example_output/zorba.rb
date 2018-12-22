@@ -23,3 +23,8 @@ install :
 	 args = std_cmake_args
 	 if MacOS.version == :el_capitan && MacOS::Xcode.installed? && MacOS::Xcode.version >= "8.0"
 	 args << "-DZORBA_HAVE_CLOCKGETTIME=OFF"
+	 end
+	 mkdir "build" do
+	 system "cmake", "..", *args
+	 system "make", "install"
+	 end

@@ -27,3 +27,20 @@ install :
 	 system "make", "install"
 	 ENV["GREP"] = "#{buildpath}/grep/bin/grep"
 	 end
+	 end
+	 args = %W[
+	 --disable-dependency-tracking
+	 --disable-silent-rules
+	 --prefix=#{prefix}
+	 --enable-cogl-pango=yes
+	 --enable-introspection=yes
+	 --disable-glx
+	 --without-x
+	 ]
+	 if build.head?
+	 system "./autogen.sh", *args
+	 else
+	 system "./configure", *args
+	 end
+	 system "make", "install"
+	 doc.install "examples"

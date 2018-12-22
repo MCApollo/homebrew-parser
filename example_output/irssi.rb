@@ -31,3 +31,8 @@ install :
 	 if build.head?
 	 ENV["NOCONFIGURE"] = "yes"
 	 system "./autogen.sh", *args
+	 end
+	 inreplace "configure", "^DUIfm", "^DUIifm"
+	 system "./configure", *args
+	 system "make"
+	 system "make", "install"

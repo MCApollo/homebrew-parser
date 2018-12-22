@@ -40,3 +40,6 @@ install :
 	 system "make"
 	 unless user_in_mail_group
 	 inreplace "Makefile", /^DOTLOCK_GROUP =.*$/, "DOTLOCK_GROUP = #{effective_group}"
+	 end
+	 system "make", "install"
+	 doc.install resource("html") if build.head?

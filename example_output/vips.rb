@@ -42,3 +42,6 @@ install :
 	 args << "--with-magick" << "--with-magickpackage=GraphicsMagick"
 	 elsif build.with? "imagemagick"
 	 args << "--with-magick"
+	 end
+	 system "./configure", *args
+	 system "make", "install"

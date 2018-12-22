@@ -25,3 +25,27 @@ install :
 	 args << "cxxflags=-std=c++11"
 	 if ENV.compiler == :clang
 	 args << "cxxflags=-stdlib=libc++" << "linkflags=-stdlib=libc++"
+	 end
+	 inreplace "bootstrap.sh", "using python", "#using python"
+	 pyver = Language::Python.major_minor_version "python3"
+	 py_prefix = Formula["python3"].opt_frameworks/"Python.framework/Versions/#{pyver}"
+	 numpy_site_packages = buildpath/"homebrew-numpy/lib/python#{pyver}/site-packages"
+	 numpy_site_packages.mkpath
+	 ENV["PYTHONPATH"] = numpy_site_packages
+	 resource("numpy").stage do
+	 system "python3", *Language::Python.setup_install_args(buildpath/"homebrew-numpy")
+	 end
+	 (buildpath/"user-config.jam").write <<~EOS
+	 using darwin : : #{ENV.cxx} ;
+	 using python : #{pyver}
+	 : python3
+	 : #{py_prefix}/include/python#{pyver}m
+	 : #{py_prefix}/lib ;
+	 EOS
+	 system "./bootstrap.sh", "--prefix=#{prefix}", "--libdir=#{lib}",
+	 "--with-libraries=python", "--with-python=python3",
+	 "--with-python-root=#{py_prefix}"
+	 system "./b2", "--build-dir=build-python3", "--stagedir=stage-python3",
+	 "python=#{pyver}", *args
+	 lib.install Dir["stage-python3/lib/*py*"]
+	 doc.install Dir["libs/python/doc/*"]

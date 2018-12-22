@@ -34,3 +34,19 @@ install :
 	 system "luarocks", "build", r.name, "--tree=#{luapath}"
 	 end
 	 end
+	 end
+	 system "./bootstrap.sh"
+	 system "./configure", "--disable-debug",
+	 "--disable-dependency-tracking",
+	 "--disable-silent-rules",
+	 "--with-lua=#{prefix}",
+	 "--prefix=#{prefix}"
+	 system "make"
+	 system "make", "install"
+	 (libexec/"bin").install bin/"sile"
+	 (bin/"sile").write <<~EOS
+	 #!/bin/bash
+	 export LUA_PATH="#{ENV["LUA_PATH"]}"
+	 export LUA_CPATH="#{ENV["LUA_CPATH"]}"
+	 "#{libexec}/bin/sile" "$@"
+	 EOS

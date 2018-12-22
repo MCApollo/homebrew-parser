@@ -30,3 +30,4 @@ install :
 	 bin.install "ack-#{version.to_s.tr("-", "_")}-single-file" => "ack"
 	 system "pod2man", "#{bin}/ack", "ack.1"
 	 man1.install "ack.1"
+	 end

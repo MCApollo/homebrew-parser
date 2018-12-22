@@ -23,3 +23,4 @@ install :
 	 MachO::Tools.change_install_name("gme_player", dylib_id, "#{lib}/libgme.0.dylib")
 	 bin.install "gme_player"
 	 end
+	 end

@@ -52,3 +52,15 @@ install :
 	 args << "-DPYTHON_LIBRARY=#{py_lib}/libpython2.7.dylib"
 	 args << "-DPYTHON_INCLUDE_DIR=#{py_prefix}/include/python2.7"
 	 args << "-DCMAKE_PREFIX_PATH=#{py_prefix}"
+	 end
+	 if ENV.compiler == :clang && !build.bottle?
+	 args << "-DENABLE_SSSE3=ON" if Hardware::CPU.ssse3?
+	 args << "-DENABLE_SSE41=ON" if Hardware::CPU.sse4?
+	 args << "-DENABLE_SSE42=ON" if Hardware::CPU.sse4_2?
+	 args << "-DENABLE_AVX=ON" if Hardware::CPU.avx?
+	 end
+	 mkdir "build" do
+	 system "cmake", "..", *args
+	 system "make"
+	 system "make", "install"
+	 end

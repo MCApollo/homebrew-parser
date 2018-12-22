@@ -60,3 +60,4 @@ install :
 	 if build.with? "sdl"
 	 bin.install "avplay"
 	 man1.install "doc/avplay.1"
+	 end

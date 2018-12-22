@@ -25,3 +25,13 @@ install :
 	 /^HACKDIR=.*/,
 	 "HACKDIR=#{libexec}"
 	 system "sh", "setup.sh", "hints/#{hintfile}"
+	 end
+	 inreplace "sys/unix/sysconf",
+	 /^WIZARDS=.*/,
+	 "WIZARDS=*"
+	 system "make", "install"
+	 bin.install "src/nethack"
+	 (libexec+"save").mkpath
+	 man6.install "doc/nethack.6"
+	 chmod "g+w", libexec
+	 chmod "g+w", libexec+"save"

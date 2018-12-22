@@ -19,3 +19,4 @@ install :
 	 if build.without? "default-names"
 	 (libexec/"gnubin").install_symlink bin/"gwhich" => "which"
 	 (libexec/"gnuman/man1").install_symlink man1/"gwhich.1" => "which.1"
+	 end

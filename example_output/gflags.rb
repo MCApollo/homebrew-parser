@@ -18,3 +18,8 @@ install :
 	 args << "-DBUILD_SHARED_LIBS=OFF"
 	 else
 	 args << "-DBUILD_SHARED_LIBS=ON"
+	 end
+	 mkdir "buildroot" do
+	 system "cmake", "..", *args
+	 system "make", "install"
+	 end

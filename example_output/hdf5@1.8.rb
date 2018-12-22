@@ -35,3 +35,12 @@ install :
 	 args << "--enable-cxx"
 	 else
 	 args << "--disable-cxx"
+	 end
+	 if build.with? "mpi"
+	 ENV["CC"] = "mpicc"
+	 ENV["CXX"] = "mpicxx"
+	 ENV["FC"] = "mpif90"
+	 args << "--enable-parallel"
+	 end
+	 system "./configure", *args
+	 system "make", "install"

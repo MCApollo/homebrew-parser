@@ -65,3 +65,8 @@ install :
 	 system "./autogen.sh", *args
 	 else
 	 system "./configure", *args
+	 end
+	 system "make", "install"
+	 system "make", "install-so"
+	 (pkgshare/"fonts").install resource("fonts")
+	 (man/"de").rmtree

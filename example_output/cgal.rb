@@ -28,3 +28,6 @@ install :
 	 args << "-DWITH_CGAL_Qt5=OFF" << "-DWITH_CGAL_ImageIO=OFF"
 	 else
 	 args << "-DWITH_CGAL_Qt5=ON" << "-DWITH_CGAL_ImageIO=ON"
+	 end
+	 system "cmake", ".", *args
+	 system "make", "install"

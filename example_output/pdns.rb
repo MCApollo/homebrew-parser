@@ -32,3 +32,7 @@ install :
 	 args << "--with-modules=gsqlite3 remote"
 	 else
 	 args << "--with-modules=gsqlite3"
+	 end
+	 system "./bootstrap" if build.head?
+	 system "./configure", *args
+	 system "make", "install"

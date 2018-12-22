@@ -16,3 +16,4 @@ install :
 	 bad = /^    alias ls='colourify ls --color'$/
 	 if grc_bashrc.exist? && File.read(grc_bashrc) =~ bad
 	 inreplace grc_bashrc, bad, "    alias ls='colourify ls'"
+	 end

@@ -25,3 +25,7 @@ install :
 	 args << "--toolset=clang"
 	 elsif ENV.compiler == :gcc
 	 args << "--toolset=darwin"
+	 end
+	 args << "--prefix=#{prefix}"
+	 system "bjam", *args
+	 (lib/"pkgconfig/luabind.pc").write pc_file

@@ -17,3 +17,6 @@ install :
 	 bltool_jar = Dir["target/bltool-*-standalone.jar"][0]
 	 else
 	 bltool_jar = "bltool.jar"
+	 end
+	 libexec.install bltool_jar
+	 bin.write_jar_script libexec/File.basename(bltool_jar), "bltool"

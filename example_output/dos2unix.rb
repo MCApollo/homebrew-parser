@@ -26,3 +26,5 @@ install :
 	 gettext = Formula["gettext"]
 	 args << "CFLAGS_OS=-I#{gettext.include}"
 	 args << "LDFLAGS_EXTRA=-L#{gettext.lib} -lintl"
+	 end
+	 system "make", *args

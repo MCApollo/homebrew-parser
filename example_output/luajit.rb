@@ -33,3 +33,5 @@ install :
 	 s.gsub! "Libs:",
 	 "Libs: -pagezero_size 10000 -image_base 100000000"
 	 end
+	 end
+	 %W[#{lib}/lua #{share}/lua].each { |d| rm_rf d }

@@ -52,3 +52,23 @@ install :
 	 args << "-DWITH_GEOS=ON"
 	 else
 	 args << "-DWITH_GEOS=OFF"
+	 end
+	 if build.with? "cairo"
+	 args << "-WITH_CAIRO=ON"
+	 else
+	 args << "-DWITH_CAIRO=OFF"
+	 end
+	 if build.with? "postgresql"
+	 args << "-DWITH_POSTGIS=ON"
+	 else
+	 args << "-DWITH_POSTGIS=OFF"
+	 end
+	 if build.with? "fastcgi"
+	 args << "-DWITH_FCGI=ON"
+	 else
+	 args << "-DWITH_FCGI=OFF"
+	 end
+	 mkdir "build" do
+	 system "cmake", "..", *args
+	 system "make", "install"
+	 end

@@ -22,3 +22,4 @@ install :
 	 system "make", "install"
 	 if build.without? "default-names"
 	 (libexec/"gnubin").install_symlink bin/"gtime" => "time"
+	 end

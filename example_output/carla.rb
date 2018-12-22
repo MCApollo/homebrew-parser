@@ -21,3 +21,6 @@ install :
 	 args = []
 	 if ENV.compiler == :clang && MacOS.version <= :mountain_lion
 	 args << "MACOS_OLD=true"
+	 end
+	 system "make", *args
+	 system "make", "install", "PREFIX=#{prefix}"

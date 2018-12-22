@@ -38,6 +38,12 @@ install :
 	 else
 	 inreplace libexec/"conf/druid/_common/common.runtime.properties",
 	 ", \"mysql-metadata-storage\"", ""
+	 end
+	 bin.install Dir["#{libexec}/bin/*.sh"]
+	 bin.env_script_all_files(libexec/"bin", Language::Java.java_home_env("1.8"))
+	 Pathname.glob("#{bin}/*.sh") do |file|
+	 mv file, bin/"druid-#{file.basename}"
+	 end
 	 %w[
 	 druid/hadoop-tmp
 	 druid/indexing-logs

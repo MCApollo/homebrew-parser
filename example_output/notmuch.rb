@@ -46,3 +46,18 @@ install :
 	 args << "--with-emacs" << "--emacslispdir=#{elisp}" << "--emacsetcdir=#{elisp}"
 	 else
 	 args << "--without-emacs"
+	 end
+	 args << "--without-ruby" if build.without? "ruby"
+	 system "./configure", *args
+	 system "make", "V=1", "install"
+	 if build.with? "ruby"
+	 cd "bindings/ruby" do
+	 inreplace "Makefile", HOMEBREW_PREFIX/"lib/ruby", lib/"ruby"
+	 system "make", "install"
+	 end
+	 end
+	 Language::Python.each_python(build) do |python, _version|
+	 cd "bindings/python" do
+	 system python, *Language::Python.setup_install_args(prefix)
+	 end
+	 end

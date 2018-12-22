@@ -66,3 +66,23 @@ install :
 	 odie "No libpythonX.Y.{dylib|a} file found!"
 	 end
 	 args << "-DVTK_INSTALL_PYTHON_MODULE_DIR='#{py_site_packages}/'"
+	 end
+	 if build.with? "qt"
+	 args << "-DVTK_QT_VERSION:STRING=5" << "-DVTK_Group_Qt=ON"
+	 args << "-DVTK_WRAP_PYTHON_SIP=ON"
+	 args << "-DSIP_PYQT_DIR='#{Formula["pyqt5"].opt_share}/sip'"
+	 end
+	 system "cmake", "..", *args
+	 system "make"
+	 system "make", "install"
+	 end
+	 inreplace Dir["#{lib}/cmake/**/vtkPython.cmake"].first do |s|
+	 if build.with? "python"
+	 s.gsub! Formula["python"].prefix.realpath, Formula["python"].opt_prefix
+	 end
+	 if build.with? "python@2"
+	 s.gsub! Formula["python@2"].prefix.realpath, Formula["python@2"].opt_prefix
+	 end
+	 end
+	 inreplace Dir["#{lib}/cmake/**/vtkhdf5.cmake"].first,
+	 Formula["hdf5"].prefix.realpath, Formula["hdf5"].opt_prefix

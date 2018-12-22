@@ -31,3 +31,4 @@ install :
 	 system "make", "-f", "Makefile.osx"
 	 end
 	 prefix.install "Angband.app"
+	 end

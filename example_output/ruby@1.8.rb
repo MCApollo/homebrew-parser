@@ -20,3 +20,22 @@ install :
 	 <<~EOS.gsub(/^/, "    ")
 	 if %w[CC CPP LDSHARED LIBRUBY_LDSHARED].include?(name)
 	 val = val.sub("\\"", "\\"#{scrub_env} ")
+	 end
+	 if /^prefix$/ =~ name
+	 EOS
+	 rm_r "ext/tk"
+	 args = %W[
+	 --prefix=#{prefix}
+	 --enable-shared
+	 --enable-install-doc
+	 ]
+	 system "./configure", *args
+	 system "make"
+	 system "make", "install"
+	 system "make", "install-doc"
+	 end
+	 test do
+	 hello_text = shell_output("#{bin}/ruby -e 'puts :hello'")
+	 assert_equal "hello\n", hello_text
+	 system "#{bin}/ruby", "-e", "require 'zlib'"
+	 end

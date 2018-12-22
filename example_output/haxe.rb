@@ -33,3 +33,13 @@ install :
 	 end
 	 else
 	 system "make", "OCAMLOPT=ocamlopt.opt"
+	 end
+	 cd "extra/haxelib_src" do
+	 system "cmake", "."
+	 system "make"
+	 end
+	 rm "haxelib"
+	 cp "extra/haxelib_src/haxelib", "haxelib"
+	 bin.mkpath
+	 system "make", "install", "INSTALL_BIN_DIR=#{bin}",
+	 "INSTALL_LIB_DIR=#{lib}/haxe", "INSTALL_STD_DIR=#{lib}/haxe/std"

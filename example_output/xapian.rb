@@ -40,3 +40,8 @@ install :
 	 ENV.append_path "PYTHONPATH",
 	 Formula["sphinx-doc"].opt_libexec/"vendor/lib/python2.7/site-packages"
 	 args << "--with-python"
+	 end
+	 system "./configure", *args
+	 system "make", "install"
+	 end
+	 end

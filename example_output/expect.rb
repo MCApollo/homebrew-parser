@@ -29,3 +29,9 @@ install :
 	 else
 	 ENV.prepend "CFLAGS", "-I#{MacOS.sdk_path}/System/Library/Frameworks/Tcl.framework/Versions/8.5/Headers/tcl-private"
 	 args << "--with-tcl=#{MacOS.sdk_path}/System/Library/Frameworks/Tcl.framework"
+	 end
+	 system "autoreconf", "--force", "--install", "--verbose"
+	 system "./configure", *args
+	 system "make"
+	 system "make", "install"
+	 lib.install_symlink Dir[lib/"expect*/libexpect*"]

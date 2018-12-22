@@ -16,6 +16,17 @@ install :
 	 ENV.delete("OPENSSL_LOCAL_CONFIG_DIR")
 	 if which("perl") == Formula["perl"].opt_bin/"perl"
 	 ENV["PERL"] = Formula["perl"].opt_bin/"perl"
+	 end
+	 if MacOS.prefer_64_bit?
+	 arch_args = %w[darwin64-x86_64-cc enable-ec_nistp_64_gcc_128]
+	 else
+	 arch_args = %w[darwin-i386-cc]
+	 end
+	 ENV.deparallelize
+	 system "perl", "./Configure", *(configure_args + arch_args)
+	 system "make"
+	 system "make", "test"
+	 system "make", "install", "MANDIR=#{man}", "MANSUFFIX=ssl"
 	 keychains = %w[
 	 /System/Library/Keychains/SystemRootCertificates.keychain
 	 ]

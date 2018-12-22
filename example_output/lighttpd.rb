@@ -54,3 +54,7 @@ install :
 	 s.sub!(/^server\.network-backend\s*=\s*"sendfile"$/, 'server.network-backend = "writev"')
 	 s.sub!(/^server\.max-connections = .+$/, "server.max-connections = " + (MAX_FDS / 2).to_s)
 	 end
+	 end
+	 log_path.mkpath
+	 (www_path/"htdocs").mkpath
+	 run_path.mkpath

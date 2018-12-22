@@ -22,6 +22,40 @@ EOF_patch :
 install :
 	 if MacOS.version == :sierra && MacOS::Xcode.installed? && MacOS::Xcode.version >= "9.0"
 	 ENV.delete("SDKROOT")
+	 end
+	 inreplace "pypy/tool/build_cffi_imports.py" do |s|
+	 s.gsub! "http://", "https://"
+	 s.gsub! "https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-2.6.2.tar.gz",
+	 "https://mirrorservice.org/pub/OpenBSD/LibreSSL/libressl-2.6.2.tar.gz"
+	 s.gsub! "https://tukaani.org/xz/xz-5.2.3.tar.gz",
+	 "https://netix.dl.sourceforge.net/project/lzmautils/xz-5.2.3.tar.gz"
+	 s.gsub! "os.path.join(tempfile.gettempdir(), 'pypy-archives')",
+	 "os.path.join('#{buildpath}', 'pypy-archives')"
+	 end
+	 ENV["PYTHONPATH"] = ""
+	 ENV["PYPY_USESSION_DIR"] = buildpath
+	 python = Formula["pypy"].opt_bin/"pypy"
+	 cd "pypy/goal" do
+	 system python, buildpath/"rpython/bin/rpython",
+	 "-Ojit", "--shared", "--cc", ENV.cc, "--verbose",
+	 "--make-jobs", ENV.make_jobs, "targetpypystandalone.py"
+	 end
+	 libexec.mkpath
+	 cd "pypy/tool/release" do
+	 system python, "package.py", "--archive-name", "pypy3", "--targetdir", "."
+	 system "tar", "-C", libexec.to_s, "--strip-components", "1", "-xf", "pypy3.tar.bz2"
+	 end
+	 (libexec/"lib").install libexec/"bin/libpypy3-c.dylib" => "libpypy3-c.dylib"
+	 MachO::Tools.change_install_name("#{libexec}/bin/pypy3",
+	 "@rpath/libpypy3-c.dylib",
+	 "#{libexec}/lib/libpypy3-c.dylib")
+	 MachO::Tools.change_dylib_id("#{libexec}/lib/libpypy3-c.dylib",
+	 "#{opt_libexec}/lib/libpypy3-c.dylib")
+	 (libexec/"lib-python").install "lib-python/3"
+	 libexec.install %w[include lib_pypy]
+	 bin.install_symlink libexec/"bin/pypy3"
+	 bin.install_symlink libexec/"bin/pypy" => "pypy3.5"
+	 lib.install_symlink libexec/"lib/libpypy3-c.dylib"
 	 %w[_sqlite3 _curses syslog gdbm _tkinter].each do |module_name|
 	 quiet_system bin/"pypy3", "-c", "import #{module_name}"
 	 end

@@ -24,3 +24,6 @@ install :
 	 cd "python" do
 	 system "python", *Language::Python.setup_install_args(prefix)
 	 end
+	 end
+	 rm bin/"file"
+	 rm man1/"file.1"

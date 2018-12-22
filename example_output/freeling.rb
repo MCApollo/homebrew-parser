@@ -46,3 +46,23 @@ install :
 	 system "./bootstrap.sh", *bootstrap_args
 	 system "./b2", "headers"
 	 system "./b2", *args
+	 end
+	 (libexec/"boost/lib").each_child do |dylib|
+	 MachO::Tools.change_dylib_id(dylib.to_s, dylib.to_s)
+	 end
+	 %w[chrono filesystem thread].each do |library|
+	 macho = MachO.open("#{libexec}/boost/lib/libboost_#{library}-mt.dylib")
+	 macho.change_dylib("libboost_system-mt.dylib",
+	 "#{libexec}/boost/lib/libboost_system-mt.dylib")
+	 macho.write!
+	 end
+	 mkdir "build" do
+	 system "cmake", "..",  "-DBoost_INCLUDE_DIR=#{libexec}/boost/include",
+	 "-DBoost_LIBRARY_DIR_RELEASE=#{libexec}/boost/lib",
+	 *std_cmake_args
+	 system "make", "install"
+	 end
+	 libexec.install "#{bin}/fl_initialize"
+	 inreplace "#{bin}/analyze",
+	 ". $(cd $(dirname $0) && echo $PWD)/fl_initialize",
+	 ". #{libexec}/fl_initialize"

@@ -40,3 +40,7 @@ install :
 	 args << "cxxflags=-std=c++11"
 	 if ENV.compiler == :clang
 	 args << "cxxflags=-stdlib=libc++" << "linkflags=-stdlib=libc++"
+	 end
+	 end
+	 system "./bootstrap.sh", *bargs
+	 system "./b2", *args

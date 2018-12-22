@@ -22,3 +22,12 @@ install :
 	 if build.head?
 	 ENV["LIBTOOLIZE"] = "glibtoolize"
 	 system "./autogen.sh"
+	 end
+	 args = %W[
+	 --prefix=#{prefix}
+	 --sbindir=#{bin}
+	 --localstatedir=#{var}
+	 --with-vpnc-script=#{etc}/vpnc-script
+	 ]
+	 system "./configure", *args
+	 system "make", "install"

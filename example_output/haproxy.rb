@@ -31,3 +31,7 @@ install :
 	 args << "LUA_LIB=#{lua.opt_lib}"
 	 args << "LUA_INC=#{lua.opt_include}/lua"
 	 args << "LUA_LD_FLAGS=-L#{lua.opt_lib}"
+	 end
+	 system "make", "CC=#{ENV.cc}", "CFLAGS=#{ENV.cflags}", "LDFLAGS=#{ENV.ldflags}", *args
+	 man1.install "doc/haproxy.1"
+	 bin.install "haproxy"

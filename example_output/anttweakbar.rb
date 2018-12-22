@@ -17,3 +17,7 @@ install :
 	 (MacOS.version == :el_capitan && MacOS::Xcode.installed? &&
 	 MacOS::Xcode.version >= "8.0")
 	 ENV.delete("SDKROOT")
+	 end
+	 system "make", "-C", "src", "-f", "Makefile.osx"
+	 lib.install "lib/libAntTweakBar.dylib", "lib/libAntTweakBar.a"
+	 include.install "include/AntTweakBar.h"

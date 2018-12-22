@@ -32,3 +32,4 @@ install :
 	 "TESTS/mmio.f", "TESTS/debug.h"
 	 if build.with? "mpi"
 	 (libexec/"bin").install (buildpath/"PARPACK/EXAMPLES/MPI").children
+	 end

@@ -25,3 +25,18 @@ install :
 	 args << "cxxflags=-std=c++11"
 	 if ENV.compiler == :clang
 	 args << "cxxflags=-stdlib=libc++" << "linkflags=-stdlib=libc++"
+	 end
+	 open("user-config.jam", "a") do |file|
+	 file.write "using darwin : : #{ENV.cxx} ;\n"
+	 file.write "using mpi ;\n"
+	 end
+	 system "./bootstrap.sh", "--prefix=#{prefix}", "--libdir=#{lib}", "--with-libraries=mpi"
+	 system "./b2", *args
+	 lib.install Dir["stage/lib/*mpi*"]
+	 boost = Formula["boost"]
+	 MachO::Tools.change_install_name("#{lib}/libboost_mpi-mt.dylib",
+	 "libboost_serialization-mt.dylib",
+	 "#{boost.lib}/libboost_serialization-mt.dylib")
+	 MachO::Tools.change_install_name("#{lib}/libboost_mpi.dylib",
+	 "libboost_serialization.dylib",
+	 "#{boost.lib}/libboost_serialization.dylib")

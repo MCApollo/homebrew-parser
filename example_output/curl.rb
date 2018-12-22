@@ -37,3 +37,17 @@ install :
 	 args << "--with-darwinssl"
 	 args << "--without-ca-bundle"
 	 args << "--without-ca-path"
+	 end
+	 args << (build.with?("libssh2") ? "--with-libssh2" : "--without-libssh2")
+	 args << (build.with?("libmetalink") ? "--with-libmetalink" : "--without-libmetalink")
+	 args << (build.with?("gssapi") ? "--with-gssapi" : "--without-gssapi")
+	 args << (build.with?("rtmpdump") ? "--with-librtmp" : "--without-librtmp")
+	 if build.with? "c-ares"
+	 args << "--enable-ares=#{Formula["c-ares"].opt_prefix}"
+	 else
+	 args << "--disable-ares"
+	 end
+	 system "./configure", *args
+	 system "make", "install"
+	 system "make", "install", "-C", "scripts"
+	 libexec.install "lib/mk-ca-bundle.pl"

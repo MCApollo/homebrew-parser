@@ -38,3 +38,6 @@ install :
 	 inreplace "etc/make-liarc.sh" do |s|
 	 s.gsub! "run_configure", "run_configure --without-x"
 	 end
+	 end
+	 system "etc/make-liarc.sh", "--prefix=#{prefix}", "--mandir=#{man}"
+	 system "make", "install"

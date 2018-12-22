@@ -62,3 +62,31 @@ install :
 	 elsif build.with? "python"
 	 python_executable = Utils.popen_read("which python3").strip
 	 python_version = Language::Python.major_minor_version("python3")
+	 end
+	 python_prefix = Utils.popen_read("#{python_executable} -c 'import sys;print(sys.prefix)'").chomp
+	 python_include = Utils.popen_read("#{python_executable} -c 'from distutils import sysconfig;print(sysconfig.get_python_inc(True))'").chomp
+	 args << "-Dpython=ON"
+	 if File.exist? "#{python_prefix}/Python"
+	 python_library = "#{python_prefix}/Python"
+	 elsif File.exist? "#{python_prefix}/lib/lib#{python_version}.a"
+	 python_library = "#{python_prefix}/lib/lib#{python_version}.a"
+	 elsif File.exist? "#{python_prefix}/lib/lib#{python_version}.dylib"
+	 python_library = "#{python_prefix}/lib/lib#{python_version}.dylib"
+	 else
+	 odie "No libpythonX.Y.{a,dylib} file found!"
+	 end
+	 args << "-DPYTHON_EXECUTABLE='#{python_executable}'"
+	 args << "-DPYTHON_INCLUDE_DIR='#{python_include}'"
+	 args << "-DPYTHON_LIBRARY='#{python_library}'"
+	 else
+	 args << "-Dpython=OFF"
+	 end
+	 mkdir "builddir" do
+	 system "cmake", "..", *args
+	 if MacOS.version < :high_sierra
+	 system "xcrun", "make", "install"
+	 else
+	 system "make", "install"
+	 end
+	 chmod 0755, Dir[bin/"*.*sh"]
+	 end

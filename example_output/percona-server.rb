@@ -63,3 +63,4 @@ install :
 	 ENV["TMPDIR"] = nil
 	 system bin/"mysqld", "--initialize-insecure", "--user=#{ENV["USER"]}",
 	 "--basedir=#{prefix}", "--datadir=#{datadir}", "--tmpdir=/tmp"
+	 end

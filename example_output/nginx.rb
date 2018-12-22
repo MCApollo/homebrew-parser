@@ -68,6 +68,18 @@ install :
 	 if build.with? "passenger"
 	 nginx_ext = `#{Formula["passenger"].opt_bin}/passenger-config --nginx-addon-dir`.chomp
 	 args << "--add-module=#{nginx_ext}"
+	 end
+	 if build.head?
+	 system "./auto/configure", *args
+	 else
+	 system "./configure", *args
+	 end
+	 system "make", "install"
+	 if build.head?
+	 man8.install "docs/man/nginx.8"
+	 else
+	 man8.install "man/nginx.8"
+	 end
 	 (etc/"nginx/servers").mkpath
 	 (var/"run/nginx").mkpath
 	 html = prefix/"html"
@@ -78,3 +90,8 @@ install :
 	 else
 	 dst.dirname.mkpath
 	 html.rename(dst)
+	 end
+	 prefix.install_symlink dst => "html"
+	 if rack.subdirs.any? { |d| d.join("sbin").directory? }
+	 sbin.install_symlink bin/"nginx"
+	 end

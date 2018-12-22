@@ -25,3 +25,40 @@ install :
 	 ENV["erl_cv_clock_gettime_monotonic_default_resolution"] = "no"
 	 ENV["erl_cv_clock_gettime_monotonic_try_find_pthread_compatible"] = "no"
 	 ENV["erl_cv_clock_gettime_wall_default_resolution"] = "no"
+	 end
+	 %w[LIBS FLAGS AFLAGS ZFLAGS].each { |k| ENV.delete("ERL_#{k}") }
+	 ENV["FOP"] = "#{HOMEBREW_PREFIX}/bin/fop" if build.with? "fop"
+	 system "./otp_build", "autoconf" if File.exist? "otp_build"
+	 args = %W[
+	 --disable-debug
+	 --disable-silent-rules
+	 --prefix=#{prefix}
+	 --enable-kernel-poll
+	 --enable-threads
+	 --enable-sctp
+	 --enable-dynamic-ssl-lib
+	 --with-ssl=#{Formula["openssl"].opt_prefix}
+	 --enable-shared-zlib
+	 --enable-smp-support
+	 ]
+	 args << "--enable-darwin-64bit" if MacOS.prefer_64_bit?
+	 args << "--enable-native-libs" if build.with? "native-libs"
+	 args << "--enable-dirty-schedulers" if build.with? "dirty-schedulers"
+	 args << "--enable-wx" if build.with? "wxmac"
+	 args << "--with-dynamic-trace=dtrace" if MacOS::CLT.installed?
+	 if build.without? "hipe"
+	 args << "--disable-hipe"
+	 else
+	 args << "--enable-hipe"
+	 end
+	 if build.with? "java"
+	 args << "--with-javac"
+	 else
+	 args << "--without-javac"
+	 end
+	 system "./configure", *args
+	 system "make"
+	 ENV.deparallelize
+	 system "make", "install"
+	 (lib/"erlang").install resource("man").files("man")
+	 doc.install resource("html")

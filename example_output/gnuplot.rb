@@ -24,3 +24,25 @@ install :
 	 if build.with? "aquaterm"
 	 ENV.prepend "CPPFLAGS", "-F/Library/Frameworks"
 	 ENV.prepend "LDFLAGS", "-F/Library/Frameworks"
+	 end
+	 resource("libcerf").stage do
+	 system "./configure", "--prefix=#{buildpath}/libcerf", "--enable-static", "--disable-shared"
+	 system "make", "install"
+	 end
+	 ENV.prepend_path "PKG_CONFIG_PATH", buildpath/"libcerf/lib/pkgconfig"
+	 args = %W[
+	 --disable-dependency-tracking
+	 --disable-silent-rules
+	 --prefix=#{prefix}
+	 --with-readline=#{Formula["readline"].opt_prefix}
+	 --without-tutorial
+	 ]
+	 args << "--disable-wxwidgets" if build.without? "wxmac"
+	 args << (build.with?("aquaterm") ? "--with-aquaterm" : "--without-aquaterm")
+	 args << (build.with?("qt") ? "--with-qt" : "--with-qt=no")
+	 args << (build.with?("x11") ? "--with-x" : "--without-x")
+	 system "./prepare" if build.head?
+	 system "./configure", *args
+	 ENV.deparallelize
+	 system "make"
+	 system "make", "install"

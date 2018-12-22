@@ -25,3 +25,8 @@ install :
 	 "--with-cxx",
 	 "--without-octave"
 	 system "make"
+	 end
+	 system "make", "install"
+	 %w[0.dylib dylib a].each do |suffix|
+	 lib.install_symlink "#{lib}/libnlopt_cxx.#{suffix}" => "#{lib}/libnlopt.#{suffix}"
+	 end

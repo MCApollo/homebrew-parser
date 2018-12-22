@@ -24,3 +24,7 @@ install :
 	 args << "--disable-coretext"
 	 else
 	 args << "--disable-fontconfig"
+	 end
+	 system "autoreconf", "-i" if build.head?
+	 system "./configure", *args
+	 system "make", "install"

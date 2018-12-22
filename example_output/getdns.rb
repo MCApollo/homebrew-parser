@@ -19,3 +19,12 @@ install :
 	 if build.head?
 	 system "glibtoolize", "-ci"
 	 system "autoreconf", "-fi"
+	 end
+	 system "./configure", "--prefix=#{prefix}",
+	 "--with-libevent",
+	 "--with-ssl=#{Formula["openssl"].opt_prefix}",
+	 "--with-trust-anchor=#{etc}/getdns-root.key",
+	 "--without-stubby"
+	 system "make"
+	 ENV.deparallelize
+	 system "make", "install"

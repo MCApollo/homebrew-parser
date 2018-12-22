@@ -22,3 +22,12 @@ install :
 	 args << "--with-tcl=#{MacOS.sdk_path}/System/Library/Frameworks/Tcl.framework"
 	 else
 	 args << "--with-tcl-stubs"
+	 end
+	 if build.with? "osxfuse"
+	 ENV.prepend "CFLAGS", "-I/usr/local/include/osxfuse"
+	 else
+	 args << "--disable-fusefs"
+	 end
+	 system "./configure", *args
+	 system "make"
+	 bin.install "fossil"

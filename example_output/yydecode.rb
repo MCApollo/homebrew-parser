@@ -14,3 +14,8 @@ EOF_patch :
 install :
 	 if DevelopmentTools.clang_build_version >= 900
 	 inreplace "src/crc32.h", "typedef unsigned long int u_int32_t;", ""
+	 end
+	 system "./configure", "--disable-debug", "--disable-dependency-tracking",
+	 "--prefix=#{prefix}",
+	 "--mandir=#{man}"
+	 system "make", "install"

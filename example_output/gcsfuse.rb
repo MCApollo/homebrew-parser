@@ -20,3 +20,5 @@ install :
 	 gcsfuse_version = `git rev-parse --short HEAD`.strip
 	 else
 	 gcsfuse_version = version
+	 end
+	 system "./build_gcsfuse", buildpath, prefix, gcsfuse_version

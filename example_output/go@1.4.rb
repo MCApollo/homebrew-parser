@@ -33,3 +33,32 @@ install :
 	 ]
 	 else
 	 targets = [["darwin", [""]]]
+	 end
+	 cd "src" do
+	 targets.each do |os, archs|
+	 archs.each do |arch|
+	 ENV["GOROOT_FINAL"] = libexec
+	 ENV["GOOS"]         = os
+	 ENV["GOARCH"]       = arch
+	 ENV["CGO_ENABLED"]  = "0"
+	 ohai "Building go for #{arch}-#{os}"
+	 system "./make.bash", "--no-clean"
+	 end
+	 end
+	 end
+	 (buildpath/"pkg/obj").rmtree
+	 libexec.install Dir["*"]
+	 (bin/"go").write_env_script(libexec/"bin/go", :PATH => "#{libexec}/bin:$PATH")
+	 bin.install_symlink libexec/"bin/gofmt"
+	 ENV.prepend_path "PATH", libexec/"bin"
+	 ENV["GOPATH"] = buildpath
+	 (buildpath/"src/golang.org/x/tools").install resource("gotools")
+	 cd "src/golang.org/x/tools/cmd/godoc/" do
+	 system "go", "build"
+	 (libexec/"bin").install "godoc"
+	 end
+	 bin.install_symlink libexec/"bin/godoc"
+	 cd "src/golang.org/x/tools/cmd/vet/" do
+	 system "go", "build"
+	 (libexec/"pkg/tool/darwin_amd64/").install "vet"
+	 end

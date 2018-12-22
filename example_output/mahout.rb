@@ -17,3 +17,15 @@ install :
 	 if build.head?
 	 chmod 755, "./bin"
 	 system "mvn", "-DskipTests", "clean", "install"
+	 end
+	 libexec.install "bin"
+	 if build.head?
+	 libexec.install Dir["buildtools/target/*.jar"]
+	 libexec.install Dir["core/target/*.jar"]
+	 libexec.install Dir["examples/target/*.jar"]
+	 libexec.install Dir["math/target/*.jar"]
+	 else
+	 libexec.install Dir["*.jar"]
+	 end
+	 bin.install Dir["#{libexec}/bin/*"]
+	 bin.env_script_all_files(libexec/"bin", Language::Java.java_home_env)

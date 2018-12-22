@@ -18,3 +18,19 @@ install :
 	 inreplace "sysincludes.h",
 	 "
 	 "
+	 end
+	 args = %W[
+	 LIBS=-liconv
+	 --disable-debug
+	 --prefix=#{prefix}
+	 --sysconfdir=#{etc}
+	 ]
+	 if build.with? "x11"
+	 args << "--with-x"
+	 else
+	 args << "--without-x"
+	 end
+	 system "./configure", *args
+	 system "make"
+	 ENV.deparallelize
+	 system "make", "install"

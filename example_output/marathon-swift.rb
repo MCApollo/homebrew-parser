@@ -21,3 +21,5 @@ install :
 	 ENV.delete("CC")
 	 system "swift", "package", "update"
 	 system "swift", "build", "-c", "release", "-Xswiftc", "-static-stdlib"
+	 end
+	 system "make", "install_bin", "PREFIX=#{prefix}"

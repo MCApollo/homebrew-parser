@@ -22,3 +22,4 @@ install :
 	 else
 	 libexec.install "openapi-generator-cli-#{version}.jar"
 	 bin.write_jar_script libexec/"openapi-generator-cli-#{version}.jar", "openapi-generator"
+	 end

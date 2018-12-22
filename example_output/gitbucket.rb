@@ -18,3 +18,4 @@ install :
 	 libexec.install "war/target/gitbucket.war", "."
 	 else
 	 libexec.install "gitbucket.war"
+	 end

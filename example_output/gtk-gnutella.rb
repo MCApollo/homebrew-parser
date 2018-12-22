@@ -18,3 +18,8 @@ install :
 	 if MacOS.version == :el_capitan && MacOS::Xcode.installed? && MacOS::Xcode.version >= "8.0"
 	 inreplace "Configure", "ret = clock_gettime(CLOCK_REALTIME, &tp);",
 	 "ret = undefinedgibberish(CLOCK_REALTIME, &tp);"
+	 end
+	 system "./build.sh", "--prefix=#{prefix}", "--disable-nls"
+	 system "make", "install"
+	 rm_rf share/"pixmaps"
+	 rm_rf share/"applications"

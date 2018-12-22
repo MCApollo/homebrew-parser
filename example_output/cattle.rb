@@ -21,3 +21,8 @@ install :
 	 if build.head?
 	 inreplace "autogen.sh", "libtoolize", "glibtoolize"
 	 system "sh", "autogen.sh"
+	 end
+	 system "./configure", "--disable-dependency-tracking",
+	 "--disable-silent-rules",
+	 "--prefix=#{prefix}"
+	 system "make", "install"

@@ -48,3 +48,7 @@ install :
 	 else
 	 args << "--enable-debugger"
 	 args << "--enable-smp"
+	 end
+	 system "./configure", *args
+	 system "make"
+	 system "make", "install"

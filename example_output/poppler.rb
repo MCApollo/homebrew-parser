@@ -43,3 +43,26 @@ install :
 	 args << "-DENABLE_QT5=ON"
 	 else
 	 args << "-DENABLE_QT5=OFF"
+	 end
+	 system "cmake", ".", *args
+	 system "make", "install"
+	 system "make", "clean"
+	 system "cmake", ".", "-DBUILD_SHARED_LIBS=OFF", *args
+	 system "make"
+	 lib.install "libpoppler.a"
+	 lib.install "cpp/libpoppler-cpp.a"
+	 lib.install "glib/libpoppler-glib.a"
+	 resource("font-data").stage do
+	 system "make", "install", "prefix=#{prefix}"
+	 end
+	 libpoppler = (lib/"libpoppler.dylib").readlink
+	 to_fix = ["#{lib}/libpoppler-cpp.dylib", "#{lib}/libpoppler-glib.dylib",
+	 *Dir["#{bin}/*"]]
+	 to_fix << "#{lib}/libpoppler-qt5.dylib" if build.with?("qt")
+	 to_fix.each do |f|
+	 macho = MachO.open(f)
+	 macho.change_dylib("@rpath/#{libpoppler}", "#{lib}/#{libpoppler}")
+	 macho.write!
+	 end
+	 inreplace share/"gir-1.0/Poppler-0.18.gir", "@rpath", lib.to_s
+	 system "g-ir-compiler", "--output=#{lib}/girepository-1.0/Poppler-0.18.typelib", share/"gir-1.0/Poppler-0.18.gir"

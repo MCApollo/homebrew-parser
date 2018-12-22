@@ -44,3 +44,21 @@ install :
 	 args << "--enable-ssl" << "--with-openssl=#{Formula["openssl"].opt_prefix}" << "--disable-cyassl"
 	 else
 	 args << "--disable-ssl" << "--disable-cyassl"
+	 end
+	 if build.with? "postgresql"
+	 args << "--enable-libpq" << "--with-postgresql=#{Formula["postgresql"].opt_bin}/pg_config"
+	 else
+	 args << "--disable-libpq" << "--without-postgresql"
+	 end
+	 if build.with? "libmemcached"
+	 args << "--enable-libmemcached" << "--with-memcached=#{Formula["memcached"].opt_bin}/memcached"
+	 else
+	 args << "--disable-libmemcached" << "--without-memcached"
+	 end
+	 args << "--disable-libtokyocabinet" if build.without? "tokyo-cabinet"
+	 args << (build.with?("mysql") ? "--with-mysql=#{Formula["mysql"].opt_bin}/mysql_config" : "--without-mysql")
+	 args << (build.with?("hiredis") ? "--enable-hiredis" : "--disable-hiredis")
+	 ENV.append_to_cflags "-DHAVE_HTONLL"
+	 (var/"log").mkpath
+	 system "./configure", *args
+	 system "make", "install"

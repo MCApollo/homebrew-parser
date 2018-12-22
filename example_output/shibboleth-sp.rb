@@ -41,5 +41,8 @@ install :
 	 ]
 	 if MacOS.version >= :high_sierra
 	 args << "--with-apxs24=#{Formula["httpd"].opt_bin}/apxs"
+	 end
+	 system "./configure", *args
+	 system "make", "install"
 	 (var/"run/shibboleth/").mkpath
 	 (var/"cache/shibboleth").mkpath

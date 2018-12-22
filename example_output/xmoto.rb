@@ -34,3 +34,12 @@ install :
 	 else
 	 s.gsub! "s2) {", "s2) const {"
 	 end
+	 end
+	 system "./bootstrap" if build.head?
+	 system "./configure", "--prefix=#{prefix}",
+	 "--disable-dependency-tracking",
+	 "--disable-xmltest",
+	 "--disable-sdltest",
+	 "--with-apple-opengl-framework",
+	 "--with-asian-ttf-file="
+	 system "make", "install"

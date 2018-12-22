@@ -46,3 +46,28 @@ install :
 	 cp_r ".", prefix/"sounds/music"
 	 end
 	 end
+	 end
+	 if build.with?("sounds-en")
+	 mkdir_p prefix/"sounds/en"
+	 [8, 16, 32, 48].each do |n|
+	 resource("sounds-en-us-callie-#{n}000").stage do
+	 cp_r ".", prefix/"sounds/en"
+	 end
+	 end
+	 end
+	 if build.with?("sounds-fr")
+	 mkdir_p prefix/"sounds/fr"
+	 [8, 16, 32, 48].each do |n|
+	 resource("sounds-fr-ca-june-#{n}000").stage do
+	 cp_r ".", prefix/"sounds/fr"
+	 end
+	 end
+	 end
+	 if build.with?("sounds-ru")
+	 mkdir_p prefix/"sounds/ru"
+	 [8, 16, 32, 48].each do |n|
+	 resource("sounds-ru-RU-elena-#{n}000").stage do
+	 cp_r ".", prefix/"sounds/ru"
+	 end
+	 end
+	 end

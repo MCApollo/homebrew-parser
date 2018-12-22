@@ -30,3 +30,11 @@ install :
 	 args << "-DPYTHON_BINDINGS=ON"
 	 args << "-DPYTHON_INCLUDE_DIR='#{pyinc}'"
 	 args << "-DPYTHON_LIBRARY='#{pypref}/lib/libpython2.7.dylib'"
+	 end
+	 args << "-DCAIRO_LIBRARY:FILEPATH=" if build.without? "cairo"
+	 mkdir "build" do
+	 system "cmake", "..", *args
+	 system "make"
+	 system "make", "install"
+	 end
+	 (pkgshare/"java").install lib/"openbabel.jar" if build.with? "java"

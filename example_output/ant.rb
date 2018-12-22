@@ -24,3 +24,9 @@ install :
 	 resource("ivy").stage do
 	 (libexec/"lib").install Dir["ivy-*.jar"]
 	 end
+	 end
+	 if build.with? "bcel"
+	 resource("bcel").stage do
+	 (libexec/"lib").install "bcel-#{resource("bcel").version}.jar"
+	 end
+	 end

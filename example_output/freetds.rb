@@ -28,3 +28,12 @@ install :
 	 ]
 	 if build.with? "msdblib"
 	 args << "--enable-msdblib"
+	 end
+	 if build.head?
+	 system "./autogen.sh", *args
+	 else
+	 system "./configure", *args
+	 end
+	 system "make"
+	 ENV.deparallelize
+	 system "make", "install"

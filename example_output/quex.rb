@@ -22,3 +22,4 @@ install :
 	 man1.install "doc/manpage/quex.1"
 	 else
 	 man1.install "manpage/quex.1"
+	 end

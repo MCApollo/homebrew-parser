@@ -17,3 +17,7 @@ install :
 	 if build.head?
 	 ENV["NOCONFIGURE"] = "yes"
 	 system "./autogen.sh"
+	 end
+	 system "./configure", "--disable-dependency-tracking",
+	 "--prefix=#{prefix}"
+	 system "make", "install"

@@ -38,3 +38,6 @@ install :
 	 system "make"
 	 system "make", "install"
 	 end
+	 end
+	 system "./configure", "--prefix=#{prefix}"
+	 system "make", "install"

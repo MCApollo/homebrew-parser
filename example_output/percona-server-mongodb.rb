@@ -40,5 +40,34 @@ install :
 	 end
 	 args << "sasl" if build.with? "sasl"
 	 system "./build.sh", *args
+	 end
+	 (buildpath/"src/mongo-tools").install Dir["src/mongo/gotools/bin/*"]
+	 args = %W[
+	 --prefix=#{prefix}
+	 -j#{ENV.make_jobs}
+	 ]
+	 args << "CC=#{ENV.cc}"
+	 args << "CXX=#{ENV.cxx}"
+	 args << "--use-sasl-client" if build.with? "sasl"
+	 args << "--use-system-boost" if build.with? "boost"
+	 args << "--use-new-tools"
+	 args << "--disable-warnings-as-errors" if MacOS.version >= :yosemite
+	 if build.with? "openssl"
+	 args << "--ssl"
+	 args << "CCFLAGS=-I#{Formula["openssl"].opt_include}"
+	 args << "LINKFLAGS=-L#{Formula["openssl"].opt_lib}"
+	 end
+	 scons "install", *args
+	 (buildpath/"mongod.conf").write <<~EOS
+	 systemLog:
+	 destination: file
+	 path: #{var}/log/mongodb/mongo.log
+	 logAppend: true
+	 storage:
+	 dbPath: #{var}/mongodb
+	 net:
+	 bindIp: 127.0.0.1
+	 EOS
+	 etc.install "mongod.conf"
 	 (var/"mongodb").mkpath
 	 (var/"log/mongodb").mkpath

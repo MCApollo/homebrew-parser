@@ -20,3 +20,7 @@ install :
 	 args << "--disable-nasm" unless MacOS.version >= :mountain_lion
 	 if ENV.compiler == :clang && DevelopmentTools.clang_build_version < 421
 	 args << "--disable-assembly"
+	 end
+	 system "./configure", *args
+	 system "make", "install"
+	 libexec.install Dir["src/main/macosx/*"] if build.stable?

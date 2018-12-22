@@ -42,3 +42,20 @@ install :
 	 args << "--enable-multilib"
 	 else
 	 args << "--disable-multilib"
+	 end
+	 inreplace "libgcc/config/t-slibgcc-darwin", "@shlib_slibdir@", "#{HOMEBREW_PREFIX}/lib/gcc/#{version_suffix}"
+	 mkdir "build" do
+	 unless MacOS::CLT.installed?
+	 args << "--with-native-system-header-dir=/usr/include"
+	 args << "--with-sysroot=#{MacOS.sdk_path}"
+	 end
+	 system "../configure", *args
+	 if build.with? "profiled-build"
+	 system "make", "profiledbootstrap"
+	 else
+	 system "make", "bootstrap"
+	 end
+	 system "make", "install"
+	 end
+	 Dir.glob(man7/"*.7") { |file| add_suffix file, version_suffix }
+	 info.rmtree

@@ -19,3 +19,12 @@ EOF_patch :
 install :
 	 if build.with?("python") && build.with?("python@2")
 	 odie "You must pass both --without-python and --with-python@2 for python 2 support"
+	 end
+	 Language::Python.each_python(build) do |python, version|
+	 system "./configure", "--disable-dependency-tracking",
+	 "--disable-silent-rules",
+	 "--prefix=#{prefix}",
+	 "--with-pygi-overrides-dir=#{lib}/python#{version}/site-packages/gi/overrides",
+	 "PYTHON=#{python}"
+	 system "make", "install"
+	 end

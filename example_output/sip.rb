@@ -18,4 +18,17 @@ install :
 	 if build.head?
 	 ln_s cached_download/".hg", ".hg"
 	 system "python", "build.py", "prepare"
+	 end
+	 Language::Python.each_python(build) do |python, version|
+	 ENV.delete("SDKROOT")
+	 system python, "configure.py",
+	 "--deployment-target=#{MacOS.version}",
+	 "--destdir=#{lib}/python#{version}/site-packages",
+	 "--bindir=#{bin}",
+	 "--incdir=#{include}",
+	 "--sipdir=#{HOMEBREW_PREFIX}/share/sip"
+	 system "make"
+	 system "make", "install"
+	 system "make", "clean"
+	 end
 	 (HOMEBREW_PREFIX/"share/sip").mkpath

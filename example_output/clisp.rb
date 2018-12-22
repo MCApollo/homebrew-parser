@@ -48,3 +48,4 @@ install :
 	 system "make", "check"
 	 end
 	 system "make", "install"
+	 end

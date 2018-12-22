@@ -39,7 +39,36 @@ install :
 	 if build.with?("python")
 	 args << "--with-python"
 	 ENV["PYTHON"] = which("python3")
+	 end
+	 if MacOS.version >= :mavericks || MacOS::CLT.installed?
+	 args << "--with-tcl"
+	 if File.exist?("#{MacOS.sdk_path}/System/Library/Frameworks/Tcl.framework/tclConfig.sh")
+	 args << "--with-tclconfig=#{MacOS.sdk_path}/System/Library/Frameworks/Tcl.framework"
+	 end
+	 end
+	 if DevelopmentTools.clang_build_version >= 1000
+	 inreplace "configure",
+	 "-I$perl_archlibexp/CORE",
+	 "-iwithsysroot $perl_archlibexp/CORE"
+	 inreplace "contrib/hstore_plperl/Makefile",
+	 "-I$(perl_archlibexp)/CORE",
+	 "-iwithsysroot $(perl_archlibexp)/CORE"
+	 inreplace "src/pl/plperl/GNUmakefile",
+	 "-I$(perl_archlibexp)/CORE",
+	 "-iwithsysroot $(perl_archlibexp)/CORE"
+	 end
+	 system "./configure", *args
+	 system "make"
+	 dirs = %W[datadir=#{pkgshare} libdir=#{lib} pkglibdir=#{lib}]
+	 if DevelopmentTools.clang_build_version >= 1000
+	 system "make", "all"
+	 system "make", "-C", "contrib", "install", "all", *dirs
+	 system "make", "install", "all", *dirs
+	 else
+	 system "make", "install-world", *dirs
+	 end
 	 (var/"log").mkpath
 	 (var/name).mkpath
 	 unless File.exist? "#{var}/#{name}/PG_VERSION"
 	 system "#{bin}/initdb", "#{var}/#{name}"
+	 end

@@ -15,3 +15,7 @@ install :
 	 if build.head?
 	 chmod 0755, "genautomake.sh"
 	 system "./genautomake.sh"
+	 end
+	 system "./configure", "--disable-dependency-tracking",
+	 "--prefix=#{prefix}"
+	 system "make", "install"

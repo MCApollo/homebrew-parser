@@ -21,3 +21,11 @@ install :
 	 blas = "-L#{Formula["openblas"].opt_lib} -lopenblas"
 	 else
 	 blas = "-L#{Formula["veclibfort"].opt_lib} -lvecLibFort"
+	 end
+	 mkdir "build" do
+	 system "cmake", "..", *std_cmake_args, "-DBUILD_SHARED_LIBS=ON",
+	 "-DBLAS_LIBRARIES=#{blas}", "-DLAPACK_LIBRARIES=#{blas}"
+	 system "make", "all"
+	 system "make", "install"
+	 end
+	 pkgshare.install "EXAMPLE"

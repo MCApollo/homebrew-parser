@@ -15,3 +15,6 @@ install :
 	 if build.head?
 	 system "autoreconf", "-i"
 	 system "automake"
+	 end
+	 system "./configure", "--prefix=#{prefix}"
+	 system "make", "install"

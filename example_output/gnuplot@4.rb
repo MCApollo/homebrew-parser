@@ -30,3 +30,26 @@ install :
 	 ENV.prepend "LDFLAGS", "-F/Library/Frameworks"
 	 else
 	 inreplace "configure", "-laquaterm", ""
+	 end
+	 args = %W[
+	 --disable-dependency-tracking
+	 --disable-silent-rules
+	 --prefix=#{prefix}
+	 --with-gd=#{Formula["gd"].opt_prefix}
+	 --with-lispdir=#{elisp}
+	 --with-readline=#{Formula["readline"].opt_prefix}
+	 --without-latex
+	 ]
+	 pdflib = Formula["pdflib-lite"].opt_prefix
+	 args << "--with-pdf=#{pdflib}" if build.with? "pdflib-lite"
+	 if build.without? "wxmac"
+	 args << "--disable-wxwidgets"
+	 args << "--without-cairo" if build.without? "cairo"
+	 end
+	 args << (build.with?("aquaterm") ? "--with-aquaterm" : "--without-aquaterm")
+	 args << (build.with?("x11") ? "--with-x" : "--without-x")
+	 args << "--without-tutorial"
+	 system "./configure", *args
+	 ENV.deparallelize
+	 system "make"
+	 system "make", "install"

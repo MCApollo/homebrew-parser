@@ -31,3 +31,6 @@ install :
 	 -X #{proj}/cmd.CommitID=#{minio_commit}
 	 EOS
 	 end
+	 end
+	 bin.install buildpath/"mc"
+	 prefix.install_metafiles
