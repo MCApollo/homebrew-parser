@@ -20,6 +20,7 @@ class HomebrewParser(object):
 			'description': [],
 			'build_deps': [],
 			'link_deps': [],
+			'optional_deps': [],
 			'conflicts': [],
 			'patches': [],
 			'EOF_patch': [],
@@ -41,7 +42,10 @@ class HomebrewParser(object):
 			if line.endswith(':build'):
 				self.formula['build_deps'].append(match)
 			else:
-				self.formula['link_deps'].append(match)
+				if line.endswith(':optional'):
+					self.formula['optional_deps'].append(match)
+				else:
+					self.formula['link_deps'].append(match)
 		elif line.startswith('conflicts_with'):
 		# https://github.com/Homebrew/homebrew-core/blob/eea44928f3476bca9c0ab6f91bc6f82372eb2a7a/Formula/mariadb-connector-c.rb
 		# Deals with edge case:
