@@ -16,7 +16,11 @@ link_deps :
 	 libogg
 	 libvorbis
 	 sqlite
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

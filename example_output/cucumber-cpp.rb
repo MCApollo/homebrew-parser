@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 ruby
 	 boost
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

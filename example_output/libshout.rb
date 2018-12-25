@@ -13,7 +13,11 @@ link_deps :
 	 libvorbis
 	 speex
 	 theora
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

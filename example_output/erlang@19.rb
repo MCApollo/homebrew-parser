@@ -13,9 +13,13 @@ build_deps :
 link_deps :
 	 openssl
 	 wxmac
+optional_deps :
 	 fop
 	 :java
 conflicts :
+resource :
+	 ['man', 'html']
+	 ['https://www.erlang.org/download/otp_doc_man_19.3.tar.gz', 'https://www.erlang.org/download/otp_doc_html_19.3.tar.gz']
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/1f4a770/erlang%4019/boring-ssl-high-sierra.patch
 	 https://github.com/erlang/otp/commit/a64c4d806fa54848c35632114585ad82b98712e8.diff?full_index=1

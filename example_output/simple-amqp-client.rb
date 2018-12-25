@@ -12,7 +12,11 @@ build_deps :
 link_deps :
 	 boost
 	 rabbitmq-c
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

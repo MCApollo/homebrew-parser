@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 mercurial
+optional_deps :
 conflicts :
 	 git-remote-hg
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

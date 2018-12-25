@@ -13,7 +13,11 @@ link_deps :
 	 gnutls
 	 gsasl
 	 gtk+3
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/f8e3d2e4/libinfinity/patch-infinoted-infinoted-pam.c.diff
 EOF_patch :

@@ -14,7 +14,11 @@ build_deps :
 link_deps :
 	 at-spi2-core
 	 atk
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

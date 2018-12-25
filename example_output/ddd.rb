@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 openmotif
 	 :x11
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://savannah.gnu.org/patch/download.php?file_id=29114
 	 https://savannah.gnu.org/patch/download.php?file_id=31132

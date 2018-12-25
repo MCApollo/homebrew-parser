@@ -8,7 +8,11 @@ description :
 	 Console program to recover files based on their headers and footers
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

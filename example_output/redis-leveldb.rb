@@ -12,7 +12,11 @@ link_deps :
 	 leveldb
 	 libev
 	 snappy
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

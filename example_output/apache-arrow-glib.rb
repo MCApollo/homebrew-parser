@@ -13,7 +13,11 @@ link_deps :
 	 apache-arrow
 	 gettext
 	 glib
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

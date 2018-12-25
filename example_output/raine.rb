@@ -13,7 +13,11 @@ build_deps :
 	 nasm
 	 pkg-config
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['gettext', 'libpng', 'sdl', 'sdl_image', 'libogg', 'libvorbis', 'flac', 'sdl_sound', 'freetype', 'sdl_ttf', 'muparser']
+	 ['https://ftp.gnu.org/gnu/gettext/gettext-0.19.8.1.tar.xz', 'https://downloads.sourceforge.net/project/libpng/libpng16/older-releases/1.6.31/libpng-1.6.31.tar.xz', 'https://www.libsdl.org/release/SDL-1.2.15.tar.gz', 'https://www.libsdl.org/projects/SDL_image/release/SDL_image-1.2.12.tar.gz', 'https://downloads.xiph.org/releases/ogg/libogg-1.3.2.tar.gz', 'https://downloads.xiph.org/releases/vorbis/libvorbis-1.3.5.tar.xz', 'https://downloads.xiph.org/releases/flac/flac-1.3.2.tar.xz', 'https://icculus.org/SDL_sound/downloads/SDL_sound-1.0.3.tar.gz', 'https://downloads.sourceforge.net/project/freetype/freetype2/2.8/freetype-2.8.tar.bz2', 'https://www.libsdl.org/projects/SDL_ttf/release/SDL_ttf-2.0.11.tar.gz', 'https://github.com/beltoforion/muparser/archive/v2.2.5.tar.gz']
 patches :
 EOF_patch :
 install :

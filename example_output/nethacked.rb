@@ -8,7 +8,11 @@ description :
 	 Bugfixed and interface-patched Nethack
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/b40e459/nethacked/1.0.patch
 EOF_patch :

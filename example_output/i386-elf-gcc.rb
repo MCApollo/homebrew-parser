@@ -12,7 +12,11 @@ link_deps :
 	 i386-elf-binutils
 	 libmpc
 	 mpfr
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -9,7 +9,11 @@ description :
 build_deps :
 	 pkg-config
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['xproto', 'xorg-macros']
+	 ['https://xorg.freedesktop.org/releases/individual/proto/xproto-7.0.28.tar.gz', 'https://xorg.freedesktop.org/releases/individual/util/util-macros-1.19.0.tar.bz2']
 patches :
 EOF_patch :
 install :

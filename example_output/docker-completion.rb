@@ -8,8 +8,12 @@ description :
 	 Bash, Zsh and Fish completion for Docker
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 docker
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

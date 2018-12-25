@@ -8,8 +8,12 @@ description :
 	 This library is for the GeoIP Legacy format (dat)
 build_deps :
 link_deps :
+optional_deps :
 	 geoipupdate
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

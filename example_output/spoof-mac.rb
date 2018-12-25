@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 python@2
+optional_deps :
 conflicts :
+resource :
+	 ['docopt']
+	 ['https://files.pythonhosted.org/packages/source/d/docopt/docopt-0.6.2.tar.gz']
 patches :
 EOF_patch :
 install :

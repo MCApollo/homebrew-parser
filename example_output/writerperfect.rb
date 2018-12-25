@@ -14,7 +14,11 @@ link_deps :
 	 libwpd
 	 libwpg
 	 libwps
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -13,7 +13,11 @@ link_deps :
 	 libpng
 	 sdl
 	 sdl_ttf
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

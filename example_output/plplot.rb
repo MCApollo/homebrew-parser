@@ -14,9 +14,13 @@ link_deps :
 	 freetype
 	 gcc
 	 pango
+optional_deps :
 	 :java
 	 :x11
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

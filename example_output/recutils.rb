@@ -8,7 +8,11 @@ description :
 	 Tools to work with human-editable, plain text data files
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/macports/macports-ports/b76d1e48dac/editors/nano/files/secure_snprintf.patch
 EOF_patch :

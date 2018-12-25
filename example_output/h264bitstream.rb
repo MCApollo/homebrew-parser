@@ -8,7 +8,11 @@ description :
 	 Library for reading and writing H264 video streams
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

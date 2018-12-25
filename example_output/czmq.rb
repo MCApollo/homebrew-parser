@@ -12,7 +12,11 @@ build_deps :
 	 xmlto
 link_deps :
 	 zeromq
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

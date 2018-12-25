@@ -11,8 +11,12 @@ build_deps :
 link_deps :
 	 glib
 	 openssl
+optional_deps :
 	 dante
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

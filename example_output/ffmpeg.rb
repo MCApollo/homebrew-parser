@@ -22,6 +22,7 @@ link_deps :
 	 x265
 	 xvid
 	 xz
+optional_deps :
 	 aom
 	 chromaprint
 	 fdk-aac
@@ -55,6 +56,9 @@ link_deps :
 	 zeromq
 	 zimg
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

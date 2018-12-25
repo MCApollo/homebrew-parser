@@ -21,7 +21,11 @@ link_deps :
 	 intltool
 	 libnotify
 	 libusb
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

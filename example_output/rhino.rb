@@ -8,8 +8,12 @@ description :
 	 JavaScript engine
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 nut
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

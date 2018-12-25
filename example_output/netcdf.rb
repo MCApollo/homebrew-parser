@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 gcc
 	 hdf5
+optional_deps :
 conflicts :
+resource :
+	 ['cxx', 'cxx-compat', 'fortran']
+	 ['https://github.com/Unidata/netcdf-cxx4/archive/v4.3.0.tar.gz', 'https://www.unidata.ucar.edu/downloads/netcdf/ftp/netcdf-cxx-4.2.tar.gz', 'https://www.unidata.ucar.edu/downloads/netcdf/ftp/netcdf-fortran-4.4.4.tar.gz']
 patches :
 EOF_patch :
 install :

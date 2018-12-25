@@ -14,7 +14,11 @@ build_deps :
 	 pkg-config
 link_deps :
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/ioerror/tlsdate/pull/160.patch?full_index=1
 EOF_patch :

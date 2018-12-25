@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 :java
+optional_deps :
 conflicts :
+resource :
+	 ['apidocs']
+	 ['https://downloads.ortussolutions.com/ortussolutions/commandbox/4.4.0/commandbox-apidocs-4.4.0.zip']
 patches :
 EOF_patch :
 install :

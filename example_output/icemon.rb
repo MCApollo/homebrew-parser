@@ -13,7 +13,11 @@ link_deps :
 	 icecream
 	 lzo
 	 qt
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

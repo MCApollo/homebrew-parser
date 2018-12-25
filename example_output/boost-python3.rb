@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 boost
 	 python
+optional_deps :
 conflicts :
+resource :
+	 ['numpy']
+	 ['https://files.pythonhosted.org/packages/d5/6e/f00492653d0fdf6497a181a1c1d46bbea5a2383e7faf4c8ca6d6f3d2581d/numpy-1.14.5.zip']
 patches :
 EOF_patch :
 install :

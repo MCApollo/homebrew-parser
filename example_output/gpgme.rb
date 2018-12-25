@@ -12,7 +12,11 @@ link_deps :
 	 gnupg
 	 libassuan
 	 libgpg-error
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

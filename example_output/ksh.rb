@@ -8,7 +8,11 @@ description :
 	 KornShell, ksh93
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['init']
+	 ['https://opensource.apple.com/source/ksh/ksh-23/INIT.2012-08-01.tgz']
 patches :
 EOF_patch :
 install :

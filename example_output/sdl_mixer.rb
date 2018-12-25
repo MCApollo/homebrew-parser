@@ -13,10 +13,14 @@ link_deps :
 	 libogg
 	 libvorbis
 	 sdl
+optional_deps :
 	 flac
 	 fluid-synth
 	 smpeg
 conflicts :
+resource :
+	 ['playwave']
+	 ['https://hg.libsdl.org/SDL_mixer/raw-file/a4e9c53d9c30/playwave.c']
 patches :
 EOF_patch :
 install :

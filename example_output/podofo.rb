@@ -15,8 +15,12 @@ link_deps :
 	 libpng
 	 libtiff
 	 openssl
+optional_deps :
 	 libidn
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

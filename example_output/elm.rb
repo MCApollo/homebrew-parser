@@ -10,7 +10,11 @@ build_deps :
 	 cabal-install
 	 ghc@8.2
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

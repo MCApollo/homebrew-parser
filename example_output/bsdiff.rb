@@ -9,7 +9,11 @@ description :
 build_deps :
 	 bsdmake
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/bspatch.c b/bspatch.c

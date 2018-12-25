@@ -11,10 +11,14 @@ build_deps :
 	 pkg-config
 	 xmlto
 link_deps :
+optional_deps :
 	 libpgm
 	 libsodium
 	 norm
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

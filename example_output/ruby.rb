@@ -13,7 +13,11 @@ link_deps :
 	 libyaml
 	 openssl
 	 readline
+optional_deps :
 conflicts :
+resource :
+	 ['rubygems']
+	 ['https://rubygems.org/rubygems/rubygems-2.7.7.tgz']
 patches :
 EOF_patch :
 install :

@@ -21,7 +21,11 @@ link_deps :
 	 mlt
 	 openexr
 	 pango
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://gist.githubusercontent.com/tschoonj/06d5de3cdc5d063f8612/raw/26fe46b6eedeecdc686b9fd5aac01de9f2756424/synfig.diff
 EOF_patch :

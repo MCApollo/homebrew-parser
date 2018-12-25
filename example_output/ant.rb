@@ -8,7 +8,11 @@ description :
 	 Java build tool
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['bcel']
+	 ['https://www.apache.org/dyn/closer.cgi?path=commons/bcel/binaries/bcel-6.2-bin.tar.gz']
 patches :
 EOF_patch :
 install :

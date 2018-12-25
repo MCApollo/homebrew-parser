@@ -8,7 +8,11 @@ description :
 	 Migrate or backup IMAP mail accounts
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['Unicode::String', 'File::Copy::Recursive', 'Authen::NTLM', 'Mail::IMAPClient', 'IO::Tee', 'Data::Uniqid', 'JSON', 'Test::MockObject', 'JSON::WebToken', 'Module::Build::Tiny', 'Readonly', 'Sys::MemInfo']
+	 ['https://cpan.metacpan.org/authors/id/G/GA/GAAS/GAAS/Unicode-String-2.10.tar.gz', 'https://cpan.metacpan.org/authors/id/D/DM/DMUEY/File-Copy-Recursive-0.44.tar.gz', 'https://cpan.metacpan.org/authors/id/N/NB/NBEBOUT/NTLM-1.09.tar.gz', 'https://cpan.metacpan.org/authors/id/P/PL/PLOBBES/Mail-IMAPClient-3.39.tar.gz', 'https://cpan.metacpan.org/authors/id/N/NE/NEILB/IO-Tee-0.65.tar.gz', 'https://cpan.metacpan.org/authors/id/M/MW/MWX/Data-Uniqid-0.12.tar.gz', 'https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/JSON-2.97001.tar.gz', 'https://cpan.metacpan.org/authors/id/C/CH/CHROMATIC/Test-MockObject-1.20161202.tar.gz', 'https://cpan.metacpan.org/authors/id/X/XA/XAICRON/JSON-WebToken-0.10.tar.gz', 'https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-Tiny-0.039.tar.gz', 'https://cpan.metacpan.org/authors/id/S/SA/SANKO/Readonly-2.05.tar.gz', 'https://cpan.metacpan.org/authors/id/S/SC/SCRESTO/Sys-MemInfo-0.99.tar.gz']
 patches :
 EOF_patch :
 install :

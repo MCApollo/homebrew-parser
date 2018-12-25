@@ -8,7 +8,11 @@ description :
 	 Command for managing git vendored dependencies
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

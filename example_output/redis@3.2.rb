@@ -8,7 +8,11 @@ description :
 	 Persistent key-value database, with built-in net interface
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

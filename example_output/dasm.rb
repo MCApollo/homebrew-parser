@@ -8,7 +8,11 @@ description :
 	 Macro assembler with support for several 8-bit microprocessors
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

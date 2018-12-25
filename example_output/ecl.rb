@@ -11,7 +11,11 @@ link_deps :
 	 bdw-gc
 	 gmp
 	 libffi
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

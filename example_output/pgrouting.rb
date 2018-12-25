@@ -14,7 +14,11 @@ link_deps :
 	 gmp
 	 postgis
 	 postgresql
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

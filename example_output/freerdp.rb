@@ -12,7 +12,11 @@ build_deps :
 link_deps :
 	 openssl
 	 :x11
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/FreeRDP/FreeRDP/commit/1d3289.diff?full_index=1
 	 https://github.com/FreeRDP/FreeRDP/commit/e32f9e.diff?full_index=1

@@ -8,7 +8,11 @@ description :
 	 7-Zip (high compression file archiver) implementation
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://mirrors.ocf.berkeley.edu/debian/pool/main/p/p7zip/p7zip_16.02+dfsg-6.debian.tar.xz
 EOF_patch :

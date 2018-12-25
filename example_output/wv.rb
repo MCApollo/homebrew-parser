@@ -13,7 +13,11 @@ link_deps :
 	 libgsf
 	 libpng
 	 libwmf
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

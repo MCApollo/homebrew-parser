@@ -10,7 +10,11 @@ build_deps :
 	 qt
 link_deps :
 	 glew
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/990b9bb/opencsg/disable-examples.diff
 EOF_patch :

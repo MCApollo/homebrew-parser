@@ -12,7 +12,11 @@ link_deps :
 	 ghostscript
 	 imagemagick
 	 python@2
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

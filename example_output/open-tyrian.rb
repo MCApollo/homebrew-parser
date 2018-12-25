@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 sdl
 	 sdl_net
+optional_deps :
 conflicts :
+resource :
+	 ['data']
+	 ['https://camanis.net/tyrian/tyrian21.zip']
 patches :
 EOF_patch :
 install :

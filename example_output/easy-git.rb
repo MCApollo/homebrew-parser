@@ -8,7 +8,11 @@ description :
 	 Wrapper to simplify learning and using git
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

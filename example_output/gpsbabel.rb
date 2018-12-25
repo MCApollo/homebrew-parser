@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 qt
+optional_deps :
 	 libusb
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/gpsbabel/gpsbabel/commit/b7365b93.patch?full_index=1
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/ca4c4730/gpsbabel/qt5.10.patch

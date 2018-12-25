@@ -10,7 +10,11 @@ build_deps :
 	 pkg-config
 link_deps :
 	 gnutls
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/77f0d9d2/ucommon/cachelinesize.patch
 EOF_patch :

@@ -9,8 +9,12 @@ description :
 build_deps :
 	 :xcode
 link_deps :
+optional_deps :
 conflicts :
 	 cclive
+resource :
+	 ['bootstrap']
+	 ['https://github.com/Clozure/ccl/releases/download/v1.11.5/ccl-1.11.5-darwinx86.tar.gz']
 patches :
 EOF_patch :
 install :

@@ -11,9 +11,13 @@ build_deps :
 link_deps :
 	 freetype
 	 qt
+optional_deps :
 conflicts :
 	 pdf2image
 	 poppler
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Monitor data's progress through a pipe
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

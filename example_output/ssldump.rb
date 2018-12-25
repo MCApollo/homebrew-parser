@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- a/base/pcap-snoop.c	2010-03-18 22:59:13.000000000 -0700

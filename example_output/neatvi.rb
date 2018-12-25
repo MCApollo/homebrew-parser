@@ -8,7 +8,11 @@ description :
 	 ex/vi clone for editing bidirectional utf-8 text
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

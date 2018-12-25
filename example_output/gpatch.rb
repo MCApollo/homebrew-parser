@@ -8,7 +8,11 @@ description :
 	 Apply a diff file to an original
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

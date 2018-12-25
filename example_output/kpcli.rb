@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 readline
+optional_deps :
 conflicts :
+resource :
+	 ['File::KeePass', 'Crypt::Rijndael', 'Sort::Naturally', 'Term::ShellUI', 'Term::Readline::Gnu', 'Data::Password', 'Clipboard', 'Mac::Pasteboard', 'Capture::Tiny']
+	 ['https://cpan.metacpan.org/authors/id/R/RH/RHANDOM/File-KeePass-2.03.tar.gz', 'https://cpan.metacpan.org/authors/id/L/LE/LEONT/Crypt-Rijndael-1.13.tar.gz', 'https://cpan.metacpan.org/authors/id/B/BI/BINGOS/Sort-Naturally-1.03.tar.gz', 'https://cpan.metacpan.org/authors/id/B/BR/BRONSON/Term-ShellUI-0.92.tar.gz', 'https://cpan.metacpan.org/authors/id/H/HA/HAYASHI/Term-ReadLine-Gnu-1.35.tar.gz', 'https://cpan.metacpan.org/authors/id/R/RA/RAZINF/Data-Password-1.12.tar.gz', 'https://cpan.metacpan.org/authors/id/K/KI/KING/Clipboard-0.13.tar.gz', 'https://cpan.metacpan.org/authors/id/W/WY/WYANT/Mac-Pasteboard-0.009.tar.gz', 'https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Capture-Tiny-0.46.tar.gz']
 patches :
 EOF_patch :
 install :

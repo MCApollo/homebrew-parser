@@ -12,7 +12,11 @@ link_deps :
 	 libftdi0
 	 libhid
 	 libusb
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

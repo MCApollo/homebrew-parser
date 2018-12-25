@@ -8,8 +8,12 @@ description :
 	 Make Arc/Info (binary) Vector Coverages appear as E00
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 gdal
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

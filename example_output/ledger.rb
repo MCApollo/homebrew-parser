@@ -14,7 +14,11 @@ link_deps :
 	 gmp
 	 mpfr
 	 python@2
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/ledger/ledger/commit/c18a55f9.diff?full_index=1
 EOF_patch :

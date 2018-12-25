@@ -8,7 +8,11 @@ description :
 	 C library and command-line tool to generate (extended) regular expressions
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

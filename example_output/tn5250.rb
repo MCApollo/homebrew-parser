@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/curses/cursesterm.c b/curses/cursesterm.c

@@ -15,7 +15,11 @@ link_deps :
 	 glew
 	 python@2
 	 sdl2
+optional_deps :
 conflicts :
+resource :
+	 ['Pillow', 'vasm', 'xcftools', 'vasm', 'xcftools']
+	 ['https://files.pythonhosted.org/packages/8d/80/eca7a2d1a3c2dafb960f32f844d570de988e609f5fd17de92e1cf6a01b0a/Pillow-4.0.0.tar.gz', 'http://server.owl.de/~frank/tags/vasm1_7e.tar.gz', 'http://henning.makholm.net/xcftools/xcftools-1.0.7.tar.gz']
 patches :
 EOF_patch :
 install :

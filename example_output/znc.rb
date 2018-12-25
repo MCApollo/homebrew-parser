@@ -10,9 +10,13 @@ build_deps :
 	 pkg-config
 link_deps :
 	 openssl
+optional_deps :
 	 icu4c
 	 python
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

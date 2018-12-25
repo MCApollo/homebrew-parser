@@ -10,8 +10,12 @@ build_deps :
 	 pkg-config
 link_deps :
 	 libtiff
+optional_deps :
 	 :x11
 conflicts :
+resource :
+	 ['fonts']
+	 ['https://downloads.sourceforge.net/project/gs-fonts/gs-fonts/8.11%20%28base%2035%2C%20GPL%29/ghostscript-fonts-std-8.11.tar.gz']
 patches :
 EOF_patch :
 	 diff --git i/base/unix-dll.mak w/base/unix-dll.mak

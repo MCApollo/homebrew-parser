@@ -12,7 +12,11 @@ link_deps :
 	 gtk+
 	 gtksourceview
 	 pygtk
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

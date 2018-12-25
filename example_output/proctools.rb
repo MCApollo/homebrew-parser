@@ -9,7 +9,11 @@ description :
 build_deps :
 	 bsdmake
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/f411d167/proctools/patch-#{name}.diff
 EOF_patch :

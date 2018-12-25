@@ -10,8 +10,12 @@ build_deps :
 	 go
 	 pkg-config
 link_deps :
+optional_deps :
 conflicts :
 	 hello
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

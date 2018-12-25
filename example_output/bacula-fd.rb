@@ -10,8 +10,12 @@ build_deps :
 link_deps :
 	 openssl
 	 readline
+optional_deps :
 conflicts :
 	 bareos-client
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

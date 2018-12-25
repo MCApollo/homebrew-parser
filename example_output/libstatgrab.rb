@@ -8,7 +8,11 @@ description :
 	 Provides cross-platform access to statistics about the system
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

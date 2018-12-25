@@ -9,9 +9,13 @@ description :
 build_deps :
 link_deps :
 	 pcre
+optional_deps :
 conflicts :
 	 aggregate
 	 num-utils
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

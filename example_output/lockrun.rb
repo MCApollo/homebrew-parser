@@ -8,7 +8,11 @@ description :
 	 Run cron jobs with overrun protection
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

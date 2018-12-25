@@ -8,7 +8,11 @@ description :
 	 Provides SOCKS and HTTPS proxy support to SSH
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

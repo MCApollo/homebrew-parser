@@ -10,8 +10,12 @@ build_deps :
 	 pkg-config
 link_deps :
 	 libtool
+optional_deps :
 conflicts :
 	 pkcrack
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

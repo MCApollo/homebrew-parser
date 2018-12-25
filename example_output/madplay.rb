@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 libid3tag
 	 mad
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/f6c5992c/madplay/patch-audio_carbon.c
 EOF_patch :

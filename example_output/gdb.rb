@@ -9,10 +9,14 @@ description :
 build_deps :
 	 pkg-config
 link_deps :
+optional_deps :
 	 guile@2.0
 	 python
 	 python@2
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/d457e55/gdb/all-targets.diff
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/d457e55/gdb/mojave.diff

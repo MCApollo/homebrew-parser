@@ -10,8 +10,12 @@ build_deps :
 	 cmake
 	 pkg-config
 link_deps :
+optional_deps :
 conflicts :
 	 libkml
+resource :
+	 ['gtest']
+	 ['https://github.com/google/googletest/archive/release-1.8.1.tar.gz']
 patches :
 EOF_patch :
 install :

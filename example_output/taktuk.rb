@@ -8,7 +8,11 @@ description :
 	 Deploy commands to (a potentially large set of) remote nodes
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

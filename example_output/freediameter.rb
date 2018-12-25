@@ -12,7 +12,11 @@ link_deps :
 	 gnutls
 	 libgcrypt
 	 libidn
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

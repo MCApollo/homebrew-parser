@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 python@2
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://sources.debian.net/data/main/b/bubbros/1.6.2-1/debian/patches/replace_sf_logo.patch
 	 https://sources.debian.net/data/main/b/bubbros/1.6.2-1/debian/patches/config_in_homedir.patch

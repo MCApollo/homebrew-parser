@@ -8,7 +8,11 @@ description :
 	 Perceptual video quality assessment based on multi-method fusion
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -14,7 +14,11 @@ link_deps :
 	 graphviz
 	 pcre
 	 python
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

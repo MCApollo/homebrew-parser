@@ -12,12 +12,16 @@ link_deps :
 	 :java
 	 pidof
 	 openssl
+optional_deps :
 conflicts :
 	 memcached
 	 mysql
 	 mariadb
 	 percona-server
 	 mysql-connector-c
+resource :
+	 ['boost']
+	 ['https://downloads.sourceforge.net/project/boost/boost/1.59.0/boost_1_59_0.tar.bz2']
 patches :
 EOF_patch :
 install :

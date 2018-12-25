@@ -8,7 +8,11 @@ description :
 	 Static cluster configuration database for cluster management
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

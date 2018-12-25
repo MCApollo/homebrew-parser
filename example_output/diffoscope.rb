@@ -12,7 +12,11 @@ link_deps :
 	 libarchive
 	 libmagic
 	 python
+optional_deps :
 conflicts :
+resource :
+	 ['libarchive-c', 'progressbar', 'python-magic']
+	 ['https://files.pythonhosted.org/packages/b9/2c/c975b3410e148dab00d14471784a743268614e21121e50e4e00b13f38370/libarchive-c-2.8.tar.gz', 'https://files.pythonhosted.org/packages/a3/a6/b8e451f6cff1c99b4747a2f7235aa904d2d49e8e1464e0b798272aa84358/progressbar-2.5.tar.gz', 'https://files.pythonhosted.org/packages/84/30/80932401906eaf787f2e9bd86dc458f1d2e75b064b4c187341f29516945c/python-magic-0.4.15.tar.gz']
 patches :
 EOF_patch :
 install :

@@ -9,9 +9,13 @@ description :
 build_deps :
 link_deps :
 	 xz
+optional_deps :
 	 lz4
 	 lzop
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -33,7 +33,11 @@ link_deps :
 	 sqlite
 	 tidy-html5
 	 unixodbc
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/acinclude.m4 b/acinclude.m4

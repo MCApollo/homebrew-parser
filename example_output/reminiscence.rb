@@ -15,7 +15,11 @@ link_deps :
 	 libmodplug
 	 libogg
 	 sdl2
+optional_deps :
 conflicts :
+resource :
+	 ['tremor']
+	 ['https://git.xiph.org/tremor.git']
 patches :
 EOF_patch :
 install :

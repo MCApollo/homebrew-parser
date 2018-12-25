@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 libplist
 	 libusb
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/libimobiledevice/libusbmuxd/commit/4397b3376dc4.patch?full_index=1
 EOF_patch :

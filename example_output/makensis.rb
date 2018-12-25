@@ -10,7 +10,11 @@ build_deps :
 	 mingw-w64
 	 scons
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['nsis']
+	 ['https://downloads.sourceforge.net/project/nsis/NSIS%203/3.03/nsis-3.03.zip']
 patches :
 EOF_patch :
 install :

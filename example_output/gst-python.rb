@@ -11,9 +11,13 @@ link_deps :
 	 gst-plugins-base
 	 python
 	 pygobject3
-	 python@2
 	 pygobject3
+optional_deps :
+	 python@2
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

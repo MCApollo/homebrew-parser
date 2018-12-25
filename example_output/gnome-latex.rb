@@ -17,8 +17,12 @@ link_deps :
 	 gspell
 	 libgee
 	 tepl
+optional_deps :
 	 gnome-themes-standard
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

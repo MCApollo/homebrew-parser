@@ -25,7 +25,11 @@ link_deps :
 	 bash
 	 bison
 	 gettext
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

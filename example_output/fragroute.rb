@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 libdnet
 	 libevent
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/2f5cab626/fragroute/configure.patch
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/2f5cab626/fragroute/fragroute.c.patch

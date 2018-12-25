@@ -8,7 +8,11 @@ description :
 	 Validate and modify HTML
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['manual']
+	 ['https://raw.githubusercontent.com/petdance/tidyp/6a6c85bc9cb089e343337377f76127d01dd39a1c/htmldoc/tidyp1.xsl']
 patches :
 EOF_patch :
 install :

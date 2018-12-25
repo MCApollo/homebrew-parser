@@ -11,7 +11,11 @@ link_deps :
 	 openssl
 	 postgresql
 	 unixodbc
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

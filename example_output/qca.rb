@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 openssl
 	 qt
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/KDE/qca/commit/b435c1b87b14ac2d2de9f83e586bfd6d8c2a755e.diff?full_index=1
 	 https://github.com/KDE/qca/commit/f4b2eb0ced5310f3c43398eb1f03e0c065e08a82.diff?full_index=1

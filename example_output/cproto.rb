@@ -8,7 +8,11 @@ description :
 	 Generate function prototypes for functions in input files
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

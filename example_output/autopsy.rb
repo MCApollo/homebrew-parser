@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 sleuthkit
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/base/autopsy.base b/base/autopsy.base

@@ -10,7 +10,11 @@ build_deps :
 	 pkg-config
 link_deps :
 	 gmp
+optional_deps :
 conflicts :
+resource :
+	 ['isl']
+	 ['http://isl.gforge.inria.fr/isl-0.18.tar.xz']
 patches :
 EOF_patch :
 install :

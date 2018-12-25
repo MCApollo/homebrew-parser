@@ -16,7 +16,11 @@ link_deps :
 	 libuv
 	 openssl
 	 re2c
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

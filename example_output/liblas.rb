@@ -12,7 +12,11 @@ link_deps :
 	 boost
 	 gdal
 	 libgeotiff
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/libLAS/libLAS/commit/49606470.patch?full_index=1
 	 https://github.com/libLAS/libLAS/commit/ec10e274.diff?full_index=1

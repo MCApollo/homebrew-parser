@@ -13,7 +13,11 @@ link_deps :
 	 isl
 	 libmpc
 	 mpfr
+optional_deps :
 conflicts :
+resource :
+	 ['binutils', 'gcc']
+	 ['https://ftp.gnu.org/gnu/binutils/binutils-2.31.1.tar.gz', 'https://ftp.gnu.org/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.xz']
 patches :
 EOF_patch :
 	 diff --git a/gcc/graphite.h b/gcc/graphite.h

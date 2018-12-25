@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 :java
+optional_deps :
 conflicts :
+resource :
+	 ['testdata']
+	 ['https://raw.githubusercontent.com/mimno/Mallet/master/sample-data/stackexchange/tsv/testing.tsv']
 patches :
 EOF_patch :
 install :

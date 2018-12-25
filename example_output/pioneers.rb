@@ -14,7 +14,11 @@ link_deps :
 	 gettext
 	 gtk+3
 	 librsvg
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -12,7 +12,11 @@ link_deps :
 	 dbus-glib
 	 glib
 	 libgda
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

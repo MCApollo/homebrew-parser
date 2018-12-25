@@ -8,9 +8,12 @@ description :
 	 Tool Command Language
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['tcllib', 'tk']
+	 ['https://downloads.sourceforge.net/project/tcllib/tcllib/1.18/tcllib-1.18.tar.gz', 'https://downloads.sourceforge.net/project/tcl/Tcl/8.6.8/tk8.6.8-src.tar.gz', 'https://raw.githubusercontent.com/macports/macports-ports/0a883ad388b/x11/tk/files/patch-macosx-tkMacOSXXStubs.c.diff']
 patches :
-	 https://raw.githubusercontent.com/macports/macports-ports/0a883ad388b/x11/tk/files/patch-macosx-tkMacOSXXStubs.c.diff
 EOF_patch :
 install :
 	 args = %W[

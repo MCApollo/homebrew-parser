@@ -10,8 +10,12 @@ build_deps :
 link_deps :
 	 jpeg
 	 openssl
+optional_deps :
 	 :x11
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/x11vnc/solid.c b/x11vnc/solid.c

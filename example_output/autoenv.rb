@@ -8,7 +8,11 @@ description :
 	 Per-project, per-directory shell environments
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

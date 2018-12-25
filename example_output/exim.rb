@@ -11,7 +11,11 @@ link_deps :
 	 berkeley-db@4
 	 openssl
 	 pcre
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

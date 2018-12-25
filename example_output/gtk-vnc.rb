@@ -17,7 +17,11 @@ link_deps :
 	 gtk+3
 	 libgcrypt
 	 :macos
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

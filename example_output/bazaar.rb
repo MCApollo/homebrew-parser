@@ -8,7 +8,11 @@ description :
 	 Friendly powerful distributed version control system
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://mirrors.ocf.berkeley.edu/debian/pool/main/b/bzr/bzr_2.7.0+bzr6622-9.debian.tar.xz
 EOF_patch :

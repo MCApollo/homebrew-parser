@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 postgresql
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/mlt/temporal_tables/commit/24906c44.diff?full_index=1
 EOF_patch :

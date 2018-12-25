@@ -10,8 +10,12 @@ build_deps :
 	 cmake
 	 python
 link_deps :
+optional_deps :
 conflicts :
 	 cmark
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -10,8 +10,12 @@ build_deps :
 	 cctools-headers
 link_deps :
 	 :ld64
+optional_deps :
 	 llvm
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/db27850/cctools/cctools-829-lto.patch
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/db27850/cctools/PR-37520.patch

@@ -8,7 +8,11 @@ description :
 	 Optimizes Matroska and WebM files
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- a/corec/tools/coremake/gcc_osx_x64.build	2017-08-22 06:38:25.000000000 -0700

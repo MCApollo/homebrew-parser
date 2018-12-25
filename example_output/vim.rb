@@ -13,9 +13,13 @@ link_deps :
 	 perl
 	 python
 	 ruby
+optional_deps :
 conflicts :
 	 ex-vi
 	 macvim
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -9,9 +9,13 @@ description :
 build_deps :
 link_deps :
 	 openssl
+optional_deps :
 conflicts :
 	 sleuthkit
 	 renameutils
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

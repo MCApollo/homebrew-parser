@@ -8,7 +8,11 @@ description :
 	 Logic game simliar to Sokoban and Boulder Dash
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

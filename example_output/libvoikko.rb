@@ -12,7 +12,11 @@ build_deps :
 	 python
 link_deps :
 	 hfstospell
+optional_deps :
 conflicts :
+resource :
+	 ['voikko-fi']
+	 ['https://www.puimula.org/voikko-sources/voikko-fi/voikko-fi-2.1.tar.gz']
 patches :
 EOF_patch :
 install :

@@ -14,7 +14,11 @@ link_deps :
 	 :maximum_macos
 	 :maximum_macos
 	 :macos
+optional_deps :
 conflicts :
+resource :
+	 ['mono', 'gecko-x86', 'gecko-x86_64', 'openssl', 'libtool', 'jpeg', 'libtiff', 'little-cms2', 'libpng', 'freetype', 'libusb', 'webp', 'fontconfig', 'gd', 'libgphoto2', 'net-snmp', 'sane-backends', 'mpg123']
+	 ['https://dl.winehq.org/wine/wine-mono/4.7.3/wine-mono-4.7.3.msi', 'https://dl.winehq.org/wine/wine-gecko/2.47/wine_gecko-2.47-x86.msi', 'https://dl.winehq.org/wine/wine-gecko/2.47/wine_gecko-2.47-x86_64.msi', 'https://www.openssl.org/source/openssl-1.0.2q.tar.gz', 'https://ftp.gnu.org/gnu/libtool/libtool-2.4.6.tar.xz', 'https://www.ijg.org/files/jpegsrc.v9c.tar.gz', 'https://download.osgeo.org/libtiff/tiff-4.0.10.tar.gz', 'https://downloads.sourceforge.net/project/lcms/lcms/2.9/lcms2-2.9.tar.gz', 'https://downloads.sourceforge.net/libpng/libpng-1.6.35.tar.xz', 'https://downloads.sourceforge.net/project/freetype/freetype2/2.9.1/freetype-2.9.1.tar.bz2', 'https://github.com/libusb/libusb/releases/download/v1.0.22/libusb-1.0.22.tar.bz2', 'https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.0.1.tar.gz', 'https://www.freedesktop.org/software/fontconfig/release/fontconfig-2.13.1.tar.bz2', 'https://github.com/libgd/libgd/releases/download/gd-2.2.5/libgd-2.2.5.tar.xz', 'https://downloads.sourceforge.net/project/gphoto/libgphoto/2.5.19/libgphoto2-2.5.19.tar.bz2', 'https://downloads.sourceforge.net/project/net-snmp/net-snmp/5.8/net-snmp-5.8.tar.gz', 'https://deb.debian.org/debian/pool/main/s/sane-backends/sane-backends_1.0.27.orig.tar.gz', 'https://downloads.sourceforge.net/project/mpg123/mpg123/1.25.10/mpg123-1.25.10.tar.bz2']
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/74c2566/wine/2.14.patch
 EOF_patch :

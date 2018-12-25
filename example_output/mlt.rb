@@ -16,7 +16,11 @@ link_deps :
 	 libvorbis
 	 sdl
 	 sox
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

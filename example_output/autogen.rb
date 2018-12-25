@@ -10,7 +10,11 @@ build_deps :
 	 pkg-config
 link_deps :
 	 guile
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/0de886b/autogen/allow-guile-2.2.diff
 EOF_patch :

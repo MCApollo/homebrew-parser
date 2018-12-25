@@ -8,7 +8,11 @@ description :
 	 Show ps output as a tree
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

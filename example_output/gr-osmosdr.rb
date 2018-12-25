@@ -17,7 +17,11 @@ link_deps :
 	 librtlsdr
 	 python
 	 uhd
+optional_deps :
 conflicts :
+resource :
+	 ['Cheetah']
+	 ['https://files.pythonhosted.org/packages/source/C/Cheetah/Cheetah-2.4.4.tar.gz']
 patches :
 EOF_patch :
 install :

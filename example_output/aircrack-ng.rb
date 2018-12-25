@@ -15,7 +15,11 @@ link_deps :
 	 openssl
 	 pcre
 	 sqlite
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- a/scripts/airodump-ng-oui-update

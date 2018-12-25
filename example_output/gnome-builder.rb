@@ -27,7 +27,11 @@ link_deps :
 	 libxml2
 	 template-glib
 	 vte3
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/src/libide/meson.build b/src/libide/meson.build

@@ -10,8 +10,12 @@ build_deps :
 	 gawk
 link_deps :
 	 openssl
+optional_deps :
 conflicts :
 	 unixodbc
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

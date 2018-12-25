@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 sdl
+optional_deps :
 conflicts :
+resource :
+	 ['test_song']
+	 ['https://ftp.modland.com/pub/modules/PMD/Shiori%20Ueno/His%20Name%20Is%20Diamond/dd06.m']
 patches :
 EOF_patch :
 install :

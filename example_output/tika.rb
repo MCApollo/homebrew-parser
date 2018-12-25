@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 :java
+optional_deps :
 conflicts :
+resource :
+	 ['server']
+	 ['https://www.apache.org/dyn/closer.cgi?path=tika/tika-server-1.19.1.jar']
 patches :
 EOF_patch :
 install :

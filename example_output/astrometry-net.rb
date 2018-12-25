@@ -19,7 +19,11 @@ link_deps :
 	 numpy
 	 python
 	 wcslib
+optional_deps :
 conflicts :
+resource :
+	 ['fitsio']
+	 ['https://files.pythonhosted.org/packages/9c/cb/f52534b71f4d99916723af2994898904015b9a1bf0286a165182d0374bbf/fitsio-0.9.11.tar.gz']
 patches :
 EOF_patch :
 install :

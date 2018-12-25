@@ -16,7 +16,11 @@ link_deps :
 	 pygobject
 	 pygtk
 	 python@2
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

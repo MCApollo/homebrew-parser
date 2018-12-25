@@ -12,8 +12,12 @@ build_deps :
 	 libtool
 link_deps :
 	 protobuf
+optional_deps :
 conflicts :
 	 swift-protobuf
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

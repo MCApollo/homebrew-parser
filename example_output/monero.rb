@@ -16,7 +16,11 @@ link_deps :
 	 readline
 	 unbound
 	 zeromq
+optional_deps :
 conflicts :
+resource :
+	 ['cppzmq']
+	 ['https://github.com/zeromq/cppzmq/archive/v4.3.0.tar.gz']
 patches :
 EOF_patch :
 install :

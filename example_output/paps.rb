@@ -16,7 +16,11 @@ link_deps :
 	 gettext
 	 glib
 	 pango
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

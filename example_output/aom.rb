@@ -10,7 +10,11 @@ build_deps :
 	 cmake
 	 yasm
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['bus_qcif_15fps.y4m']
+	 ['https://media.xiph.org/video/derf/y4m/bus_qcif_15fps.y4m']
 patches :
 EOF_patch :
 install :

@@ -12,7 +12,11 @@ link_deps :
 	 openssl
 	 python
 	 zsh-completions
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

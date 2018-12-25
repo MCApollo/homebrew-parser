@@ -13,7 +13,11 @@ link_deps :
 	 gdal
 	 netcdf
 	 pcre
+optional_deps :
 conflicts :
+resource :
+	 ['gshhg', 'dcw']
+	 ['ftp://ftp.soest.hawaii.edu/gmt/gshhg-gmt-2.3.7.tar.gz', 'ftp://ftp.soest.hawaii.edu/gmt/dcw-gmt-1.1.4.tar.gz']
 patches :
 EOF_patch :
 install :

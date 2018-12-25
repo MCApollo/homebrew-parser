@@ -8,8 +8,12 @@ description :
 	 Optimizes lists of prefixes to reduce list lengths
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 crush-tools
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

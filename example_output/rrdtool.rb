@@ -11,8 +11,12 @@ build_deps :
 link_deps :
 	 glib
 	 pango
+optional_deps :
 	 lua
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/configure b/configure

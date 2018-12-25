@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 mysql-client
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 ['DBI', 'DBD::mysql', 'TermReadKey']
+	 ['https://cpan.metacpan.org/authors/id/T/TI/TIMB/DBI-1.636.tar.gz', 'https://cpan.metacpan.org/authors/id/C/CA/CAPTTOFU/DBD-mysql-4.046.tar.gz', 'https://cpan.metacpan.org/authors/id/J/JS/JSTOWE/TermReadKey-2.37.tar.gz']
 patches :
 EOF_patch :
 install :

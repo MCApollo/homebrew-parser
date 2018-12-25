@@ -10,8 +10,12 @@ build_deps :
 	 autoconf
 	 automake
 link_deps :
+optional_deps :
 conflicts :
 	 gifsicle
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

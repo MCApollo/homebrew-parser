@@ -14,8 +14,12 @@ link_deps :
 	 openssl
 	 unixodbc
 	 wxmac
+optional_deps :
 	 fop
 conflicts :
+resource :
+	 ['man', 'html']
+	 ['https://www.erlang.org/download/otp_doc_man_17.5.tar.gz', 'https://www.erlang.org/download/otp_doc_html_17.5.tar.gz']
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/8cf3045/erlang%4017/boring-ssl-high-sierra.patch
 	 https://github.com/erlang/otp/commit/a64c4d806fa54848c35632114585ad82b98712e8.diff?full_index=1

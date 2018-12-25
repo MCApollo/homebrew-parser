@@ -20,7 +20,11 @@ link_deps :
 	 libarchive
 	 :macos
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

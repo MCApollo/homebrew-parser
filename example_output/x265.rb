@@ -11,7 +11,11 @@ build_deps :
 	 nasm
 link_deps :
 	 :macos
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

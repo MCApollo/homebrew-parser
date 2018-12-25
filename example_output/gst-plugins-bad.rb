@@ -20,6 +20,7 @@ link_deps :
 	 openssl
 	 opus
 	 orc
+optional_deps :
 	 dirac
 	 fdk-aac
 	 gnutls
@@ -33,6 +34,9 @@ link_deps :
 	 sound-touch
 	 srt
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

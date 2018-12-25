@@ -8,7 +8,11 @@ description :
 	 CPU/RAM/battery stats chart bar for tmux (and GNU screen)
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

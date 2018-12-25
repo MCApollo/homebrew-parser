@@ -8,8 +8,12 @@ description :
 	 Collection of portable C++ source libraries
 build_deps :
 link_deps :
+optional_deps :
 	 icu4c
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -21,7 +21,11 @@ link_deps :
 	 sdl2
 	 sdl2_mixer
 	 speexdsp
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

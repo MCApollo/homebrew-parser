@@ -8,8 +8,12 @@ description :
 	 Pager program similar to more
 build_deps :
 link_deps :
+optional_deps :
 	 pcre
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

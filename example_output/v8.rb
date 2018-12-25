@@ -10,7 +10,11 @@ build_deps :
 	 python@2
 link_deps :
 	 :macos
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

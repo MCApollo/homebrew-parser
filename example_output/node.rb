@@ -11,7 +11,11 @@ build_deps :
 	 python@2
 link_deps :
 	 icu4c
+optional_deps :
 conflicts :
+resource :
+	 ['npm']
+	 ['https://registry.npmjs.org/npm/-/npm-6.4.1.tgz']
 patches :
 EOF_patch :
 install :

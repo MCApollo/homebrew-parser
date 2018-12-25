@@ -12,12 +12,16 @@ link_deps :
 	 :macos
 	 :macos
 	 openssl
+optional_deps :
 conflicts :
 	 mysql-cluster
 	 mariadb
 	 percona-server
 	 mysql-connector-c
 	 mariadb-connector-c
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

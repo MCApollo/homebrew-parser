@@ -8,7 +8,11 @@ description :
 	 Display directories as trees (with optional color/HTML output)
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -12,8 +12,12 @@ link_deps :
 	 icu4c
 	 libffi
 	 pcre
+optional_deps :
 conflicts :
 	 parrot
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

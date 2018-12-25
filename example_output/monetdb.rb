@@ -13,7 +13,11 @@ link_deps :
 	 openssl
 	 pcre
 	 readline
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

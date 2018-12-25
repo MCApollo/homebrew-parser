@@ -14,7 +14,11 @@ link_deps :
 	 gtk+
 	 libart
 	 libglade
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

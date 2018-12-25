@@ -8,7 +8,11 @@ description :
 	 Lightweight text editor optimized for Dvorak and QWERTY keyboards
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

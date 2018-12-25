@@ -14,7 +14,11 @@ link_deps :
 	 libgcrypt
 	 mysql-client
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 ['DBI', 'DBD::mysql', 'boost']
+	 ['https://cpan.metacpan.org/authors/id/T/TI/TIMB/DBI-1.641.tar.gz', 'https://cpan.metacpan.org/authors/id/C/CA/CAPTTOFU/DBD-mysql-4.046.tar.gz', 'https://downloads.sourceforge.net/project/boost/boost/1.59.0/boost_1_59_0.tar.bz2']
 patches :
 EOF_patch :
 install :

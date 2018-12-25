@@ -13,7 +13,11 @@ link_deps :
 	 hadoop
 	 hbase
 	 :java
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

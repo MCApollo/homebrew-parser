@@ -19,7 +19,11 @@ link_deps :
 	 sqlite
 	 utf8proc
 	 :java
+optional_deps :
 conflicts :
+resource :
+	 ['serf']
+	 ['https://www.apache.org/dyn/closer.cgi?path=serf/serf-1.3.9.tar.bz2']
 patches :
 EOF_patch :
 	 diff --git a/subversion/bindings/swig/perl/native/Makefile.PL.in b/subversion/bindings/swig/perl/native/Makefile.PL.in

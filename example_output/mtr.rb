@@ -11,9 +11,13 @@ build_deps :
 	 automake
 	 pkg-config
 link_deps :
+optional_deps :
 	 glib
 	 gtk+
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 gcc
+optional_deps :
 conflicts :
+resource :
+	 ['examples']
+	 ['https://www.ime.unicamp.br/~martinez/packmol/examples/examples.tar.gz']
 patches :
 EOF_patch :
 install :

@@ -13,7 +13,11 @@ link_deps :
 	 python
 	 python@2
 	 qt
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

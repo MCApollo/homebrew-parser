@@ -12,7 +12,11 @@ link_deps :
 	 atkmm
 	 gtk+3
 	 pangomm
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

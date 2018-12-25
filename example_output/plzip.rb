@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 lzlib
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/68e2af8/plzip/pthread.diff
 EOF_patch :

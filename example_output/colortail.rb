@@ -10,7 +10,11 @@ build_deps :
 	 autoconf
 	 automake
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/joakim666/colortail/commit/36dd0437bb364fd1493934bdb618cc102a29d0a5.diff?full_index=1
 EOF_patch :

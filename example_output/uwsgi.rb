@@ -13,10 +13,14 @@ link_deps :
 	 pcre
 	 python@2
 	 yajl
+optional_deps :
 	 libyaml
 	 python
 	 zeromq
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/726bff4/uwsgi/libpython-tbd-xcode-sdk.diff
 EOF_patch :

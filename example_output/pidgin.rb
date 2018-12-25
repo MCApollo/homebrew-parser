@@ -19,7 +19,11 @@ link_deps :
 	 libidn
 	 libotr
 	 pango
+optional_deps :
 conflicts :
+resource :
+	 ['pidgin-otr']
+	 ['https://otr.cypherpunks.ca/pidgin-otr-4.0.2.tar.gz']
 patches :
 EOF_patch :
 install :

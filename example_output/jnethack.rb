@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 :x11
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://dotsrc.dl.osdn.net/osdn/jnethack/58545/jnethack-3.4.3-0.11.diff.gz
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/e9653f1/jnethack/3.4.3-0.11.patch

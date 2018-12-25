@@ -8,7 +8,11 @@ description :
 	 Library for FreeImage, a dependency-free graphics library
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/4dcf528/freeimage/3.17.0.patch
 EOF_patch :

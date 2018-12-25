@@ -11,7 +11,11 @@ build_deps :
 	 ninja
 	 subversion
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['clang', 'libcxx']
+	 ['http://llvm.org/svn/llvm-project/cfe/tags/google/stable/2018-10-04/', 'https://releases.llvm.org/7.0.0/libcxx-7.0.0.src.tar.xz']
 patches :
 EOF_patch :
 install :

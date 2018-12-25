@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 libowfat
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://gist.githubusercontent.com/plumbojumbo/9331146/raw/560e46a688ac9493ffbc1464e59cc062c0940532/GNUmakefile.diff
 EOF_patch :

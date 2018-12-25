@@ -12,7 +12,11 @@ link_deps :
 	 gtkglext
 	 pygobject
 	 pygtk
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

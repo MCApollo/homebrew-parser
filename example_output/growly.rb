@@ -8,7 +8,11 @@ description :
 	 Redirect command output to a growl notification
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

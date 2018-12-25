@@ -11,7 +11,11 @@ build_deps :
 	 xmlto
 link_deps :
 	 pypy
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

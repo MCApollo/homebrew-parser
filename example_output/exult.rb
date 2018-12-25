@@ -15,7 +15,11 @@ link_deps :
 	 libogg
 	 libvorbis
 	 sdl2
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/c9cb2e28/exult/clang9.patch
 EOF_patch :

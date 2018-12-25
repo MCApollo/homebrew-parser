@@ -13,8 +13,12 @@ build_deps :
 	 pkg-config
 link_deps :
 	 gettext
+optional_deps :
 conflicts :
 	 visionmedia-watch
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

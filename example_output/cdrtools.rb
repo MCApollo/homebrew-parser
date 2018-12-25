@@ -9,8 +9,12 @@ description :
 build_deps :
 	 smake
 link_deps :
+optional_deps :
 conflicts :
 	 dvdrtools
+resource :
+	 []
+	 []
 patches :
 	 https://downloads.sourceforge.net/project/cdrtools/cdrtools-3.01-fix-20151126-mkisofs-isoinfo.patch
 EOF_patch :

@@ -8,7 +8,11 @@ description :
 	 Portable ASCII art graphics library
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/6e23dfb/aalib/1.4rc5.patch
 EOF_patch :

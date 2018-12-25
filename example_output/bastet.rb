@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 boost
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/fph/bastet/commit/0e03f8d4.patch?full_index=1
 EOF_patch :

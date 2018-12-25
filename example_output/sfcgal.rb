@@ -13,7 +13,11 @@ link_deps :
 	 cgal
 	 gmp
 	 mpfr
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

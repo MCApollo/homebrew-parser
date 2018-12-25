@@ -8,7 +8,11 @@ description :
 	 Go programming environment (1.4)
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['gotools']
+	 ['https://go.googlesource.com/tools.git']
 patches :
 EOF_patch :
 install :

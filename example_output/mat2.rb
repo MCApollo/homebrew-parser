@@ -14,7 +14,11 @@ link_deps :
 	 py3cairo
 	 pygobject3
 	 python
+optional_deps :
 conflicts :
+resource :
+	 ['mutagen']
+	 ['https://files.pythonhosted.org/packages/source/m/mutagen/mutagen-1.41.1.tar.gz']
 patches :
 EOF_patch :
 	 diff --git a/mat2 b/mat2

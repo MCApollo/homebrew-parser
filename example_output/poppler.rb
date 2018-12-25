@@ -22,11 +22,15 @@ link_deps :
 	 little-cms2
 	 nss
 	 openjpeg
+optional_deps :
 	 qt
 conflicts :
 	 pdftohtml
 	 pdf2image
 	 xpdf
+resource :
+	 ['font-data']
+	 ['https://poppler.freedesktop.org/poppler-data-0.4.9.tar.gz']
 patches :
 EOF_patch :
 install :

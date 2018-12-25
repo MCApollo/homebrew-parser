@@ -8,7 +8,11 @@ description :
 	 Tiny, wget-like FTP client for uploading files
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/src/memdbg.c b/src/memdbg.c

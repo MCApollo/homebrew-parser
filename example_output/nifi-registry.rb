@@ -8,7 +8,11 @@ description :
 	 Centralized storage & management of NiFi/MiNiFi shared resources
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

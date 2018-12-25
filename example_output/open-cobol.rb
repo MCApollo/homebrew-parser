@@ -10,8 +10,12 @@ build_deps :
 link_deps :
 	 berkeley-db
 	 gmp
+optional_deps :
 conflicts :
 	 gnu-cobol
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 App.net client based on TTYtter
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

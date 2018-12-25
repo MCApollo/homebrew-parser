@@ -8,7 +8,11 @@ description :
 	 Non-validating CSS1 and HTML parser for C++
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

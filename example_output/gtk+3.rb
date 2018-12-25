@@ -17,7 +17,11 @@ link_deps :
 	 libepoxy
 	 pango
 	 gsettings-desktop-schemas
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://gitlab.gnome.org/jralls/gtk/commit/efb3888af770937c6c2c184d9beea19fbc24bb4a.patch
 EOF_patch :

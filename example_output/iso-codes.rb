@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 pkg-config
 	 python
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

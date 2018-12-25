@@ -8,7 +8,11 @@ description :
 	 Standard SGML representation system for technical documents
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['xml412', 'xml42', 'xml43', 'xml44', 'xml45', 'xml50']
+	 ['https://docbook.org/xml/4.1.2/docbkx412.zip', 'https://docbook.org/xml/4.2/docbook-xml-4.2.zip', 'https://docbook.org/xml/4.3/docbook-xml-4.3.zip', 'https://docbook.org/xml/4.4/docbook-xml-4.4.zip', 'https://docbook.org/xml/4.5/docbook-xml-4.5.zip', 'https://docbook.org/xml/5.0/docbook-5.0.zip']
 patches :
 EOF_patch :
 install :

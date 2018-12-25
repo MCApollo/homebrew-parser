@@ -8,7 +8,11 @@ description :
 	 Extract Digicam setting info from EXIF JPEG headers
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://mirrors.ocf.berkeley.edu/debian/pool/main/j/jhead/jhead_3.00-4.debian.tar.xz
 EOF_patch :

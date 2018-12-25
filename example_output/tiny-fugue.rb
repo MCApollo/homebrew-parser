@@ -11,8 +11,12 @@ link_deps :
 	 libnet
 	 openssl
 	 pcre
+optional_deps :
 conflicts :
 	 tee-clc
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- a/src/malloc.c	2007-01-13 15:12:39.000000000 -0800

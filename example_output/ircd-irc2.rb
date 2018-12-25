@@ -8,8 +8,12 @@ description :
 	 Original IRC server daemon
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 ircd-hybrid
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

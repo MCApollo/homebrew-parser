@@ -8,7 +8,11 @@ description :
 	 Bash script for interacting with Dropbox
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

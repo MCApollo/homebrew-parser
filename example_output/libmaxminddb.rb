@@ -8,8 +8,12 @@ description :
 	 C library for the MaxMind DB file format
 build_deps :
 link_deps :
+optional_deps :
 	 geoipupdate
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

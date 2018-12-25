@@ -10,7 +10,11 @@ build_deps :
 	 ocaml
 link_deps :
 	 coq
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

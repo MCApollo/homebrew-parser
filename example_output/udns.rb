@@ -8,7 +8,11 @@ description :
 	 DNS resolver library
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- udns-0.4.orig/Makefile.in	2014-01-23 02:45:31.000000000 -0800

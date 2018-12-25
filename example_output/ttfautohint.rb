@@ -12,7 +12,11 @@ link_deps :
 	 freetype
 	 harfbuzz
 	 libpng
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

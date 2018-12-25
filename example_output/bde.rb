@@ -8,7 +8,11 @@ description :
 	 Basic Development Environment: foundational C++ libraries used at Bloomberg
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['bde-tools']
+	 ['https://github.com/bloomberg/bde-tools/archive/v1.0.tar.gz']
 patches :
 EOF_patch :
 install :

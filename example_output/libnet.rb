@@ -11,7 +11,11 @@ build_deps :
 	 automake
 	 libtool
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/a689647/libnet/patch-configure.in.diff
 EOF_patch :

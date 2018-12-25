@@ -8,8 +8,12 @@ description :
 	 Utility for creating and opening lzh archives
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 lhasa
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

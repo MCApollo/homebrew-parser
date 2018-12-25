@@ -16,7 +16,11 @@ link_deps :
 	 libao
 	 libgcrypt
 	 mad
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

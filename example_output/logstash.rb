@@ -8,7 +8,11 @@ description :
 	 Tool for managing events and logs
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

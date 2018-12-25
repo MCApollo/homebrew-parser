@@ -8,7 +8,11 @@ description :
 	 Extract, view, and test RAR archives
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

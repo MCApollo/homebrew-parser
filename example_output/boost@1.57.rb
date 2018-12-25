@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 icu4c
+optional_deps :
 	 icu4c
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

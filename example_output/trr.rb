@@ -10,7 +10,11 @@ build_deps :
 	 nkf
 link_deps :
 	 apel
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

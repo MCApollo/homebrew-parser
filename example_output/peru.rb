@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 python
+optional_deps :
 conflicts :
+resource :
+	 ['docopt', 'PyYAML']
+	 ['https://files.pythonhosted.org/packages/a2/55/8f8cab2afd404cf578136ef2cc5dfb50baa1761b68c9da1fb1e4eed343c9/docopt-0.6.2.tar.gz', 'https://files.pythonhosted.org/packages/9e/a3/1d13970c3f36777c583f136c136f804d70f500168edc1edea6daa7200769/PyYAML-3.13.tar.gz']
 patches :
 EOF_patch :
 install :

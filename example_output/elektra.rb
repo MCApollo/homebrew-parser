@@ -10,9 +10,13 @@ build_deps :
 	 cmake
 	 doxygen
 link_deps :
-	 qt
 	 discount
+optional_deps :
+	 qt
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

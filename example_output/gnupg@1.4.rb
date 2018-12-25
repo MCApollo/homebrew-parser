@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 curl
+optional_deps :
 	 libusb-compat
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

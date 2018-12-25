@@ -9,7 +9,11 @@ build_deps :
 	 autoconf
 link_deps :
 	 zsh
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -13,7 +13,11 @@ link_deps :
 	 cairo
 	 gettext
 	 gtk+
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

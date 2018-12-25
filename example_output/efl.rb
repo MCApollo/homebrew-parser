@@ -30,7 +30,11 @@ link_deps :
 	 poppler
 	 pulseaudio
 	 shared-mime-info
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

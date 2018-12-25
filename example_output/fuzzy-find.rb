@@ -8,7 +8,11 @@ description :
 	 Fuzzy filename finder matching across directories as well as files
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

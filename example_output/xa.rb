@@ -8,7 +8,11 @@ description :
 	 6502 cross assembler
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

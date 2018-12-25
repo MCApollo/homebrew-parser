@@ -8,7 +8,11 @@ description :
 	 Implements diff functions for binary and text files
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

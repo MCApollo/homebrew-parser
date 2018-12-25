@@ -16,7 +16,11 @@ link_deps :
 	 proj
 	 sqlite
 	 wxmac
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 For some strange reason, wxWidgets does not take the required steps to register

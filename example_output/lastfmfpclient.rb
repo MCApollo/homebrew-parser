@@ -13,7 +13,11 @@ link_deps :
 	 libsamplerate
 	 mad
 	 taglib
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

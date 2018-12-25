@@ -13,7 +13,11 @@ build_deps :
 	 rust
 link_deps :
 	 pcre2
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

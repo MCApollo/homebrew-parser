@@ -8,7 +8,11 @@ description :
 	 Traffic generator for the SIP protocol
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 N-gram-based text categorization library
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

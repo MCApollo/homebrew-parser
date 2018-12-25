@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 openssl
 	 :x11
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/scard.c b/scard.c

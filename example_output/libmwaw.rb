@@ -10,7 +10,11 @@ build_deps :
 	 pkg-config
 link_deps :
 	 librevenge
+optional_deps :
 conflicts :
+resource :
+	 ['test_document']
+	 ['https://github.com/openpreserve/format-corpus/raw/825c8a5af012a93cf7aac408b0396e03a4575850/office-examples/Old%20Word%20file/NEWSSLID.DOC']
 patches :
 EOF_patch :
 install :

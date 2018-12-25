@@ -22,7 +22,11 @@ link_deps :
 	 json-glib
 	 libsoup
 	 python
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 :java
+optional_deps :
 conflicts :
+resource :
+	 ['sample.apk']
+	 ['https://github.com/downloads/stephanenicolas/RoboDemo/robodemo-sample-1.0.1.apk']
 patches :
 EOF_patch :
 install :

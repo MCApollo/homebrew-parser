@@ -8,7 +8,11 @@ description :
 	 Scalable batch and stream data processing
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

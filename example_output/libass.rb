@@ -13,8 +13,12 @@ link_deps :
 	 freetype
 	 fribidi
 	 harfbuzz
+optional_deps :
 	 fontconfig
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

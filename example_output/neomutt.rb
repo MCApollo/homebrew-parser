@@ -16,7 +16,11 @@ link_deps :
 	 notmuch
 	 openssl
 	 tokyo-cabinet
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

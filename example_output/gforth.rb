@@ -12,7 +12,11 @@ link_deps :
 	 libffi
 	 libtool
 	 pcre
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

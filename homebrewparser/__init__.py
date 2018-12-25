@@ -22,6 +22,7 @@ class HomebrewParser(object):
 			'link_deps': [],
 			'optional_deps': [],
 			'conflicts': [],
+			'resource': [[],[]],
 			'patches': [],
 			'EOF_patch': [],
 			'install': []
@@ -66,6 +67,7 @@ class HomebrewParser(object):
 		patchMode	= False # Keep URLs of patches
 		isData		= False # Expect patch file at EOF
 		installMode	= False # Keep install instructions
+		resourceMode	= False # 'resource do'
 		endCount	= 0	# Part of installMode
 		# We `shouldLoop` if this is met.
 		LoopRegex = re.compile(
@@ -93,6 +95,7 @@ class HomebrewParser(object):
 				shouldLoop	= False
 				patchMode	= False
 				installMode	= False
+				resourceMode	= False
 				endCount	= 0
 				continue
 			# Patch & Install modes used here:
@@ -115,6 +118,17 @@ class HomebrewParser(object):
 							print('install --> do')
 						endCount += 1
 					self.formula['install'].append(line)
+				if resourceMode:
+					if Debug:
+						print('resouce ', line)
+					if line.startswith('url'):
+						try:
+							match = re.compile(r'(?:.*\")(.*)(?:\")').match(line).groups()
+						except AttributeError:
+							pass
+						if match:
+							match = ''.join(match)
+							self.formula['resource'][1].append(match)
 				continue
 
 			if LoopRegex.search(line): # (bottle|head|test)
@@ -185,6 +199,16 @@ class HomebrewParser(object):
 				if Debug:
 					print('EOF --> ', line)
 				self.formula['EOF_patch'].append(line)
+			elif line.startswith('resource'):
+				try:
+					match = re.compile(r'(?:.*\")(.*)(?:\")').match(line).groups()
+				except AttributeError:
+					pass
+				if match:
+					match = ''.join(match)
+					self.formula['resource'][0].append(match)
+					shouldLoop = True
+					resourceMode = True
 		return self.formula
 
 	def Parse(self, formula):

@@ -8,7 +8,11 @@ description :
 	 Query multiple distributions' package archives
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['Acme::Damn', 'forks', 'Sys::SigAction']
+	 ['https://cpan.metacpan.org/authors/id/I/IB/IBB/Acme-Damn-0.08.tar.gz', 'https://cpan.metacpan.org/authors/id/R/RY/RYBSKEJ/forks-0.36.tar.gz', 'https://cpan.metacpan.org/authors/id/L/LB/LBAXTER/Sys-SigAction-0.23.tar.gz']
 patches :
 EOF_patch :
 install :

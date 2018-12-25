@@ -12,8 +12,12 @@ link_deps :
 	 boost
 	 pcre
 	 quvi
+optional_deps :
 conflicts :
 	 clozure-cl
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

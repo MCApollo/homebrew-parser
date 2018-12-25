@@ -11,7 +11,11 @@ build_deps :
 	 pkg-config
 link_deps :
 	 pcre
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

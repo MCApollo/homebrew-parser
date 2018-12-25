@@ -8,7 +8,11 @@ description :
 	 CLI program for rolling a dice sequence
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

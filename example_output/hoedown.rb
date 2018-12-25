@@ -8,7 +8,11 @@ description :
 	 Secure Markdown processing (a revived fork of Sundown)
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

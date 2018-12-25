@@ -8,7 +8,11 @@ description :
 	 Converts Microsoft Office docx documents to equivalent text documents
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['sample_doc']
+	 ['https://calibre-ebook.com/downloads/demos/demo.docx']
 patches :
 EOF_patch :
 install :

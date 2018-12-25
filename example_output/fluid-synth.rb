@@ -11,9 +11,13 @@ build_deps :
 	 pkg-config
 link_deps :
 	 glib
+optional_deps :
 	 libsndfile
 	 portaudio
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -14,7 +14,11 @@ link_deps :
 	 gnuplot
 	 mpfr
 	 readline
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

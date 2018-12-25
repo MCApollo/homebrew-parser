@@ -8,7 +8,11 @@ description :
 	 Unit testing framework handling automated tests in C++
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

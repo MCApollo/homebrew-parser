@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 bdw-gc
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- a/backend/common/kite_vm.c	2010-08-21 01:20:25.000000000 +0200

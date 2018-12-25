@@ -14,7 +14,11 @@ build_deps :
 link_deps :
 	 glib
 	 libnet
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- a/src/Makefile.in	2010-03-01 13:13:17.000000000 -0800

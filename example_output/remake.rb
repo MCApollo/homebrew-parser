@@ -8,7 +8,11 @@ description :
 	 GNU Make with improved error handling, tracing, and a debugger
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

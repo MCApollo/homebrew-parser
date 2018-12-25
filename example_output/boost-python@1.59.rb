@@ -9,10 +9,14 @@ description :
 build_deps :
 link_deps :
 	 python@2
+	 boost@1.59
+	 boost@1.59
+optional_deps :
 	 python
-	 boost@1.59
-	 boost@1.59
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

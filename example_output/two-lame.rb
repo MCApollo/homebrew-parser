@@ -8,7 +8,11 @@ description :
 	 Optimized MPEG Audio Layer 2 (MP2) encoder
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

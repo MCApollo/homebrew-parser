@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 e2fsprogs
 	 :osxfuse
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

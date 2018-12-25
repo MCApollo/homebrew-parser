@@ -8,7 +8,11 @@ description :
 	 Move, copy, append, and link multiple files
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://mirrorservice.org/sites/ftp.debian.org/debian/pool/main/m/mmv/mmv_1.01b-15.diff.gz
 EOF_patch :

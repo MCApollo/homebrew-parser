@@ -15,7 +15,11 @@ link_deps :
 	 libsamplerate
 	 libvorbis
 	 two-lame
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

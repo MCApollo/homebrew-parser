@@ -8,8 +8,12 @@ description :
 	 Perl-powered file rename script with many helpful built-ins
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 util-linux
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

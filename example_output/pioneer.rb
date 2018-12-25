@@ -18,7 +18,11 @@ link_deps :
 	 libvorbis
 	 sdl2
 	 sdl2_image
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

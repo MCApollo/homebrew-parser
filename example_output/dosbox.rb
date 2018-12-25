@@ -13,8 +13,12 @@ link_deps :
 	 sdl
 	 sdl_net
 	 sdl_sound
+optional_deps :
 conflicts :
 	 dosbox-x
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

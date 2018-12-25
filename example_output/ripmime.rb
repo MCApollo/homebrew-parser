@@ -8,7 +8,11 @@ description :
 	 Extract attachments out of MIME encoded email packages
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

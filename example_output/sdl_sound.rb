@@ -12,7 +12,11 @@ link_deps :
 	 libogg
 	 libvorbis
 	 sdl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 rcs
+optional_deps :
 conflicts :
 	 srclib
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

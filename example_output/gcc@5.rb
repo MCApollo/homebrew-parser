@@ -12,7 +12,11 @@ link_deps :
 	 gmp
 	 libmpc
 	 mpfr
+optional_deps :
 conflicts :
+resource :
+	 ['isl']
+	 ['https://gcc.gnu.org/pub/gcc/infrastructure/isl-0.14.tar.bz2']
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/64fd2d52/gcc%405/5.4.0.patch
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/078797f1b9/gcc%405/xcode9.patch

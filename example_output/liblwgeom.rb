@@ -16,7 +16,11 @@ link_deps :
 	 geos
 	 json-c
 	 proj
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

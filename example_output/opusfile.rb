@@ -12,7 +12,11 @@ link_deps :
 	 libogg
 	 openssl
 	 opus
+optional_deps :
 conflicts :
+resource :
+	 ['music_48kbps.opus']
+	 ['https://www.opus-codec.org/examples/samples/music_48kbps.opus']
 patches :
 EOF_patch :
 install :

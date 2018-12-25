@@ -8,7 +8,11 @@ description :
 	 Disassembler for the Zilog Z80 microprocessor and compatibles
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

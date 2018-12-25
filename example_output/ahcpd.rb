@@ -8,7 +8,11 @@ description :
 	 Autoconfiguration protocol for IPv6 and IPv6/IPv4 networks
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/Makefile b/Makefile

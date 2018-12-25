@@ -8,7 +8,11 @@ description :
 	 Tool to report network interface bandwidth
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/drivers.c b/drivers.c

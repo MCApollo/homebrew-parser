@@ -8,7 +8,11 @@ description :
 	 Examines code and reports possible security weaknesses
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['flaws']
+	 ['https://www.dwheeler.com/flawfinder/test.c']
 patches :
 EOF_patch :
 install :

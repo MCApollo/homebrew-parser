@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 graphviz
 	 qt
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -10,8 +10,12 @@ build_deps :
 link_deps :
 	 openssl
 	 readline
+optional_deps :
 	 python@2
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

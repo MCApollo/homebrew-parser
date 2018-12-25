@@ -15,7 +15,11 @@ link_deps :
 	 libidn
 	 libotr
 	 loudmouth
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

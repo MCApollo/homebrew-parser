@@ -8,7 +8,11 @@ description :
 	 C library for controlling SiliconDust HDHomeRun TV tuners
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

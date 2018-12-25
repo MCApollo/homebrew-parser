@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 openssl
+optional_deps :
 	 xz
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

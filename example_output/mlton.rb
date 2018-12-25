@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 gmp
+optional_deps :
 conflicts :
+resource :
+	 ['bootstrap']
+	 ['https://downloads.sourceforge.net/project/mlton/mlton/20180207/mlton-20180207-1.amd64-darwin.gmp-static.tgz']
 patches :
 EOF_patch :
 install :

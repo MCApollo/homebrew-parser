@@ -13,7 +13,11 @@ link_deps :
 	 fftw
 	 liquid-dsp
 	 qt
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

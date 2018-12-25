@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 pbc
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/sig/bbs.c b/sig/bbs.c

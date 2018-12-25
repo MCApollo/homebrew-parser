@@ -10,8 +10,12 @@ build_deps :
 link_deps :
 	 openssl
 	 pcre
+optional_deps :
 	 lua
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

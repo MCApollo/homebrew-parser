@@ -8,7 +8,11 @@ description :
 	 Detect content format of a disk or disk image
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -12,7 +12,11 @@ link_deps :
 	 sqlite
 	 w3m
 	 wget
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

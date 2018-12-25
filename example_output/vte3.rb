@@ -16,7 +16,11 @@ link_deps :
 	 gtk+3
 	 pcre2
 	 vala
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

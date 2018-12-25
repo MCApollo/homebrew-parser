@@ -11,7 +11,11 @@ link_deps :
 	 libev
 	 libunwind-headers
 	 ragel
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -10,7 +10,11 @@ build_deps :
 	 go
 	 python@2
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['virtualenv']
+	 ['https://files.pythonhosted.org/packages/b1/72/2d70c5a1de409ceb3a27ff2ec007ecdd5cc52239e7c74990e32af57affe9/virtualenv-15.2.0.tar.gz']
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/1ddc0e6/auditbeat/go1.10.diff
 EOF_patch :

@@ -8,7 +8,11 @@ description :
 	 Manage compile and link flags for libraries
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

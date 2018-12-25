@@ -8,7 +8,11 @@ description :
 	 Powerful, lightweight programming language (v5.1.5)
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 http://lua-users.org/files/wiki_insecure/power_patches/5.1/sig_catch.patch
 	 https://luajit.org/patches/lua-5.1.4-advanced_readline.patch

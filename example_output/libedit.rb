@@ -8,7 +8,11 @@ description :
 	 BSD-style licensed readline alternative
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

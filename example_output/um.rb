@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 ruby
+optional_deps :
 conflicts :
+resource :
+	 ['kramdown']
+	 ['https://rubygems.org/gems/kramdown-1.17.0.gem']
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 The Dungeon modified from FORTRAN to C
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

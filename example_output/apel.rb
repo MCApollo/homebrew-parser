@@ -8,7 +8,11 @@ description :
 	 Emacs Lisp library to help write portable Emacs programs
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

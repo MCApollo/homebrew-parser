@@ -10,8 +10,12 @@ build_deps :
 	 go
 	 govendor
 link_deps :
+optional_deps :
 conflicts :
 	 python-yq
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

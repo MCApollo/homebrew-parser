@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 python@2
+optional_deps :
 conflicts :
+resource :
+	 ['six', 'python-dateutil', 'pytz', 'python-gflags', 'google-apputils']
+	 ['https://files.pythonhosted.org/packages/16/64/1dc5e5976b17466fd7d712e59cbe9fb1e18bec153109e5ba3ed6c9102f1a/six-1.9.0.tar.gz', 'https://files.pythonhosted.org/packages/62/fe/45044dfa6bfa6ff18ddfe1df85fbf01d333c284b94e8c9a02fe12241c8cf/python-dateutil-2.4.1.tar.bz2', 'https://files.pythonhosted.org/packages/63/15/8cdc183c669ef4c870099848b6fb37f11e5aeb2fa06601d0015ac4201e51/pytz-2014.10.tar.bz2', 'https://files.pythonhosted.org/packages/46/47/12c17c3216c04a85e5ffd9163ad09f0c1661c2cc2ccc0faf70e39cb8dc96/python-gflags-2.0.tar.gz', 'https://files.pythonhosted.org/packages/69/66/a511c428fef8591c5adfa432a257a333e0d14184b6c5d03f1450827f7fe7/google-apputils-0.4.2.tar.gz']
 patches :
 EOF_patch :
 	 diff --git a/src/google/protobuf/descriptor.h b/src/google/protobuf/descriptor.h

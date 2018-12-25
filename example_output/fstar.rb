@@ -13,7 +13,11 @@ build_deps :
 link_deps :
 	 gmp
 	 ocaml
+optional_deps :
 conflicts :
+resource :
+	 ['z3']
+	 ['https://github.com/Z3Prover/z3.git']
 patches :
 EOF_patch :
 install :

@@ -13,7 +13,11 @@ link_deps :
 	 amtk
 	 gtksourceview4
 	 uchardet
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -10,6 +10,7 @@ build_deps :
 	 cmake
 link_deps :
 	 openssl
+optional_deps :
 conflicts :
 	 mysql
 	 mysql-cluster
@@ -17,6 +18,9 @@ conflicts :
 	 mysql-connector-c
 	 mytop
 	 mariadb-connector-c
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

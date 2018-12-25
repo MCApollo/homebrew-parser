@@ -12,7 +12,11 @@ link_deps :
 	 boost
 	 eigen
 	 nlopt
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

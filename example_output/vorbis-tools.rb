@@ -13,7 +13,11 @@ link_deps :
 	 libao
 	 libogg
 	 libvorbis
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

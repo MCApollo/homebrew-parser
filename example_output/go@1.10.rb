@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 :macos
+optional_deps :
 conflicts :
+resource :
+	 ['gotools', 'gobootstrap']
+	 ['https://go.googlesource.com/tools.git', 'https://storage.googleapis.com/golang/go1.7.darwin-amd64.tar.gz']
 patches :
 EOF_patch :
 install :

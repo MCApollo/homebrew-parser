@@ -8,8 +8,12 @@ description :
 	 Distributed realtime computation system to process data streams
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 stormssh
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

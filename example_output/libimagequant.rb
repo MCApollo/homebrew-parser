@@ -8,7 +8,11 @@ description :
 	 Palette quantization library extracted from pnquant2
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

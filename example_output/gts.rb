@@ -12,7 +12,11 @@ link_deps :
 	 gettext
 	 glib
 	 netpbm
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/examples/happrox.c b/examples/happrox.c

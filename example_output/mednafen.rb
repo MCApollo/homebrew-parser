@@ -13,7 +13,11 @@ link_deps :
 	 libsndfile
 	 :macos
 	 sdl2
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -10,7 +10,11 @@ build_deps :
 	 autoconf
 	 automake
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://sourceforge.net/p/nload/bugs/_discuss/thread/c9b68d8e/4a65/attachment/devreader-bsd.cpp.patch
 EOF_patch :

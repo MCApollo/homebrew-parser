@@ -8,7 +8,11 @@ description :
 	 Hierarchical, reference-counted memory pool with destructors
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

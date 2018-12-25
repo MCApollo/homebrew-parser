@@ -16,7 +16,11 @@ build_deps :
 link_deps :
 	 glib
 	 json-glib
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

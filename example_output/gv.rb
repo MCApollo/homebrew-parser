@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 ghostscript
 	 :x11
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -15,7 +15,11 @@ link_deps :
 	 pgrouting
 	 postgis
 	 postgresql
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

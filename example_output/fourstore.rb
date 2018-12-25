@@ -17,7 +17,11 @@ link_deps :
 	 pcre
 	 raptor
 	 rasqal
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

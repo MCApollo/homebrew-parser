@@ -11,8 +11,12 @@ build_deps :
 	 pkg-config
 link_deps :
 	 little-cms2
+optional_deps :
 	 python@2
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

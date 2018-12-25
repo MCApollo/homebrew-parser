@@ -16,7 +16,11 @@ link_deps :
 	 libtiff
 	 :macos
 	 openexr
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

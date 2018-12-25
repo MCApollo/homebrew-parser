@@ -10,8 +10,12 @@ build_deps :
 	 pkg-config
 link_deps :
 	 libevent
+optional_deps :
 	 utf8proc
 conflicts :
+resource :
+	 ['completion']
+	 ['https://raw.githubusercontent.com/imomaliev/tmux-bash-completion/homebrew_1.0.0/completions/tmux']
 patches :
 EOF_patch :
 install :

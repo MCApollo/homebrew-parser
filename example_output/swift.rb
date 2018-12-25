@@ -11,7 +11,11 @@ build_deps :
 	 ninja
 link_deps :
 	 :xcode
+optional_deps :
 conflicts :
+resource :
+	 ['clang', 'cmark', 'compiler-rt', 'llbuild', 'llvm', 'swiftpm']
+	 ['https://github.com/apple/swift-clang/archive/swift-4.2.1-RELEASE.tar.gz', 'https://github.com/apple/swift-cmark/archive/swift-4.2.1-RELEASE.tar.gz', 'https://github.com/apple/swift-compiler-rt/archive/swift-4.2.1-RELEASE.tar.gz', 'https://github.com/apple/swift-llbuild/archive/swift-4.2.1-RELEASE.tar.gz', 'https://github.com/apple/swift-llvm/archive/swift-4.2.1-RELEASE.tar.gz', 'https://github.com/apple/swift-package-manager/archive/swift-4.2.1-RELEASE.tar.gz']
 patches :
 EOF_patch :
 install :

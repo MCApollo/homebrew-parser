@@ -8,7 +8,11 @@ description :
 	 Tools to manipulate dates with a focus on financial data
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Library for accessing discs and disc image files
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

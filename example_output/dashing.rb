@@ -10,7 +10,11 @@ build_deps :
 	 glide
 	 go
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['ruby_docs_tarball']
+	 ['https://ruby-doc.org/downloads/ruby_2_5_0_core_rdocs.tgz']
 patches :
 EOF_patch :
 install :

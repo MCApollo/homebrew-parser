@@ -15,7 +15,11 @@ build_deps :
 link_deps :
 	 libsodium
 	 postgresql
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

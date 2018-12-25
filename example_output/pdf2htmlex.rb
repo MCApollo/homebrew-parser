@@ -26,7 +26,11 @@ link_deps :
 	 openjpeg
 	 pango
 	 ttfautohint
+optional_deps :
 conflicts :
+resource :
+	 ['fontforge', 'poppler', 'poppler-data']
+	 ['pdf2htmlEX', 'https://poppler.freedesktop.org/poppler-0.57.0.tar.xz', 'https://poppler.freedesktop.org/poppler-data-0.4.8.tar.gz']
 patches :
 EOF_patch :
 install :

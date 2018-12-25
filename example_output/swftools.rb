@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 :x11
+optional_deps :
 conflicts :
+resource :
+	 ['xpdf']
+	 ['https://src.fedoraproject.org/repo/pkgs/xpdf/xpdf-3.04.tar.gz/3bc86c69c8ff444db52461270bef3f44/xpdf-3.04.tar.gz']
 patches :
 EOF_patch :
 	 --- a/configure	2012-04-08 10:25:35.000000000 -0700

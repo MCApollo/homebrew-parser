@@ -8,7 +8,11 @@ description :
 	 Superfast compression library
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['cputime', 'spookyhash']
+	 ['https://github.com/centaurean/cputime.git', 'https://github.com/centaurean/spookyhash/archive/spookyhash-1.0.6.tar.gz']
 patches :
 EOF_patch :
 install :

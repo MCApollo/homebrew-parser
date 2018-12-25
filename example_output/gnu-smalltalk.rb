@@ -19,8 +19,12 @@ link_deps :
 	 libtool
 	 readline
 	 :x11
+optional_deps :
 	 glew
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -13,7 +13,11 @@ link_deps :
 	 serd
 	 sord
 	 sratom
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

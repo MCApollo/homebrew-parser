@@ -8,7 +8,11 @@ description :
 	 Net top tool grouping bandwidth per process
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

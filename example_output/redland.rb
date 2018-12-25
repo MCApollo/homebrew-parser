@@ -13,7 +13,11 @@ link_deps :
 	 rasqal
 	 sqlite
 	 unixodbc
+optional_deps :
 conflicts :
+resource :
+	 ['bindings']
+	 ['http://download.librdf.org/source/redland-bindings-1.0.17.1.tar.gz']
 patches :
 EOF_patch :
 install :

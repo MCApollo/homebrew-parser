@@ -29,7 +29,11 @@ link_deps :
 	 netpbm
 	 opencv
 	 openjpeg
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

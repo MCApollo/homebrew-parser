@@ -10,7 +10,11 @@ build_deps :
 	 ocaml-findlib
 link_deps :
 	 ocaml
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

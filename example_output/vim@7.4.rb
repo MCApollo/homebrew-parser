@@ -12,7 +12,11 @@ link_deps :
 	 perl
 	 python
 	 ruby
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/src/if_python3.c b/src/if_python3.c

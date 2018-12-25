@@ -25,7 +25,11 @@ link_deps :
 	 libtiff
 	 little-cms2
 	 pango
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/patches/9cacfd49be1db430d7a956132d6521e23fc85f77/geeqie/wexitstatus_fix.diff
 EOF_patch :

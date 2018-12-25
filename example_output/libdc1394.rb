@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 sdl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/b8275aa07f/libdc1394/capture.patch
 EOF_patch :

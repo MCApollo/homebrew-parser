@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 boost
 	 libgcrypt
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/Makefile.in b/Makefile.in

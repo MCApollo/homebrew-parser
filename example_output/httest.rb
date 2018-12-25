@@ -15,7 +15,11 @@ link_deps :
 	 openssl
 	 pcre
 	 spidermonkey
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

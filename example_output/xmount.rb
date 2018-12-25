@@ -14,7 +14,11 @@ link_deps :
 	 libewf
 	 openssl
 	 :osxfuse
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

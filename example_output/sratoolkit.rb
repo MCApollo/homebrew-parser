@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 hdf5
 	 libmagic
+optional_deps :
 conflicts :
+resource :
+	 ['ngs-sdk', 'ncbi-vdb']
+	 ['https://github.com/ncbi/ngs/archive/2.9.2.tar.gz', 'https://github.com/ncbi/ncbi-vdb/archive/2.9.2.tar.gz']
 patches :
 EOF_patch :
 install :

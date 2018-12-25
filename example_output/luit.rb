@@ -8,7 +8,11 @@ description :
 	 Filter run between arbitrary application and UTF-8 terminal emulator
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

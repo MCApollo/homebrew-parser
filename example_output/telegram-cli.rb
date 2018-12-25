@@ -14,7 +14,11 @@ link_deps :
 	 libevent
 	 openssl
 	 readline
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/vysheng/tg/pull/1306.patch?full_index=1
 EOF_patch :

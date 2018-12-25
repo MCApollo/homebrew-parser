@@ -17,7 +17,11 @@ link_deps :
 	 boost
 	 openssl
 	 :java
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

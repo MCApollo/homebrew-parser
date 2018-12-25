@@ -11,7 +11,11 @@ build_deps :
 	 llvm
 	 pkg-config
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['vim-hdl-examples']
+	 ['https://github.com/suoto/vim-hdl-examples.git']
 patches :
 EOF_patch :
 install :

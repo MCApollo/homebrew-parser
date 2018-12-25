@@ -11,9 +11,13 @@ build_deps :
 link_deps :
 	 openssl
 	 pcre
+optional_deps :
 	 json-c
 	 yara
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

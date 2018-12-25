@@ -12,7 +12,11 @@ build_deps :
 	 libtool
 link_deps :
 	 blitz
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/configure.ac b/configure.ac

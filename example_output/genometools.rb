@@ -12,8 +12,12 @@ link_deps :
 	 cairo
 	 pango
 	 python
+optional_deps :
 conflicts :
 	 libslax
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

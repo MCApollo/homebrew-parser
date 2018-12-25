@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 mhash
+optional_deps :
 conflicts :
+resource :
+	 ['libmcrypt']
+	 ['https://downloads.sourceforge.net/project/mcrypt/Libmcrypt/2.5.8/libmcrypt-2.5.8.tar.gz']
 patches :
 EOF_patch :
 	 diff --git a/src/rfc2440.c b/src/rfc2440.c

@@ -14,8 +14,12 @@ link_deps :
 	 sqlite
 	 curl
 	 openssl
+optional_deps :
 conflicts :
 	 genometools
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

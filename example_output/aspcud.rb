@@ -12,7 +12,11 @@ build_deps :
 	 re2c
 link_deps :
 	 clingo
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

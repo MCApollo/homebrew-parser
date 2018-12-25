@@ -8,7 +8,11 @@ description :
 	 Banner-like program prints strings as ASCII art
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['contrib', 'intl']
+	 ['ftp://ftp.figlet.org/pub/figlet/fonts/contributed.tar.gz', 'ftp://ftp.figlet.org/pub/figlet/fonts/international.tar.gz']
 patches :
 EOF_patch :
 install :

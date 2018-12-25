@@ -8,7 +8,11 @@ description :
 	 Filter IP addresses matching IPv4 CIDR/network specification
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

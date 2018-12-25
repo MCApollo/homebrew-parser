@@ -12,15 +12,19 @@ build_deps :
 link_deps :
 	 boost
 	 libevent
+	 libpqxx
+optional_deps :
 	 hiredis
 	 libmemcached
 	 mysql
 	 openssl
 	 postgresql
-	 libpqxx
 	 tokyo-cabinet
 	 wolfssl
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 gettext
+optional_deps :
 conflicts :
+resource :
+	 ['gettext-pm']
+	 ['https://cpan.metacpan.org/authors/id/P/PV/PVANDRY/gettext-1.07.tar.gz']
 patches :
 EOF_patch :
 install :

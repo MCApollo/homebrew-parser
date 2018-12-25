@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 akka
 	 :java
+optional_deps :
 conflicts :
+resource :
+	 ['womtool']
+	 ['https://github.com/broadinstitute/cromwell/releases/download/36/womtool-36.jar']
 patches :
 EOF_patch :
 install :

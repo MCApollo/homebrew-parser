@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 :macos
+optional_deps :
 conflicts :
+resource :
+	 ['gotools', 'gobootstrap']
+	 ['https://go.googlesource.com/tools.git', 'https://storage.googleapis.com/golang/go1.7.darwin-amd64.tar.gz']
 patches :
 	 https://github.com/Homebrew/formula-patches/raw/e089e057dbb8aff7d0dc36a6c1933c29dca9c77e/go%401.9/go_19_load_commands.patch
 EOF_patch :

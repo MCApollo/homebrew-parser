@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 ruby-build
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Program that provides for interactive editing in a pipeline
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['man']
+	 ['https://www.cs.duke.edu/~des/scripts/vip.man']
 patches :
 EOF_patch :
 	 diff --git a/vip b/vip

@@ -11,8 +11,12 @@ build_deps :
 link_deps :
 	 libgcrypt
 	 poppler
+optional_deps :
 	 pcre
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

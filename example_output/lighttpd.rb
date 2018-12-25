@@ -15,9 +15,13 @@ link_deps :
 	 openldap
 	 openssl
 	 pcre
+optional_deps :
 	 libev
 	 lua@5.1
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

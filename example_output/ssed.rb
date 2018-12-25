@@ -8,8 +8,12 @@ description :
 	 Super sed stream editor
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 gnu-sed
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

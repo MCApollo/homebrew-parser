@@ -8,7 +8,11 @@ description :
 	 Library for managing 3D-Studio Release 3 and 4 '.3DS' files
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

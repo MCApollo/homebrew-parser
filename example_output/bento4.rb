@@ -10,9 +10,13 @@ build_deps :
 	 :xcode
 link_deps :
 	 python
+optional_deps :
 conflicts :
 	 gpac
 	 mp4v2
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

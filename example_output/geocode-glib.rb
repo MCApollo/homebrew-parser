@@ -13,7 +13,11 @@ link_deps :
 	 gtk+3
 	 json-glib
 	 libsoup
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -15,7 +15,11 @@ link_deps :
 	 glib
 	 libimobiledevice
 	 :osxfuse
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

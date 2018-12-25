@@ -9,9 +9,12 @@ description :
 build_deps :
 link_deps :
 	 :maximum_macos
+optional_deps :
 conflicts :
+resource :
+	 ['gmp', 'mpfr', 'mpc', 'isl', 'cloog']
+	 ['https://ftp.gnu.org/gnu/gmp/gmp-4.3.2.tar.bz2', 'https://raw.githubusercontent.com/Homebrew/formula-patches/010a4dc3/gmp%404/4.3.2.patch', 'https://gcc.gnu.org/pub/gcc/infrastructure/mpfr-2.4.2.tar.bz2', 'https://gcc.gnu.org/pub/gcc/infrastructure/mpc-0.8.1.tar.gz', 'https://gcc.gnu.org/pub/gcc/infrastructure/isl-0.12.2.tar.bz2', 'https://www.bastoul.net/cloog/pages/download/count.php3?url=./cloog-0.18.4.tar.gz']
 patches :
-	 https://raw.githubusercontent.com/Homebrew/formula-patches/010a4dc3/gmp%404/4.3.2.patch
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/c2dae73416/gcc%404.9/xcode9.patch
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/b7c7883d/gcc%404.9/high_sierra_2.patch
 EOF_patch :

@@ -11,7 +11,11 @@ link_deps :
 	 gettext
 	 popt
 	 s-lang
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

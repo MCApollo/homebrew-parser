@@ -8,7 +8,11 @@ description :
 	 Set and statistical operations on genomic data of arbitrary scale
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

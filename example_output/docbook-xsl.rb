@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 docbook
+optional_deps :
 conflicts :
+resource :
+	 ['ns']
+	 ['https://downloads.sourceforge.net/project/docbook/docbook-xsl-ns/1.79.1/docbook-xsl-ns-1.79.1.tar.bz2']
 patches :
 EOF_patch :
 install :

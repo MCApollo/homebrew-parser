@@ -11,9 +11,13 @@ build_deps :
 link_deps :
 	 boost
 	 jemalloc
+optional_deps :
 	 python
 	 python@2
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

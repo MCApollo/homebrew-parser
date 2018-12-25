@@ -11,7 +11,11 @@ link_deps :
 	 gcc
 	 libpng
 	 :x11
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/patches/b520c2d/pgplot/patch-makemake.diff
 	 https://raw.githubusercontent.com/Homebrew/patches/b520c2d/pgplot/patch-proccom.c.diff

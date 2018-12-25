@@ -11,7 +11,11 @@ build_deps :
 	 mlton
 link_deps :
 	 gmp
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

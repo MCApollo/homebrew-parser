@@ -8,7 +8,11 @@ description :
 	 Password/passphrase strength checking and enforcement toolset
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

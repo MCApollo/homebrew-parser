@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 :macos
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/fb00ee376a/rethinkdb/xcode9.patch
 EOF_patch :

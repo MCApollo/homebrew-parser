@@ -12,7 +12,11 @@ build_deps :
 link_deps :
 	 gtk+3
 	 sdl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/c126b2c/fceux/xcode9.patch
 EOF_patch :

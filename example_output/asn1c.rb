@@ -8,7 +8,11 @@ description :
 	 Compile ASN.1 specifications into C source code
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

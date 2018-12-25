@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 :java
+optional_deps :
 conflicts :
+resource :
+	 ['deps']
+	 ['https://www.apache.org/dyn/closer.cgi?path=forrest/apache-forrest-0.9-dependencies.tar.gz']
 patches :
 EOF_patch :
 install :

@@ -12,7 +12,11 @@ link_deps :
 	 jpeg
 	 libexif
 	 pixman
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/185c281/exiftran/fix-build.diff
 EOF_patch :

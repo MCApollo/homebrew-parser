@@ -11,7 +11,11 @@ build_deps :
 	 pkg-config
 link_deps :
 	 lua
+optional_deps :
 conflicts :
+resource :
+	 ['luafilesystem', 'luaposix']
+	 ['https://github.com/keplerproject/luafilesystem/archive/v1_7_0_2.tar.gz', 'https://github.com/luaposix/luaposix/archive/v34.0.4.tar.gz']
 patches :
 EOF_patch :
 install :

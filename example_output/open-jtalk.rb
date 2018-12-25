@@ -8,7 +8,11 @@ description :
 	 Japanese text-to-speech system
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['hts_engine API', 'voice', 'mei']
+	 ['https://downloads.sourceforge.net/project/hts-engine/hts_engine%20API/hts_engine_API-1.10/hts_engine_API-1.10.tar.gz', 'https://downloads.sourceforge.net/project/open-jtalk/HTS%20voice/hts_voice_nitech_jp_atr503_m001-1.05/hts_voice_nitech_jp_atr503_m001-1.05.tar.gz', 'https://downloads.sourceforge.net/project/mmdagent/MMDAgent_Example/MMDAgent_Example-1.7/MMDAgent_Example-1.7.zip']
 patches :
 EOF_patch :
 install :

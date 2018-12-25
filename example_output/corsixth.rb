@@ -16,7 +16,11 @@ link_deps :
 	 lua
 	 sdl2
 	 sdl2_mixer
+optional_deps :
 conflicts :
+resource :
+	 ['lpeg', 'luafilesystem']
+	 ['https://ftp.openbsd.org/pub/OpenBSD/distfiles/lpeg-1.0.1.tar.gz', 'https://github.com/keplerproject/luafilesystem/archive/v1_7_0_2.tar.gz']
 patches :
 EOF_patch :
 install :

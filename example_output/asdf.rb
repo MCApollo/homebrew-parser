@@ -8,7 +8,11 @@ description :
 	 Extendable version manager with support for Ruby, Node.js, Erlang & more
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

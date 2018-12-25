@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 gcc
+optional_deps :
 conflicts :
 	 open-mpi
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

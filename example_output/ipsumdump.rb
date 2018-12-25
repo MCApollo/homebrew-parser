@@ -8,7 +8,11 @@ description :
 	 Summarizes TCP/IP dump files into a self-describing ASCII format
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

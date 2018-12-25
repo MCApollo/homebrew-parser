@@ -10,12 +10,16 @@ build_deps :
 link_deps :
 	 openssl
 	 pcre
-	 mysql
 	 postgresql
 	 fping
 	 libevent
 	 libssh2
+optional_deps :
+	 mysql
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

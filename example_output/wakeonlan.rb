@@ -8,7 +8,11 @@ description :
 	 Sends magic packets to wake up network-devices
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

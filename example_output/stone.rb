@@ -8,7 +8,11 @@ description :
 	 TCP/IP packet repeater in the application layer
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -10,7 +10,11 @@ build_deps :
 	 boost
 	 cmake
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/assimp/assimp/pull/1634.patch?full_index=1
 EOF_patch :

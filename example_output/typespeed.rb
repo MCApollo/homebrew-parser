@@ -8,7 +8,11 @@ description :
 	 Zap words flying across the screen by typing them correctly
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

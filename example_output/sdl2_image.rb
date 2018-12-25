@@ -14,7 +14,11 @@ link_deps :
 	 libtiff
 	 sdl2
 	 webp
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

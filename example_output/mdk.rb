@@ -16,7 +16,11 @@ link_deps :
 	 guile
 	 libglade
 	 readline
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

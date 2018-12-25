@@ -9,9 +9,13 @@ description :
 build_deps :
 link_deps :
 	 openssl
+optional_deps :
 	 pygtk
 conflicts :
 	 ndiff
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

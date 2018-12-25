@@ -13,7 +13,11 @@ link_deps :
 	 gflags
 	 glog
 	 protobuf
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

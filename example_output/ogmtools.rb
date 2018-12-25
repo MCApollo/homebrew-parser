@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 libogg
 	 libvorbis
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/e4957439/ogmtools/common.h.diff
 EOF_patch :

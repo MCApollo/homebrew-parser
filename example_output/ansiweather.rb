@@ -8,7 +8,11 @@ description :
 	 Weather in your terminal, with ANSI colors and Unicode symbols
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

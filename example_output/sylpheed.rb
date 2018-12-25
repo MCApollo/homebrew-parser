@@ -12,7 +12,11 @@ link_deps :
 	 gpgme
 	 gtk+
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

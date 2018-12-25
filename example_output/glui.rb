@@ -8,7 +8,11 @@ description :
 	 C++ user interface library
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/src/include/GL/glui.h b/src/include/GL/glui.h

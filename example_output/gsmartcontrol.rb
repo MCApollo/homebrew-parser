@@ -12,7 +12,11 @@ link_deps :
 	 gtkmm3
 	 pcre
 	 smartmontools
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Small & secure supervision software suite
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['skalibs', 'execline', 'execline']
+	 ['https://skarnet.org/software/skalibs/skalibs-2.7.0.0.tar.gz', 'https://skarnet.org/software/execline/execline-2.5.0.1.tar.gz', 'git://git.skarnet.org/execline']
 patches :
 EOF_patch :
 install :

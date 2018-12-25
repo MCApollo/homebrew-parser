@@ -18,7 +18,11 @@ link_deps :
 	 sdl2_image
 	 sdl2_mixer
 	 sdl2_ttf
+optional_deps :
 conflicts :
+resource :
+	 ['Cython']
+	 ['https://files.pythonhosted.org/packages/b3/ae/971d3b936a7ad10e65cb7672356cff156000c5132cf406cb0f4d7a980fd3/Cython-0.28.3.tar.gz']
 patches :
 EOF_patch :
 install :

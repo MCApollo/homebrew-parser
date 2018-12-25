@@ -9,7 +9,11 @@ description :
 build_deps :
 	 :xcode
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/a94f6f/unar/xcode10.diff
 EOF_patch :

@@ -8,7 +8,11 @@ description :
 	 Recreates the SETEC ASTRONOMY effect from 'Sneakers'
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

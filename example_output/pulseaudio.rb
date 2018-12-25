@@ -15,8 +15,12 @@ link_deps :
 	 libtool
 	 openssl
 	 speexdsp
+optional_deps :
 	 glib
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

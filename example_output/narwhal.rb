@@ -8,7 +8,11 @@ description :
 	 General purpose JavaScript platform for building applications
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

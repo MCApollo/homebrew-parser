@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 libxml2
 	 python@2
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/itstool/itstool/commit/9b84c00.patch?full_index=1
 EOF_patch :

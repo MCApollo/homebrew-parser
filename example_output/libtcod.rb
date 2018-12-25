@@ -13,8 +13,12 @@ build_deps :
 	 pkg-config
 link_deps :
 	 sdl2
+optional_deps :
 conflicts :
 	 libzip
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

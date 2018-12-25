@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 mysql-client
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 ['DBI', 'DBD::mysql', 'JSON']
+	 ['https://cpan.metacpan.org/authors/id/T/TI/TIMB/DBI-1.641.tar.gz', 'https://cpan.metacpan.org/authors/id/C/CA/CAPTTOFU/DBD-mysql-4.046.tar.gz', 'https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/JSON-2.97001.tar.gz']
 patches :
 EOF_patch :
 install :

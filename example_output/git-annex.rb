@@ -15,7 +15,11 @@ link_deps :
 	 libmagic
 	 quvi
 	 xdot
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

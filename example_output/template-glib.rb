@@ -15,7 +15,11 @@ build_deps :
 link_deps :
 	 glib
 	 gobject-introspection
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

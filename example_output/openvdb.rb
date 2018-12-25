@@ -16,7 +16,11 @@ link_deps :
 	 jemalloc
 	 openexr
 	 tbb
+optional_deps :
 conflicts :
+resource :
+	 ['test_file']
+	 ['http://www.openvdb.org/download/models/cube.vdb.zip']
 patches :
 EOF_patch :
 install :

@@ -10,9 +10,13 @@ build_deps :
 link_deps :
 	 libsodium
 	 openssl
+optional_deps :
 	 mysql
 	 postgresql
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

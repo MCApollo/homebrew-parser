@@ -8,7 +8,11 @@ description :
 	 C library for playback of module music (MOD, S3M, IT, etc)
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['demo_mods']
+	 ['https://files.scene.org/get:us-http/mirrors/modsoulbrother/vim/vim-best-of.zip']
 patches :
 EOF_patch :
 install :

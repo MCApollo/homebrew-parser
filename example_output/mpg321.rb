@@ -11,7 +11,11 @@ link_deps :
 	 libao
 	 libid3tag
 	 mad
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- a/mpg321.h	2012-03-25 05:27:49.000000000 -0700

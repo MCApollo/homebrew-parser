@@ -8,7 +8,11 @@ description :
 	 Load testing and performance measurement application
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['jmeterplugins-standard', 'serveragent', 'jmeterplugins-extras', 'jmeterplugins-extraslibs', 'jmeterplugins-webdriver', 'jmeterplugins-hadoop']
+	 ['https://jmeter-plugins.org/downloads/file/JMeterPlugins-Standard-1.4.0.zip', 'https://jmeter-plugins.org/downloads/file/ServerAgent-2.2.1.zip', 'https://jmeter-plugins.org/downloads/file/JMeterPlugins-Extras-1.4.0.zip', 'https://jmeter-plugins.org/downloads/file/JMeterPlugins-ExtrasLibs-1.4.0.zip', 'https://jmeter-plugins.org/downloads/file/JMeterPlugins-WebDriver-1.4.0.zip', 'https://jmeter-plugins.org/downloads/file/JMeterPlugins-Hadoop-1.4.0.zip']
 patches :
 EOF_patch :
 install :

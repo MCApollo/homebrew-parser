@@ -12,7 +12,11 @@ link_deps :
 	 cairo
 	 gdal
 	 pango
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

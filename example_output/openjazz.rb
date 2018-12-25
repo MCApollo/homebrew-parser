@@ -13,7 +13,11 @@ build_deps :
 link_deps :
 	 libmodplug
 	 sdl
+optional_deps :
 conflicts :
+resource :
+	 ['shareware']
+	 ['https://image.dosgamesarchive.com/games/jazz.zip']
 patches :
 EOF_patch :
 	 diff --git a/src/io/network.cpp b/src/io/network.cpp

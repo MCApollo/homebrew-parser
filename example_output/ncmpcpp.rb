@@ -15,7 +15,11 @@ link_deps :
 	 ncurses
 	 readline
 	 taglib
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

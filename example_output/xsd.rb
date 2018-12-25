@@ -10,8 +10,12 @@ build_deps :
 	 pkg-config
 link_deps :
 	 xerces-c
+optional_deps :
 conflicts :
 	 mono
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/libxsd-frontend/xsd-frontend/semantic-graph/elements.cxx b/libxsd-frontend/xsd-frontend/semantic-graph/elements.cxx

@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 markdown
 	 python
+optional_deps :
 conflicts :
+resource :
+	 ['pygments']
+	 ['https://files.pythonhosted.org/packages/source/P/Pygments/Pygments-1.5.tar.gz']
 patches :
 EOF_patch :
 	 diff --git a/configure b/configure

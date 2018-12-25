@@ -9,10 +9,14 @@ description :
 build_deps :
 	 cmake
 link_deps :
+optional_deps :
 	 graphviz
 	 llvm
 	 qt
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

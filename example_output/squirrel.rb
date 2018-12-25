@@ -8,7 +8,11 @@ description :
 	 High level, imperative, object-oriented programming language
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/dcaba40/squirrel/xcode9.patch
 EOF_patch :

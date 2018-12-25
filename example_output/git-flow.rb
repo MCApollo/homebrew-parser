@@ -8,8 +8,12 @@ description :
 	 Extensions to follow Vincent Driessen's branching model
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 git-flow-avh
+resource :
+	 ['completion']
+	 ['https://github.com/bobthecow/git-flow-completion/archive/0.4.2.2.tar.gz']
 patches :
 EOF_patch :
 install :

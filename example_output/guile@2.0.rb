@@ -15,7 +15,11 @@ link_deps :
 	 libunistring
 	 pkg-config
 	 readline
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/macports/macports-ports/5a3bba7/lang/guile/files/sierra.patch
 	 https://raw.githubusercontent.com/macports/macports-ports/8b7f401/lang/guile/files/sierra-filter-incompatible-mkostemp-flags.patch

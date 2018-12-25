@@ -9,7 +9,11 @@ description :
 build_deps :
 	 cmake
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['p8-platform']
+	 ['https://github.com/Pulse-Eight/platform/archive/p8-platform-2.1.0.1.tar.gz']
 patches :
 EOF_patch :
 install :

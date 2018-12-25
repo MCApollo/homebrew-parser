@@ -8,7 +8,11 @@ description :
 	 C library for the simulation of quantum mechanics
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

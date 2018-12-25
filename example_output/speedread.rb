@@ -8,7 +8,11 @@ description :
 	 Simple terminal-based rapid serial visual presentation (RSVP) reader
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Analytics and search dashboard for Elasticsearch
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['node']
+	 ['https://nodejs.org/dist/v6.14.4/node-v6.14.4.tar.xz']
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Small build system for use with gyp or CMake
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -12,8 +12,12 @@ link_deps :
 	 glib
 	 gnutls
 	 libgcrypt
+optional_deps :
 	 pidgin
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/bitlbee/bitlbee/commit/eb73d05e.patch?full_index=1
 EOF_patch :

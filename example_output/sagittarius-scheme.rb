@@ -12,7 +12,11 @@ link_deps :
 	 bdw-gc
 	 libffi
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

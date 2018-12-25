@@ -13,7 +13,11 @@ link_deps :
 	 lzo
 	 :macos
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 ['pkcs11-helper']
+	 ['https://github.com/OpenSC/pkcs11-helper/releases/download/pkcs11-helper-1.22/pkcs11-helper-1.22.tar.bz2']
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Wrapper around make to colorize the output
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

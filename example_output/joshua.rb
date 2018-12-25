@@ -13,7 +13,11 @@ build_deps :
 	 python@2
 link_deps :
 	 :java
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

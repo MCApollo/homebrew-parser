@@ -11,8 +11,12 @@ link_deps :
 	 hbase
 	 :java
 	 lzo
+optional_deps :
 	 gnuplot
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

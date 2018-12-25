@@ -15,7 +15,11 @@ link_deps :
 	 libevent
 	 libssh
 	 msgpack
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

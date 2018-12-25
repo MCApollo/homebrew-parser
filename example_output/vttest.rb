@@ -8,7 +8,11 @@ description :
 	 Test compatibility of VT100-compatible terminals
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

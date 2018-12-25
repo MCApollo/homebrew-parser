@@ -11,7 +11,11 @@ link_deps :
 	 berkeley-db
 	 xerces-c
 	 xqilla
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/master/dbxml/c%2B%2B11.patch
 EOF_patch :

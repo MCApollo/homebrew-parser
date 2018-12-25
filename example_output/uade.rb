@@ -3,14 +3,17 @@ name :
 homepage :
 	 http://zakalwe.fi/uade/
 url :
-	 https://github.com/heikkiorsila/bencode-tools.git
 description :
 	 Play Amiga tunes through UAE emulation
 build_deps :
 	 pkg-config
 link_deps :
 	 libao
+optional_deps :
 conflicts :
+resource :
+	 ['bencode-tools']
+	 ['https://github.com/heikkiorsila/bencode-tools.git']
 patches :
 EOF_patch :
 	 diff --git a/configure b/configure

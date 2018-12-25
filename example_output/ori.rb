@@ -14,7 +14,11 @@ link_deps :
 	 libevent
 	 openssl
 	 :osxfuse
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

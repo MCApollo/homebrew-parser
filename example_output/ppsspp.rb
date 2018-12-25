@@ -15,7 +15,11 @@ link_deps :
 	 libzip
 	 sdl2
 	 snappy
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

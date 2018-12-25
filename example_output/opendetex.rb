@@ -8,7 +8,11 @@ description :
 	 Tool to strip TeX or LaTeX commands from documents
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/detex.1l b/detex.1l

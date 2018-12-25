@@ -18,7 +18,11 @@ link_deps :
 	 libusb
 	 qhull
 	 vtk
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -13,7 +13,11 @@ link_deps :
 	 boost
 	 libccd
 	 octomap
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

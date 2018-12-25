@@ -8,7 +8,11 @@ description :
 	 Low-level access to audio, keyboard, mouse, joystick, and graphics
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://hg.libsdl.org/SDL/raw-diff/d274fa9731b1/build-scripts/ltmain.sh
 	 https://gist.githubusercontent.com/miniupnp/26d6e967570e5729a757/raw/1a86f3cdfadbd9b74172716abd26114d9cb115d5/SDL2-2.0.3_OSX_104.patch

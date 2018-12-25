@@ -8,10 +8,14 @@ description :
 	 Full-text search engine
 build_deps :
 link_deps :
-	 mysql
 	 openssl
+optional_deps :
+	 mysql
 	 postgresql
 conflicts :
+resource :
+	 ['stemmer']
+	 ['https://github.com/snowballstem/snowball.git']
 patches :
 EOF_patch :
 install :

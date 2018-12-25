@@ -14,7 +14,11 @@ build_deps :
 	 python
 link_deps :
 	 glib
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/meson.build b/meson.build

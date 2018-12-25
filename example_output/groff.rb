@@ -8,7 +8,11 @@ description :
 	 GNU troff text-formatting system
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/Makefile.in b/Makefile.in

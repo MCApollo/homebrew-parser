@@ -12,7 +12,11 @@ link_deps :
 	 mariadb-connector-c
 	 openssl
 	 unixodbc
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

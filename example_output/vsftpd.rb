@@ -8,8 +8,12 @@ description :
 	 Secure FTP server for UNIX
 build_deps :
 link_deps :
+optional_deps :
 	 openssl
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/sysdeputil.c b/sysdeputil.c

@@ -8,7 +8,11 @@ description :
 	 Toolbox for morphological analysers and other FST-based tools
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

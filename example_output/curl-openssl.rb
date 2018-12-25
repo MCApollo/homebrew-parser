@@ -13,7 +13,11 @@ link_deps :
 	 nghttp2
 	 openldap
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

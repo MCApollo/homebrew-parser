@@ -8,7 +8,11 @@ description :
 	 Generate ASCII art with terminal, shell, and OS info
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

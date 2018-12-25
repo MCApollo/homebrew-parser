@@ -17,7 +17,11 @@ link_deps :
 	 nss
 	 pcre
 	 python
+optional_deps :
 conflicts :
+resource :
+	 ['argparse', 'simplejson']
+	 ['https://files.pythonhosted.org/packages/source/a/argparse/argparse-1.4.0.tar.gz', 'https://files.pythonhosted.org/packages/source/s/simplejson/simplejson-3.16.0.tar.gz']
 patches :
 EOF_patch :
 install :

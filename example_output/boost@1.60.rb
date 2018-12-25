@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 icu4c
+optional_deps :
 	 icu4c
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/9e56b45/boost/boost1_60_0_python_class_metadata.diff
 EOF_patch :

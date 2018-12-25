@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 libmagic
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/src/Makefile.in b/src/Makefile.in

@@ -17,7 +17,11 @@ link_deps :
 	 dbus
 	 gettext
 	 glib
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

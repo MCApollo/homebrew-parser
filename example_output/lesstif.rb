@@ -10,8 +10,12 @@ build_deps :
 link_deps :
 	 freetype
 	 :x11
+optional_deps :
 conflicts :
 	 openmotif
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

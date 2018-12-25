@@ -8,7 +8,11 @@ description :
 	 Manipulate structured data definitions (SQL and more)
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Conditional random fields for segmenting/labeling sequential data
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

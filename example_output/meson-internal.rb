@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 ninja
 	 python
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/a20d7df94112f93ea81f72ff3eacaa2d7e681053/meson-internal/meson-osx.patch?full_index=1
 EOF_patch :

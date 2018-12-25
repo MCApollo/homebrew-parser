@@ -12,8 +12,12 @@ link_deps :
 	 :arch
 	 :java
 	 lzo
+optional_deps :
 	 hadoop
 conflicts :
+resource :
+	 ['hadoop-lzo']
+	 ['https://github.com/cloudera/hadoop-lzo/archive/0.4.14.tar.gz']
 patches :
 EOF_patch :
 install :

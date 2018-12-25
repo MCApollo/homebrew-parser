@@ -14,7 +14,11 @@ build_deps :
 	 xmlto
 link_deps :
 	 libev
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

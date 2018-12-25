@@ -26,7 +26,11 @@ link_deps :
 	 opusfile
 	 qt
 	 taglib
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

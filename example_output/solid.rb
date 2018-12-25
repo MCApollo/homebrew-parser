@@ -8,7 +8,11 @@ description :
 	 Collision detection library for geometric objects in 3D space
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/include/MT/Quaternion.h b/include/MT/Quaternion.h

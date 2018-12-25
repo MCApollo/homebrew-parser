@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 :java
+optional_deps :
 conflicts :
 	 iniparser
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/fe9d4e5/fastbit/xcode9.patch
 EOF_patch :

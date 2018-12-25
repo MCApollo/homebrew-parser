@@ -12,8 +12,12 @@ link_deps :
 	 gnu-sed
 	 newt
 	 tmux
+optional_deps :
 conflicts :
 	 ctail
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Command-line REST client that can be used in pipelines
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['JSON']
+	 ['https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/JSON-2.94.tar.gz']
 patches :
 EOF_patch :
 install :

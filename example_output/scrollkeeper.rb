@@ -10,8 +10,12 @@ build_deps :
 link_deps :
 	 docbook
 	 gettext
+optional_deps :
 conflicts :
 	 rarian
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

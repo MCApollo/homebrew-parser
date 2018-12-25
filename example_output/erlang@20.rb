@@ -13,7 +13,11 @@ build_deps :
 link_deps :
 	 openssl
 	 wxmac
+optional_deps :
 conflicts :
+resource :
+	 ['man', 'html']
+	 ['https://www.erlang.org/download/otp_doc_man_20.3.tar.gz', 'https://www.erlang.org/download/otp_doc_html_20.3.tar.gz']
 patches :
 EOF_patch :
 install :

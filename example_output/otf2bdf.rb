@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 freetype
+optional_deps :
 conflicts :
+resource :
+	 ['mkinstalldirs']
+	 ['https://www.math.nmsu.edu/~mleisher/Software/otf2bdf/mkinstalldirs']
 patches :
 EOF_patch :
 install :

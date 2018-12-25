@@ -3,7 +3,6 @@ name :
 homepage :
 	 https://wiki.radioreference.com/index.php/Digital_Speech_Decoder_%28software_package%29
 url :
-	 https://github.com/szechyjs/mbelib/archive/v1.2.5.tar.gz
 description :
 	 Decoder for several digital speech formats
 build_deps :
@@ -12,7 +11,11 @@ link_deps :
 	 itpp
 	 libsndfile
 	 portaudio
+optional_deps :
 conflicts :
+resource :
+	 ['mbelib-1.2.5']
+	 ['https://github.com/szechyjs/mbelib/archive/v1.2.5.tar.gz']
 patches :
 EOF_patch :
 install :

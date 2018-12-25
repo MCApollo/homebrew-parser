@@ -12,7 +12,11 @@ link_deps :
 	 open-mpi
 	 openblas
 	 scalapack
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

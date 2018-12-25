@@ -8,7 +8,11 @@ description :
 	 Compare and mark up LaTeX file differences
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

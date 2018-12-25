@@ -22,6 +22,7 @@ link_deps :
 	 x264
 	 x265
 	 xvid
+optional_deps :
 	 dcadec
 	 faac
 	 fdk-aac
@@ -45,6 +46,9 @@ link_deps :
 	 webp
 	 zeromq
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

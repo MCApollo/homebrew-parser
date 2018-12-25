@@ -15,7 +15,11 @@ link_deps :
 	 gtk+
 	 librsvg
 	 polyglot
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

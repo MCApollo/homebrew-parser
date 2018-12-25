@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 php
+optional_deps :
 conflicts :
 	 dep
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

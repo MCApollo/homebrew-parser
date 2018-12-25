@@ -10,7 +10,11 @@ build_deps :
 	 autoconf
 	 automake
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['pbf']
+	 ['https://download.gisgraphy.com/openstreetmap/pbf/AD.tar.bz2']
 patches :
 EOF_patch :
 install :

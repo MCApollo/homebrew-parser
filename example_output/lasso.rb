@@ -12,7 +12,11 @@ link_deps :
 	 glib
 	 libxmlsec1
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

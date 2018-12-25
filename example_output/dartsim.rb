@@ -22,7 +22,11 @@ link_deps :
 	 open-scene-graph
 	 tinyxml2
 	 urdfdom
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

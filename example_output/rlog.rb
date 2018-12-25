@@ -8,7 +8,11 @@ description :
 	 Flexible message logging facility for C++
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- orig/rlog/common.h.in	2008-06-14 20:10:13.000000000 -0700

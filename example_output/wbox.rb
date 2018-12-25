@@ -8,7 +8,11 @@ description :
 	 HTTP testing tool and configuration-less HTTP server
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

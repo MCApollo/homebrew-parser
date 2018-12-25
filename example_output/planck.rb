@@ -15,7 +15,11 @@ link_deps :
 	 icu4c
 	 libzip
 	 :macos
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -19,7 +19,11 @@ link_deps :
 	 librsvg
 	 pango
 	 pcre
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

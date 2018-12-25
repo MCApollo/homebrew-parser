@@ -8,7 +8,11 @@ description :
 	 Implementation of SHA-256, SHA-384, and SHA-512 hash algorithms
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

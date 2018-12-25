@@ -8,7 +8,11 @@ description :
 	 Get events and tasks from the macOS calendar database
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

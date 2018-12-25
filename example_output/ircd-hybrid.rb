@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 openssl
+optional_deps :
 conflicts :
 	 ircd-irc2
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

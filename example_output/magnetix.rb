@@ -10,7 +10,11 @@ build_deps :
 	 :xcode
 link_deps :
 	 :macos
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/4fe0b7b6c43f75738782e047606c07446db07c4f/magnetix/avfoundation.patch
 EOF_patch :

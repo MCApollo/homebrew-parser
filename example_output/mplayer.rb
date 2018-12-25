@@ -9,11 +9,15 @@ description :
 build_deps :
 	 yasm
 link_deps :
+	 pkg-config
+optional_deps :
 	 libcaca
 	 libdvdnav
-	 pkg-config
 	 libdvdread
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/configure b/configure

@@ -13,7 +13,11 @@ link_deps :
 	 libgcrypt
 	 libgpg-error
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 ['Crypt::OpenSSL::Bignum']
+	 ['https://cpan.metacpan.org/authors/id/K/KM/KMX/Crypt-OpenSSL-Bignum-0.06.tar.gz']
 patches :
 EOF_patch :
 install :

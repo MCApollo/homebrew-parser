@@ -12,7 +12,11 @@ link_deps :
 	 gperf
 	 openssl
 	 readline
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

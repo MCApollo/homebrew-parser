@@ -15,7 +15,11 @@ link_deps :
 	 libsndfile
 	 libvorbis
 	 mad
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

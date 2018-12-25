@@ -8,7 +8,11 @@ description :
 	 Program for calculating and printing calendars
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

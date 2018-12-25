@@ -8,7 +8,11 @@ description :
 	 Rom manager for AdvanceMAME/MESS
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

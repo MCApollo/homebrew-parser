@@ -8,7 +8,11 @@ description :
 	 Backup and restore the content of your Gmail account
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

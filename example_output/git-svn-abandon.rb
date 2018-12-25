@@ -8,7 +8,11 @@ description :
 	 History-preserving svn-to-git migration
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

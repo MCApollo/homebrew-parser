@@ -14,7 +14,11 @@ link_deps :
 	 gettext
 	 openssl
 	 ossp-uuid
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

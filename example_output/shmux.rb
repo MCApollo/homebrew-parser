@@ -8,7 +8,11 @@ description :
 	 Execute the same command on many hosts in parallel
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -11,7 +11,11 @@ build_deps :
 	 p7zip
 link_deps :
 	 :java
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

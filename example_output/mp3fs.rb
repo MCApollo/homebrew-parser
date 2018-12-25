@@ -13,7 +13,11 @@ link_deps :
 	 lame
 	 libid3tag
 	 :osxfuse
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

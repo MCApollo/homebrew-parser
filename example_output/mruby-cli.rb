@@ -8,7 +8,11 @@ description :
 	 Build native command-line applications for Linux, MacOS, and Windows
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

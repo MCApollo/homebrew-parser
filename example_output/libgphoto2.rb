@@ -12,7 +12,11 @@ link_deps :
 	 gd
 	 libtool
 	 libusb-compat
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 gmp
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 http://www.cs.unipr.it/git/gitweb.cgi?p=ppl/ppl.git;a=commitdiff_plain;h=c39f6a07b51f89e365b05ba4147aa2aa448febd7
 EOF_patch :

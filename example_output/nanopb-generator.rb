@@ -10,8 +10,12 @@ build_deps :
 link_deps :
 	 protobuf
 	 python@2
+optional_deps :
 conflicts :
 	 mesos
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

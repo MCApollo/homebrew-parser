@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 python@2
+optional_deps :
 conflicts :
 	 putty
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

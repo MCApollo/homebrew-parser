@@ -8,7 +8,11 @@ description :
 	 Parse flat file structures and print them in different formats
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 spin
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/xspin525.tcl b/xspin525.tcl

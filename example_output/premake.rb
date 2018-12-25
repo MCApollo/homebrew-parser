@@ -8,7 +8,11 @@ description :
 	 Write once, build anywhere Lua-based build system
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

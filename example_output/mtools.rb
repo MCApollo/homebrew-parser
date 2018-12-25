@@ -8,9 +8,13 @@ description :
 	 Tools for manipulating MSDOS files
 build_deps :
 link_deps :
+optional_deps :
 	 :x11
 conflicts :
 	 multimarkdown
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

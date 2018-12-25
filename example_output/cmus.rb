@@ -17,10 +17,14 @@ link_deps :
 	 libvorbis
 	 mad
 	 mp4v2
+optional_deps :
 	 ffmpeg
 	 jack
 	 opusfile
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

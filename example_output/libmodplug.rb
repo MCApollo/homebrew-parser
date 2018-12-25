@@ -8,7 +8,11 @@ description :
 	 Library from the Modplug-XMMS project
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['testmod']
+	 ['https://api.modarchive.org/downloads.php?moduleid=60395#2ND_PM.S3M']
 patches :
 EOF_patch :
 install :

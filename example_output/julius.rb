@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 libsndfile
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/julius-speech/julius/pull/73.patch?full_index=1
 EOF_patch :

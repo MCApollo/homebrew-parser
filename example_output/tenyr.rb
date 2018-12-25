@@ -11,7 +11,11 @@ build_deps :
 	 pkg-config
 link_deps :
 	 sdl2_image
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

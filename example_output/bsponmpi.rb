@@ -10,7 +10,11 @@ build_deps :
 	 scons
 link_deps :
 	 open-mpi
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

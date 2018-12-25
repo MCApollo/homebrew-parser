@@ -9,7 +9,11 @@ description :
 build_deps :
 	 autoconf
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/2a22152/cdparanoia/osx_interface.patch
 EOF_patch :

@@ -16,12 +16,16 @@ link_deps :
 	 ncurses
 	 pixman
 	 libpng
+optional_deps :
 	 gtk+3
 	 libssh2
 	 libusb
 	 sdl2
 	 vde
 conflicts :
+resource :
+	 ['test-image']
+	 ['https://dl.bintray.com/homebrew/mirror/FD12FLOPPY.zip']
 patches :
 EOF_patch :
 install :

@@ -8,8 +8,12 @@ description :
 	 Fork of cdrtools DVD writer support
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 cdrtools
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/8a41dd4/dvdrtools/patch-cdda2wav-cdda2wav.c
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/8a41dd4/dvdrtools/patch-cdrecord-cdrecord.c

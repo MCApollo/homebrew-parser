@@ -8,8 +8,12 @@ description :
 	 Virtual package provided by nmap
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 nmap
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

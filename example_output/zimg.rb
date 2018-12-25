@@ -12,7 +12,11 @@ build_deps :
 	 libtool
 link_deps :
 	 :macos
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

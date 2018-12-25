@@ -8,7 +8,11 @@ description :
 	 FSF/GNU ld, ar, readelf, etc. for native development
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/91dc37fa4609cf1d040b5ede9f2eb971f3730597/binutils/add_mach_o_command.patch
 EOF_patch :

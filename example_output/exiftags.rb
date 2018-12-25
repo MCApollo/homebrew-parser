@@ -8,7 +8,11 @@ description :
 	 Utility to read EXIF tags from a digital camera JPEG file
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

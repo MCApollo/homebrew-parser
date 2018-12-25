@@ -13,7 +13,11 @@ link_deps :
 	 delta
 	 llvm
 	 :macos
+optional_deps :
 conflicts :
+resource :
+	 ['Exporter::Lite', 'File::Which', 'Getopt::Tabular', 'Regexp::Common', 'Term::ReadKey']
+	 ['https://cpan.metacpan.org/authors/id/N/NE/NEILB/Exporter-Lite-0.08.tar.gz', 'https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/File-Which-1.22.tar.gz', 'https://cpan.metacpan.org/authors/id/G/GW/GWARD/Getopt-Tabular-0.3.tar.gz', 'https://cpan.metacpan.org/authors/id/A/AB/ABIGAIL/Regexp-Common-2017060201.tar.gz', 'https://cpan.metacpan.org/authors/id/J/JS/JSTOWE/TermReadKey-2.37.tar.gz']
 patches :
 EOF_patch :
 install :

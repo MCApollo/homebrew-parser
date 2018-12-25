@@ -20,6 +20,7 @@ link_deps :
 	 pango
 	 theora
 	 x264
+optional_deps :
 	 a52dec
 	 aalib
 	 cdparanoia
@@ -33,6 +34,9 @@ link_deps :
 	 opencore-amr
 	 two-lame
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

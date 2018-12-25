@@ -8,8 +8,12 @@ description :
 	 Paragraph reflow for email
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 rancid
+resource :
+	 []
+	 []
 patches :
 	 http://sysmic.org/dl/par/par-1.52-i18n.4.patch
 EOF_patch :

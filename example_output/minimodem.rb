@@ -12,7 +12,11 @@ link_deps :
 	 fftw
 	 libsndfile
 	 pulseaudio
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

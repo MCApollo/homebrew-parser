@@ -10,7 +10,11 @@ build_deps :
 	 pkg-config
 link_deps :
 	 libbinio
+optional_deps :
 conflicts :
+resource :
+	 ['ksms']
+	 ['http://advsys.net/ken/ksmsongs.zip']
 patches :
 EOF_patch :
 install :

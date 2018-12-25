@@ -12,7 +12,11 @@ link_deps :
 	 gnupg
 	 qrencode
 	 tree
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

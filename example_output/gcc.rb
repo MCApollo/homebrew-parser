@@ -11,7 +11,11 @@ link_deps :
 	 isl
 	 libmpc
 	 mpfr
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/gcc/graphite.h b/gcc/graphite.h

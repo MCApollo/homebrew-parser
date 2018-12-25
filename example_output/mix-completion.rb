@@ -8,7 +8,11 @@ description :
 	 Elixir Mix completion plus shortcuts/colors
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -17,8 +17,12 @@ link_deps :
 	 jpeg
 	 libpng
 	 libtiff
+optional_deps :
 	 jasper
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/3d39ffd/gdk-pixbuf/meson-patches.diff
 EOF_patch :

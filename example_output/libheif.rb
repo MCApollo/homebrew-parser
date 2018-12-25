@@ -13,7 +13,11 @@ link_deps :
 	 libde265
 	 libpng
 	 x265
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

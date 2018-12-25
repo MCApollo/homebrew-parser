@@ -8,7 +8,11 @@ description :
 	 BLAKE2 b2sum reference binary
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

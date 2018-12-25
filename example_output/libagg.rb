@@ -13,7 +13,11 @@ build_deps :
 	 pkg-config
 link_deps :
 	 sdl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/include/agg_renderer_outline_aa.h b/include/agg_renderer_outline_aa.h

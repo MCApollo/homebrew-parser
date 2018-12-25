@@ -14,7 +14,11 @@ link_deps :
 	 gettext
 	 glib
 	 libffi
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

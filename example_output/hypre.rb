@@ -11,7 +11,11 @@ link_deps :
 	 gcc
 	 open-mpi
 	 veclibfort
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -11,7 +11,11 @@ build_deps :
 	 automake
 link_deps :
 	 python
+optional_deps :
 conflicts :
+resource :
+	 ['libiberty']
+	 ['https://mirrors.ocf.berkeley.edu/debian/pool/main/libi/libiberty/libiberty_20180614.orig.tar.xz']
 patches :
 EOF_patch :
 install :

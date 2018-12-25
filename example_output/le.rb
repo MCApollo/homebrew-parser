@@ -8,8 +8,12 @@ description :
 	 Text editor with block and binary operations
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 logentries
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

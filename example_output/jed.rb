@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 s-lang
+optional_deps :
 	 :x11
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

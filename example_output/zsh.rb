@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 ncurses
+optional_deps :
 conflicts :
+resource :
+	 ['htmldoc']
+	 ['https://downloads.sourceforge.net/project/zsh/zsh/5.6.2/zsh-5.6.2-doc.tar.xz']
 patches :
 EOF_patch :
 install :

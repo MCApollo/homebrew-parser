@@ -13,7 +13,11 @@ link_deps :
 	 libgphoto2
 	 popt
 	 readline
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

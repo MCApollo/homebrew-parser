@@ -14,7 +14,11 @@ link_deps :
 	 readline
 	 sqlite
 	 xz
+optional_deps :
 conflicts :
+resource :
+	 ['setuptools', 'pip', 'wheel']
+	 ['https://files.pythonhosted.org/packages/26/e5/9897eee1100b166a61f91b68528cb692e8887300d9cbdaa1a349f6304b79/setuptools-40.5.0.zip', 'https://files.pythonhosted.org/packages/45/ae/8a0ad77defb7cc903f09e551d88b443304a9bd6e6f124e75c0fbbf6de8f7/pip-18.1.tar.gz', 'https://files.pythonhosted.org/packages/c2/00/21e3ecc8a9d484f9de995471c061aa3d8f02ae54bdfd9cbdddb59138c809/wheel-0.32.2.tar.gz']
 patches :
 EOF_patch :
 install :

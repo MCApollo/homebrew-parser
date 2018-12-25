@@ -10,8 +10,12 @@ build_deps :
 link_deps :
 	 jq
 	 python
+optional_deps :
 conflicts :
 	 yq
+resource :
+	 ['PyYAML', 'xmltodict']
+	 ['https://files.pythonhosted.org/packages/9e/a3/1d13970c3f36777c583f136c136f804d70f500168edc1edea6daa7200769/PyYAML-3.13.tar.gz', 'https://files.pythonhosted.org/packages/57/17/a6acddc5f5993ea6eaf792b2e6c3be55e3e11f3b85206c818572585f61e1/xmltodict-0.11.0.tar.gz']
 patches :
 EOF_patch :
 install :

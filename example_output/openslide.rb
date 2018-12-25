@@ -17,7 +17,11 @@ link_deps :
 	 libtiff
 	 libxml2
 	 openjpeg
+optional_deps :
 conflicts :
+resource :
+	 ['svs']
+	 ['http://openslide.cs.cmu.edu/download/openslide-testdata/Aperio/CMU-1-Small-Region.svs']
 patches :
 EOF_patch :
 install :

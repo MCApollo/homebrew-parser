@@ -8,7 +8,11 @@ description :
 	 Build profile HMMs and scan against sequence databases
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

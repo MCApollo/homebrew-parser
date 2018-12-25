@@ -11,7 +11,11 @@ link_deps :
 	 gcc
 	 graphviz
 	 python
+optional_deps :
 conflicts :
+resource :
+	 ['pygooglechart', 'graphviz']
+	 ['https://files.pythonhosted.org/packages/95/88/54f91552de1e1b0085c02b96671acfba6e351915de3a12a398533fc82e20/pygooglechart-0.4.0.tar.gz', 'https://files.pythonhosted.org/packages/fa/d1/63b62dee9e55368f60b5ea445e6afb361bb47e692fc27553f3672e16efb8/graphviz-0.8.2.zip']
 patches :
 EOF_patch :
 install :

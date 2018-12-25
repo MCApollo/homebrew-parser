@@ -8,7 +8,11 @@ description :
 	 Merges httpd logs from web servers behind round-robin DNS
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

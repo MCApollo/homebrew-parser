@@ -8,7 +8,11 @@ description :
 	 Assembler/disassembler for Android's Java VM implementation
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['baksmali-jar', 'baksmali', 'smali']
+	 ['https://bitbucket.org/JesusFreke/smali/downloads/baksmali-2.2.5.jar', 'https://bitbucket.org/JesusFreke/smali/downloads/baksmali', 'https://bitbucket.org/JesusFreke/smali/downloads/smali']
 patches :
 EOF_patch :
 install :

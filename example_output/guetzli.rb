@@ -10,7 +10,11 @@ build_deps :
 	 pkg-config
 link_deps :
 	 libpng
+optional_deps :
 conflicts :
+resource :
+	 ['test_image']
+	 ['https://github.com/google/guetzli/releases/download/v1.0/bees.png']
 patches :
 EOF_patch :
 install :

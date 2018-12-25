@@ -8,7 +8,11 @@ description :
 	 Build system that uses Lua to describe the build process
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

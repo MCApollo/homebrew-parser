@@ -12,11 +12,15 @@ link_deps :
 	 fftw
 	 jpeg
 	 libpng
+optional_deps :
 	 ffmpeg
 	 libtiff
 	 opencv@2
 	 openexr
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

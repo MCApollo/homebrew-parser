@@ -8,7 +8,11 @@ description :
 	 Downloader for various streaming protocols
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/src/url.c b/src/url.c

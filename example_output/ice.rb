@@ -12,7 +12,11 @@ link_deps :
 	 :macos
 	 mcpp
 	 :java
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/zeroc-ice/ice/compare/v3.7.1..v3.7.1-xcode10.patch?full_index=1
 EOF_patch :

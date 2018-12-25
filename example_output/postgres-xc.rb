@@ -12,8 +12,12 @@ link_deps :
 	 openssl
 	 ossp-uuid
 	 readline
+optional_deps :
 conflicts :
 	 postgresql
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- a/src/pl/plpython/Makefile	2011-09-23 08:03:52.000000000 +1000

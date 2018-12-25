@@ -8,7 +8,11 @@ description :
 	 Production-grade DHCP solution
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

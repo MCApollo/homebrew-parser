@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 expat
+optional_deps :
 conflicts :
 	 arx-libertatis
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

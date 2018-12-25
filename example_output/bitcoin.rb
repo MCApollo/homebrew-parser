@@ -15,7 +15,11 @@ link_deps :
 	 miniupnpc
 	 openssl
 	 zeromq
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

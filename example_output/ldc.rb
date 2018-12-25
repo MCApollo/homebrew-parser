@@ -11,7 +11,11 @@ build_deps :
 	 libconfig
 link_deps :
 	 llvm
+optional_deps :
 conflicts :
+resource :
+	 ['ldc-bootstrap']
+	 ['https://github.com/ldc-developers/ldc/releases/download/v1.12.0/ldc2-1.12.0-osx-x86_64.tar.xz']
 patches :
 EOF_patch :
 install :

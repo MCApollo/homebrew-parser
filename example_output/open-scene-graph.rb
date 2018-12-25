@@ -16,7 +16,11 @@ link_deps :
 	 gtkglext
 	 jpeg
 	 sdl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/CMakeModules/FindGtkGl.cmake b/CMakeModules/FindGtkGl.cmake

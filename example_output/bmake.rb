@@ -8,7 +8,11 @@ description :
 	 Portable version of NetBSD make(1)
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

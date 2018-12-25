@@ -9,7 +9,11 @@ description :
 build_deps :
 	 cmake
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['sample_wav']
+	 ['https://www.mediacollege.com/audio/tone/files/1kHz_44100Hz_16bit_05sec.wav']
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 CLI wrapper for basic network utilities on macOS - ip command
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

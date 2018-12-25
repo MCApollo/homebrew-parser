@@ -12,7 +12,11 @@ link_deps :
 	 gettext
 	 glib
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

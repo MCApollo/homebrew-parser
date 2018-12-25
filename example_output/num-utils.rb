@@ -8,10 +8,14 @@ description :
 	 Programs for dealing with numbers from the command-line
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 normalize
 	 crush-tools
 	 argyll-cms
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

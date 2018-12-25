@@ -8,8 +8,12 @@ description :
 	 ID database and query tools
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 coreutils
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/macports/macports-ports/b76d1e48dac/editors/nano/files/secure_snprintf.patch
 EOF_patch :

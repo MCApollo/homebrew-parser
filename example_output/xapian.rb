@@ -8,10 +8,14 @@ description :
 	 C++ search engine library with many bindings
 build_deps :
 link_deps :
-	 python@2
 	 sphinx-doc
 	 ruby
+optional_deps :
+	 python@2
 conflicts :
+resource :
+	 ['bindings']
+	 ['https://oligarchy.co.uk/xapian/1.4.7/xapian-bindings-1.4.7.tar.xz']
 patches :
 EOF_patch :
 install :

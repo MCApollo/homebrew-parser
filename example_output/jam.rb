@@ -8,8 +8,12 @@ description :
 	 Make-like build tool
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 ftjam
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

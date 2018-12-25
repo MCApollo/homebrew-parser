@@ -8,7 +8,11 @@ description :
 	 Learn vim commands via a game
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

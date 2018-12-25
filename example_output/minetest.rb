@@ -17,7 +17,11 @@ link_deps :
 	 libvorbis
 	 luajit
 	 :x11
+optional_deps :
 conflicts :
+resource :
+	 ['minetest_game']
+	 ['https://github.com/minetest/minetest_game/archive/0.4.17.tar.gz']
 patches :
 EOF_patch :
 install :

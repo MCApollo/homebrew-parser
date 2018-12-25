@@ -8,7 +8,11 @@ description :
 	 High performance TCP and WebSocket load generator and sink
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

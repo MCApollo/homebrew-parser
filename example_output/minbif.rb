@@ -14,7 +14,11 @@ link_deps :
 	 glib
 	 gnutls
 	 pidgin
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

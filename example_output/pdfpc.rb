@@ -14,7 +14,11 @@ link_deps :
 	 libgee
 	 librsvg
 	 poppler
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

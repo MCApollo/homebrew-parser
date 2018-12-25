@@ -14,7 +14,11 @@ link_deps :
 	 libxml2
 	 proj
 	 sqlite
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/27a0e51936e01829d0a6f3c75a7fbcaf92bb133f/libspatialite/sqlite310.patch
 EOF_patch :

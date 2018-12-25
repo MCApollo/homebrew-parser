@@ -9,7 +9,11 @@ description :
 build_deps :
 	 bison
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

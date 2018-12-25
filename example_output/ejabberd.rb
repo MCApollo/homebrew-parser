@@ -12,8 +12,12 @@ link_deps :
 	 gd
 	 libyaml
 	 openssl
+optional_deps :
 	 imagemagick
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -11,8 +11,12 @@ build_deps :
 link_deps :
 	 libassuan
 	 libgpg-error
+optional_deps :
 	 gtk+
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

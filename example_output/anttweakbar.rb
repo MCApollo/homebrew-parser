@@ -8,7 +8,11 @@ description :
 	 C/C++ library for adding GUIs to OpenGL apps
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/62e79481/anttweakbar/anttweakbar.diff
 EOF_patch :

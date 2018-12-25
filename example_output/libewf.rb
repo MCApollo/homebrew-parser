@@ -10,8 +10,12 @@ build_deps :
 	 pkg-config
 link_deps :
 	 openssl
+optional_deps :
 	 :osxfuse
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

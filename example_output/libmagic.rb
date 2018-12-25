@@ -8,8 +8,12 @@ description :
 	 Implementation of the file(1) command
 build_deps :
 link_deps :
+optional_deps :
 	 python@2
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

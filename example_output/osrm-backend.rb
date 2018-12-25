@@ -16,7 +16,11 @@ link_deps :
 	 lua
 	 :macos
 	 tbb
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Middleware to access a smart card using SCard API
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -14,7 +14,11 @@ link_deps :
 	 openssl
 	 xerces-c
 	 xml-security-c
+optional_deps :
 conflicts :
+resource :
+	 ['curl']
+	 ['https://curl.haxx.se/download/curl-7.62.0.tar.bz2']
 patches :
 EOF_patch :
 install :

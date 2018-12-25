@@ -8,7 +8,11 @@ description :
 	 Generate C-based recognizers from regular expressions
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

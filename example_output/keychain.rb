@@ -8,7 +8,11 @@ description :
 	 User-friendly front-end to ssh-agent(1)
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

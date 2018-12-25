@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 :maximum_macos
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

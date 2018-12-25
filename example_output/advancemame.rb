@@ -11,8 +11,12 @@ build_deps :
 link_deps :
 	 freetype
 	 sdl
+optional_deps :
 conflicts :
 	 advancemenu
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

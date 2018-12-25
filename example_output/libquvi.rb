@@ -10,7 +10,11 @@ build_deps :
 	 pkg-config
 link_deps :
 	 lua@5.1
+optional_deps :
 conflicts :
+resource :
+	 ['scripts']
+	 ['https://downloads.sourceforge.net/project/quvi/0.4/libquvi-scripts/libquvi-scripts-0.4.14.tar.xz']
 patches :
 EOF_patch :
 install :

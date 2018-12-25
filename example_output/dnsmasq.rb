@@ -10,9 +10,13 @@ build_deps :
 	 pkg-config
 link_deps :
 	 nettle
-	 libidn
 	 gettext
+optional_deps :
+	 libidn
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

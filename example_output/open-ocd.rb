@@ -13,7 +13,11 @@ link_deps :
 	 libftdi
 	 libusb
 	 libusb-compat
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

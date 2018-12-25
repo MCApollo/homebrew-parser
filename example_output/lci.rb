@@ -8,8 +8,12 @@ description :
 	 Interpreter for the lambda calculus
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 lolcode
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

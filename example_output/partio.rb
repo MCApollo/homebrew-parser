@@ -11,7 +11,11 @@ build_deps :
 	 doxygen
 	 swig
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/wdas/partio/commit/5b80b00ddedaef9ffed19ea4e6773ed1dc27394e.diff?full_index=1
 	 https://github.com/wdas/partio/commit/bdce60e316b699fb4fd813c6cad9d369205657c8.diff?full_index=1

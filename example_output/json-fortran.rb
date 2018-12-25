@@ -11,7 +11,11 @@ build_deps :
 	 ford
 link_deps :
 	 gcc
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

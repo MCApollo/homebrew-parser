@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 libffi
 	 python@2
+optional_deps :
 conflicts :
+resource :
+	 ['clang', 'clang-extra-tools', 'compiler-rt', 'libcxx', 'libunwind', 'lld', 'lldb', 'openmp', 'polly']
+	 ['https://releases.llvm.org/6.0.1/cfe-6.0.1.src.tar.xz', 'https://releases.llvm.org/6.0.1/clang-tools-extra-6.0.1.src.tar.xz', 'https://releases.llvm.org/6.0.1/compiler-rt-6.0.1.src.tar.xz', 'https://releases.llvm.org/6.0.1/libcxx-6.0.1.src.tar.xz', 'https://releases.llvm.org/6.0.1/libunwind-6.0.1.src.tar.xz', 'https://releases.llvm.org/6.0.1/lld-6.0.1.src.tar.xz', 'https://releases.llvm.org/6.0.1/lldb-6.0.1.src.tar.xz', 'https://releases.llvm.org/6.0.1/openmp-6.0.1.src.tar.xz', 'https://releases.llvm.org/6.0.1/polly-6.0.1.src.tar.xz']
 patches :
 EOF_patch :
 install :

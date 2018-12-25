@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 libsigsegv
 	 readline
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/e2cc7c1/clisp/patch-src_lispbibl_d.diff
 EOF_patch :

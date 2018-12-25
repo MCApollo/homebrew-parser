@@ -8,7 +8,11 @@ description :
 	 Writes patterns on magnetic media to thwart data recovery
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

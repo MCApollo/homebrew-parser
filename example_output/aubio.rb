@@ -13,7 +13,11 @@ link_deps :
 	 :macos
 	 numpy
 	 python
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 python
+optional_deps :
 conflicts :
+resource :
+	 ['click']
+	 ['https://files.pythonhosted.org/packages/source/c/click/click-4.0.tar.gz']
 patches :
 EOF_patch :
 install :

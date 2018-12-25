@@ -8,7 +8,11 @@ description :
 	 Add HTML markup and links to internet-drafts and RFCs
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

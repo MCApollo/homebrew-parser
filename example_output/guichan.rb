@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 sdl_image
+optional_deps :
 conflicts :
+resource :
+	 ['fixedfont.bmp']
+	 ['https://guichan.sourceforge.io/oldsite/images/fixedfont.bmp']
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Ethernet communication suite that works natively with Siemens S7 PLCs
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

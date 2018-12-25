@@ -9,6 +9,7 @@ build_deps :
 	 pkg-config
 link_deps :
 	 openssl
+optional_deps :
 	 a52dec
 	 faad2
 	 ffmpeg
@@ -21,6 +22,9 @@ link_deps :
 	 :x11
 conflicts :
 	 bento4
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/gpac/gpac/commit/bceb03fd2be95097a7b409ea59914f332fb6bc86.patch?full_index=1
 	 https://github.com/gpac/gpac/commit/b12b86e995db235e9a7e0c4fcd0fd54eb37bcee4.patch?full_index=1

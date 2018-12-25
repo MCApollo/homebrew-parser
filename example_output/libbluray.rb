@@ -13,7 +13,11 @@ link_deps :
 	 :java
 	 fontconfig
 	 freetype
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

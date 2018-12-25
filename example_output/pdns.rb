@@ -13,8 +13,12 @@ link_deps :
 	 lua
 	 openssl
 	 sqlite
+optional_deps :
 	 postgresql
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -9,9 +9,13 @@ description :
 build_deps :
 	 cmake
 link_deps :
+optional_deps :
 conflicts :
 	 mbedtls
 	 msgpack
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

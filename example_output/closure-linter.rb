@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 python@2
+optional_deps :
 conflicts :
+resource :
+	 ['python-gflags']
+	 ['https://files.pythonhosted.org/packages/source/p/python-gflags/python-gflags-2.0.tar.gz']
 patches :
 EOF_patch :
 install :

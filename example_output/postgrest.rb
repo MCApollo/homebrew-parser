@@ -11,7 +11,11 @@ build_deps :
 	 ghc@8.2
 link_deps :
 	 postgresql
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/PostgREST/postgrest/pull/1111.patch?full_index=1
 EOF_patch :

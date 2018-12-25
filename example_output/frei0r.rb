@@ -10,9 +10,13 @@ build_deps :
 	 autoconf
 	 pkg-config
 link_deps :
+optional_deps :
 	 cairo
 	 opencv@2
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

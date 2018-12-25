@@ -14,7 +14,11 @@ link_deps :
 	 libpng
 	 libtiff
 	 webp
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

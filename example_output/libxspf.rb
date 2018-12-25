@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 cpptest
 	 uriparser
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/examples/read/read.cpp b/examples/read/read.cpp

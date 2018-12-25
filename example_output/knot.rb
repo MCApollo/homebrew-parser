@@ -16,7 +16,11 @@ link_deps :
 	 :macos
 	 protobuf-c
 	 userspace-rcu
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

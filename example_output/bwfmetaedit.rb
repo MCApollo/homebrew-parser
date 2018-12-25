@@ -8,7 +8,11 @@ description :
 	 Tool for embedding, validating, and exporting BWF file metadata
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

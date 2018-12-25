@@ -12,8 +12,12 @@ link_deps :
 	 jpeg
 	 libpng
 	 libtiff
+optional_deps :
 conflicts :
 	 num-utils
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

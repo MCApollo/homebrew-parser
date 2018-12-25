@@ -14,7 +14,11 @@ build_deps :
 link_deps :
 	 gd
 	 libpng
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

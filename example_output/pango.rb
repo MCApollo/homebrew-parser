@@ -15,7 +15,11 @@ link_deps :
 	 fribidi
 	 glib
 	 harfbuzz
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/e0aa10/pango/pango_font_size.patch
 EOF_patch :

@@ -8,7 +8,11 @@ description :
 	 Play music originally designed for Atari ST and Amiga computers
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

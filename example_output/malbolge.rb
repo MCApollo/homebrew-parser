@@ -8,7 +8,11 @@ description :
 	 Deliberately difficult to program esoteric programming language
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- /malbolge.c

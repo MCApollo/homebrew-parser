@@ -10,7 +10,11 @@ build_deps :
 	 bsdmake
 link_deps :
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

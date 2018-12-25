@@ -8,7 +8,11 @@ description :
 	 Automatically restart SSH sessions and tunnels
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/rscreen b/rscreen

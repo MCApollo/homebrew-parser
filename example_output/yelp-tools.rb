@@ -15,7 +15,11 @@ build_deps :
 	 pkg-config
 link_deps :
 	 gtk+3
+optional_deps :
 conflicts :
+resource :
+	 ['yelp-xsl']
+	 ['https://download.gnome.org/sources/yelp-xsl/3.30/yelp-xsl-3.30.1.tar.xz']
 patches :
 EOF_patch :
 install :

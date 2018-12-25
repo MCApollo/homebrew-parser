@@ -8,7 +8,11 @@ description :
 	 Organize software neatly under a single directory tree (e.g. /usr/local)
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

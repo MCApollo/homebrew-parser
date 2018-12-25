@@ -8,7 +8,11 @@ description :
 	 Console-based live network and disk I/O bandwidth monitor
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 8-bit Atmel AVR disassembler
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/Makefile b/Makefile

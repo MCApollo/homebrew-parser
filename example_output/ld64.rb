@@ -13,7 +13,11 @@ build_deps :
 link_deps :
 	 :maximum_macos
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 ['makefile']
+	 ['https://raw.githubusercontent.com/Homebrew/formula-patches/3b073fca/ld64/Makefile-97']
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/3b073fca/ld64/ld64-97-ppc-branch-island.patch
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/3b073fca/ld64/ld64-97-no-LTO.patch

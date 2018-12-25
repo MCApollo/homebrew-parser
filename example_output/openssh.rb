@@ -9,9 +9,13 @@ description :
 build_deps :
 link_deps :
 	 openssl
-	 ldns
 	 pkg-config
+optional_deps :
+	 ldns
 conflicts :
+resource :
+	 ['com.openssh.sshd.sb']
+	 ['https://opensource.apple.com/source/OpenSSH/OpenSSH-209.50.1/com.openssh.sshd.sb']
 patches :
 	 https://raw.githubusercontent.com/Homebrew/patches/1860b0a74/openssh/patch-sandbox-darwin.c-apple-sandbox-named-external.diff
 	 https://raw.githubusercontent.com/Homebrew/patches/d8b2d8c2/openssh/patch-sshd.c-apple-sandbox-named-external.diff

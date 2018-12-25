@@ -11,7 +11,11 @@ build_deps :
 	 godep
 link_deps :
 	 docker-machine
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

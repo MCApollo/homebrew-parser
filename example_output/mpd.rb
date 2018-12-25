@@ -28,7 +28,11 @@ link_deps :
 	 libvorbis
 	 opus
 	 sqlite
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

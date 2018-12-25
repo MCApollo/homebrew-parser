@@ -10,8 +10,12 @@ build_deps :
 link_deps :
 	 :macos
 	 readline
+optional_deps :
 	 libpq
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

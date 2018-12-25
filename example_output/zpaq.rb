@@ -8,7 +8,11 @@ description :
 	 Incremental, journaling command-line archiver
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['test']
+	 ['http://mattmahoney.net/dc/calgarytest2.zpaq']
 patches :
 EOF_patch :
 install :

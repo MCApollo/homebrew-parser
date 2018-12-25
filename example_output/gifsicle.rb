@@ -8,9 +8,13 @@ description :
 	 GIF image/animation creator/editor
 build_deps :
 link_deps :
+optional_deps :
 	 :x11
 conflicts :
 	 giflossy
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 C API for determining the call-chain of a program
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

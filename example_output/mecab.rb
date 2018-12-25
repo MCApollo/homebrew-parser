@@ -8,8 +8,12 @@ description :
 	 Yet another part-of-speech and morphological analyzer
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 mecab-ko
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

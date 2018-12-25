@@ -14,7 +14,11 @@ link_deps :
 	 nghttp2
 	 openssl
 	 pcre
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -16,7 +16,11 @@ link_deps :
 	 glib
 	 libgsf
 	 vala
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

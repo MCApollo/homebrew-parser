@@ -9,9 +9,13 @@ description :
 build_deps :
 link_deps :
 	 libusb-compat
+optional_deps :
 conflicts :
 	 cspice
 	 openhmd
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

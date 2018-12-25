@@ -8,7 +8,11 @@ description :
 	 Update dynamic DNS entries
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['Data::Validate::IP']
+	 ['https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Data-Validate-IP-0.27.tar.gz']
 patches :
 EOF_patch :
 install :

@@ -18,7 +18,11 @@ link_deps :
 	 libpng
 	 libvorbis
 	 :macos
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

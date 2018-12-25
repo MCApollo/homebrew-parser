@@ -12,9 +12,13 @@ link_deps :
 	 msgpack
 	 openssl
 	 pcre
-	 mecab
 	 mecab-ipadic
+optional_deps :
+	 mecab
 conflicts :
+resource :
+	 ['groonga-normalizer-mysql']
+	 ['https://packages.groonga.org/source/groonga-normalizer-mysql/groonga-normalizer-mysql-1.1.3.tar.gz']
 patches :
 EOF_patch :
 install :

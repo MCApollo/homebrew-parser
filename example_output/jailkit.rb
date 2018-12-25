@@ -8,7 +8,11 @@ description :
 	 Utilities to create limited user accounts in a chroot jail
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

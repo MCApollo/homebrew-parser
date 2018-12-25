@@ -22,7 +22,11 @@ link_deps :
 	 mysql-client
 	 redis
 	 rrdtool
+optional_deps :
 conflicts :
+resource :
+	 ['nDPI']
+	 ['https://github.com/ntop/nDPI/archive/2.4.tar.gz']
 patches :
 EOF_patch :
 install :

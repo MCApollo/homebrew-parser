@@ -10,7 +10,11 @@ build_deps :
 	 rust
 link_deps :
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

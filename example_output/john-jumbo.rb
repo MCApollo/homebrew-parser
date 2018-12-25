@@ -11,8 +11,12 @@ build_deps :
 link_deps :
 	 gmp
 	 openssl
+optional_deps :
 conflicts :
 	 john
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/magnumripper/JohnTheRipper/commit/d29ad8aabaa9726eb08f440001c37611fa072e0c.diff?full_index=1
 EOF_patch :

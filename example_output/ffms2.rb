@@ -10,7 +10,11 @@ build_deps :
 	 pkg-config
 link_deps :
 	 ffmpeg
+optional_deps :
 conflicts :
+resource :
+	 ['videosample']
+	 ['https://samples.mplayerhq.hu/V-codecs/lm20.avi']
 patches :
 EOF_patch :
 install :

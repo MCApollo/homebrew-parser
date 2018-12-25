@@ -12,7 +12,11 @@ link_deps :
 	 sip
 	 python
 	 python@2
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/4f563668/pyqt/qt-5.11.diff
 EOF_patch :

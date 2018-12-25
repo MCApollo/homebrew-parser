@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 python@2
+optional_deps :
 conflicts :
+resource :
+	 ['setuptools', 'thrift', 'futures', 'six', 'cql', 'cassandra-driver']
+	 ['https://files.pythonhosted.org/packages/source/s/setuptools/setuptools-12.0.5.tar.gz', 'https://files.pythonhosted.org/packages/source/t/thrift/thrift-0.9.2.tar.gz', 'https://files.pythonhosted.org/packages/source/f/futures/futures-2.2.0.tar.gz', 'https://files.pythonhosted.org/packages/source/s/six/six-1.9.0.tar.gz', 'https://files.pythonhosted.org/packages/source/c/cql/cql-1.4.0.tar.gz', 'https://files.pythonhosted.org/packages/source/c/cassandra-driver/cassandra-driver-2.6.0.tar.gz']
 patches :
 EOF_patch :
 install :

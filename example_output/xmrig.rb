@@ -12,7 +12,11 @@ link_deps :
 	 libmicrohttpd
 	 libuv
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

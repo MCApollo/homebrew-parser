@@ -12,7 +12,11 @@ build_deps :
 	 pkg-config
 link_deps :
 	 ossp-uuid
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

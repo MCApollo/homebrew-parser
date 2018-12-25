@@ -8,7 +8,11 @@ description :
 	 Rewrite of netcat that supports IPv6, plus other improvements
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

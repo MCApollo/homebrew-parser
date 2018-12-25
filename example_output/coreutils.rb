@@ -8,12 +8,16 @@ description :
 	 GNU File, Shell, and Text utilities
 build_deps :
 link_deps :
+optional_deps :
 	 gmp
 conflicts :
 	 ganglia
 	 gegl
 	 idutils
 	 aardvark_shell_utils
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

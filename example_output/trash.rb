@@ -8,8 +8,12 @@ description :
 	 CLI tool that moves files or folder to the trash
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 trash-cli
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

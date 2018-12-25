@@ -8,7 +8,11 @@ description :
 	 Make Python build faster, using the leverage of `ccache`
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 CLI for Apple's Private (Closed) Mobile Device Framework
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/imkira/mobiledevice/pull/20.patch?full_index=1
 EOF_patch :

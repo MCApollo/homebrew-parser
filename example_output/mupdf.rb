@@ -10,8 +10,12 @@ build_deps :
 link_deps :
 	 openssl
 	 :x11
+optional_deps :
 conflicts :
 	 mupdf-tools
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

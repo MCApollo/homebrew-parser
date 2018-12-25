@@ -10,9 +10,13 @@ build_deps :
 	 cmake
 link_deps :
 	 hdf5
-	 python@2
 	 numpy
+optional_deps :
+	 python@2
 conflicts :
+resource :
+	 ['dataset.dat', 'testset.dat', 'dataset.hdf5']
+	 ['https://www.cs.ubc.ca/research/flann/uploads/FLANN/datasets/dataset.dat', 'https://www.cs.ubc.ca/research/flann/uploads/FLANN/datasets/testset.dat', 'https://www.cs.ubc.ca/research/flann/uploads/FLANN/datasets/dataset.hdf5']
 patches :
 EOF_patch :
 install :

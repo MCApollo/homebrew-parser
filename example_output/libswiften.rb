@@ -12,7 +12,11 @@ link_deps :
 	 boost
 	 libidn
 	 lua@5.1
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

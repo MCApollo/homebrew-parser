@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 python
+optional_deps :
 conflicts :
+resource :
+	 ['psutil']
+	 ['https://files.pythonhosted.org/packages/7d/9a/1e93d41708f8ed2b564395edfa3389f0fd6d567597401c2e5e2775118d8b/psutil-5.4.7.tar.gz']
 patches :
 EOF_patch :
 install :

@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 readline
+optional_deps :
 conflicts :
+resource :
+	 ['functions']
+	 ['https://sqlite.org/contrib/download/extension-functions.c?get=25']
 patches :
 EOF_patch :
 install :

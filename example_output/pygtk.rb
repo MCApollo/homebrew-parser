@@ -14,8 +14,12 @@ link_deps :
 	 gtk+
 	 py2cairo
 	 pygobject
+optional_deps :
 	 libglade
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

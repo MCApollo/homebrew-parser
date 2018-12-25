@@ -8,7 +8,11 @@ description :
 	 Formatted C++11/14/17 stdlib man pages from cppreference.com
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Library providing functions to lock standard mailboxes
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

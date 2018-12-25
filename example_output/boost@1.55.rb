@@ -8,7 +8,11 @@ description :
 	 Collection of portable C++ source libraries
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/boostorg/atomic/commit/6bb71fdd.diff?full_index=1
 	 https://github.com/boostorg/atomic/commit/e4bde20f.diff?full_index=1

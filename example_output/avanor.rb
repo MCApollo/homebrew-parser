@@ -8,7 +8,11 @@ description :
 	 Quick-growing roguelike game with easy ADOM-like UI
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://gist.githubusercontent.com/mistydemeo/64f47233ee64d55cb7d5/raw/c1847d7e3a134e6109ad30ce1968919dd962e727/avanor-clang.diff
 EOF_patch :

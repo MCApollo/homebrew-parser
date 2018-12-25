@@ -13,7 +13,11 @@ build_deps :
 	 make
 	 xz
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Enhanced version of dd for forensics and security
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

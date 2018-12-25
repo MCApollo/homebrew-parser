@@ -8,7 +8,11 @@ description :
 	 Network Kanji code conversion Filter (NKF)
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

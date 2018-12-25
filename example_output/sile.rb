@@ -18,7 +18,11 @@ link_deps :
 	 icu4c
 	 libpng
 	 lua
+optional_deps :
 conflicts :
+resource :
+	 ['lpeg', 'lua-zlib', 'luaexpat', 'luafilesystem']
+	 ['http://www.inf.puc-rio.br/~roberto/lpeg/lpeg-1.0.1.tar.gz', 'https://github.com/brimworks/lua-zlib/archive/v1.2.tar.gz', 'https://matthewwild.co.uk/projects/luaexpat/luaexpat-1.3.0.tar.gz', 'https://github.com/keplerproject/luafilesystem/archive/v1_7_0_2.tar.gz']
 patches :
 EOF_patch :
 install :

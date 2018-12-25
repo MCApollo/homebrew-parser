@@ -8,8 +8,12 @@ description :
 	 Text column alignment filter
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 speech-tools
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

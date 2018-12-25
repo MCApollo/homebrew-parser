@@ -8,7 +8,11 @@ description :
 	 Standalone version of arguments parsing functions from GLIBC
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/b5f0ad3/argp-standalone/patch-argp-fmtstream.h
 EOF_patch :

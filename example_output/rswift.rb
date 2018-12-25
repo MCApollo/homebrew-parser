@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 :xcode
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/mac-cain13/R.swift/commit/082adb3a4fb3835507e61de15dabd2e9e1b547fb.diff?full_index=1
 EOF_patch :

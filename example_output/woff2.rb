@@ -10,7 +10,11 @@ build_deps :
 	 cmake
 link_deps :
 	 brotli
+optional_deps :
 conflicts :
+resource :
+	 ['roboto_1', 'roboto_2']
+	 ['https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxP.ttf', 'https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.woff2']
 patches :
 EOF_patch :
 install :

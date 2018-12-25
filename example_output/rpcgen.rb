@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 :xcode
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/rpcgen/rpc_parse.c b/rpcgen/rpc_parse.c

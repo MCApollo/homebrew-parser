@@ -8,7 +8,11 @@ description :
 	 Smart multi-file multi-part decoder
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/19da78c/uudeview/inews.c.patch
 EOF_patch :

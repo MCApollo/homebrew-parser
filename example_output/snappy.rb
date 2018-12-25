@@ -10,7 +10,11 @@ build_deps :
 	 cmake
 	 pkg-config
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/google/snappy/pull/61.patch?full_index=1
 EOF_patch :

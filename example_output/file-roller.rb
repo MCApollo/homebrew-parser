@@ -19,7 +19,11 @@ link_deps :
 	 json-glib
 	 libarchive
 	 libmagic
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

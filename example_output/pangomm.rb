@@ -12,7 +12,11 @@ link_deps :
 	 cairomm
 	 glibmm
 	 pango
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

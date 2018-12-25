@@ -11,9 +11,13 @@ build_deps :
 link_deps :
 	 mysql-client
 	 openssl
+optional_deps :
 	 gtk+
 	 libssh
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

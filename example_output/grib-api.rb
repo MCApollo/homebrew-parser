@@ -13,8 +13,12 @@ link_deps :
 	 jasper
 	 libpng
 	 numpy
+optional_deps :
 conflicts :
 	 eccodes
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

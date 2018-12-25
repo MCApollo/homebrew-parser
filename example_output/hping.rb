@@ -8,7 +8,11 @@ description :
 	 Command-line oriented TCP/IP packet assembler/analyzer
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/fc1d446f/hping/patch-libpcap_stuff.c.diff
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/fc1d446f/hping/patch-ars.c.diff

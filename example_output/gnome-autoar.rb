@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 gtk+3
 	 libarchive
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Literate documentation system for C, C++, and Java
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

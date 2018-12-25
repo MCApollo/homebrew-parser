@@ -16,7 +16,11 @@ link_deps :
 	 libgcrypt
 	 libgpg-error
 	 pkcs11-helper
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

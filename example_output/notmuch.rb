@@ -18,10 +18,14 @@ link_deps :
 	 xapian
 	 zlib
 	 python@2
+optional_deps :
 	 emacs
 	 python
 	 ruby
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/bindings/python/notmuch/globals.py b/bindings/python/notmuch/globals.py

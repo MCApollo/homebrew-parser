@@ -8,8 +8,12 @@ description :
 	 PDF to HTML converter (based on xpdf)
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 poppler
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 python@2
+optional_deps :
 conflicts :
+resource :
+	 ['mysql-connector-python']
+	 ['https://github.com/mysql/mysql-connector-python/archive/2.2.2.tar.gz']
 patches :
 EOF_patch :
 install :

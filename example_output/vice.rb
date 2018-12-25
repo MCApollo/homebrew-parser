@@ -24,7 +24,11 @@ link_deps :
 	 portaudio
 	 sdl2
 	 xz
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/src/gfxoutputdrv/ffmpegdrv.c b/src/gfxoutputdrv/ffmpegdrv.c

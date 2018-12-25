@@ -8,7 +8,11 @@ description :
 	 Plugin manager for zsh, inspired by oh-my-zsh and vundle
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

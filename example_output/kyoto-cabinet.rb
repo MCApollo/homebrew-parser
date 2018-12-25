@@ -8,7 +8,11 @@ description :
 	 Library of routines for managing a database
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- a/kccommon.h  2013-11-08 09:27:37.000000000 -0500

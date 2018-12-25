@@ -10,8 +10,12 @@ build_deps :
 link_deps :
 	 mercurial
 	 python@2
+optional_deps :
 conflicts :
 	 git-cinnabar
+resource :
+	 ['hg']
+	 ['https://mercurial-scm.org/release/mercurial-4.1.3.tar.gz']
 patches :
 EOF_patch :
 install :

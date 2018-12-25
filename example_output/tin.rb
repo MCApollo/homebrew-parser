@@ -8,8 +8,12 @@ description :
 	 Threaded, NNTP-, and spool-based UseNet newsreader
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 mutt
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

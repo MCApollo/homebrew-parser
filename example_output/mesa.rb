@@ -16,7 +16,11 @@ link_deps :
 	 expat
 	 gettext
 	 :x11
+optional_deps :
 conflicts :
+resource :
+	 ['Mako', 'gears.c']
+	 ['https://files.pythonhosted.org/packages/eb/f3/67579bb486517c0d49547f9697e36582cd19dafb5df9e687ed8e22de57fa/Mako-1.0.7.tar.gz', 'https://www.opengl.org/archives/resources/code/samples/glut_examples/mesademos/gears.c']
 patches :
 EOF_patch :
 install :

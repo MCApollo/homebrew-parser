@@ -8,7 +8,11 @@ description :
 	 Scala web framework inspired by Sinatra
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

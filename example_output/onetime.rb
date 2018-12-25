@@ -8,7 +8,11 @@ description :
 	 Encryption with one-time pads
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/kfogel/OneTime/commit/61e534e2.patch?full_index=1
 	 https://github.com/kfogel/OneTime/commit/fb0a12f2.patch?full_index=1

@@ -11,8 +11,12 @@ build_deps :
 link_deps :
 	 libevent
 	 openssl
+optional_deps :
 	 libscrypt
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

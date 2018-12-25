@@ -15,7 +15,11 @@ build_deps :
 link_deps :
 	 gtk+3
 	 hicolor-icon-theme
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

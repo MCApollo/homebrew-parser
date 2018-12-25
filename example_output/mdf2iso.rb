@@ -8,7 +8,11 @@ description :
 	 Tool to convert MDF (Alcohol 120% images) images to ISO images
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

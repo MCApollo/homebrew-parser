@@ -29,7 +29,11 @@ link_deps :
 	 xz
 	 yara
 	 zstd
+optional_deps :
 conflicts :
+resource :
+	 ['MarkupSafe', 'Jinja2', 'third-party', 'aws-sdk-cpp']
+	 ['https://files.pythonhosted.org/packages/c0/41/bae1254e0396c0cc8cf1751cb7d9afc90a602353695af5952530482c963f/MarkupSafe-0.23.tar.gz', 'https://files.pythonhosted.org/packages/5f/bd/5815d4d925a2b8cbbb4b4960f018441b0c65f24ba29f3bdcfb3c8218a307/Jinja2-2.8.1.tar.gz', 'https://github.com/osquery/third-party/archive/3.0.0.tar.gz', 'https://github.com/aws/aws-sdk-cpp/archive/1.3.30.tar.gz']
 patches :
 	 https://github.com/facebook/osquery/commit/512f775c.diff?full_index=1
 EOF_patch :

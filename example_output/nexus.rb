@@ -8,7 +8,11 @@ description :
 	 Repository manager for binary software components
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -13,9 +13,13 @@ build_deps :
 link_deps :
 	 :macos
 	 openssl
+optional_deps :
 	 boost
 conflicts :
 	 mongodb
+resource :
+	 ['Cheetah', 'PyYAML', 'typing']
+	 ['https://files.pythonhosted.org/packages/cd/b0/c2d700252fc251e91c08639ff41a8a5203b627f4e0a2ae18a6b662ab32ea/Cheetah-2.4.4.tar.gz', 'https://files.pythonhosted.org/packages/9e/a3/1d13970c3f36777c583f136c136f804d70f500168edc1edea6daa7200769/PyYAML-3.13.tar.gz', 'https://files.pythonhosted.org/packages/ec/cc/28444132a25c113149cec54618abc909596f0b272a74c55bab9593f8876c/typing-3.6.4.tar.gz']
 patches :
 EOF_patch :
 install :

@@ -17,7 +17,11 @@ link_deps :
 	 gupnp
 	 gupnp-av
 	 libsoup
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

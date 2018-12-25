@@ -9,7 +9,11 @@ description :
 build_deps :
 	 cmake
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['xtl']
+	 ['https://github.com/QuantStack/xtl/archive/0.5.2.tar.gz']
 patches :
 EOF_patch :
 install :

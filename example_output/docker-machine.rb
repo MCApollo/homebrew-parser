@@ -10,7 +10,11 @@ build_deps :
 	 automake
 	 go
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -11,7 +11,11 @@ link_deps :
 	 sdl
 	 sdl_gfx
 	 sdl_image
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

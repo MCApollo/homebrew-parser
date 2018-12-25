@@ -8,7 +8,11 @@ description :
 	 State machine compiler
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['pdf']
+	 ['https://www.colm.net/files/ragel/ragel-guide-6.10.pdf']
 patches :
 EOF_patch :
 install :

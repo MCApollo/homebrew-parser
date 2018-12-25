@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 python
 	 :macos
+optional_deps :
 conflicts :
+resource :
+	 ['gmp', 'binary', 'testsuite']
+	 ['https://ftp.gnu.org/gnu/gmp/gmp-6.1.2.tar.xz', 'https://downloads.haskell.org/~ghc/8.2.2/ghc-8.2.2-x86_64-apple-darwin.tar.xz', 'https://downloads.haskell.org/~ghc/8.2.2/ghc-8.2.2-testsuite.tar.xz']
 patches :
 EOF_patch :
 install :

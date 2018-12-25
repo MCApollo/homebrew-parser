@@ -8,7 +8,11 @@ description :
 	 Customized Bash environment for git work
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

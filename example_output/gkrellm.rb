@@ -19,7 +19,11 @@ link_deps :
 	 gtk+
 	 openssl
 	 pango
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

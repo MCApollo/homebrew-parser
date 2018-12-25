@@ -13,7 +13,11 @@ link_deps :
 	 glib
 	 glib-networking
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

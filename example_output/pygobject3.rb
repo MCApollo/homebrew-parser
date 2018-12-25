@@ -14,9 +14,13 @@ link_deps :
 	 python
 	 gobject-introspection
 	 py3cairo
-	 python@2
 	 py2cairo
+optional_deps :
+	 python@2
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

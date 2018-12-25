@@ -8,7 +8,11 @@ description :
 	 Implements brute force attack to recover WPA/WPA2 passkeys
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://gist.githubusercontent.com/syndicut/6134996/raw/16f1b4336c104375ff93a88858809eced53c1171/reaver-osx.diff
 EOF_patch :

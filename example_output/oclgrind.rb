@@ -10,7 +10,11 @@ build_deps :
 	 cmake
 	 llvm
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

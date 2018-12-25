@@ -8,7 +8,11 @@ description :
 	 Install one or more MySQL servers
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

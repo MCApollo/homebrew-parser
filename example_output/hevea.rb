@@ -10,8 +10,12 @@ build_deps :
 	 ocamlbuild
 link_deps :
 	 ocaml
+optional_deps :
 	 ghostscript
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

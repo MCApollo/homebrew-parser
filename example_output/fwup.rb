@@ -12,7 +12,11 @@ link_deps :
 	 confuse
 	 libarchive
 	 libsodium
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

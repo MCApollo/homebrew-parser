@@ -18,7 +18,11 @@ build_deps :
 link_deps :
 	 gettext
 	 glib
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/GNOME/libgtop/commit/42b049f338363f92c1e93b4549fc944098eae674.diff?full_index=1
 EOF_patch :

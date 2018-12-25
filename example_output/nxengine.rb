@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 sdl
 	 sdl_ttf
+optional_deps :
 conflicts :
+resource :
+	 ['game']
+	 ['https://www.cavestory.org/downloads/cavestoryen.zip']
 patches :
 EOF_patch :
 install :

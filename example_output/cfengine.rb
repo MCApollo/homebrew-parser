@@ -12,7 +12,11 @@ link_deps :
 	 lmdb
 	 openssl
 	 pcre
+optional_deps :
 conflicts :
+resource :
+	 ['masterfiles']
+	 ['https://cfengine-package-repos.s3.amazonaws.com/tarballs/cfengine-masterfiles-3.12.0.tar.gz']
 patches :
 EOF_patch :
 install :

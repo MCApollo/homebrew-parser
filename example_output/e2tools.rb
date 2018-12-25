@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 e2fsprogs
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

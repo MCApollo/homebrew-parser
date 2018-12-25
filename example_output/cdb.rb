@@ -8,7 +8,11 @@ description :
 	 Create and read constant databases
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

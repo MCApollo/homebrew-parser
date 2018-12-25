@@ -13,7 +13,11 @@ link_deps :
 	 libao
 	 libvorbis
 	 mad
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://sourceforge.net/p/cdrdao/patches/_discuss/thread/205354b0/141e/attachment/cdrdao-mac.patch
 EOF_patch :

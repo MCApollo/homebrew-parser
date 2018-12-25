@@ -16,7 +16,11 @@ link_deps :
 	 libplist
 	 :macos
 	 usbmuxd
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

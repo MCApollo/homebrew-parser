@@ -8,7 +8,11 @@ description :
 	 Tool that dumps shared memory segments (System V and POSIX)
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

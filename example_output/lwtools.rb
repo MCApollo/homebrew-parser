@@ -8,7 +8,11 @@ description :
 	 Cross-development tools for Motorola 6809 and Hitachi 6309
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

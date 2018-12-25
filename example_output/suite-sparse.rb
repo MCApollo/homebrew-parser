@@ -10,8 +10,12 @@ build_deps :
 	 cmake
 link_deps :
 	 metis
+optional_deps :
 conflicts :
 	 mongoose
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Alternative C/C++ preprocessor
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/3fd7fba/mcpp/2.7.2.patch
 EOF_patch :

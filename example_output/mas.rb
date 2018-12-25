@@ -10,7 +10,11 @@ build_deps :
 	 carthage
 link_deps :
 	 :xcode
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

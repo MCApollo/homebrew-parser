@@ -14,7 +14,11 @@ link_deps :
 	 imagemagick
 	 libdmtx
 	 libtool
+optional_deps :
 conflicts :
+resource :
+	 ['test_image12']
+	 ['https://raw.githubusercontent.com/dmtx/libdmtx/ca9313f/test/rotate_test/images/test_image12.png']
 patches :
 EOF_patch :
 install :

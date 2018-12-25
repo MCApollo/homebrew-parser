@@ -11,7 +11,11 @@ build_deps :
 	 python@2
 link_deps :
 	 :macos
+optional_deps :
 conflicts :
+resource :
+	 ['lldb']
+	 ['https://github.com/llvm-mirror/lldb.git', 'https://github.com/llvm-mirror/lldb.git', 'https://github.com/llvm-mirror/lldb.git', 'https://github.com/llvm-mirror/lldb.git', 'http://llvm.org/svn/llvm-project/lldb/tags/RELEASE_34/final/']
 patches :
 EOF_patch :
 install :

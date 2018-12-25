@@ -8,7 +8,11 @@ description :
 	 Passive DNS network mapper (a.k.a. subdomains bruteforcer)
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

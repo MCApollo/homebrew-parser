@@ -11,7 +11,11 @@ build_deps :
 	 flex
 link_deps :
 	 pkg-config
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

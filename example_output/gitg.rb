@@ -25,7 +25,11 @@ link_deps :
 	 libpeas
 	 libsecret
 	 libsoup
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/libgitg/meson.build b/libgitg/meson.build

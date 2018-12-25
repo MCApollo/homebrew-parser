@@ -15,7 +15,11 @@ link_deps :
 	 boost
 	 jsoncpp
 	 python
+optional_deps :
 conflicts :
+resource :
+	 ['test_apk']
+	 ['https://raw.githubusercontent.com/facebook/redex/fa32d542d4074dbd485584413d69ea0c9c3cbc98/test/instr/redex-test.apk']
 patches :
 EOF_patch :
 install :

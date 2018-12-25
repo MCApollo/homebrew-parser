@@ -25,7 +25,11 @@ link_deps :
 	 openexr
 	 python
 	 webp
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

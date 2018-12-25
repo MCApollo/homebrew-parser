@@ -18,7 +18,11 @@ link_deps :
 	 libarchive
 	 libgee
 	 libsoup
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

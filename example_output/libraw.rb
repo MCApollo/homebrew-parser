@@ -12,7 +12,11 @@ link_deps :
 	 jasper
 	 jpeg
 	 little-cms2
+optional_deps :
 conflicts :
+resource :
+	 ['librawtestfile']
+	 ['https://www.rawsamples.ch/raws/nikon/d1/RAW_NIKON_D1.NEF']
 patches :
 EOF_patch :
 install :

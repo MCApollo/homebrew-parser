@@ -8,7 +8,11 @@ description :
 	 Renders an animated, color, ANSI-text loop of the Poptart Cat
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/klange/nyancat/pull/34.patch?full_index=1
 EOF_patch :

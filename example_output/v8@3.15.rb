@@ -8,7 +8,11 @@ description :
 	 Google's open source JavaScript engine
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['gyp']
+	 ['https://chromium.googlesource.com/external/gyp.git']
 patches :
 EOF_patch :
 install :

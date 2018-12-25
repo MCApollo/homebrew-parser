@@ -11,7 +11,11 @@ build_deps :
 	 libosmium
 link_deps :
 	 boost
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

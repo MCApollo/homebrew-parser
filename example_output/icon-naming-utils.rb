@@ -8,7 +8,11 @@ description :
 	 Script to handle icon names in desktop icon themes
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

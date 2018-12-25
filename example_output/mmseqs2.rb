@@ -10,7 +10,11 @@ build_deps :
 	 cmake
 link_deps :
 	 gcc
+optional_deps :
 conflicts :
+resource :
+	 ['documentation']
+	 ['https://github.com/soedinglab/MMseqs2.wiki.git']
 patches :
 EOF_patch :
 install :

@@ -13,9 +13,13 @@ link_deps :
 	 ncurses
 	 openssl
 	 pcre
+optional_deps :
 	 gtk+
 	 gtk+3
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

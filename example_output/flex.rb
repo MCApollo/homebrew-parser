@@ -10,7 +10,11 @@ build_deps :
 	 help2man
 link_deps :
 	 gettext
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Strip or convert ANSI codes into HTML, (La)Tex, RTF, or BBCode
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

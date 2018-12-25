@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 go
+optional_deps :
 conflicts :
+resource :
+	 ['iochan', 'pup']
+	 ['https://github.com/mitchellh/iochan.git', 'https://github.com/ericchiang/pup/archive/v0.4.0.tar.gz']
 patches :
 EOF_patch :
 install :

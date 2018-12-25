@@ -15,8 +15,12 @@ link_deps :
 	 glew
 	 innoextract
 	 sdl
+optional_deps :
 conflicts :
 	 rnv
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/arx/ArxLibertatis/commit/442ba4af978160abd3856a9daec38f5b6e213cb4.patch?full_index=1
 EOF_patch :

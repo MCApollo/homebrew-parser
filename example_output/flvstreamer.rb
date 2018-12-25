@@ -8,8 +8,12 @@ description :
 	 Stream audio and video from flash & RTMP Servers
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 rtmpdump
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 TomeEE Web Profile plus JAX-RS
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

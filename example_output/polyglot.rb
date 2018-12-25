@@ -8,7 +8,11 @@ description :
 	 Protocol adapter to run UCI engines under XBoard
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

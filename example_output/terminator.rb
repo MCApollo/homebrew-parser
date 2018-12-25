@@ -14,7 +14,11 @@ link_deps :
 	 pygtk
 	 python@2
 	 vte
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/terminatorlib/cwd.py b/terminatorlib/cwd.py

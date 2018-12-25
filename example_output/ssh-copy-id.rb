@@ -8,7 +8,11 @@ description :
 	 Add a public key to a remote machine's authorized_keys file
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

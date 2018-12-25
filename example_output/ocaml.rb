@@ -8,8 +8,12 @@ description :
 	 General purpose programming language in the ML family
 build_deps :
 link_deps :
+optional_deps :
 	 :x11
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

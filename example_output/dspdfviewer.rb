@@ -22,7 +22,11 @@ link_deps :
 	 libtiff
 	 openjpeg
 	 qt
+optional_deps :
 conflicts :
+resource :
+	 ['poppler', 'font-data']
+	 ['https://poppler.freedesktop.org/poppler-0.65.0.tar.xz', 'https://poppler.freedesktop.org/poppler-data-0.4.9.tar.gz']
 patches :
 EOF_patch :
 install :

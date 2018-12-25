@@ -11,7 +11,11 @@ link_deps :
 	 concurrencykit
 	 jlog
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

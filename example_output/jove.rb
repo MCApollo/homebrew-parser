@@ -8,7 +8,11 @@ description :
 	 Emacs-style editor with vi-like memory, CPU, and size requirements
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/3cada68f/jove/patch-getline.diff
 EOF_patch :

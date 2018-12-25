@@ -12,7 +12,11 @@ link_deps :
 	 libidn
 	 openssl
 	 unbound
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

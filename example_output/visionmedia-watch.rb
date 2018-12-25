@@ -8,8 +8,12 @@ description :
 	 Periodically executes the given command
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 watch
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

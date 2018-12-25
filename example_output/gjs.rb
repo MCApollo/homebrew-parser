@@ -14,7 +14,11 @@ link_deps :
 	 gtk+3
 	 nspr
 	 readline
+optional_deps :
 conflicts :
+resource :
+	 ['mozjs60']
+	 ['https://archive.mozilla.org/pub/firefox/releases/60.1.0esr/source/firefox-60.1.0esr.source.tar.xz']
 patches :
 EOF_patch :
 install :

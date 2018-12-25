@@ -13,7 +13,11 @@ link_deps :
 	 libtool
 	 net-snmp
 	 riemann-client
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

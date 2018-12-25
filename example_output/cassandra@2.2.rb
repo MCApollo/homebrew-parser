@@ -10,7 +10,11 @@ build_deps :
 	 cython
 link_deps :
 	 python@2
+optional_deps :
 conflicts :
+resource :
+	 ['setuptools', 'futures', 'six', 'thrift', 'cql', 'cassandra-driver']
+	 ['https://files.pythonhosted.org/packages/a4/c8/9a7a47f683d54d83f648d37c3e180317f80dc126a304c45dc6663246233a/setuptools-36.5.0.zip', 'https://files.pythonhosted.org/packages/cc/26/b61e3a4eb50653e8a7339d84eeaa46d1e93b92951978873c220ae64d0733/futures-3.1.1.tar.gz', 'https://files.pythonhosted.org/packages/16/d8/bc6316cf98419719bd59c91742194c111b6f2e85abac88e496adefaf7afe/six-1.11.0.tar.gz', 'https://files.pythonhosted.org/packages/a3/ea/84a41e03f1ab14fb314c8bcf1c451090efa14c5cdfb9797d1079f502b54e/thrift-0.10.0.zip', 'https://files.pythonhosted.org/packages/0b/15/523f6008d32f05dd3c6a2e7c2f21505f0a785b6dc8949cad325306858afc/cql-1.4.0.tar.gz', 'https://files.pythonhosted.org/packages/5a/96/a5b2458a0483d3cefdf13064d40119754c1552ea34b7f0e8c6e03e66eb0a/cassandra-driver-3.11.0.tar.gz']
 patches :
 EOF_patch :
 install :

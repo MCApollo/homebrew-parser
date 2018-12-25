@@ -8,7 +8,11 @@ description :
 	 Library for dealing with Microsoft ITSS/CHM files
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

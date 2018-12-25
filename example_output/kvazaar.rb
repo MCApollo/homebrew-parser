@@ -9,7 +9,11 @@ description :
 build_deps :
 	 yasm
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['videosample']
+	 ['https://samples.mplayerhq.hu/V-codecs/lm20.avi']
 patches :
 EOF_patch :
 install :

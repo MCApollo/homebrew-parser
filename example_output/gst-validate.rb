@@ -14,7 +14,11 @@ link_deps :
 	 gst-plugins-base
 	 gstreamer
 	 json-glib
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

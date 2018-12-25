@@ -8,7 +8,11 @@ description :
 	 ADAPTIVE Communication Environment: OO network programming in C++
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

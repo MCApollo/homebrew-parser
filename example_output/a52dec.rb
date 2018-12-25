@@ -8,7 +8,11 @@ description :
 	 Library for decoding ATSC A/52 streams (AKA 'AC-3')
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,8 +8,12 @@ description :
 	 Programmable completion for Bash 3.2
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 bash-completion@2
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/c1d87451da3b5b147bed95b2dc783a1b02520ac5/bash-completion/bug-740971.patch
 EOF_patch :

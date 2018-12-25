@@ -11,7 +11,11 @@ link_deps :
 	 cabal-install
 	 ghc
 	 emacs
+optional_deps :
 conflicts :
+resource :
+	 ['stdlib']
+	 ['https://github.com/agda/agda-stdlib.git']
 patches :
 EOF_patch :
 install :

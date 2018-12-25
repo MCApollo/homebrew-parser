@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 readline
+optional_deps :
 conflicts :
+resource :
+	 ['book']
+	 ['https://ftp.gnu.org/gnu/chess/book_1.02.pgn.gz']
 patches :
 EOF_patch :
 install :

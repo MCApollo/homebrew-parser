@@ -8,7 +8,11 @@ description :
 	 Collection of LLDB commands to assist debugging iOS apps
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

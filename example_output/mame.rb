@@ -19,7 +19,11 @@ link_deps :
 	 sdl2
 	 sqlite
 	 utf8proc
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

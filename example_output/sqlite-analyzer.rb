@@ -8,7 +8,11 @@ description :
 	 Analyze how space is allocated inside an SQLite file
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

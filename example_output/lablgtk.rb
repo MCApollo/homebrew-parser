@@ -14,7 +14,11 @@ link_deps :
 	 gtksourceview
 	 librsvg
 	 ocaml
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

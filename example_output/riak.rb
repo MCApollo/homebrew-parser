@@ -11,9 +11,12 @@ link_deps :
 	 :arch
 	 erlang@17
 	 :macos
+optional_deps :
 conflicts :
+resource :
+	 ['fuse', 'hyper', 'solr', 'yokozuna']
+	 ['https://github.com/jlouis/fuse.git', 'https://github.com/basho/hyper.git', 'https://github.com/basho/hyper/pull/6.patch?full_index=1', 'https://files-source.tiot.jp/riak/solr/solr-4.10.4-yz-2.tgz', 'https://github.com/basho/yokozuna.git']
 patches :
-	 https://github.com/basho/hyper/pull/6.patch?full_index=1
 EOF_patch :
 install :
 	 ENV.deparallelize

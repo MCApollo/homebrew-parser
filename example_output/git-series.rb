@@ -11,7 +11,11 @@ build_deps :
 	 rust
 link_deps :
 	 libssh2
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

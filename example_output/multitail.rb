@@ -8,7 +8,11 @@ description :
 	 Tail multiple files in one terminal simultaneously
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

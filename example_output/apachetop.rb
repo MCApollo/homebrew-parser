@@ -9,7 +9,11 @@ description :
 	 Top-like display of Apache log
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- src/resolver.h    2005-10-15 18:10:01.000000000 +0200

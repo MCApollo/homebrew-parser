@@ -13,9 +13,13 @@ link_deps :
 	 openjpeg
 	 openssl
 	 python@2
-	 python
 	 swig
+optional_deps :
+	 python
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

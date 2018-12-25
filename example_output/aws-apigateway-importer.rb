@@ -10,7 +10,11 @@ build_deps :
 	 maven
 link_deps :
 	 :java
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/amazon-archives/aws-apigateway-importer/commit/660e3ce.diff?full_index=1
 EOF_patch :

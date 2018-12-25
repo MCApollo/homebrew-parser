@@ -13,7 +13,11 @@ link_deps :
 	 python@2
 	 swig
 	 :codesign
+optional_deps :
 conflicts :
+resource :
+	 ['clang', 'clang-extra-tools', 'compiler-rt', 'libcxx', 'libunwind', 'lld', 'lldb', 'openmp', 'polly', 'clang-extra-tools', 'compiler-rt', 'libcxx', 'libunwind', 'lld', 'lldb', 'openmp', 'polly']
+	 ['https://releases.llvm.org/7.0.0/cfe-7.0.0.src.tar.xz', 'https://releases.llvm.org/7.0.0/clang-tools-extra-7.0.0.src.tar.xz', 'https://releases.llvm.org/7.0.0/compiler-rt-7.0.0.src.tar.xz', 'https://releases.llvm.org/7.0.0/libcxx-7.0.0.src.tar.xz', 'https://releases.llvm.org/7.0.0/libunwind-7.0.0.src.tar.xz', 'https://releases.llvm.org/7.0.0/lld-7.0.0.src.tar.xz', 'https://releases.llvm.org/7.0.0/lldb-7.0.0.src.tar.xz', 'https://releases.llvm.org/7.0.0/openmp-7.0.0.src.tar.xz', 'https://releases.llvm.org/7.0.0/polly-7.0.0.src.tar.xz', 'https://git.llvm.org/git/clang-tools-extra.git', 'https://git.llvm.org/git/compiler-rt.git', 'https://git.llvm.org/git/libcxx.git', 'https://git.llvm.org/git/libunwind.git', 'https://git.llvm.org/git/lld.git', 'https://git.llvm.org/git/lldb.git', 'https://git.llvm.org/git/openmp.git', 'https://git.llvm.org/git/polly.git']
 patches :
 EOF_patch :
 install :

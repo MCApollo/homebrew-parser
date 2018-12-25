@@ -16,8 +16,12 @@ link_deps :
 	 glib
 	 gtk+
 	 gtkglext
+optional_deps :
 conflicts :
 	 gts
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -11,8 +11,12 @@ build_deps :
 link_deps :
 	 lv2
 	 gtk+
+optional_deps :
 	 :x11
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Display an interface's bandwidth usage
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

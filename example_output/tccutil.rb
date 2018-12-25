@@ -8,7 +8,11 @@ description :
 	 Utility to modify the macOS Accessibility Database (TCC.db)
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

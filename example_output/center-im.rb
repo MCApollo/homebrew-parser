@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 gettext
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/677cb38/center-im/patch-libjabber_jconn.c.diff
 EOF_patch :

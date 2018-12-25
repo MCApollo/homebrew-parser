@@ -16,11 +16,15 @@ link_deps :
 	 libtiff
 	 lua@5.1
 	 readline
+	 pango
+optional_deps :
 	 pdflib-lite
 	 wxmac
-	 pango
 	 :x11
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

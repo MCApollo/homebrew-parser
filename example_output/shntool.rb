@@ -8,7 +8,11 @@ description :
 	 Multi-purpose tool for manipulating and analyzing WAV files
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

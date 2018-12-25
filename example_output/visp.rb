@@ -16,7 +16,11 @@ link_deps :
 	 libpng
 	 opencv
 	 zbar
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

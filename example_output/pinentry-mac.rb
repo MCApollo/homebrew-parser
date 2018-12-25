@@ -9,7 +9,11 @@ description :
 build_deps :
 	 :xcode
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/GPGTools/pinentry-mac/pull/7.patch?full_index=1
 EOF_patch :

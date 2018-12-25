@@ -12,7 +12,11 @@ link_deps :
 	 boost
 	 hdf5
 	 ilmbase
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

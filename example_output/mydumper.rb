@@ -15,7 +15,11 @@ link_deps :
 	 mysql-client
 	 openssl
 	 pcre
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- cmake/modules/FindMySQL.cmake	2015-09-16 16:11:34.000000000 -0400

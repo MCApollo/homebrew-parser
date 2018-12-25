@@ -8,7 +8,11 @@ description :
 	 Allows multiple users to watch a serial console at the same time
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

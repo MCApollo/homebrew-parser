@@ -14,7 +14,11 @@ link_deps :
 	 sdl_image
 	 sdl_mixer
 	 sdl_ttf
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Clean C library for processing UTF-8 Unicode data
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

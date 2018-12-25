@@ -8,8 +8,12 @@ description :
 	 Documentation metadata library
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 scrollkeeper
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

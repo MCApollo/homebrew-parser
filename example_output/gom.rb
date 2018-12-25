@@ -16,7 +16,11 @@ link_deps :
 	 gdk-pixbuf
 	 gettext
 	 glib
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/bindings/python/meson.build b/bindings/python/meson.build

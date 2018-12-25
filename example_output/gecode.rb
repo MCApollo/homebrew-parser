@@ -8,8 +8,12 @@ description :
 	 Toolkit for developing constraint-based systems and applications
 build_deps :
 link_deps :
+optional_deps :
 	 qt
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

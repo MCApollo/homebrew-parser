@@ -8,7 +8,11 @@ description :
 	 Break a packet trace into some number of sub-traces
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Filter to replace numeric timestamps with a formated date time
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

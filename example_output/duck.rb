@@ -12,7 +12,11 @@ build_deps :
 	 :xcode
 link_deps :
 	 :java
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Tool for reverse engineering 3rd party, closed, binary Android apps
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['sample.apk']
+	 ['https://github.com/downloads/stephanenicolas/RoboDemo/robodemo-sample-1.0.1.apk']
 patches :
 EOF_patch :
 install :

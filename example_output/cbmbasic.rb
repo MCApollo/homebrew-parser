@@ -8,7 +8,11 @@ description :
 	 Commodore BASIC V2 as a scripting language
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

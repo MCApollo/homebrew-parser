@@ -12,8 +12,12 @@ link_deps :
 	 cscope
 	 lua
 	 python
+optional_deps :
 conflicts :
 	 vim
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -11,7 +11,11 @@ link_deps :
 	 libgcrypt
 	 libgpg-error
 	 pcre
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,9 +8,13 @@ description :
 	 C implementation of Markdown
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 markdown
 	 multimarkdown
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -14,7 +14,11 @@ build_deps :
 link_deps :
 	 libbitcoin-node
 	 libbitcoin-protocol
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

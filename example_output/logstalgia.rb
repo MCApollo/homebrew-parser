@@ -17,7 +17,11 @@ link_deps :
 	 pcre
 	 sdl2
 	 sdl2_image
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

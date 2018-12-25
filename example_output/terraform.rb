@@ -10,8 +10,12 @@ build_deps :
 	 go
 	 gox
 link_deps :
+optional_deps :
 conflicts :
 	 tfenv
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

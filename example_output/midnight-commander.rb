@@ -13,8 +13,12 @@ link_deps :
 	 libssh2
 	 openssl
 	 s-lang
+optional_deps :
 conflicts :
 	 minio-mc
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

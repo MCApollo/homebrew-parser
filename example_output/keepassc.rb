@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 python
+optional_deps :
 conflicts :
+resource :
+	 ['kppy', 'pycryptodomex']
+	 ['https://files.pythonhosted.org/packages/c8/d9/6ced04177b4790ccb1ba44e466c5b67f3a1cfe4152fb05ef5f990678f94f/kppy-1.5.2.tar.gz', 'https://files.pythonhosted.org/packages/e6/5a/cf2bd33574f8f8711bad12baee7ef5c9c53a09c338cec241abfc0ba0cf63/pycryptodomex-3.6.3.tar.gz']
 patches :
 EOF_patch :
 install :

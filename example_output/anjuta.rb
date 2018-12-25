@@ -24,7 +24,11 @@ link_deps :
 	 shared-mime-info
 	 vala
 	 vte3
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

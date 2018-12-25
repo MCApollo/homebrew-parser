@@ -10,11 +10,15 @@ build_deps :
 	 pkg-config
 link_deps :
 	 gnutls
+optional_deps :
 	 dbus
 	 imagemagick@6
 	 librsvg
 	 mailutils
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

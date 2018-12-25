@@ -15,12 +15,16 @@ link_deps :
 	 libpng
 	 libtiff
 	 libtool
+optional_deps :
 	 ghostscript
 	 libwmf
 	 little-cms2
 	 webp
 	 :x11
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Library for handling page faults in user mode
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

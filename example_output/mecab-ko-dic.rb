@@ -11,7 +11,11 @@ build_deps :
 	 automake
 link_deps :
 	 mecab-ko
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

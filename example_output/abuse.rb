@@ -15,7 +15,11 @@ link_deps :
 	 libvorbis
 	 sdl
 	 sdl_mixer
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

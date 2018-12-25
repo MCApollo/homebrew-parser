@@ -16,8 +16,12 @@ link_deps :
 	 jpeg
 	 json-glib
 	 libpng
+optional_deps :
 conflicts :
 	 coreutils
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

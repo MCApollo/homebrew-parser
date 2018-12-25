@@ -8,8 +8,12 @@ description :
 	 Implementation of an algorithm for breaking the PkZip cipher
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 libextractor
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

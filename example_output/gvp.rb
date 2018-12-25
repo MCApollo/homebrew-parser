@@ -8,7 +8,11 @@ description :
 	 Go versioning packager
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/pote/gvp/commit/11c4cefd.patch?full_index=1
 EOF_patch :

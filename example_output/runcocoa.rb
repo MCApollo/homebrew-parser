@@ -8,7 +8,11 @@ description :
 	 Tools to run Cocoa/Objective-C and C code from the command-line
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

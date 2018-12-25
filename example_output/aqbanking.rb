@@ -16,7 +16,11 @@ link_deps :
 	 libxml2
 	 libxmlsec1
 	 libxslt
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

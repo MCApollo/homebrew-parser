@@ -11,7 +11,11 @@ link_deps :
 	 cmake
 	 qt
 	 xerces-c
+optional_deps :
 conflicts :
+resource :
+	 ['G4NDL', 'G4EMLOW', 'PhotonEvaporation', 'RadioactiveDecay', 'G4SAIDDATA', 'G4NEUTRONXS', 'G4ABLA', 'G4PII', 'G4ENSDFSTATE']
+	 ['https://cern.ch/geant4-data/datasets/G4NDL.4.5.tar.gz', 'https://cern.ch/geant4-data/datasets/G4EMLOW.7.3.tar.gz', 'https://cern.ch/geant4-data/datasets/G4PhotonEvaporation.5.2.tar.gz', 'https://cern.ch/geant4-data/datasets/G4RadioactiveDecay.5.2.tar.gz', 'https://cern.ch/geant4-data/datasets/G4SAIDDATA.1.1.tar.gz', 'https://cern.ch/geant4-data/datasets/G4NEUTRONXS.1.4.tar.gz', 'https://cern.ch/geant4-data/datasets/G4ABLA.3.1.tar.gz', 'https://cern.ch/geant4-data/datasets/G4PII.1.3.tar.gz', 'https://cern.ch/geant4-data/datasets/G4ENSDFSTATE.2.2.tar.gz']
 patches :
 EOF_patch :
 install :

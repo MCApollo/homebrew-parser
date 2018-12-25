@@ -11,9 +11,13 @@ link_deps :
 	 freetype
 	 ghostscript
 	 :x11
+optional_deps :
 conflicts :
 	 poppler
 	 xpdf
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

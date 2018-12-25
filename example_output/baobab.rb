@@ -17,7 +17,11 @@ link_deps :
 	 adwaita-icon-theme
 	 gtk+3
 	 hicolor-icon-theme
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

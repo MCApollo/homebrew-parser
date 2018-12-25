@@ -10,8 +10,12 @@ build_deps :
 link_deps :
 	 gcc
 	 libevent
+optional_deps :
 conflicts :
 	 mpich
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

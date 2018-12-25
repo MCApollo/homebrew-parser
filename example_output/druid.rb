@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 :java
 	 zookeeper
+optional_deps :
 conflicts :
+resource :
+	 ['mysql-metadata-storage']
+	 ['http://static.druid.io/artifacts/releases/mysql-metadata-storage-0.12.2.tar.gz']
 patches :
 EOF_patch :
 install :

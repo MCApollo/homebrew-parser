@@ -8,7 +8,11 @@ description :
 	 Convert CloneCD images to ISO images
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

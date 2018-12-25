@@ -9,7 +9,11 @@ description :
 build_deps :
 	 pkg-config
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['bindings']
+	 ['https://downloads.sourceforge.net/project/omniorb/omniORBpy/omniORBpy-4.2.2/omniORBpy-4.2.2.tar.bz2']
 patches :
 EOF_patch :
 install :

@@ -8,8 +8,12 @@ description :
 	 Shell command parallelization utility
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 moreutils
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -21,7 +21,11 @@ link_deps :
 	 sdl_mixer
 	 sdl_ttf
 	 xerces-c
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/master/enigma/c%2B%2B11.patch
 EOF_patch :

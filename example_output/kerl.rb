@@ -8,7 +8,11 @@ description :
 	 Easy building and installing of Erlang/OTP instances
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

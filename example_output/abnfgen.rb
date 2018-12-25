@@ -8,7 +8,11 @@ description :
 	 Quickly generate random documents that match an ABFN grammar
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

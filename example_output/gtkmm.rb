@@ -15,7 +15,11 @@ link_deps :
 	 gtk+
 	 libsigc++
 	 pangomm
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

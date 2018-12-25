@@ -15,7 +15,11 @@ link_deps :
 	 goffice
 	 pygobject
 	 rarian
+optional_deps :
 conflicts :
+resource :
+	 ['itstool', 'py_libxml2']
+	 ['http://files.itstool.org/itstool/itstool-2.0.2.tar.bz2', 'http://xmlsoft.org/sources/libxml2-2.9.7.tar.gz']
 patches :
 EOF_patch :
 install :

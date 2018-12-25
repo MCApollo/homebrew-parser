@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 gettext
 	 :osxfuse
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/e0b6faaa0d/ntfs-3g/10.13.patch
 EOF_patch :

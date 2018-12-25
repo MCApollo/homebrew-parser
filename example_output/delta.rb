@@ -8,7 +8,11 @@ description :
 	 Programatically minimize files to isolate features of interest
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

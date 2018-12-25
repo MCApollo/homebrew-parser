@@ -10,7 +10,11 @@ build_deps :
 	 pkg-config
 link_deps :
 	 aterm
+optional_deps :
 conflicts :
+resource :
+	 ['c-library', 'toolbuslib', 'error-support', 'pt-support', 'sdf-support', 'asf-support', 'tide-support', 'rstore-support', 'config-support', 'ptable-support', 'sglr', 'asc-support', 'pgen', 'pandora']
+	 ['http://www.meta-environment.org/releases/c-library-1.2.tar.gz', 'http://www.meta-environment.org/releases/toolbuslib-1.1.tar.gz', 'http://www.meta-environment.org/releases/error-support-1.6.tar.gz', 'http://www.meta-environment.org/releases/pt-support-2.4.tar.gz', 'http://www.meta-environment.org/releases/sdf-support-2.5.tar.gz', 'http://www.meta-environment.org/releases/asf-support-1.8.tar.gz', 'http://www.meta-environment.org/releases/tide-support-1.3.1.tar.gz', 'http://www.meta-environment.org/releases/rstore-support-1.0.tar.gz', 'http://www.meta-environment.org/releases/config-support-1.4.tar.gz', 'http://www.meta-environment.org/releases/ptable-support-1.2.tar.gz', 'http://www.meta-environment.org/releases/sglr-4.5.3.tar.gz', 'http://www.meta-environment.org/releases/asc-support-2.6.tar.gz', 'http://www.meta-environment.org/releases/pgen-2.8.1.tar.gz', 'http://www.meta-environment.org/releases/pandora-1.6.tar.gz']
 patches :
 EOF_patch :
 install :

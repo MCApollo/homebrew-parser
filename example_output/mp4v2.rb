@@ -8,8 +8,12 @@ description :
 	 Read, create, and modify MP4 files
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 bento4
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

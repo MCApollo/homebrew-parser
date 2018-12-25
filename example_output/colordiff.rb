@@ -8,8 +8,12 @@ description :
 	 Color-highlighted diff(1) output
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 cdiff
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/Makefile b/Makefile

@@ -11,8 +11,12 @@ build_deps :
 link_deps :
 	 libexif
 	 popt
+optional_deps :
 	 gettext
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

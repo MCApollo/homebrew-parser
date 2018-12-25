@@ -14,7 +14,11 @@ link_deps :
 	 libtiff
 	 sdl
 	 webp
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/41996822/sdl_image/IMG_ImageIO.m.patch
 EOF_patch :

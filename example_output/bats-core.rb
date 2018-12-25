@@ -8,8 +8,12 @@ description :
 	 Bash Automated Testing System
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 bats
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -9,7 +9,11 @@ description :
 build_deps :
 	 cmake
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['miniampl']
+	 ['https://github.com/dpo/miniampl/archive/v1.0.tar.gz']
 patches :
 EOF_patch :
 install :

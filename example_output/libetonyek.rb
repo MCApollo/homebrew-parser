@@ -13,7 +13,11 @@ link_deps :
 	 glm
 	 librevenge
 	 mdds
+optional_deps :
 conflicts :
+resource :
+	 ['liblangtag']
+	 ['https://bitbucket.org/tagoh/liblangtag/downloads/liblangtag-0.6.2.tar.bz2']
 patches :
 EOF_patch :
 install :

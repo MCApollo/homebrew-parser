@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 gettext
+optional_deps :
 conflicts :
+resource :
+	 ['cracklib-words']
+	 ['https://github.com/cracklib/cracklib/releases/download/cracklib-2.9.6/cracklib-words-2.9.6.bz2']
 patches :
 	 https://github.com/cracklib/cracklib/commit/47e5dec.patch?full_index=1
 EOF_patch :

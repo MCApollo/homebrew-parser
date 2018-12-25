@@ -13,7 +13,11 @@ link_deps :
 	 fftw
 	 libsamplerate
 	 qt
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

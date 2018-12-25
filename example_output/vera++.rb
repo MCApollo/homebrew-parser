@@ -9,7 +9,11 @@ description :
 build_deps :
 	 cmake
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['doc', 'boost', 'lua', 'luabind']
+	 ['https://bitbucket.org/verateam/vera/downloads/vera++-1.3.0-doc.tar.gz', 'https://downloads.sourceforge.net/project/boost/boost/1.56.0/boost_1_56_0.tar.bz2', 'https://github.com/LuaDist/lua/archive/5.2.3.tar.gz', 'https://github.com/verateam/luabind/archive/vera-1.3.0.tar.gz']
 patches :
 EOF_patch :
 install :

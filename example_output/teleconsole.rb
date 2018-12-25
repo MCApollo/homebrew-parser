@@ -9,7 +9,11 @@ description :
 build_deps :
 	 go
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/gravitational/teleconsole/pull/8.patch?full_index=1
 EOF_patch :

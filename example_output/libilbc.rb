@@ -8,7 +8,11 @@ description :
 	 Packaged version of iLBC codec from the WebRTC project
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

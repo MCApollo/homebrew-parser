@@ -8,7 +8,11 @@ description :
 	 C library for manipulating Yubico one-time passwords
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

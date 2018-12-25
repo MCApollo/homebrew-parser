@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 postgresql
 	 readline
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 gettext
+optional_deps :
 conflicts :
 	 cspice
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

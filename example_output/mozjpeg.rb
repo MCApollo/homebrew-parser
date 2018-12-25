@@ -13,8 +13,12 @@ build_deps :
 	 nasm
 	 pkg-config
 link_deps :
+optional_deps :
 	 libpng
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

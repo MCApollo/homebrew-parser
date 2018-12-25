@@ -18,8 +18,12 @@ link_deps :
 	 postgresql
 	 proj
 	 sfcgal
+optional_deps :
 	 protobuf-c
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

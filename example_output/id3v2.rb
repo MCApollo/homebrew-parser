@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 id3lib
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

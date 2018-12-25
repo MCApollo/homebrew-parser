@@ -8,8 +8,12 @@ description :
 	 Utilities to aid shell scripts or command-line users
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 coreutils
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 :java
 	 libreadline-java
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

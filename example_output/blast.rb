@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 lmdb
+optional_deps :
 conflicts :
 	 proj
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

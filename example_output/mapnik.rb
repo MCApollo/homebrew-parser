@@ -21,7 +21,11 @@ link_deps :
 	 postgresql
 	 proj
 	 webp
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/mapnik/mapnik/commit/c067eb7eec32fdd6d1c3d0e90b13a889459f2756.diff?full_index=1
 EOF_patch :

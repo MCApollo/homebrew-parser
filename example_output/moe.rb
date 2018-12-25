@@ -8,7 +8,11 @@ description :
 	 Console text editor for ISO-8859 and ASCII
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

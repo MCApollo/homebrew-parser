@@ -8,7 +8,11 @@ description :
 	 Multiple Repository management tool
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['test-repo']
+	 ['https://github.com/Homebrew/homebrew-command-not-found.git']
 patches :
 EOF_patch :
 install :

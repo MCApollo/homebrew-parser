@@ -23,7 +23,11 @@ link_deps :
 	 speex
 	 speexdsp
 	 sqlite
+optional_deps :
 conflicts :
+resource :
+	 ['sounds-music-8000', 'sounds-music-16000', 'sounds-music-32000', 'sounds-music-48000', 'sounds-en-us-callie-8000', 'sounds-en-us-callie-16000', 'sounds-en-us-callie-32000', 'sounds-en-us-callie-48000', 'sounds-fr-ca-june-8000', 'sounds-fr-ca-june-16000', 'sounds-fr-ca-june-32000', 'sounds-fr-ca-june-48000', 'sounds-ru-RU-elena-8000', 'sounds-ru-RU-elena-16000', 'sounds-ru-RU-elena-32000', 'sounds-ru-RU-elena-48000']
+	 ['#{sounds_url_base}/freeswitch-sounds-music-8000-#{moh_version}.tar.gz', '#{sounds_url_base}/freeswitch-sounds-music-16000-#{moh_version}.tar.gz', '#{sounds_url_base}/freeswitch-sounds-music-32000-#{moh_version}.tar.gz', '#{sounds_url_base}/freeswitch-sounds-music-48000-#{moh_version}.tar.gz', '#{sounds_url_base}/freeswitch-sounds-en-us-callie-8000-#{sounds_en_version}.tar.gz', '#{sounds_url_base}/freeswitch-sounds-en-us-callie-16000-#{sounds_en_version}.tar.gz', '#{sounds_url_base}/freeswitch-sounds-en-us-callie-32000-#{sounds_en_version}.tar.gz', '#{sounds_url_base}/freeswitch-sounds-en-us-callie-48000-#{sounds_en_version}.tar.gz', '#{sounds_url_base}/freeswitch-sounds-fr-ca-june-8000-#{sounds_fr_version}.tar.gz', '#{sounds_url_base}/freeswitch-sounds-fr-ca-june-16000-#{sounds_fr_version}.tar.gz', '#{sounds_url_base}/freeswitch-sounds-fr-ca-june-32000-#{sounds_fr_version}.tar.gz', '#{sounds_url_base}/freeswitch-sounds-fr-ca-june-48000-#{sounds_fr_version}.tar.gz', '#{sounds_url_base}/freeswitch-sounds-ru-RU-elena-8000-#{sounds_ru_version}.tar.gz', '#{sounds_url_base}/freeswitch-sounds-ru-RU-elena-16000-#{sounds_ru_version}.tar.gz', '#{sounds_url_base}/freeswitch-sounds-ru-RU-elena-32000-#{sounds_ru_version}.tar.gz', '#{sounds_url_base}/freeswitch-sounds-ru-RU-elena-48000-#{sounds_ru_version}.tar.gz']
 patches :
 EOF_patch :
 install :

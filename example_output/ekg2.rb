@@ -11,8 +11,12 @@ build_deps :
 link_deps :
 	 openssl
 	 readline
+optional_deps :
 	 libgadu
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/compat/strlcat.c b/compat/strlcat.c

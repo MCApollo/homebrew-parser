@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 python
+optional_deps :
 	 rtmpdump
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -12,7 +12,11 @@ link_deps :
 	 lame
 	 mktorrent
 	 python
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

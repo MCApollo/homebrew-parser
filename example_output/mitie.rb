@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 python@2
+optional_deps :
 conflicts :
+resource :
+	 ['models-english']
+	 ['https://downloads.sourceforge.net/project/mitie/binaries/MITIE-models-v0.2.tar.bz2']
 patches :
 EOF_patch :
 install :

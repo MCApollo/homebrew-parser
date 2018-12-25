@@ -9,7 +9,11 @@ description :
 build_deps :
 	 go
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['sonobuoyresults']
+	 ['https://raw.githubusercontent.com/heptio/sonobuoy/master/pkg/client/results/testdata/results-0.10.tar.gz']
 patches :
 EOF_patch :
 install :

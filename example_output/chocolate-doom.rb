@@ -14,7 +14,11 @@ link_deps :
 	 sdl2
 	 sdl2_mixer
 	 sdl2_net
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Collect, send, process, and generate NetFlow data reports
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

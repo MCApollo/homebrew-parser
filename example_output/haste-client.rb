@@ -3,13 +3,16 @@ name :
 homepage :
 	 https://hastebin.com/
 url :
-	 https://rubygems.org/gems/faraday-0.12.2.gem
 description :
 	 CLI client for haste-server
 build_deps :
 link_deps :
 	 ruby
+optional_deps :
 conflicts :
+resource :
+	 ['faraday', 'json', 'multipart-post']
+	 ['https://rubygems.org/gems/faraday-0.12.2.gem', 'https://rubygems.org/gems/json-2.1.0.gem', 'https://rubygems.org/gems/multipart-post-2.0.0.gem']
 patches :
 EOF_patch :
 install :

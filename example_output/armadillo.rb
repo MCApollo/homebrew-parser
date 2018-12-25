@@ -13,7 +13,11 @@ link_deps :
 	 arpack
 	 hdf5
 	 superlu
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -13,7 +13,11 @@ link_deps :
 	 lua
 	 lutok
 	 sqlite
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

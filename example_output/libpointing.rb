@@ -8,7 +8,11 @@ description :
 	 Provides direct access to HID pointing devices
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

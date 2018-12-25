@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 readline
+optional_deps :
 	 :x11
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

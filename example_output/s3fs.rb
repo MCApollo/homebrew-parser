@@ -15,7 +15,11 @@ link_deps :
 	 libgcrypt
 	 nettle
 	 :osxfuse
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

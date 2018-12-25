@@ -10,8 +10,12 @@ build_deps :
 	 :xcode
 link_deps :
 	 :macos
+optional_deps :
 conflicts :
 	 choose
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

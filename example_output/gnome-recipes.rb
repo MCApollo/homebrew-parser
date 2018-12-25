@@ -23,7 +23,11 @@ link_deps :
 	 librest
 	 libsoup
 	 libxml2
+optional_deps :
 conflicts :
+resource :
+	 ['goa']
+	 ['https://download.gnome.org/sources/gnome-online-accounts/3.30/gnome-online-accounts-3.30.0.tar.xz']
 patches :
 EOF_patch :
 install :

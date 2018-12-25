@@ -8,7 +8,11 @@ description :
 	 ID3 tag editor for MP3 files
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

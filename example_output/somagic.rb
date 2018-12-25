@@ -11,7 +11,11 @@ link_deps :
 	 libgcrypt
 	 libusb
 	 somagic-tools
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,8 +8,12 @@ description :
 	 GNU implementation of the famous stream editor
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 ssed
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 ghostscript
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/Homebrew/formula-patches/raw/master/libspectre/libspectre-0.2.7-gs918.patch
 EOF_patch :

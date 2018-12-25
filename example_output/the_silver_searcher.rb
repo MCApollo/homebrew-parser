@@ -13,7 +13,11 @@ build_deps :
 link_deps :
 	 pcre
 	 xz
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

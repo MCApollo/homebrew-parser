@@ -15,7 +15,11 @@ link_deps :
 	 ossp-uuid
 	 protobuf@3.1
 	 python@2
+optional_deps :
 conflicts :
+resource :
+	 ['protobuf-c']
+	 ['https://github.com/protobuf-c/protobuf-c/releases/download/v1.2.1/protobuf-c-1.2.1.tar.gz']
 patches :
 EOF_patch :
 install :

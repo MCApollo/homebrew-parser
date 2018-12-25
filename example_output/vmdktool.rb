@@ -8,7 +8,11 @@ description :
 	 Converts raw filesystems to VMDK files and vice versa
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

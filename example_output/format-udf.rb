@@ -8,7 +8,11 @@ description :
 	 Bash script to format a block device to UDF
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

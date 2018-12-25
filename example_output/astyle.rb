@@ -8,7 +8,11 @@ description :
 	 Source code beautifier for C, C++, C#, and Java
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

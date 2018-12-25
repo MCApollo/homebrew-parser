@@ -18,7 +18,11 @@ link_deps :
 	 mad
 	 sdl
 	 theora
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

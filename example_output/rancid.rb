@@ -8,8 +8,12 @@ description :
 	 Really Awesome New Cisco confIg Differ
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 par
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

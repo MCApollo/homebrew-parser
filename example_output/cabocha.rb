@@ -11,7 +11,11 @@ link_deps :
 	 crf++
 	 mecab
 	 mecab-ipadic
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

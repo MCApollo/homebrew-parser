@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 cairo
 	 poppler
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

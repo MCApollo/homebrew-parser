@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 :x11
+optional_deps :
 	 dmenu
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

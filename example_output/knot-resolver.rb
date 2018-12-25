@@ -16,7 +16,11 @@ link_deps :
 	 lmdb
 	 luajit
 	 nettle
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

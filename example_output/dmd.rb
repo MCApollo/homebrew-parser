@@ -8,7 +8,11 @@ description :
 	 D programming language compiler for macOS
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['druntime', 'phobos', 'tools', 'phobos', 'tools']
+	 ['https://github.com/dlang/druntime/archive/v2.083.1.tar.gz', 'https://github.com/dlang/phobos/archive/v2.083.1.tar.gz', 'https://github.com/dlang/tools/archive/v2.083.1.tar.gz', 'https://github.com/dlang/phobos.git', 'https://github.com/dlang/tools.git']
 patches :
 EOF_patch :
 install :

@@ -8,9 +8,13 @@ description :
 	 Text-to-HTML conversion tool
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 discount
 	 multimarkdown
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

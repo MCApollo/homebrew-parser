@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 gcc
 	 :x11
+optional_deps :
 conflicts :
+resource :
+	 ['xorg-cf-files']
+	 ['https://xorg.freedesktop.org/releases/individual/util/xorg-cf-files-1.0.5.tar.bz2']
 patches :
 	 https://raw.githubusercontent.com/Homebrew/patches/a0bb3a4/imake/patch-imakemdep.h.diff
 EOF_patch :

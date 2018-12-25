@@ -12,7 +12,11 @@ link_deps :
 	 libssh2
 	 openssl
 	 pkg-config
+optional_deps :
 conflicts :
+resource :
+	 ['cargo', 'racer', 'racer', 'cargobootstrap']
+	 ['https://github.com/rust-lang/cargo.git', 'https://github.com/racer-rust/racer/archive/2.0.14.tar.gz', 'https://github.com/racer-rust/racer.git', 'https://static.rust-lang.org/dist/2018-10-25/cargo-0.31.0-x86_64-apple-darwin.tar.gz']
 patches :
 EOF_patch :
 install :

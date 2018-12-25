@@ -8,7 +8,11 @@ description :
 	 Recover the default WPA passphrases from supported routers
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

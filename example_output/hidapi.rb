@@ -12,7 +12,11 @@ build_deps :
 	 libtool
 	 pkg-config
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/signal11/hidapi/pull/219.patch?full_index=1
 EOF_patch :

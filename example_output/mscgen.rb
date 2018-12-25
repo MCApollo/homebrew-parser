@@ -11,8 +11,12 @@ build_deps :
 link_deps :
 	 freetype
 	 gd
+optional_deps :
 	 :x11
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

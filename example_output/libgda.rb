@@ -19,7 +19,11 @@ link_deps :
 	 openssl
 	 readline
 	 sqlite
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

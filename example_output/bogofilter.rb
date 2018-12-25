@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 berkeley-db
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

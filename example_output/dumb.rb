@@ -8,7 +8,11 @@ description :
 	 IT, XM, S3M and MOD player library
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

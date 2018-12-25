@@ -8,7 +8,11 @@ description :
 	 Recursively substitute remote URLs for multiple repos
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

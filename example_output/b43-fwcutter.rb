@@ -8,7 +8,11 @@ description :
 	 Extract firmware from Braodcom 43xx driver files
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

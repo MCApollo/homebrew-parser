@@ -11,7 +11,11 @@ link_deps :
 	 atomicparsley
 	 ffmpeg
 	 :macos
+optional_deps :
 conflicts :
+resource :
+	 ['IO::Socket::IP', 'IO::Socket::SSL', 'Mojolicious', 'Mozilla::CA']
+	 ['https://cpan.metacpan.org/authors/id/P/PE/PEVANS/IO-Socket-IP-0.39.tar.gz', 'https://cpan.metacpan.org/authors/id/S/SU/SULLR/IO-Socket-SSL-2.059.tar.gz', 'https://cpan.metacpan.org/authors/id/S/SR/SRI/Mojolicious-7.93.tar.gz', 'https://cpan.metacpan.org/authors/id/A/AB/ABH/Mozilla-CA-20180117.tar.gz']
 patches :
 EOF_patch :
 install :

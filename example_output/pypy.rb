@@ -14,7 +14,11 @@ link_deps :
 	 libffi
 	 openssl
 	 sqlite
+optional_deps :
 conflicts :
+resource :
+	 ['bootstrap', 'setuptools', 'pip']
+	 ['https://bitbucket.org/pypy/pypy/downloads/pypy2-v6.0.0-osx64.tar.bz2', 'https://files.pythonhosted.org/packages/1a/04/d6f1159feaccdfc508517dba1929eb93a2854de729fa68da9d5c6b48fa00/setuptools-39.2.0.zip', 'https://files.pythonhosted.org/packages/ae/e8/2340d46ecadb1692a1e455f13f75e596d4eab3d11a57446f08259dee8f02/pip-10.0.1.tar.gz']
 patches :
 EOF_patch :
 install :

@@ -12,7 +12,11 @@ build_deps :
 	 libtool
 link_deps :
 	 gettext
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

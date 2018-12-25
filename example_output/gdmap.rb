@@ -13,7 +13,11 @@ link_deps :
 	 gettext
 	 glib
 	 gtk+
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/configure b/configure

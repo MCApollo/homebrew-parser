@@ -23,7 +23,11 @@ link_deps :
 	 python@2
 	 snappy
 	 xz
+optional_deps :
 conflicts :
+resource :
+	 ['jblas', 'numpy']
+	 ['https://mikiobraun.github.io/jblas/jars/jblas-1.2.3.jar', 'https://files.pythonhosted.org/packages/ee/66/7c2690141c520db08b6a6f852fa768f421b0b50683b7bbcd88ef51f33170/numpy-1.14.0.zip']
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/7bbffa4/shogun/fix_python_linking.patch
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/9df360c/shogun/fix_veclib.patch

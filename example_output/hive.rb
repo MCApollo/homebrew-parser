@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 hadoop
 	 :java
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

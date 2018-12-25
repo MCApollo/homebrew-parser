@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 node
+optional_deps :
 conflicts :
+resource :
+	 ['webpack-cli']
+	 ['https://registry.npmjs.org/webpack-cli/-/webpack-cli-3.1.2.tgz']
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Port of ChinaDNS to C: fix irregularities with DNS in China
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

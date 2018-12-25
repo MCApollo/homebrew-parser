@@ -8,7 +8,11 @@ description :
 	 Implements djb's redo: an alternative to make(1)
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['docs']
+	 ['man']
 patches :
 EOF_patch :
 install :

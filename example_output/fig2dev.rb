@@ -11,8 +11,12 @@ link_deps :
 	 ghostscript
 	 libpng
 	 netpbm
+optional_deps :
 	 :x11
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 gtk+
 	 sane-backends
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/e1a592d/xsane/patch-src__xsane-save.c-libpng15-compat.diff
 EOF_patch :

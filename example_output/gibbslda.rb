@@ -8,7 +8,11 @@ description :
 	 Library wrapping imlib2's context API
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/src/utils.cpp b/src/utils.cpp

@@ -8,7 +8,11 @@ description :
 	 SSL/TLS cryptography library
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['ca-bundle']
+	 ['https://curl.haxx.se/ca/cacert-2018-10-17.pem']
 patches :
 EOF_patch :
 install :

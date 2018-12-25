@@ -12,8 +12,12 @@ build_deps :
 	 libtool
 link_deps :
 	 python@2
+optional_deps :
 	 python
 conflicts :
+resource :
+	 ['six']
+	 ['https://files.pythonhosted.org/packages/16/d8/bc6316cf98419719bd59c91742194c111b6f2e85abac88e496adefaf7afe/six-1.11.0.tar.gz']
 patches :
 EOF_patch :
 install :

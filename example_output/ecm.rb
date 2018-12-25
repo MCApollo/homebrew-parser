@@ -8,7 +8,11 @@ description :
 	 Prepare CD image files so they compress better
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 R7RS Scheme implementation, developed to be a handy script interpreter
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

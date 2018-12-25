@@ -27,10 +27,14 @@ link_deps :
 	 fftw
 	 graphicsmagick
 	 poppler
+optional_deps :
 	 imagemagick
 	 openexr
 	 openslide
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

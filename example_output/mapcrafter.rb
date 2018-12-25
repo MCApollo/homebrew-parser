@@ -12,7 +12,11 @@ link_deps :
 	 boost
 	 jpeg-turbo
 	 libpng
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

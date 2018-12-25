@@ -8,7 +8,11 @@ description :
 	 TCP connect to the given IP/port combo
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

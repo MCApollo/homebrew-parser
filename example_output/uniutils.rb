@@ -8,7 +8,11 @@ description :
 	 Manipulate and analyze Unicode text
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 Description: Fix clang FTBFS [-Wreturn-type]

@@ -10,7 +10,11 @@ build_deps :
 	 pkg-config
 link_deps :
 	 libogg
+optional_deps :
 conflicts :
+resource :
+	 ['oggfile']
+	 ['https://upload.wikimedia.org/wikipedia/commons/c/c8/Example.ogg']
 patches :
 EOF_patch :
 install :

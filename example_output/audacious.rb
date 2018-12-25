@@ -32,9 +32,12 @@ link_deps :
 	 qt
 	 sdl2
 	 wavpack
+optional_deps :
 conflicts :
+resource :
+	 ['plugins']
+	 ['https://distfiles.audacious-media-player.org/audacious-plugins-3.9.tar.bz2', 'https://github.com/audacious-media-player/audacious-plugins/pull/62.patch?full_index=1']
 patches :
-	 https://github.com/audacious-media-player/audacious-plugins/pull/62.patch?full_index=1
 EOF_patch :
 install :
 	 args = %W[

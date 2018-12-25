@@ -8,7 +8,11 @@ description :
 	 Command-line interface to generate clients for api builder
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

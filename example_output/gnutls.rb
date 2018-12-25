@@ -14,9 +14,13 @@ link_deps :
 	 libunistring
 	 nettle
 	 p11-kit
+optional_deps :
 	 guile
 	 unbound
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

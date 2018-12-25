@@ -18,7 +18,11 @@ link_deps :
 	 neon
 	 s-lang
 	 unac
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/ed0e680/flactag/jpeg9.patch
 EOF_patch :

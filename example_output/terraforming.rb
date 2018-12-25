@@ -8,7 +8,11 @@ description :
 	 Export existing AWS resources to Terraform style (tf, tfstate)
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['aws-sdk-autoscaling', 'aws-sdk-cloudwatch', 'aws-sdk-ec2', 'aws-sdk-efs', 'aws-sdk-elasticache', 'aws-sdk-elasticloadbalancing', 'aws-sdk-elasticloadbalancingv2', 'aws-sdk-iam', 'aws-sdk-kms', 'aws-sdk-rds', 'aws-sdk-redshift', 'aws-sdk-route53', 'aws-sdk-s3', 'aws-sdk-sns', 'aws-sdk-sqs', 'multi_json', 'thor']
+	 ['https://rubygems.org/gems/aws-sdk-autoscaling-1.3.0.gem', 'https://rubygems.org/gems/aws-sdk-cloudwatch-1.2.0.gem', 'https://rubygems.org/gems/aws-sdk-ec2-1.10.0.gem', 'https://rubygems.org/gems/aws-sdk-efs-1.0.0.gem', 'https://rubygems.org/gems/aws-sdk-elasticache-1.1.0.gem', 'https://rubygems.org/gems/aws-sdk-elasticloadbalancing-1.1.0.gem', 'https://rubygems.org/gems/aws-sdk-elasticloadbalancingv2-1.3.0.gem', 'https://rubygems.org/gems/aws-sdk-iam-1.3.0.gem', 'https://rubygems.org/gems/aws-sdk-kms-1.2.0.gem', 'https://rubygems.org/gems/aws-sdk-rds-1.4.0.gem', 'https://rubygems.org/gems/aws-sdk-redshift-1.1.0.gem', 'https://rubygems.org/gems/aws-sdk-route53-1.3.0.gem', 'https://rubygems.org/gems/aws-sdk-s3-1.5.0.gem', 'https://rubygems.org/gems/aws-sdk-sns-1.1.0.gem', 'https://rubygems.org/gems/aws-sdk-sqs-1.2.0.gem', 'https://rubygems.org/gems/multi_json-1.12.2.gem', 'https://rubygems.org/gems/thor-0.20.0.gem']
 patches :
 EOF_patch :
 install :

@@ -10,7 +10,11 @@ build_deps :
 	 maven
 link_deps :
 	 :java
+optional_deps :
 conflicts :
+resource :
+	 ['macify', 'java-image-scaling']
+	 ['https://www.java2s.com/Code/JarDownload/macify/macify-1.4.jar.zip', 'https://www.java2s.com/Code/JarDownload/java-image/java-image-scaling-0.8.5.jar.zip']
 patches :
 EOF_patch :
 install :

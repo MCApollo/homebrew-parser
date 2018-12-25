@@ -10,8 +10,12 @@ build_deps :
 	 cmake
 link_deps :
 	 pcre
+optional_deps :
 conflicts :
 	 sdl
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

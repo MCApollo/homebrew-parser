@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 md5sha1sum
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/break_filelist b/break_filelist

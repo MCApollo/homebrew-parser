@@ -8,7 +8,11 @@ description :
 	 ROM backup tool and emulator's Swiss Army knife program
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['super_bat_puncher_demo']
+	 ['http://morphcat.de/superbatpuncher/Super%20Bat%20Puncher%20Demo.zip']
 patches :
 EOF_patch :
 install :

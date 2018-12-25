@@ -12,7 +12,11 @@ build_deps :
 	 sphinx-doc
 link_deps :
 	 pcre
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

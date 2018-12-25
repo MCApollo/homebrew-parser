@@ -12,7 +12,11 @@ link_deps :
 	 libgcrypt
 	 lzo
 	 :macos
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -12,7 +12,11 @@ link_deps :
 	 pod2man
 	 libidn2
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

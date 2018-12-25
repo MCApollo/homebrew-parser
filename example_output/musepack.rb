@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 libcuefile
 	 libreplaygain
+optional_deps :
 conflicts :
+resource :
+	 ['test-mpc']
+	 ['https://trac.ffmpeg.org/raw-attachment/ticket/1160/decodererror.mpc']
 patches :
 EOF_patch :
 install :

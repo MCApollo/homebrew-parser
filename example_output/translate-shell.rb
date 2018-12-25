@@ -11,7 +11,11 @@ link_deps :
 	 fribidi
 	 gawk
 	 rlwrap
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

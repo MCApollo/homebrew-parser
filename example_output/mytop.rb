@@ -10,8 +10,12 @@ build_deps :
 link_deps :
 	 mysql-client
 	 openssl
+optional_deps :
 conflicts :
 	 mariadb
+resource :
+	 ['List::Util', 'Config::IniFiles', 'DBI', 'DBD::mysql']
+	 ['https://cpan.metacpan.org/authors/id/P/PE/PEVANS/Scalar-List-Utils-1.46.tar.gz', 'https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Config-IniFiles-2.94.tar.gz', 'https://cpan.metacpan.org/authors/id/T/TI/TIMB/DBI-1.641.tar.gz', 'https://cpan.metacpan.org/authors/id/C/CA/CAPTTOFU/DBD-mysql-4.046.tar.gz']
 patches :
 	 https://mirrorservice.org/sites/ftp.debian.org/debian/pool/main/m/mytop/mytop_1.9.1-2.debian.tar.xz
 EOF_patch :

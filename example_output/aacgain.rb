@@ -8,7 +8,11 @@ description :
 	 AAC-supporting version of mp3gain
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

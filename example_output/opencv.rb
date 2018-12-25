@@ -20,7 +20,11 @@ link_deps :
 	 python
 	 python@2
 	 tbb
+optional_deps :
 conflicts :
+resource :
+	 ['contrib']
+	 ['https://github.com/opencv/opencv_contrib/archive/3.4.3.tar.gz']
 patches :
 EOF_patch :
 install :

@@ -14,7 +14,11 @@ link_deps :
 	 jpeg-turbo
 	 :x11
 	 gnutls
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -17,7 +17,11 @@ link_deps :
 	 libpng
 	 openal-soft
 	 sdl2
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

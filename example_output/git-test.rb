@@ -8,7 +8,11 @@ description :
 	 Run tests on each distinct tree in a revision list
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

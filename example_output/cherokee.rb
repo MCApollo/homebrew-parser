@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 gettext
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/cherokee/webserver/commit/d0213768fdc6cf3aee61fe0be398d7825c01198f.diff?full_index=1
 EOF_patch :

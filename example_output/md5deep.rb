@@ -10,7 +10,11 @@ build_deps :
 	 autoconf
 	 automake
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/jessek/hashdeep/commit/8776134.patch?full_index=1
 EOF_patch :

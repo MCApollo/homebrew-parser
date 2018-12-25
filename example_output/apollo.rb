@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 :java
+optional_deps :
 conflicts :
+resource :
+	 ['bdb-je', 'mqtt']
+	 ['https://download.oracle.com/maven/com/sleepycat/je/5.0.34/je-5.0.34.jar', 'https://search.maven.org/remotecontent?filepath=org/fusesource/fuse-extra/fusemq-apollo-mqtt/1.3/fusemq-apollo-mqtt-1.3-uber.jar']
 patches :
 EOF_patch :
 install :

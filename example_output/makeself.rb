@@ -8,7 +8,11 @@ description :
 	 Make self-extractable archives on UNIX
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 xerces-c
+optional_deps :
 conflicts :
 	 zorba
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

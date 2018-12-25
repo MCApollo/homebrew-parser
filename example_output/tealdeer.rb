@@ -9,8 +9,12 @@ description :
 build_deps :
 	 rust
 link_deps :
+optional_deps :
 conflicts :
 	 tldr
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

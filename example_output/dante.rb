@@ -8,7 +8,11 @@ description :
 	 SOCKS server and client, implementing RFC 1928 and related standards
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

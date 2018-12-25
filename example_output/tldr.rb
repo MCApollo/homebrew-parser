@@ -10,8 +10,12 @@ build_deps :
 	 pkg-config
 link_deps :
 	 libzip
+optional_deps :
 conflicts :
 	 tealdeer
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -18,7 +18,11 @@ link_deps :
 	 minizip
 	 pygtk
 	 python@2
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/gwyddion/mac_integration.c b/gwyddion/mac_integration.c

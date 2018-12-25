@@ -12,7 +12,11 @@ description :
 	 Renders mathematical expressions as ASCII art
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/expr.cc b/expr.cc

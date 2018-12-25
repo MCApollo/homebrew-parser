@@ -8,7 +8,11 @@ description :
 	 SOCKS client wrapper for *BSD/macOS
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 boost
 	 sqlite
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

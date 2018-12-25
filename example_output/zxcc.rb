@@ -8,7 +8,11 @@ description :
 	 CP/M 2/3 emulator for cross-compiling and CP/M tools under UNIX
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

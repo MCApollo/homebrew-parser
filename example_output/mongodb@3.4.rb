@@ -13,8 +13,12 @@ build_deps :
 link_deps :
 	 :macos
 	 openssl
+optional_deps :
 	 boost
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

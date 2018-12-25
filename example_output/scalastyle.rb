@@ -8,7 +8,11 @@ description :
 	 Run scalastyle from the command-line
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['default_config']
+	 ['https://raw.githubusercontent.com/scalastyle/scalastyle/v1.0.0/lib/scalastyle_config.xml']
 patches :
 EOF_patch :
 install :

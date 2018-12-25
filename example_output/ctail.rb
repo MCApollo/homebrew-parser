@@ -13,8 +13,12 @@ build_deps :
 link_deps :
 	 apr
 	 apr-util
+optional_deps :
 conflicts :
 	 byobu
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

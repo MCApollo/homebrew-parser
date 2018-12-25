@@ -13,7 +13,11 @@ link_deps :
 	 libxc
 	 open-mpi
 	 scalapack
+optional_deps :
 conflicts :
+resource :
+	 ['libint']
+	 ['https://downloads.sourceforge.net/project/libint/v1-releases/libint-1.1.5.tar.gz']
 patches :
 EOF_patch :
 install :

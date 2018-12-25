@@ -11,7 +11,11 @@ link_deps :
 	 sdl
 	 sdl_mixer
 	 sdl_ttf
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- formatter.cpp

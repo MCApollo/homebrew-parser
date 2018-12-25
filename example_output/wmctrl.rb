@@ -12,7 +12,11 @@ link_deps :
 	 gettext
 	 glib
 	 :x11
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- wmctrl-1.07.orig/main.c

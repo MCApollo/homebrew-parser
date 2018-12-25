@@ -12,7 +12,11 @@ build_deps :
 	 pkg-config
 	 ragel
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

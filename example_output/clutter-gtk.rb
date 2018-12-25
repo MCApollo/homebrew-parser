@@ -14,7 +14,11 @@ link_deps :
 	 gdk-pixbuf
 	 glib
 	 gtk+3
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

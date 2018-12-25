@@ -9,7 +9,11 @@ description :
 build_deps :
 	 autoconf
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git Makefile.in Makefile.in

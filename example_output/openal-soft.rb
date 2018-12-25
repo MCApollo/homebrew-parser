@@ -10,10 +10,14 @@ build_deps :
 	 cmake
 	 pkg-config
 link_deps :
+optional_deps :
 	 fluid-synth
 	 portaudio
 	 pulseaudio
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

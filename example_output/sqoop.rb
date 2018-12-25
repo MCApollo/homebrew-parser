@@ -14,7 +14,11 @@ link_deps :
 	 hive
 	 :java
 	 zookeeper
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/77adf73/sqoop/1.4.6.patch
 EOF_patch :

@@ -8,7 +8,11 @@ description :
 	 Ogg Bitstream Library
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['oggfile']
+	 ['https://upload.wikimedia.org/wikipedia/commons/c/c8/Example.ogg']
 patches :
 EOF_patch :
 install :

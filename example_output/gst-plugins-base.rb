@@ -18,7 +18,11 @@ link_deps :
 	 orc
 	 pango
 	 theora
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

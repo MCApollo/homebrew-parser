@@ -8,7 +8,11 @@ description :
 	 Command-line tools for dealing with Type 1 fonts
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

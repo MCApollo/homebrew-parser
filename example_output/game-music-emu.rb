@@ -9,8 +9,12 @@ description :
 build_deps :
 	 cmake
 link_deps :
+optional_deps :
 	 sdl
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

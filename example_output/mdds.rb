@@ -10,7 +10,11 @@ build_deps :
 	 autoconf
 link_deps :
 	 boost
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

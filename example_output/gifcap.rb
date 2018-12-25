@@ -8,7 +8,11 @@ description :
 	 Capture video from an Android device and make a gif
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -11,7 +11,11 @@ build_deps :
 	 vala
 link_deps :
 	 glib
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

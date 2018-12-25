@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 :macos
 	 docker-machine
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -13,8 +13,12 @@ build_deps :
 link_deps :
 	 gettext
 	 readline
+optional_deps :
 conflicts :
 	 freeling
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

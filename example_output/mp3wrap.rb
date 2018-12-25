@@ -8,7 +8,11 @@ description :
 	 Wrap two or more mp3 files in a single large file
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

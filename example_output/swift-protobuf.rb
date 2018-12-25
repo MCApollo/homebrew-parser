@@ -10,8 +10,12 @@ build_deps :
 link_deps :
 	 :xcode
 	 protobuf
+optional_deps :
 conflicts :
 	 protobuf-swift
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

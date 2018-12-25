@@ -12,10 +12,14 @@ build_deps :
 link_deps :
 	 boost
 	 openssl
+	 :java
+optional_deps :
 	 libevent
 	 python@2
-	 :java
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

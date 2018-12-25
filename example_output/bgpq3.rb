@@ -8,7 +8,11 @@ description :
 	 BGP filtering automation for Cisco, Juniper, BIRD and OpenBGPD routers
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/Makefile.in b/Makefile.in

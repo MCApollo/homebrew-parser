@@ -8,7 +8,11 @@ description :
 	 Ncurses based advanced hex editor featuring diff mode and more
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

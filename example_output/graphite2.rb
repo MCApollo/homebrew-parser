@@ -9,7 +9,11 @@ description :
 build_deps :
 	 cmake
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['testfont']
+	 ['https://scripts.sil.org/pub/woff/fonts/Simple-Graphite-Font.ttf']
 patches :
 EOF_patch :
 install :

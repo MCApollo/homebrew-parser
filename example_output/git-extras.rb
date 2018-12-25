@@ -8,8 +8,12 @@ description :
 	 Small git utilities
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 git-utils
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

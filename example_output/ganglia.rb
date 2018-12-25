@@ -13,8 +13,12 @@ link_deps :
 	 confuse
 	 pcre
 	 rrdtool
+optional_deps :
 conflicts :
 	 coreutils
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

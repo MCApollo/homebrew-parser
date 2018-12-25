@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 libupnp
 	 :osxfuse
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/DomT4/scripts/ee974414da/Homebrew_Resources/djmount/djmount.diff
 EOF_patch :

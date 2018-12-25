@@ -12,8 +12,12 @@ link_deps :
 	 ghostscript
 	 gnu-getopt
 	 imagemagick
+optional_deps :
 	 mplayer
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -9,7 +9,11 @@ description :
 build_deps :
 	 nkf
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/86107cf/fdclone/3.01b.patch
 EOF_patch :

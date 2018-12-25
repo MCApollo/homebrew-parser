@@ -8,7 +8,11 @@ description :
 	 Rolls an amount of virtual dice
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Ncurses-based presentation tool
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['ncurses-ruby']
+	 ['https://downloads.sourceforge.net/project/ncurses-ruby.berlios/ncurses-ruby-1.3.1.tar.bz2']
 patches :
 EOF_patch :
 install :

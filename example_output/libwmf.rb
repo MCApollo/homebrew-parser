@@ -13,7 +13,11 @@ link_deps :
 	 gd
 	 jpeg
 	 libpng
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

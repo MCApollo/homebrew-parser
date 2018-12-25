@@ -10,8 +10,12 @@ build_deps :
 	 :xcode
 link_deps :
 	 openssl
+optional_deps :
 	 :x11
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

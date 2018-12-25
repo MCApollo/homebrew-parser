@@ -8,8 +8,12 @@ description :
 	 Convert text between DOS, UNIX, and Mac formats
 build_deps :
 link_deps :
+optional_deps :
 	 gettext
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

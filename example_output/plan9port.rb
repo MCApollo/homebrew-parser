@@ -8,8 +8,12 @@ description :
 	 Many Plan 9 programs ported to UNIX-like operating systems
 build_deps :
 link_deps :
+optional_deps :
 	 :x11
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

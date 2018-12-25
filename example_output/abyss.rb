@@ -12,7 +12,11 @@ build_deps :
 link_deps :
 	 gcc
 	 open-mpi
+optional_deps :
 conflicts :
+resource :
+	 ['testdata']
+	 ['http://www.bcgsc.ca/platform/bioinfo/software/abyss/releases/1.3.4/test-data.tar.gz']
 patches :
 EOF_patch :
 install :

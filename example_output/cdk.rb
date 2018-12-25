@@ -8,7 +8,11 @@ description :
 	 Curses development kit provides predefined curses widget for apps
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

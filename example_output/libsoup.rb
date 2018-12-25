@@ -16,7 +16,11 @@ link_deps :
 	 gnutls
 	 libpsl
 	 vala
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

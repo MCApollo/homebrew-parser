@@ -8,7 +8,11 @@ description :
 	 LetsEncrypt/acme client implemented as a shell-script
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

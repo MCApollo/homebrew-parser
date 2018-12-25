@@ -12,7 +12,11 @@ build_deps :
 	 graphviz
 link_deps :
 	 wget
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

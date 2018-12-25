@@ -8,8 +8,12 @@ description :
 build_deps :
 link_deps :
 	 pcre
+optional_deps :
 	 :x11
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/contrib/hbcurl/core.c b/contrib/hbcurl/core.c

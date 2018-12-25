@@ -13,10 +13,14 @@ link_deps :
 	 gd
 	 libpng
 	 libtool
+optional_deps :
 	 gts
 	 librsvg
 	 pango
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

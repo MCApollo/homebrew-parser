@@ -8,10 +8,14 @@ description :
 	 Logic/functional programming language
 build_deps :
 link_deps :
+optional_deps :
 	 erlang
 	 hwloc
 	 mono
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

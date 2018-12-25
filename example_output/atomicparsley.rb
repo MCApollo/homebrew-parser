@@ -11,7 +11,11 @@ build_deps :
 	 automake
 	 libtool
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/ac8624c36e/atomicparsley/xcode9.patch
 EOF_patch :

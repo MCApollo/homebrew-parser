@@ -8,7 +8,11 @@ description :
 build_deps :
 	 nasm
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

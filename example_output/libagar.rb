@@ -12,7 +12,11 @@ link_deps :
 	 jpeg
 	 libpng
 	 sdl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -17,8 +17,12 @@ link_deps :
 	 libpng
 	 libtiff
 	 little-cms2
+optional_deps :
 	 exiv2
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/b8ed064/ufraw/jpeg9.patch
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/d5bf686c74/ufraw/high_sierra.patch

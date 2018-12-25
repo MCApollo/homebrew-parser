@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 gdal
 	 netcdf
+optional_deps :
 conflicts :
+resource :
+	 ['gshhg']
+	 ['ftp://ftp.soest.hawaii.edu/gmt/gshhg-gmt-2.3.7.tar.gz']
 patches :
 EOF_patch :
 install :

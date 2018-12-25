@@ -12,7 +12,11 @@ link_deps :
 	 imlib2
 	 libexif
 	 :x11
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

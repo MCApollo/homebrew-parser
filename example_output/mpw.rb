@@ -11,7 +11,11 @@ link_deps :
 	 json-c
 	 libsodium
 	 ncurses
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

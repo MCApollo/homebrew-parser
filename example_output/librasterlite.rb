@@ -13,7 +13,11 @@ link_deps :
 	 libpng
 	 libspatialite
 	 sqlite
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

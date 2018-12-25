@@ -13,7 +13,11 @@ link_deps :
 	 imagemagick
 	 plotutils
 	 xz
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

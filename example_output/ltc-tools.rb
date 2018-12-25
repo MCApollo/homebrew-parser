@@ -13,7 +13,11 @@ link_deps :
 	 jack
 	 libltc
 	 libsndfile
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

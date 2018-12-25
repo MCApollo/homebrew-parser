@@ -21,7 +21,11 @@ link_deps :
 	 cairo
 	 pango
 	 :x11
+optional_deps :
 conflicts :
+resource :
+	 ['tessdata', 'eng', 'osd', 'snum']
+	 ['https://github.com/tesseract-ocr/tessdata_fast/archive/4.0.0.tar.gz', 'https://github.com/tesseract-ocr/tessdata_fast/raw/4.0.0/eng.traineddata', 'https://github.com/tesseract-ocr/tessdata_fast/raw/4.0.0/osd.traineddata', 'https://github.com/USCDataScience/counterfeit-electronics-tesseract/raw/319a6eeacff181dad5c02f3e7a3aff804eaadeca/Training%20Tesseract/snum.traineddata']
 patches :
 EOF_patch :
 install :

@@ -14,7 +14,11 @@ link_deps :
 	 gettext
 	 gst-plugins-base
 	 gstreamer
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

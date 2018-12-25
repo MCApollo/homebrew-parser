@@ -18,8 +18,12 @@ link_deps :
 	 libssh
 	 lua@5.1
 	 nghttp2
+optional_deps :
 	 qt
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Aquarium animation in ASCII art
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['Curses', 'Term::Animation']
+	 ['https://cpan.metacpan.org/authors/id/G/GI/GIRAFFED/Curses-1.34.tar.gz', 'https://cpan.metacpan.org/authors/id/K/KB/KBAUCOM/Term-Animation-2.6.tar.gz']
 patches :
 EOF_patch :
 install :

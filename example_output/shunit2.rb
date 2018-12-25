@@ -8,7 +8,11 @@ description :
 	 xUnit unit testing framework for Bourne-based shell scripts
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

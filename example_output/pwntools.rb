@@ -10,8 +10,12 @@ build_deps :
 link_deps :
 	 openssl
 	 python@2
+optional_deps :
 conflicts :
 	 moreutils
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

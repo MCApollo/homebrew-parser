@@ -11,9 +11,12 @@ build_deps :
 link_deps :
 	 libffi
 	 python@2
+optional_deps :
 conflicts :
+resource :
+	 ['clang', 'clang-extra-tools', 'compiler-rt', 'libcxx', 'libunwind', 'lld', 'lldb', 'openmp', 'polly']
+	 ['https://releases.llvm.org/5.0.2/cfe-5.0.2.src.tar.xz', 'https://releases.llvm.org/5.0.2/clang-tools-extra-5.0.2.src.tar.xz', 'https://releases.llvm.org/5.0.2/compiler-rt-5.0.2.src.tar.xz', 'https://releases.llvm.org/5.0.2/libcxx-5.0.2.src.tar.xz', 'https://releases.llvm.org/5.0.2/libunwind-5.0.2.src.tar.xz', 'https://releases.llvm.org/5.0.2/lld-5.0.2.src.tar.xz', 'https://releases.llvm.org/5.0.2/lldb-5.0.2.src.tar.xz', 'https://github.com/llvm-mirror/lldb/commit/324f93b5e30.patch?full_index=1', 'https://releases.llvm.org/5.0.2/openmp-5.0.2.src.tar.xz', 'https://releases.llvm.org/5.0.2/polly-5.0.2.src.tar.xz']
 patches :
-	 https://github.com/llvm-mirror/lldb/commit/324f93b5e30.patch?full_index=1
 EOF_patch :
 install :
 	 ENV.libcxx if ENV.compiler == :clang

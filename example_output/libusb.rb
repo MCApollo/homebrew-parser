@@ -8,7 +8,11 @@ description :
 	 Library for USB device access
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

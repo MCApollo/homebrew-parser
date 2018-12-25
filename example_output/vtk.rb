@@ -17,10 +17,14 @@ link_deps :
 	 libtiff
 	 netcdf
 	 python@2
+	 pyqt
+optional_deps :
 	 python
 	 qt
-	 pyqt
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

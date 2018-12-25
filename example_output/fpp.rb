@@ -8,7 +8,11 @@ description :
 	 CLI program that accepts piped input and presents files for selection
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

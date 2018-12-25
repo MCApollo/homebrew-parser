@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 ruby
+optional_deps :
 conflicts :
+resource :
+	 ['colorize', 'commander', 'diffy', 'highline', 'string_undump', 'polyglot', 'treetop']
+	 ['https://rubygems.org/gems/colorize-0.8.1.gem', 'https://rubygems.org/gems/commander-4.4.7.gem', 'https://rubygems.org/gems/diffy-3.2.1.gem', 'https://rubygems.org/gems/highline-2.0.0.gem', 'https://rubygems.org/gems/string_undump-0.1.1.gem', 'https://rubygems.org/gems/polyglot-0.3.5.gem', 'https://rubygems.org/gems/treetop-1.6.10.gem']
 patches :
 EOF_patch :
 install :

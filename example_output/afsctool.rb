@@ -8,7 +8,11 @@ description :
 	 Utility for manipulating HFS+ compressed files
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/vfx01j/afsctool/commit/26293a3809c9ad1db5f9bff9dffaefb8e201a089.diff?full_index=1
 EOF_patch :

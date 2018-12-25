@@ -13,7 +13,11 @@ link_deps :
 	 gpatch
 	 perl
 	 xz
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

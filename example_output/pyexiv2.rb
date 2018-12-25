@@ -12,7 +12,11 @@ link_deps :
 	 boost
 	 boost-python
 	 exiv2
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

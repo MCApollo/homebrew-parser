@@ -13,7 +13,11 @@ link_deps :
 	 open-mpi
 	 suite-sparse
 	 veclibfort
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

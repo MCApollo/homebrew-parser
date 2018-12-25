@@ -11,7 +11,11 @@ link_deps :
 	 jasper
 	 jpeg
 	 little-cms2
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

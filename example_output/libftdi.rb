@@ -12,9 +12,13 @@ build_deps :
 	 swig
 link_deps :
 	 libusb
+optional_deps :
 	 boost
 	 confuse
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

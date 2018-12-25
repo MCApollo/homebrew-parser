@@ -8,7 +8,11 @@ description :
 	 Smartphone boot splash screen converter for Android and winCE
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

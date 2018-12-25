@@ -13,7 +13,11 @@ link_deps :
 	 json-c
 	 libwebsockets
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

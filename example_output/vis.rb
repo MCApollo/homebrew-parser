@@ -12,7 +12,11 @@ build_deps :
 link_deps :
 	 libtermkey
 	 lua
+optional_deps :
 conflicts :
+resource :
+	 ['lpeg']
+	 ['https://luarocks.org/manifests/gvvaughan/lpeg-1.0.1-1.src.rock']
 patches :
 EOF_patch :
 install :

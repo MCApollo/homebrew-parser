@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 gettext
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 ['git']
+	 ['https://www.kernel.org/pub/software/scm/git/git-2.18.0.tar.gz']
 patches :
 EOF_patch :
 install :

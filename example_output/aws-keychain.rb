@@ -8,7 +8,11 @@ description :
 	 Uses macOS keychain for storage of AWS credentials
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

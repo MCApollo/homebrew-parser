@@ -9,7 +9,11 @@ description :
 build_deps :
 	 cmake
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['sample.dcm']
+	 ['https://raw.githubusercontent.com/dangom/sample-dicom/master/MR000000.dcm']
 patches :
 EOF_patch :
 install :

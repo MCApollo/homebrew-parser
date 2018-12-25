@@ -12,7 +12,11 @@ link_deps :
 	 berkeley-db
 	 libsamplerate
 	 libsndfile
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

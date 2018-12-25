@@ -8,7 +8,11 @@ description :
 	 Solver for quantified boolean formulae (QBF)
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['nenofex', 'picosat']
+	 ['https://github.com/lonsing/nenofex/archive/version-1.1.tar.gz', 'http://fmv.jku.at/picosat/picosat-960.tar.gz']
 patches :
 EOF_patch :
 install :

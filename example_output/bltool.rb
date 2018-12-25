@@ -8,7 +8,11 @@ description :
 	 Tool for command-line interaction with backloggery.com
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

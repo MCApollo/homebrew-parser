@@ -8,7 +8,11 @@ description :
 	 Burrow-Wheeler Aligner for pairwise alignment of DNA
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

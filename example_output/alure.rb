@@ -10,7 +10,11 @@ build_deps :
 	 cmake
 	 pkg-config
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/eed63e836e/alure/unistd.patch
 EOF_patch :

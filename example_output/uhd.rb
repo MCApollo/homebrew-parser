@@ -13,7 +13,11 @@ link_deps :
 	 boost
 	 libusb
 	 python@2
+optional_deps :
 conflicts :
+resource :
+	 ['Mako']
+	 ['https://files.pythonhosted.org/packages/eb/f3/67579bb486517c0d49547f9697e36582cd19dafb5df9e687ed8e22de57fa/Mako-1.0.7.tar.gz']
 patches :
 EOF_patch :
 install :

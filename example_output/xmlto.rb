@@ -11,7 +11,11 @@ link_deps :
 	 docbook
 	 docbook-xsl
 	 gnu-getopt
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- xmlto-0.0.25/xmlto.in.orig

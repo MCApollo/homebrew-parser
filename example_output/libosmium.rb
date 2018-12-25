@@ -10,12 +10,16 @@ build_deps :
 	 boost
 	 cmake
 link_deps :
+optional_deps :
 	 doxygen
 	 expat
 	 gdal
 	 google-sparsehash
 	 proj
 conflicts :
+resource :
+	 ['protozero']
+	 ['https://github.com/mapbox/protozero/archive/v1.6.3.tar.gz']
 patches :
 EOF_patch :
 install :

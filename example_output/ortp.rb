@@ -11,7 +11,11 @@ build_deps :
 	 pkg-config
 link_deps :
 	 mbedtls
+optional_deps :
 conflicts :
+resource :
+	 ['bctoolbox']
+	 ['https://github.com/BelledonneCommunications/bctoolbox/archive/0.6.0.tar.gz']
 patches :
 EOF_patch :
 install :

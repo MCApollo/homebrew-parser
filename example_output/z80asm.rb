@@ -8,7 +8,11 @@ description :
 	 Assembler for the Zilog Z80 microprcessor and compatibles
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

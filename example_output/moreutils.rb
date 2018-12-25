@@ -9,6 +9,7 @@ description :
 build_deps :
 	 docbook-xsl
 link_deps :
+optional_deps :
 conflicts :
 	 parallel
 	 parallel
@@ -16,6 +17,9 @@ conflicts :
 	 errno
 	 task-spooler
 	 ts
+resource :
+	 ['Time::Duration', 'IPC::Run']
+	 ['https://cpan.metacpan.org/authors/id/N/NE/NEILB/Time-Duration-1.20.tar.gz', 'https://cpan.metacpan.org/authors/id/T/TO/TODDR/IPC-Run-0.94.tar.gz']
 patches :
 EOF_patch :
 install :

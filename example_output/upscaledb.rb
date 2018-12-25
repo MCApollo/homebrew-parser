@@ -13,7 +13,11 @@ link_deps :
 	 :java
 	 openssl
 	 protobuf
+optional_deps :
 conflicts :
+resource :
+	 ['libuv']
+	 ['https://github.com/libuv/libuv/archive/v0.10.37.tar.gz']
 patches :
 	 https://github.com/cruppstahl/upscaledb/commit/01156f9a8.patch?full_index=1
 EOF_patch :

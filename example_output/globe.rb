@@ -8,7 +8,11 @@ description :
 	 Prints ASCII graphic of currently-lit side of the Earth
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

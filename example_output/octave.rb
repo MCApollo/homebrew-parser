@@ -37,8 +37,12 @@ link_deps :
 	 sundials
 	 texinfo
 	 veclibfort
+optional_deps :
 	 qt
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

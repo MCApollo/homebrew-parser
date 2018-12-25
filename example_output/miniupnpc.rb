@@ -8,7 +8,11 @@ description :
 	 UPnP IGD client library and daemon
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

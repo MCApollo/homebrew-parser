@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 lzo
 	 xz
+optional_deps :
 conflicts :
+resource :
+	 ['opengfx', 'opensfx', 'openmsx']
+	 ['https://bundles.openttdcoop.org/opengfx/releases/0.5.4/opengfx-0.5.4.zip', 'https://bundles.openttdcoop.org/opensfx/releases/0.2.3/opensfx-0.2.3.zip', 'https://bundles.openttdcoop.org/openmsx/releases/0.3.1/openmsx-0.3.1.zip']
 patches :
 EOF_patch :
 install :

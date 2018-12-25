@@ -16,7 +16,11 @@ link_deps :
 	 lame
 	 mkcue
 	 vorbis-tools
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

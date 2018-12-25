@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 openssl
+optional_deps :
 conflicts :
 	 renameutils
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff -u ./configure.bak ./configure

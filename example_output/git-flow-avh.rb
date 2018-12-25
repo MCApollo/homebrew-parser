@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 gnu-getopt
+optional_deps :
 conflicts :
 	 git-flow
+resource :
+	 ['completion']
+	 ['https://github.com/petervanderdoes/git-flow-completion/archive/0.6.0.tar.gz']
 patches :
 EOF_patch :
 install :

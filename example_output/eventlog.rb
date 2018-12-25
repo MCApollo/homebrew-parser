@@ -8,7 +8,11 @@ description :
 	 Replacement for syslog API providing structure to messages
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

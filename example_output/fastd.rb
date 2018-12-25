@@ -13,9 +13,13 @@ link_deps :
 	 json-c
 	 libsodium
 	 libuecc
+optional_deps :
 	 openssl
 	 :tuntap
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

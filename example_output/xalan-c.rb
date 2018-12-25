@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 xerces-c
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/master/xalan-c/xerces-char16.patch
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/master/xalan-c/locator-system-id.patch

@@ -12,7 +12,11 @@ link_deps :
 	 jansson
 	 libevent
 	 sqlite
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Stub server with Maven, Gradle, Scala, and shell integration
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

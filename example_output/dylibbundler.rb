@@ -8,7 +8,11 @@ description :
 	 Utility to bundle libraries into executables for macOS
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

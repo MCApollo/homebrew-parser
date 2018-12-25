@@ -9,9 +9,13 @@ description :
 build_deps :
 	 pkg-config
 link_deps :
-	 imlib2
 	 :x11
+optional_deps :
+	 imlib2
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

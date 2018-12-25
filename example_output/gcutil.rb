@@ -8,7 +8,11 @@ description :
 	 Manage your Google Compute Engine resources
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

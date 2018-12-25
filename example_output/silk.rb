@@ -12,7 +12,11 @@ link_deps :
 	 glib
 	 libfixbuf
 	 yaf
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

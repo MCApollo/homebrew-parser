@@ -8,7 +8,11 @@ description :
 	 Toolkit for processing sequences in FASTA/Q formats
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

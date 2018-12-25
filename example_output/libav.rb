@@ -20,10 +20,14 @@ link_deps :
 	 opus
 	 x264
 	 xvid
+optional_deps :
 	 openssl
 	 sdl
 	 theora
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/b6e917c/libav/Check-for--no_weak_imports-in-ldflags-on-macOS.patch
 	 https://github.com/libav/libav/commit/141c960e21d2860e354f9b90df136184dd00a9a8.patch?full_index=1

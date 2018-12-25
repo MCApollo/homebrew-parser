@@ -13,7 +13,11 @@ build_deps :
 	 pkg-config
 	 sphinx-doc
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

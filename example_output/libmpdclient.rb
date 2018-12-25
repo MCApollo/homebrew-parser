@@ -11,7 +11,11 @@ build_deps :
 	 meson-internal
 	 ninja
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

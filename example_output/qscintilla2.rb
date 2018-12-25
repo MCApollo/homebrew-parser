@@ -13,7 +13,11 @@ link_deps :
 	 python@2
 	 qt
 	 sip
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

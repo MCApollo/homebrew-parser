@@ -16,7 +16,11 @@ link_deps :
 	 sdl_mixer
 	 sdl_ttf
 	 smpeg
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/eeb2de3/onscripter/jpeg9.patch
 EOF_patch :

@@ -13,7 +13,11 @@ link_deps :
 	 gettext
 	 gtk+
 	 gtk-mac-integration
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/configure b/configure

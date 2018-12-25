@@ -8,7 +8,11 @@ description :
 	 Macro assembler for Broadcom VideoCore IV aka Raspberry Pi GPU
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['old_makefile']
+	 ['https://raw.githubusercontent.com/maazl/vc4asm/c6991f0/src/Makefile']
 patches :
 EOF_patch :
 install :

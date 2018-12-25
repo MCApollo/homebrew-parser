@@ -8,7 +8,11 @@ description :
 	 Mail anomalies in the system logfiles to the administrator
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

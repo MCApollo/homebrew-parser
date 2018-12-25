@@ -13,7 +13,11 @@ link_deps :
 	 hiredis
 	 jsoncpp
 	 libmicrohttpd
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Advanced HTML-to-text converter
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 http://www.mbayer.de/html2text/downloads/patch-utf8-html2text-1.3.2a.diff
 EOF_patch :

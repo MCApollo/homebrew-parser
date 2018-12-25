@@ -11,7 +11,11 @@ build_deps :
 	 gettext
 link_deps :
 	 wxmac
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

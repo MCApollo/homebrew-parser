@@ -15,9 +15,13 @@ link_deps :
 	 gmp
 	 json-c
 	 libdnet
+optional_deps :
 	 hiredis
 	 mongo-c-driver
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

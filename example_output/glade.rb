@@ -19,7 +19,11 @@ link_deps :
 	 gtk-mac-integration
 	 hicolor-icon-theme
 	 libxml2
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

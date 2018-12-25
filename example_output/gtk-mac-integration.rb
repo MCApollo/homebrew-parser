@@ -14,7 +14,11 @@ link_deps :
 	 gtk+
 	 gtk+3
 	 pygtk
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

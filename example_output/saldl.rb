@@ -13,7 +13,11 @@ build_deps :
 link_deps :
 	 curl
 	 libevent
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

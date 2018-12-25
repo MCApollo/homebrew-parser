@@ -8,7 +8,11 @@ description :
 	 Emerging programming language designed for parallel computing
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -14,7 +14,11 @@ link_deps :
 	 glib
 	 gtk+3
 	 libsoup
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 EXIF and IPTC metadata manipulation library and tools
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

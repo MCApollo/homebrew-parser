@@ -20,7 +20,11 @@ link_deps :
 	 lua
 	 openssl
 	 yara
+optional_deps :
 conflicts :
+resource :
+	 ['bindings', 'extras', 'extras']
+	 ['https://radare.mikelloc.com/get/2.8.0/radare2-bindings-2.8.0.tar.gz', 'https://radare.mikelloc.com/get/2.8.0/radare2-extras-2.8.0.tar.gz', 'https://github.com/radare/radare2-extras.git']
 patches :
 EOF_patch :
 install :

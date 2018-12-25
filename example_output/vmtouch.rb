@@ -8,7 +8,11 @@ description :
 	 Portable file system cache diagnostics and control
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

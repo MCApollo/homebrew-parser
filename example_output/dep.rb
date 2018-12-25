@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 go
+optional_deps :
 conflicts :
 	 deployer
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

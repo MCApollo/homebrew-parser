@@ -12,7 +12,11 @@ link_deps :
 	 libpng
 	 portaudio
 	 sdl2
+optional_deps :
 conflicts :
+resource :
+	 ['emutos']
+	 ['https://downloads.sourceforge.net/project/emutos/emutos/0.9.9.1/emutos-512k-0.9.9.1.zip']
 patches :
 	 https://hg.tuxfamily.org/mercurialroot/hatari/hatari/raw-rev/21bc2b0ebae4
 EOF_patch :

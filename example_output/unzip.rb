@@ -8,7 +8,11 @@ description :
 	 Extraction utility for .zip compressed archives
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://mirrors.ocf.berkeley.edu/debian/pool/main/u/unzip/unzip_6.0-21.debian.tar.xz
 EOF_patch :

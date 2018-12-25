@@ -8,7 +8,11 @@ description :
 	 Tools to ease Gerrit code review
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

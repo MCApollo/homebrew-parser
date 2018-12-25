@@ -14,7 +14,11 @@ link_deps :
 	 glib
 	 gtk-doc
 	 pango
+optional_deps :
 conflicts :
+resource :
+	 ['grep']
+	 ['https://ftp.gnu.org/gnu/grep/grep-2.20.tar.xz']
 patches :
 EOF_patch :
 install :

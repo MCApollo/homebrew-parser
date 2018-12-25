@@ -13,7 +13,11 @@ link_deps :
 	 jpeg
 	 libpng
 	 open-mpi
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

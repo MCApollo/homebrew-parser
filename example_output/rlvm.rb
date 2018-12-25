@@ -23,7 +23,11 @@ link_deps :
 	 sdl_image
 	 sdl_mixer
 	 sdl_ttf
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/eglaysher/rlvm/commit/668863d2222b962ee8e7d9829e972ef05c990302.diff?full_index=1
 EOF_patch :

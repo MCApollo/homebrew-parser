@@ -11,10 +11,14 @@ build_deps :
 link_deps :
 	 gcc
 	 open-mpi
-	 fltk
 	 cairo
+optional_deps :
+	 fltk
 	 opencascade
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

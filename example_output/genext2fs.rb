@@ -8,7 +8,11 @@ description :
 	 Generates an ext2 filesystem as a normal (non-root) user
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -10,8 +10,12 @@ build_deps :
 link_deps :
 	 lzo
 	 xz
+optional_deps :
 	 lz4
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/05ae0eb1/squashfs/squashfs-osx-bundle.diff
 EOF_patch :

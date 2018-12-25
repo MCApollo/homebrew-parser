@@ -8,7 +8,11 @@ description :
 	 Reads and writes many common audio file formats
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://mirrors.ocf.berkeley.edu/debian/pool/main/a/audiofile/audiofile_0.3.6-4.debian.tar.xz
 	 https://mirrors.ocf.berkeley.edu/debian/pool/main/a/audiofile/audiofile_0.3.6-4.debian.tar.xz

@@ -8,9 +8,13 @@ description :
 	 Lookup tool for domain names and other internet resources
 build_deps :
 link_deps :
-	 libidn2
 	 pkg-config
+optional_deps :
+	 libidn2
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

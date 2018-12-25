@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 readline
+optional_deps :
 conflicts :
 	 todoman
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- a/util/XML.cc	Mon Dec 10 22:26:55 2007

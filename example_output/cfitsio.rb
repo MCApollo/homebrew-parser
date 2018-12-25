@@ -8,7 +8,11 @@ description :
 	 C access to FITS data files with optional Fortran wrappers
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

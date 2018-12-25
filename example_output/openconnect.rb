@@ -11,9 +11,13 @@ build_deps :
 link_deps :
 	 gettext
 	 gnutls
+optional_deps :
 	 oath-toolkit
 	 stoken
 conflicts :
+resource :
+	 ['vpnc-script']
+	 ['http://git.infradead.org/users/dwmw2/vpnc-scripts.git/blob_plain/6e04e0bbb66c0bf0ae055c0f4e58bea81dbb5c3c:/vpnc-script']
 patches :
 EOF_patch :
 install :

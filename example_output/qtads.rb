@@ -12,7 +12,11 @@ link_deps :
 	 sdl2
 	 sdl2_mixer
 	 sdl_sound
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/realnc/qtads/commit/46701a2.patch?full_index=1
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/e189341/qtads/xcode9.diff

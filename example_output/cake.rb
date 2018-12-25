@@ -8,8 +8,12 @@ description :
 build_deps :
 link_deps :
 	 mono
+optional_deps :
 conflicts :
 	 coffeescript
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

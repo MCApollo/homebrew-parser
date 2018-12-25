@@ -17,7 +17,11 @@ link_deps :
 	 libsoxr
 	 openssl
 	 popt
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Strips headers and footers from RFCs and Internet-Drafts
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['rfc1149']
+	 ['https://www.ietf.org/rfc/rfc1149.txt']
 patches :
 EOF_patch :
 install :

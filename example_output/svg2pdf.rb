@@ -10,7 +10,11 @@ build_deps :
 	 pkg-config
 link_deps :
 	 libsvg-cairo
+optional_deps :
 conflicts :
+resource :
+	 ['svg.svg']
+	 ['https://raw.githubusercontent.com/mathiasbynens/small/master/svg.svg']
 patches :
 EOF_patch :
 install :

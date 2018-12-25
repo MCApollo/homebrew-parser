@@ -10,7 +10,11 @@ build_deps :
 	 go
 	 gox
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

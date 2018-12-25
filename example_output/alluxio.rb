@@ -8,7 +8,11 @@ description :
 	 Open Source Memory Speed Virtual Distributed Storage
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

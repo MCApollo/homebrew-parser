@@ -12,7 +12,11 @@ link_deps :
 	 desktop-file-utils
 	 gpgme
 	 gtk+
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

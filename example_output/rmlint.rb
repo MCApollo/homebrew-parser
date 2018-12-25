@@ -15,7 +15,11 @@ link_deps :
 	 glib
 	 json-glib
 	 libelf
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

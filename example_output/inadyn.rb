@@ -15,7 +15,11 @@ link_deps :
 	 confuse
 	 gnutls
 	 pkg-config
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/troglobit/inadyn/commit/57bdcc0321b49ee68397c70140d9895655edb06f.diff?full_index=1
 EOF_patch :

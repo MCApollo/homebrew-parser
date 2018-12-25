@@ -8,8 +8,12 @@ description :
 	 Featureful UNIX password cracker
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 john-jumbo
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- a/src/params.h	2012-08-30 13:24:18.000000000 -0500

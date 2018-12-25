@@ -14,7 +14,11 @@ link_deps :
 	 python
 	 ssdeep
 	 xz
+optional_deps :
 conflicts :
+resource :
+	 ['numpy', 'scipy']
+	 ['https://files.pythonhosted.org/packages/45/ba/2a781ebbb0cd7962cc1d12a6b65bd4eff57ffda449fdbbae4726dc05fbc3/numpy-1.15.2.zip', 'https://files.pythonhosted.org/packages/07/76/7e844757b9f3bf5ab9f951ccd3e4a8eed91ab8720b0aac8c2adcc2fdae9f/scipy-1.1.0.tar.gz']
 patches :
 EOF_patch :
 install :

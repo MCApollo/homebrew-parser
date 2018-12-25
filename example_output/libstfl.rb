@@ -10,7 +10,11 @@ build_deps :
 	 swig
 link_deps :
 	 ruby
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

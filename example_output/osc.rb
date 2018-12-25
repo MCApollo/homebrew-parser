@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 openssl
 	 python@2
+optional_deps :
 conflicts :
+resource :
+	 ['pycurl', 'urlgrabber', 'M2Crypto', 'typing']
+	 ['https://files.pythonhosted.org/packages/12/3f/557356b60d8e59a1cce62ffc07ecc03e4f8a202c86adae34d895826281fb/pycurl-7.43.0.tar.gz', 'https://files.pythonhosted.org/packages/29/1a/f509987826e17369c52a80a07b257cc0de3d7864a303175f2634c8bcb3e3/urlgrabber-3.10.2.tar.gz', 'https://files.pythonhosted.org/packages/01/bd/a41491718f9e2bebab015c42b5be7071c6695acfa301e3fc0480bfd6a15b/M2Crypto-0.27.0.tar.gz', 'https://files.pythonhosted.org/packages/ca/38/16ba8d542e609997fdcd0214628421c971f8c395084085354b11ff4ac9c3/typing-3.6.2.tar.gz']
 patches :
 EOF_patch :
 install :

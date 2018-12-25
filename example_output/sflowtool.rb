@@ -8,7 +8,11 @@ description :
 	 Utilities and scripts for analyzing sFlow data
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['scripts']
+	 ['https://inmon.com/bin/sflowutils.tar.gz']
 patches :
 EOF_patch :
 install :

@@ -10,9 +10,13 @@ build_deps :
 link_deps :
 	 coreutils
 	 readline
+optional_deps :
 conflicts :
 	 ipmiutil
 	 irods
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- a/src/apply.c

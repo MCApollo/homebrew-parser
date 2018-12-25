@@ -8,7 +8,11 @@ description :
 	 Netwide Assembler (NASM) is an 80x86 assembler
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

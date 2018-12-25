@@ -18,7 +18,11 @@ link_deps :
 	 hicolor-icon-theme
 	 libinfinity
 	 libxml++
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/code/core/header.cpp b/code/core/header.cpp

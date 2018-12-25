@@ -23,7 +23,11 @@ link_deps :
 	 libpng
 	 libtiff
 	 pixman
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

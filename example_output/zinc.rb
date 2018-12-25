@@ -8,7 +8,11 @@ description :
 	 Stand-alone version of sbt's Scala incremental compiler
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

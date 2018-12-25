@@ -3,12 +3,15 @@ name :
 homepage :
 	 https://inform-fiction.org/inform6.html
 url :
-	 https://inform-fiction.org/examples/Adventureland/Adventureland.inf
 description :
 	 Design system for interactive fiction
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['Adventureland.inf']
+	 ['https://inform-fiction.org/examples/Adventureland/Adventureland.inf']
 patches :
 EOF_patch :
 install :

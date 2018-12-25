@@ -8,7 +8,11 @@ description :
 	 Tool to impose load on and stress test a computer system
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

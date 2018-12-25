@@ -21,7 +21,11 @@ link_deps :
 	 libuninameslist
 	 pango
 	 python@2
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/fontforge/fontforge/commit/9f69bd0f9.patch?full_index=1
 EOF_patch :

@@ -16,7 +16,11 @@ link_deps :
 	 mcrypt
 	 nettle
 	 pcre
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

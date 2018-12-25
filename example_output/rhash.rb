@@ -8,7 +8,11 @@ description :
 	 Utility for computing and verifying hash sums of files
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

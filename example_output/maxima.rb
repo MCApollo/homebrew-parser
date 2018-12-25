@@ -12,7 +12,11 @@ link_deps :
 	 gettext
 	 gnuplot
 	 rlwrap
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

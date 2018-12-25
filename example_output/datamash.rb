@@ -8,7 +8,11 @@ description :
 	 Tool to perform numerical, textual & statistical operations
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

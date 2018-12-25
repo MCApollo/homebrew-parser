@@ -16,7 +16,11 @@ link_deps :
 	 goocanvas
 	 gtk+3
 	 hamlib
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Java class file shrinker, optimizer, and obfuscator
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

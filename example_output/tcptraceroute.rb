@@ -8,7 +8,11 @@ description :
 build_deps :
 link_deps :
 	 libnet
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

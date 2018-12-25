@@ -9,7 +9,11 @@ build_deps :
 link_deps :
 	 ffmpeg
 	 mkvtoolnix
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/mkvdts2ac3.sh b/mkvdts2ac3.sh

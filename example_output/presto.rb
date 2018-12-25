@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 :java
+optional_deps :
 conflicts :
+resource :
+	 ['presto-cli']
+	 ['https://search.maven.org/remotecontent?filepath=com/facebook/presto/presto-cli/0.215/presto-cli-0.215-executable.jar']
 patches :
 EOF_patch :
 install :

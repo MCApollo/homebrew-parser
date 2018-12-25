@@ -15,7 +15,11 @@ link_deps :
 	 squashfs
 	 xz
 	 zstd
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

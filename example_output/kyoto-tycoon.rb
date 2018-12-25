@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 kyoto-cabinet
 	 lua
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- a/ktdbext.h  2013-11-08 09:34:53.000000000 -0500

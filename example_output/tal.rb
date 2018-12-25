@@ -8,7 +8,11 @@ description :
 	 Align line endings if they match
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

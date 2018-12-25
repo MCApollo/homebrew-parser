@@ -8,7 +8,11 @@ description :
 	 List USB devices, just like the Linux lsusb command
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

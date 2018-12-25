@@ -9,7 +9,11 @@ description :
 build_deps :
 	 node
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['node']
+	 ['https://nodejs.org/dist/v10.9.0/node-v10.9.0.tar.xz']
 patches :
 EOF_patch :
 install :

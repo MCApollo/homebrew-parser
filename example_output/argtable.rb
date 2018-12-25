@@ -8,7 +8,11 @@ description :
 	 ANSI C library for parsing GNU-style command-line options
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

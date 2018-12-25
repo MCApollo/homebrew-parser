@@ -13,9 +13,13 @@ build_deps :
 link_deps :
 	 openssl
 	 wxmac
+optional_deps :
 	 fop
 	 :java
 conflicts :
+resource :
+	 ['man', 'html']
+	 ['https://www.erlang.org/download/otp_doc_man_21.1.tar.gz', 'https://www.erlang.org/download/otp_doc_html_21.1.tar.gz']
 patches :
 EOF_patch :
 install :

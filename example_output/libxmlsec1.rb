@@ -13,7 +13,11 @@ link_deps :
 	 libgcrypt
 	 libxml2
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/src/dl.c b/src/dl.c

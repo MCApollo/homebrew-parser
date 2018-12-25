@@ -13,8 +13,12 @@ link_deps :
 	 boost
 	 yaml-cpp
 	 mysql-client
+optional_deps :
 	 postgresql
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

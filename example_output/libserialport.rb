@@ -8,7 +8,11 @@ description :
 	 Cross-platform serial port C library
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 python
+optional_deps :
 conflicts :
+resource :
+	 ['stem']
+	 ['https://files.pythonhosted.org/packages/11/d5/e51983f81b38408ae2f0e166481ad867962f6fa07610fe71119534e12d41/stem-1.6.0.tar.gz']
 patches :
 EOF_patch :
 install :

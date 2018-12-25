@@ -8,7 +8,11 @@ description :
 	 Convert MIDI audio files to human-readable CSV format
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

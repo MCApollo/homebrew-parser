@@ -10,7 +10,11 @@ build_deps :
 	 pkg-config
 	 python@2
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['icu4c']
+	 ['https://ssl.icu-project.org/files/icu4c/58.2/icu4c-58_2-src.tgz']
 patches :
 EOF_patch :
 install :

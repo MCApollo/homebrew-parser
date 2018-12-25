@@ -8,7 +8,11 @@ description :
 	 Monitors sleep, wakeup, and idleness of a Mac
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

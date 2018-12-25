@@ -15,7 +15,11 @@ link_deps :
 	 pcre
 	 python
 	 sqlite
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

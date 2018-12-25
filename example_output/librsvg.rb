@@ -16,8 +16,12 @@ link_deps :
 	 glib
 	 libcroco
 	 pango
+optional_deps :
 	 gtk+3
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

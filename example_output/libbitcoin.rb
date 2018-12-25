@@ -15,7 +15,11 @@ link_deps :
 	 boost
 	 libpng
 	 qrencode
+optional_deps :
 conflicts :
+resource :
+	 ['secp256k1']
+	 ['https://github.com/libbitcoin/secp256k1/archive/v0.1.0.13.tar.gz']
 patches :
 EOF_patch :
 install :

@@ -8,8 +8,12 @@ description :
 	 JBIG1 data compression standard implementation
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 netpbm
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

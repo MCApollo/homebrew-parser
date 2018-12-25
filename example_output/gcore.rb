@@ -8,7 +8,11 @@ description :
 	 Produce a snapshot (core dump) of a running process
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

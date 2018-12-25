@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 icu4c
+optional_deps :
 	 icu4c
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/2ccb6715b3/boost/boost159-questionable-operator.patch
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/2ccb6715b3/boost/boost159-missing-symbols.patch

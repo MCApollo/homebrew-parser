@@ -12,7 +12,11 @@ link_deps :
 	 lv2
 	 serd
 	 sord
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

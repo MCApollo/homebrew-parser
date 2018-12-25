@@ -8,8 +8,12 @@ description :
 	 Two ports of /bin/sh from V6 UNIX (circa 1975)
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 teleport
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

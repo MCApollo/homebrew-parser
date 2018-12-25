@@ -10,10 +10,14 @@ build_deps :
 	 pkg-config
 link_deps :
 	 nettle
-	 gtk+3
 	 adwaita-icon-theme
 	 hicolor-icon-theme
+optional_deps :
+	 gtk+3
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

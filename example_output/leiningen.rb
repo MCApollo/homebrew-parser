@@ -8,7 +8,11 @@ description :
 	 Build tool for Clojure
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['jar']
+	 ['https://github.com/technomancy/leiningen/releases/download/2.8.3/leiningen-2.8.3-standalone.zip']
 patches :
 EOF_patch :
 install :

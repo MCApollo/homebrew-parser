@@ -8,7 +8,11 @@ description :
 	 Display information about active connections for a Squid proxy
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

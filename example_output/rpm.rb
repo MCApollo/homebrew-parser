@@ -18,7 +18,11 @@ link_deps :
 	 popt
 	 xz
 	 zstd
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

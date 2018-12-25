@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 freetype
 	 sdl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://gist.githubusercontent.com/tomyun/a8d2193b6e18218217c4/raw/8292c48e751c6a9939db89553d01445d801420dd/sdl_ttf-fix-1433.diff
 EOF_patch :

@@ -10,8 +10,12 @@ build_deps :
 	 pkg-config
 link_deps :
 	 libagg
+optional_deps :
 	 freetype
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

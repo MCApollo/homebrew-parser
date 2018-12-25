@@ -25,8 +25,12 @@ link_deps :
 	 pcre
 	 yajl
 	 xz
+optional_deps :
 	 python
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

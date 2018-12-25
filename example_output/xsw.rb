@@ -12,7 +12,11 @@ link_deps :
 	 sdl_gfx
 	 sdl_image
 	 sdl_ttf
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

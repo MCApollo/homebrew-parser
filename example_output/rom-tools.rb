@@ -13,7 +13,11 @@ link_deps :
 	 portmidi
 	 sdl2
 	 utf8proc
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

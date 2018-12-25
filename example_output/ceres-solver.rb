@@ -14,7 +14,11 @@ link_deps :
 	 glog
 	 metis
 	 suite-sparse
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

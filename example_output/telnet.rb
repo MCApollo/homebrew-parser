@@ -9,8 +9,12 @@ description :
 build_deps :
 	 :xcode
 link_deps :
+optional_deps :
 conflicts :
 	 inetutils
+resource :
+	 ['libtelnet']
+	 ['https://opensource.apple.com/tarballs/libtelnet/libtelnet-13.tar.gz']
 patches :
 EOF_patch :
 install :

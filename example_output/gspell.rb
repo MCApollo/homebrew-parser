@@ -18,7 +18,11 @@ link_deps :
 	 gtk-mac-integration
 	 iso-codes
 	 vala
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/gspell/Makefile.am b/gspell/Makefile.am

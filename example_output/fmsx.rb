@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 pulseaudio
 	 :x11
+optional_deps :
 conflicts :
+resource :
+	 ['msx-rom', 'msx2-rom', 'msx2ext-rom', 'msx2p-rom', 'msx2pext-rom', 'fmpac-rom', 'disk-rom', 'msxdos2-rom', 'painter-rom', 'kanji-rom']
+	 ['https://fms.komkon.org/fMSX/src/MSX.ROM', 'https://fms.komkon.org/fMSX/src/MSX2.ROM', 'https://fms.komkon.org/fMSX/src/MSX2EXT.ROM', 'https://fms.komkon.org/fMSX/src/MSX2P.ROM', 'https://fms.komkon.org/fMSX/src/MSX2PEXT.ROM', 'https://fms.komkon.org/fMSX/src/FMPAC.ROM', 'https://fms.komkon.org/fMSX/src/DISK.ROM', 'https://fms.komkon.org/fMSX/src/MSXDOS2.ROM', 'https://fms.komkon.org/fMSX/src/PAINTER.ROM', 'https://fms.komkon.org/fMSX/src/KANJI.ROM']
 patches :
 EOF_patch :
 install :

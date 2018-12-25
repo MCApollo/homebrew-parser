@@ -8,7 +8,11 @@ description :
 	 Convert bootable DMG images for use in VMware Fusion
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

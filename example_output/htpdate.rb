@@ -8,7 +8,11 @@ description :
 	 Synchronize time with remote web servers
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -16,7 +16,11 @@ link_deps :
 	 libyaml
 	 llvm@6
 	 pcre
+optional_deps :
 conflicts :
+resource :
+	 ['shards', 'boot']
+	 ['https://github.com/crystal-lang/shards/archive/v0.8.1.tar.gz', 'https://github.com/crystal-lang/crystal/releases/download/0.26.1/crystal-0.26.1-1-darwin-x86_64.tar.gz']
 patches :
 EOF_patch :
 install :

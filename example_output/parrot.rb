@@ -7,8 +7,12 @@ description :
 	 Open source virtual machine (for Perl6, et al.)
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 rakudo-star
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/parrot/parrot/commit/854aec65d6de8eaf5282995ab92100a2446f0cde.diff?full_index=1
 EOF_patch :

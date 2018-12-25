@@ -8,7 +8,11 @@ description :
 	 Port of Plan 9's support library for UTF-8 and Unicode
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

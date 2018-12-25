@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 :java
+optional_deps :
 conflicts :
+resource :
+	 ['test_resource']
+	 ['https://github.com/jamesagnew/hapi-fhir/raw/v3.6.0/hapi-fhir-structures-dstu3/src/test/resources/specimen-example.json']
 patches :
 EOF_patch :
 install :

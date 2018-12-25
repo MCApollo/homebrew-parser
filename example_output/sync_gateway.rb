@@ -10,7 +10,11 @@ build_deps :
 	 gnupg
 	 go
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['depot_tools']
+	 ['https://chromium.googlesource.com/chromium/tools/depot_tools.git']
 patches :
 EOF_patch :
 install :

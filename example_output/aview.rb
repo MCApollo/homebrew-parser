@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 aalib
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/image.c b/image.c

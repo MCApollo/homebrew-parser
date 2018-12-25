@@ -13,7 +13,11 @@ link_deps :
 	 boost
 	 icu4c
 	 librevenge
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

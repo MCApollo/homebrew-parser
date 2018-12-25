@@ -11,7 +11,11 @@ link_deps :
 	 jpeg
 	 libtiff
 	 proj
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

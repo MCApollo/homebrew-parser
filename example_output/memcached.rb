@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 libevent
+optional_deps :
 conflicts :
 	 mysql-cluster
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

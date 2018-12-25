@@ -12,7 +12,11 @@ link_deps :
 	 llvm@3.9
 	 :macos
 	 pcre2
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

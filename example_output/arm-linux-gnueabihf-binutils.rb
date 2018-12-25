@@ -8,7 +8,11 @@ description :
 	 FSF/GNU binutils for cross-compiling to arm-linux
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

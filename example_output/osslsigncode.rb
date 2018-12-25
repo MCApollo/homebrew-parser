@@ -11,8 +11,12 @@ build_deps :
 	 pkg-config
 link_deps :
 	 openssl
+optional_deps :
 	 libgsf
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

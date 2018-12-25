@@ -8,7 +8,11 @@ description :
 	 Utility to read Word (.doc) files
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['sample.doc']
+	 ['https://gist.github.com/bfontaine/f7e29599d329c41737ce/raw/ed4a3c5461924ed3bc18beb6b82681af9ad143d1/sample.doc']
 patches :
 EOF_patch :
 install :

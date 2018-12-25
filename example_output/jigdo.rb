@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 berkeley-db
 	 wget
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/e101570/jigdo/patch-src-compat.hh.diff
 EOF_patch :

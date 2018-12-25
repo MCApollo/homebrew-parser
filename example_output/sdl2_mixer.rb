@@ -12,11 +12,15 @@ link_deps :
 	 libmodplug
 	 libvorbis
 	 sdl2
+optional_deps :
 	 flac
 	 fluid-synth
 	 libmikmod
 	 mpg123
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

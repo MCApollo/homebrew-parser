@@ -8,7 +8,11 @@ description :
 	 Wyse 60 compatible terminal emulator
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

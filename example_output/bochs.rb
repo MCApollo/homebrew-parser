@@ -10,7 +10,11 @@ build_deps :
 	 pkg-config
 link_deps :
 	 sdl2
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/e9b520dd4c/bochs/xcode9.patch
 EOF_patch :

@@ -9,7 +9,11 @@ build_deps :
 link_deps :
 	 gawk
 	 gnupg
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

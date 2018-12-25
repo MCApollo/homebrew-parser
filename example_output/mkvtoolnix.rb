@@ -19,10 +19,14 @@ link_deps :
 	 libmatroska
 	 libogg
 	 libvorbis
+	 cmark
+optional_deps :
 	 gettext
 	 qt
-	 cmark
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

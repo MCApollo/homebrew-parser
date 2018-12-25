@@ -8,7 +8,11 @@ description :
 	 Open source flash program for STM32 using the ST serial bootloader
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

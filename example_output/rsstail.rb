@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 libmrss
+optional_deps :
 conflicts :
+resource :
+	 ['libiconv_hook']
+	 ['https://www.mirrorservice.org/sites/archive.ubuntu.com/ubuntu/pool/universe/liba/libapache-mod-encoding/libapache-mod-encoding_0.0.20021209.orig.tar.gz']
 patches :
 EOF_patch :
 install :

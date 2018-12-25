@@ -11,7 +11,11 @@ link_deps :
 	 libidn
 	 openssl
 	 pcre
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

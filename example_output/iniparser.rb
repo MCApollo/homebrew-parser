@@ -8,8 +8,12 @@ description :
 	 Library for parsing ini files
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 fastbit
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

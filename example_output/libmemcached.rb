@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 memcached
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/60f3532/libmemcached/1.0.18.patch
 EOF_patch :

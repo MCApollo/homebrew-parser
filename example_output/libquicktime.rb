@@ -10,7 +10,11 @@ build_deps :
 	 pkg-config
 link_deps :
 	 gettext
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://mirrors.ocf.berkeley.edu/debian/pool/main/libq/libquicktime/libquicktime_1.2.4-12.debian.tar.xz
 EOF_patch :

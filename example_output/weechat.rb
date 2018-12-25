@@ -14,13 +14,17 @@ link_deps :
 	 gettext
 	 gnutls
 	 libgcrypt
+	 ruby
+optional_deps :
 	 aspell
 	 curl
 	 lua
 	 perl
 	 python@2
-	 ruby
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 openssl
+optional_deps :
 conflicts :
 	 suite-sparse
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -14,7 +14,11 @@ link_deps :
 	 libzip
 	 sdl2
 	 sdl2_mixer
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

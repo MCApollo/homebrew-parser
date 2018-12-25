@@ -8,7 +8,11 @@ description :
 	 Monitor hosts/services/whatever and alert about problems
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

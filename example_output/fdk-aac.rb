@@ -8,7 +8,11 @@ description :
 	 Standalone library of the Fraunhofer FDK AAC code from Android
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

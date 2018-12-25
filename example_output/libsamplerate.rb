@@ -9,9 +9,13 @@ description :
 build_deps :
 	 pkg-config
 link_deps :
+optional_deps :
 	 fftw
 	 libsndfile
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- a/examples/audio_out.c	2011-07-12 16:57:31.000000000 -0700

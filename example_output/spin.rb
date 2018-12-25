@@ -8,7 +8,11 @@ description :
 	 The efficient verification tool of multi-threaded software
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

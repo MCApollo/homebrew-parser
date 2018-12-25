@@ -8,7 +8,11 @@ description :
 	 Lite libxmp
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/cmatsuoka/libxmp/commit/a028835.patch?full_index=1
 EOF_patch :

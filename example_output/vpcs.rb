@@ -8,7 +8,11 @@ description :
 	 Virtual PC simulator for testing IP routing
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

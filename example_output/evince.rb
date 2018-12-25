@@ -22,7 +22,11 @@ link_deps :
 	 libxml2
 	 poppler
 	 python@2
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

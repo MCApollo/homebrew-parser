@@ -8,7 +8,11 @@ description :
 	 Library for command-line editing
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://ftp.gnu.org/gnu/readline/readline-7.0-patches/readline70-#{p}
 EOF_patch :

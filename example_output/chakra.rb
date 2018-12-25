@@ -10,7 +10,11 @@ build_deps :
 	 cmake
 link_deps :
 	 icu4c
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

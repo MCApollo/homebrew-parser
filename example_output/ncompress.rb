@@ -8,7 +8,11 @@ description :
 	 Fast, simple LZW file compressor
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

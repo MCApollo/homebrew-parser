@@ -14,8 +14,12 @@ link_deps :
 	 jpeg
 	 libpng
 	 :x11
+optional_deps :
 conflicts :
 	 lesstif
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

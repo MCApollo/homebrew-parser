@@ -17,7 +17,11 @@ link_deps :
 	 glib
 	 json-glib
 	 pango
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

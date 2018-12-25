@@ -8,7 +8,11 @@ description :
 	 Terminal-based Tetris clone
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- a/Makefile  2013-10-07 11:57:18.000000000 +0200

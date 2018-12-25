@@ -15,7 +15,11 @@ link_deps :
 	 openssl
 	 popt
 	 readline
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://mirrors.ocf.berkeley.edu/debian/pool/main/l/ldapvi/ldapvi_1.7-10.debian.tar.xz
 EOF_patch :

@@ -8,7 +8,11 @@ description :
 build_deps :
 	 nkf
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- a/src/wordbuf.c	2011-08-15 02:57:05.000000000 +0900

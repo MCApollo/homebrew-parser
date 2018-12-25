@@ -12,10 +12,14 @@ link_deps :
 	 jpeg
 	 libpng
 	 libtiff
+optional_deps :
 	 giflib
 	 openjpeg
 	 webp
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

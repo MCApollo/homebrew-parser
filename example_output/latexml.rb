@@ -8,7 +8,11 @@ description :
 	 LaTeX to XML/HTML/MathML Converter
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['Image::Size', 'Text::Unidecode']
+	 ['https://cpan.metacpan.org/authors/id/R/RJ/RJRAY/Image-Size-3.300.tar.gz', 'https://cpan.metacpan.org/authors/id/S/SB/SBURKE/Text-Unidecode-1.27.tar.gz']
 patches :
 EOF_patch :
 install :

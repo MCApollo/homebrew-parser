@@ -16,7 +16,11 @@ link_deps :
 	 theora
 	 x264
 	 xvid
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/doc/texi2pod.pl b/doc/texi2pod.pl

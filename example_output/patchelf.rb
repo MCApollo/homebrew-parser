@@ -8,7 +8,11 @@ description :
 	 Modify dynamic ELF executables
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['hellworld']
+	 ['http://timelessname.com/elfbin/helloworld.tar.gz']
 patches :
 EOF_patch :
 install :

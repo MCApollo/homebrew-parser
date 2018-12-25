@@ -10,8 +10,12 @@ build_deps :
 	 pkg-config
 link_deps :
 	 libdvdread
+optional_deps :
 	 libdvdcss
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

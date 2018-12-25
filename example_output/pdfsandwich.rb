@@ -16,7 +16,11 @@ link_deps :
 	 poppler
 	 tesseract
 	 unpaper
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

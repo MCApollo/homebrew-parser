@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 node
+optional_deps :
 conflicts :
+resource :
+	 ['babel-core']
+	 ['https://registry.npmjs.org/@babel/core/-/core-7.2.0.tgz']
 patches :
 EOF_patch :
 install :

@@ -17,7 +17,11 @@ build_deps :
 link_deps :
 	 glib
 	 libgcrypt
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

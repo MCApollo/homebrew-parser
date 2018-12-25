@@ -15,7 +15,11 @@ build_deps :
 link_deps :
 	 glib
 	 gtk+3
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

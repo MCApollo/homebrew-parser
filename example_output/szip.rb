@@ -8,7 +8,11 @@ description :
 	 Implementation of extended-Rice lossless compression algorithm
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -9,7 +9,11 @@ description :
 build_deps :
 	 cmake
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['clang', 'llvm']
+	 ['http://root.cern.ch/git/clang.git', 'http://root.cern.ch/git/llvm.git']
 patches :
 EOF_patch :
 install :

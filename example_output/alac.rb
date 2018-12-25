@@ -8,7 +8,11 @@ description :
 	 Basic decoder for Apple Lossless Audio Codec files (ALAC)
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

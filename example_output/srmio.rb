@@ -8,7 +8,11 @@ description :
 	 C library to access the PowerControl of a SRM bike power meter
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

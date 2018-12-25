@@ -8,7 +8,11 @@ description :
 	 Small utility for manipulating IPv6 addresses
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

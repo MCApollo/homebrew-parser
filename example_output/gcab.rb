@@ -15,7 +15,11 @@ build_deps :
 	 vala
 link_deps :
 	 glib
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/libgcab/meson.build b/libgcab/meson.build

@@ -8,7 +8,11 @@ description :
 	 ARJ file archiver
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['testfile']
+	 ['https://s3.amazonaws.com/ARJ/ARJ286.EXE']
 patches :
 EOF_patch :
 install :

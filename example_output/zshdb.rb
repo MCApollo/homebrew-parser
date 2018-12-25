@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 zsh
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/rocky/zshdb/commit/94b389a3.patch?full_index=1
 EOF_patch :

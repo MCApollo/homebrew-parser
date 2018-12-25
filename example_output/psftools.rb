@@ -9,7 +9,11 @@ description :
 build_deps :
 	 autoconf
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['pc8x8font']
+	 ['https://www.zone38.net/font/pc8x8.zip']
 patches :
 EOF_patch :
 install :

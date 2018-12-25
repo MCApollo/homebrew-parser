@@ -8,8 +8,12 @@ description :
 	 6502 C compiler
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 grc
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

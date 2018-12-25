@@ -11,7 +11,11 @@ build_deps :
 	 ghc
 link_deps :
 	 pandoc
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

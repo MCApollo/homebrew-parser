@@ -8,7 +8,11 @@ description :
 	 Open terminal in specified directory (and optionally run command)
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

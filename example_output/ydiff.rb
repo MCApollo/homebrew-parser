@@ -8,7 +8,11 @@ description :
 	 View colored diff with side by side and auto pager support
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

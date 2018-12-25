@@ -9,7 +9,11 @@ description :
 build_deps :
 	 autoconf
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://download.samba.org/pub/rsync/src/rsync-patches-3.1.3.tar.gz
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/344bf3b/rsync/fix-crtimes-patch-3.1.3.diff

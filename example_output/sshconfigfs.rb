@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 :osxfuse
 	 python
+optional_deps :
 conflicts :
+resource :
+	 ['fusepy']
+	 ['https://github.com/terencehonles/fusepy/archive/v2.0.2.tar.gz']
 patches :
 EOF_patch :
 install :

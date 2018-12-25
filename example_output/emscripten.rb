@@ -12,8 +12,12 @@ link_deps :
 	 node
 	 python@2
 	 yuicompressor
+optional_deps :
 	 closure-compiler
 conflicts :
+resource :
+	 ['fastcomp', 'fastcomp-clang', 'fastcomp-clang']
+	 ['https://github.com/kripken/emscripten-fastcomp/archive/1.38.20.tar.gz', 'https://github.com/kripken/emscripten-fastcomp-clang/archive/1.38.20.tar.gz', 'incoming']
 patches :
 EOF_patch :
 install :

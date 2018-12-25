@@ -7,7 +7,11 @@ description :
 	 Bourne-Again SHell, a UNIX command interpreter
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

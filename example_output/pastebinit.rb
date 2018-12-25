@@ -10,7 +10,11 @@ build_deps :
 	 docbook2x
 link_deps :
 	 python
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

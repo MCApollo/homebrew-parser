@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 python
+optional_deps :
 conflicts :
 	 trash
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

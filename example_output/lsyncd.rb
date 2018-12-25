@@ -10,7 +10,11 @@ build_deps :
 	 cmake
 link_deps :
 	 lua
+optional_deps :
 conflicts :
+resource :
+	 ['xnu']
+	 ['https://opensource.apple.com/tarballs/xnu/#{tarball}']
 patches :
 EOF_patch :
 install :

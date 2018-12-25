@@ -11,8 +11,12 @@ build_deps :
 link_deps :
 	 libusb-compat
 	 openssl
+optional_deps :
 conflicts :
 	 rhino
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

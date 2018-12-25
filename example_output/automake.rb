@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 autoconf
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://git.savannah.gnu.org/cgit/automake.git/patch/?id=a348d830659fffd2cfc42994524783b07e69b4b5
 EOF_patch :

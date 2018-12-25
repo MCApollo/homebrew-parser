@@ -13,7 +13,11 @@ link_deps :
 	 libogg
 	 libvorbis
 	 speex
+optional_deps :
 conflicts :
+resource :
+	 ['freepats']
+	 ['https://freepats.zenvoid.org/freepats-20060219.zip']
 patches :
 EOF_patch :
 install :

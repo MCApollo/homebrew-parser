@@ -12,7 +12,11 @@ link_deps :
 	 glib
 	 libgsf
 	 librevenge
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

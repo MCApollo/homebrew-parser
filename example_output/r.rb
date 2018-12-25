@@ -16,9 +16,13 @@ link_deps :
 	 pcre
 	 readline
 	 xz
+optional_deps :
 	 :java
 	 openblas
 conflicts :
+resource :
+	 ['gss']
+	 ['https://cloud.r-project.org/src/contrib/gss_2.1-9.tar.gz']
 patches :
 EOF_patch :
 install :

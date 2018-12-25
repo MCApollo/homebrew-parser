@@ -9,8 +9,12 @@ description :
 build_deps :
 	 pkg-config
 link_deps :
+optional_deps :
 conflicts :
 	 pssh
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

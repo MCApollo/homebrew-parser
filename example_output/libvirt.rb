@@ -17,7 +17,11 @@ link_deps :
 	 gnutls
 	 libgcrypt
 	 yajl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

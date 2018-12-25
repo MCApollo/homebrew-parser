@@ -11,8 +11,12 @@ build_deps :
 link_deps :
 	 boost
 	 eigen
+optional_deps :
 	 ode
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

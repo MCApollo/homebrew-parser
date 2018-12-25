@@ -8,7 +8,11 @@ description :
 	 Limit the CPU usage of a process
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

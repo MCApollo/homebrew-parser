@@ -11,7 +11,11 @@ link_deps :
 	 libevent
 	 pcre
 	 tokyo-cabinet
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

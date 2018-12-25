@@ -14,8 +14,12 @@ link_deps :
 	 json-glib
 	 liboauth
 	 libsoup
+optional_deps :
 	 vala
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/gdata/gdata.symbols b/gdata/gdata.symbols

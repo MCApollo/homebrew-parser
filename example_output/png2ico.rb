@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 libpng
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/png2ico.cpp b/png2ico.cpp

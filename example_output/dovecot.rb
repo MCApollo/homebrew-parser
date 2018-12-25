@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 ['pigeonhole']
+	 ['https://pigeonhole.dovecot.org/releases/2.3/dovecot-2.3-pigeonhole-0.5.2.tar.gz']
 patches :
 EOF_patch :
 install :

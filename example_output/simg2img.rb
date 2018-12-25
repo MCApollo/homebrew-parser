@@ -8,7 +8,11 @@ description :
 	 Tool to convert Android sparse images to raw images and back
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

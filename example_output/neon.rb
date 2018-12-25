@@ -10,7 +10,11 @@ build_deps :
 	 pkg-config
 link_deps :
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/configure b/configure

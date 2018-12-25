@@ -9,8 +9,12 @@ description :
 build_deps :
 	 scons
 link_deps :
+optional_deps :
 	 libusb
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

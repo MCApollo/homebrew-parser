@@ -14,7 +14,11 @@ link_deps :
 	 sdl2_image
 	 sdl2_mixer
 	 sdl2_ttf
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/instead-hub/instead/commit/e00be1e2.patch?full_index=1
 EOF_patch :

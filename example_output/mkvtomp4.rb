@@ -12,7 +12,11 @@ link_deps :
 	 gpac
 	 mkvtoolnix
 	 python@2
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

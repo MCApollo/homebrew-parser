@@ -10,7 +10,11 @@ build_deps :
 	 pkg-config
 link_deps :
 	 gtk+
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/Makefile.in b/Makefile.in

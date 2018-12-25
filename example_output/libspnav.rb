@@ -8,7 +8,11 @@ description :
 	 Client library for connecting to 3Dconnexion's 3D input devices
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

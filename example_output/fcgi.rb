@@ -8,7 +8,11 @@ description :
 	 Protocol for interfacing interactive programs with a web server
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- a/libfcgi/fcgi_stdio.c

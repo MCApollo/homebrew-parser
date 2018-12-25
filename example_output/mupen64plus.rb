@@ -13,7 +13,11 @@ link_deps :
 	 freetype
 	 libpng
 	 sdl
+optional_deps :
 conflicts :
+resource :
+	 ['rom']
+	 ['https://github.com/mupen64plus/mupen64plus-rom/raw/76ef14c876ed036284154444c7bdc29d19381acc/m64p_test_rom.v64']
 patches :
 EOF_patch :
 install :

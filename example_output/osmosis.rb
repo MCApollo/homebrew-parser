@@ -8,7 +8,11 @@ description :
 	 Command-line OpenStreetMap data processor
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- a/bin/osmosis 2010-11-16 06:58:44.000000000 +0100

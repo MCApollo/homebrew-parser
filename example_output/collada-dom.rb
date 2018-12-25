@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 boost
 	 pcre
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/CMakeLists.txt b/CMakeLists.txt

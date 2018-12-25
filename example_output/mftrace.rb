@@ -11,7 +11,11 @@ link_deps :
 	 fontforge
 	 potrace
 	 t1utils
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

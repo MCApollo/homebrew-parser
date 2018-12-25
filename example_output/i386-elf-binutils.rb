@@ -8,7 +8,11 @@ description :
 	 FSF Binutils for i386-elf cross development
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

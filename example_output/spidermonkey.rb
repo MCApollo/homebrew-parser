@@ -10,8 +10,12 @@ build_deps :
 link_deps :
 	 nspr
 	 readline
+optional_deps :
 conflicts :
 	 narwhal
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

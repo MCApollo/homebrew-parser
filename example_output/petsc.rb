@@ -15,8 +15,12 @@ link_deps :
 	 open-mpi
 	 scalapack
 	 suite-sparse
+optional_deps :
 conflicts :
 	 petsc-complex
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,8 +8,12 @@ description :
 	 See mecab
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 mecab
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

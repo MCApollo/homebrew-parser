@@ -16,8 +16,12 @@ link_deps :
 	 geocode-glib
 	 gtk+3
 	 libsoup
+optional_deps :
 	 vala
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

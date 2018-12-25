@@ -10,7 +10,11 @@ build_deps :
 	 pkg-config
 link_deps :
 	 ilmbase
+optional_deps :
 conflicts :
+resource :
+	 ['exr']
+	 ['https://github.com/openexr/openexr-images/raw/master/TestImages/AllHalfValues.exr']
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/f1a3ea4f69b7a54d8123e2f16488864d52202de8/openexr/64bit_types.patch
 EOF_patch :

@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 jsoncpp
 	 luajit
+optional_deps :
 conflicts :
+resource :
+	 ['sample_file']
+	 ['https://gist.githubusercontent.com/juniorz/9986999/raw/a3556d7e93fa890a157a33f4233efaf8f5e01a6f/sample.scap']
 patches :
 EOF_patch :
 install :

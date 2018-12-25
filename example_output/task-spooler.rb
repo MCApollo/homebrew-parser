@@ -8,8 +8,12 @@ description :
 	 Batch system to run tasks one after another
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 moreutils
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

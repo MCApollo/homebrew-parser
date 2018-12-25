@@ -13,8 +13,12 @@ link_deps :
 	 librsvg
 	 libtiff
 	 openssl
+optional_deps :
 	 :x11
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,8 +8,12 @@ description :
 	 Command-line integration for Teensy USB development boards
 build_deps :
 link_deps :
+optional_deps :
 	 libusb-compat
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

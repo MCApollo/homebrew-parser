@@ -8,7 +8,11 @@ description :
 	 MP3 technical info viewer and ID3 1.x tag editor
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/bedf6f8/mp3info/patch-mp3tech.c.diff
 EOF_patch :

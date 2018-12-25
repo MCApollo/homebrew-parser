@@ -8,7 +8,11 @@ description :
 	 Program to tunnel/sniff between 2 serial ports
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -10,8 +10,12 @@ build_deps :
 	 cmake
 	 pkg-config
 link_deps :
+optional_deps :
 conflicts :
 	 xsd
+resource :
+	 ['fsharp', 'msbuild']
+	 ['https://github.com/fsharp/fsharp.git', 'https://github.com/mono/msbuild.git']
 patches :
 EOF_patch :
 install :

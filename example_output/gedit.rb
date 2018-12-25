@@ -28,7 +28,11 @@ link_deps :
 	 libpeas
 	 libxml2
 	 pango
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

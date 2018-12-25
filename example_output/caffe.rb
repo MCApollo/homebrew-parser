@@ -19,7 +19,11 @@ link_deps :
 	 protobuf
 	 snappy
 	 szip
+optional_deps :
 conflicts :
+resource :
+	 ['test_model_weights']
+	 ['http://dl.caffe.berkeleyvision.org/bvlc_reference_caffenet.caffemodel']
 patches :
 EOF_patch :
 install :

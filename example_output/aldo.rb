@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 libao
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/src/menu.cc b/src/menu.cc

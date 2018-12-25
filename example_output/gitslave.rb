@@ -8,7 +8,11 @@ description :
 	 Create group of related repos with one as superproject
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Compression and file packaging/archive utility
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://mirrors.ocf.berkeley.edu/debian/pool/main/z/zip/zip_3.0-11.debian.tar.xz
 EOF_patch :

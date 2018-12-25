@@ -12,7 +12,11 @@ link_deps :
 	 boost
 	 libpng
 	 lzlib
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

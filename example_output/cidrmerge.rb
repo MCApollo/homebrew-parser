@@ -8,7 +8,11 @@ description :
 	 CIDR merging with white listing (network exclusion)
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

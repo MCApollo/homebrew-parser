@@ -16,7 +16,11 @@ link_deps :
 	 icu4c
 	 libpng
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

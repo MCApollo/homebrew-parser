@@ -11,7 +11,11 @@ link_deps :
 	 python
 	 perl
 	 curl
+optional_deps :
 conflicts :
+resource :
+	 ['URI', 'Term::ReadKey', 'JSON::PP', 'boto']
+	 ['https://cpan.metacpan.org/authors/id/E/ET/ETHER/URI-1.67.tar.gz', 'https://cpan.metacpan.org/authors/id/J/JS/JSTOWE/TermReadKey-2.32.tar.gz', 'https://cpan.metacpan.org/authors/id/M/MA/MAKAMAKA/JSON-PP-2.27300.tar.gz', 'https://files.pythonhosted.org/packages/c8/af/54a920ff4255664f5d238b5aebd8eedf7a07c7a5e71e27afcfe840b82f51/boto-2.49.0.tar.gz']
 patches :
 EOF_patch :
 install :

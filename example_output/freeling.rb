@@ -10,8 +10,12 @@ build_deps :
 	 cmake
 link_deps :
 	 icu4c
+optional_deps :
 conflicts :
 	 hunspell
+resource :
+	 ['boost']
+	 ['https://dl.bintray.com/boostorg/release/1.68.0/source/boost_1_68_0.tar.bz2']
 patches :
 EOF_patch :
 install :

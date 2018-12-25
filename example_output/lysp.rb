@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 bdw-gc
 	 gcc
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/Makefile b/Makefile

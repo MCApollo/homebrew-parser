@@ -11,11 +11,15 @@ build_deps :
 	 pkg-config
 link_deps :
 	 eigen
+	 swig
+optional_deps :
 	 cairo
 	 python@2
-	 swig
 	 wxmac
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

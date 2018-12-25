@@ -8,7 +8,11 @@ description :
 	 Trace a chain of DNS servers to the source
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

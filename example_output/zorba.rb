@@ -13,8 +13,12 @@ link_deps :
 	 icu4c
 	 :macos
 	 xerces-c
+optional_deps :
 conflicts :
 	 xqilla
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

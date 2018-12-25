@@ -8,7 +8,11 @@ description :
 	 Run a command as a UNIX daemon
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

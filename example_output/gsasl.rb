@@ -8,8 +8,12 @@ description :
 	 SASL library command-line interface
 build_deps :
 link_deps :
+optional_deps :
 	 libntlm
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

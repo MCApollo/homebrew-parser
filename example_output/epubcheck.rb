@@ -8,7 +8,11 @@ description :
 	 Validate IDPF EPUB files, version 2.0 and later
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

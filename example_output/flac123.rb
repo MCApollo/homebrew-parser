@@ -14,7 +14,11 @@ link_deps :
 	 libao
 	 libogg
 	 popt
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

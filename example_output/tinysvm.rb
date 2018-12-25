@@ -8,7 +8,11 @@ description :
 	 Support vector machine library for pattern recognition
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/838f605/tinysvm/patch-configure.diff
 EOF_patch :

@@ -8,7 +8,11 @@ description :
 	 DNS message dissector
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['Net::Pcap', 'Net::Pcap::Reassemble']
+	 ['https://cpan.metacpan.org/authors/id/S/SA/SAPER/Net-Pcap-0.17.tar.gz', 'https://cpan.metacpan.org/authors/id/J/JR/JRAFTERY/Net-Pcap-Reassemble-0.04.tar.gz']
 patches :
 EOF_patch :
 install :

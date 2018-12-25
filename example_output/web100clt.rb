@@ -11,7 +11,11 @@ link_deps :
 	 i2util
 	 jansson
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/37aa64888341/web100clt/ndt-3.6.5.2-osx-10.9.patch
 EOF_patch :

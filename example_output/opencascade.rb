@@ -14,7 +14,11 @@ link_deps :
 	 freetype
 	 gl2ps
 	 tbb
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

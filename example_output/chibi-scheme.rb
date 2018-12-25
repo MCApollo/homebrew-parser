@@ -8,7 +8,11 @@ description :
 	 Small footprint Scheme for use as a C Extension Language
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

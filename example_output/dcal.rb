@@ -8,7 +8,11 @@ description :
 	 dcal(1) is to cal(1) what ddate(1) is to date(1)
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

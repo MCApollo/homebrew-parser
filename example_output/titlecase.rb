@@ -8,7 +8,11 @@ description :
 	 Script to convert text to title case
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

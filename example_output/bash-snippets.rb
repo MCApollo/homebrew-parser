@@ -8,8 +8,12 @@ description :
 	 Collection of small bash scripts for heavy terminal users
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 cheat
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

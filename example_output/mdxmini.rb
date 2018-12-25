@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 sdl
+optional_deps :
 conflicts :
+resource :
+	 ['test_song']
+	 ['https://ftp.modland.com/pub/modules/MDX/-%20unknown/Popful%20Mail/pop-00.mdx']
 patches :
 EOF_patch :
 install :

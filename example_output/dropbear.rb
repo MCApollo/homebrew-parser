@@ -8,7 +8,11 @@ description :
 	 Small SSH server/client for POSIX-based system
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://secure.ucc.asn.au/hg/dropbear/raw-rev/5d2d1021ca00
 EOF_patch :

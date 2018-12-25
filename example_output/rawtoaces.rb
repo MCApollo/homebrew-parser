@@ -14,7 +14,11 @@ link_deps :
 	 ceres-solver
 	 ilmbase
 	 libraw
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

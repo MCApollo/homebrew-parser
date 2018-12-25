@@ -10,8 +10,12 @@ build_deps :
 	 pkg-config
 link_deps :
 	 python
+optional_deps :
 conflicts :
 	 findbugs
+resource :
+	 ['pycurl', 'pyxdg']
+	 ['https://files.pythonhosted.org/packages/12/3f/557356b60d8e59a1cce62ffc07ecc03e4f8a202c86adae34d895826281fb/pycurl-7.43.0.tar.gz', 'https://files.pythonhosted.org/packages/26/28/ee953bd2c030ae5a9e9a0ff68e5912bd90ee50ae766871151cd2572ca570/pyxdg-0.25.tar.gz']
 patches :
 EOF_patch :
 install :

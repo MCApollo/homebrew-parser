@@ -14,7 +14,11 @@ link_deps :
 	 :java
 	 protobuf
 	 re2
+optional_deps :
 conflicts :
+resource :
+	 ['gtest']
+	 ['https://github.com/google/googletest/archive/release-1.8.1.tar.gz']
 patches :
 EOF_patch :
 install :

@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 openssl
 	 python
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/bwall/HashPump/pull/14.patch?full_index=1
 EOF_patch :

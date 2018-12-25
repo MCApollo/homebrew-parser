@@ -12,8 +12,12 @@ build_deps :
 	 libtool
 	 pkg-config
 link_deps :
+optional_deps :
 	 pulseaudio
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

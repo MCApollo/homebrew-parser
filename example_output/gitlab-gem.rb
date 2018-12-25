@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 ruby
+optional_deps :
 conflicts :
+resource :
+	 ['httparty', 'terminal-table', 'multi_xml', 'unicode-display_width']
+	 ['https://rubygems.org/gems/httparty-0.16.2.gem', 'https://rubygems.org/gems/terminal-table-1.8.0.gem', 'https://rubygems.org/gems/multi_xml-0.6.0.gem', 'https://rubygems.org/gems/unicode-display_width-1.4.0.gem']
 patches :
 EOF_patch :
 install :

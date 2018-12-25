@@ -8,7 +8,11 @@ description :
 	 Computes the SHA1 hash of schema and content of a SQLite database
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -14,7 +14,11 @@ link_deps :
 	 gettext
 	 json-c
 	 libstfl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

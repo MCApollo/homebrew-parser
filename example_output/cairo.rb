@@ -14,7 +14,11 @@ link_deps :
 	 glib
 	 libpng
 	 pixman
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

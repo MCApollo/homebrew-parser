@@ -8,7 +8,11 @@ description :
 	 Tools for JPEG-XR image encoding/decoding
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

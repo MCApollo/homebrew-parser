@@ -12,9 +12,13 @@ build_deps :
 link_deps :
 	 openssl
 	 tokyo-cabinet
+optional_deps :
 	 gpgme
 conflicts :
 	 tin
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

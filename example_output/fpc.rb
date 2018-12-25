@@ -8,7 +8,11 @@ description :
 	 Free Pascal: multi-architecture Pascal compiler
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['bootstrap']
+	 ['https://downloads.sourceforge.net/project/freepascal/Bootstrap/3.0.0/x86_64-macosx-10.7-ppcx64.tar.bz2']
 patches :
 EOF_patch :
 	 diff --git a/compiler/systems/t_bsd.pas b/compiler/systems/t_bsd.pas

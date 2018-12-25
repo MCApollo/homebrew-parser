@@ -8,7 +8,11 @@ description :
 build_deps :
 link_deps :
 	 mono
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

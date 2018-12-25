@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 librsync
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 ['uthash']
+	 ['https://github.com/troydhanson/uthash.git']
 patches :
 EOF_patch :
 install :

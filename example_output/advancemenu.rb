@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 sdl
+optional_deps :
 conflicts :
 	 advancemame
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

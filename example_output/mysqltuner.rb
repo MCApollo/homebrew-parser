@@ -8,7 +8,11 @@ description :
 	 Increase performance and stability of a MySQL installation
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

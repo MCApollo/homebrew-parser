@@ -8,7 +8,11 @@ description :
 	 TCP traffic analyzer
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- yconalyzer.cc.orig	2014-01-12 14:15:17.000000000 +0800

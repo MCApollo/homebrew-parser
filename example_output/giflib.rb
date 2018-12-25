@@ -8,7 +8,11 @@ description :
 	 Library and utilities for processing GIFs
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://mirrors.ocf.berkeley.edu/debian/pool/main/g/giflib/giflib_5.1.4-3.debian.tar.xz
 EOF_patch :

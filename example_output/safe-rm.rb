@@ -8,7 +8,11 @@ description :
 	 Wraps rm to prevent dangerous deletion of files
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

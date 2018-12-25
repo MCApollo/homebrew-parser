@@ -8,8 +8,12 @@ description :
 	 Program providing model for GNU coding standards and practices
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 camlistore
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

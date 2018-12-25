@@ -8,7 +8,11 @@ description :
 	 Shell script wrapper that offers helpful shortcuts for curl(1)
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

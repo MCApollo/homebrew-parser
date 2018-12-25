@@ -20,7 +20,11 @@ link_deps :
 	 sdl2
 	 sdl2_ttf
 	 speexdsp
+optional_deps :
 conflicts :
+resource :
+	 ['title-sequences', 'objects']
+	 ['https://github.com/OpenRCT2/title-sequences/releases/download/v0.1.2/title-sequence-v0.1.2.zip', 'https://github.com/OpenRCT2/objects/releases/download/v1.0.6/objects.zip']
 patches :
 EOF_patch :
 install :

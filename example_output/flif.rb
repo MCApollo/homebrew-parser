@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 libpng
 	 sdl2
+optional_deps :
 conflicts :
+resource :
+	 ['test_c']
+	 ['https://raw.githubusercontent.com/FLIF-hub/FLIF/dcc2011/tools/test.c']
 patches :
 EOF_patch :
 install :

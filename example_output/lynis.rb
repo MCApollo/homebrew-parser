@@ -8,7 +8,11 @@ description :
 	 Security and system auditing tool to harden systems
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Stateful tail: show changes to files since last check
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

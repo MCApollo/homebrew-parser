@@ -8,7 +8,11 @@ description :
 	 Check Java source against a coding standard
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -13,7 +13,11 @@ link_deps :
 	 ffmpeg
 	 jpeg
 	 libpng
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

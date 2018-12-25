@@ -18,6 +18,7 @@ link_deps :
 	 openjpeg
 	 webp
 	 xz
+optional_deps :
 	 fftw
 	 fontconfig
 	 ghostscript
@@ -29,6 +30,9 @@ link_deps :
 	 pango
 	 perl
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

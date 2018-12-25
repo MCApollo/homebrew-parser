@@ -15,7 +15,11 @@ link_deps :
 	 libusb
 	 net-snmp
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Convert bitmaps to vector graphics
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['head.pbm']
+	 ['https://potrace.sourceforge.io/img/head.pbm']
 patches :
 EOF_patch :
 install :

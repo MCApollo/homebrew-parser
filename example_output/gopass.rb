@@ -10,7 +10,11 @@ build_deps :
 	 go
 link_deps :
 	 gnupg
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -15,7 +15,11 @@ link_deps :
 	 libsodium
 	 mbedtls
 	 pcre
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

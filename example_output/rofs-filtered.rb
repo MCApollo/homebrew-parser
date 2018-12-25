@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 :macos
 	 :osxfuse
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

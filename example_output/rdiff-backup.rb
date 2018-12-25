@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 librsync
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://git.archlinux.org/svntogit/community.git/plain/trunk/rdiff-backup-1.2.8-librsync-1.0.0.patch?h=packages/rdiff-backup
 EOF_patch :

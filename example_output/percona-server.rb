@@ -11,12 +11,16 @@ build_deps :
 link_deps :
 	 :macos
 	 openssl
+optional_deps :
 conflicts :
 	 mariadb
 	 mysql
 	 mysql-cluster
 	 mysql-connector-c
 	 mariadb-connector-c
+resource :
+	 ['boost']
+	 ['https://downloads.sourceforge.net/project/boost/boost/1.59.0/boost_1_59_0.tar.bz2']
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 C library for number theoretic multiple-precision integers
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

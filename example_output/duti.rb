@@ -9,7 +9,11 @@ description :
 build_deps :
 	 autoconf
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/moretension/duti/pull/32.patch
 EOF_patch :

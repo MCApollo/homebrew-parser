@@ -8,7 +8,11 @@ description :
 	 Terminal interaction recorder and player
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['matrix.tty']
+	 ['http://0xcc.net/tty/tty/matrix.tty']
 patches :
 EOF_patch :
 install :

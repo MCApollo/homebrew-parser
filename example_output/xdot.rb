@@ -12,7 +12,11 @@ link_deps :
 	 py3cairo
 	 pygobject3
 	 python
+optional_deps :
 conflicts :
+resource :
+	 ['graphviz']
+	 ['https://files.pythonhosted.org/packages/fa/d1/63b62dee9e55368f60b5ea445e6afb361bb47e692fc27553f3672e16efb8/graphviz-0.8.2.zip']
 patches :
 EOF_patch :
 install :

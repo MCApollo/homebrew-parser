@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 python
+optional_deps :
 conflicts :
 	 choose-gui
+resource :
+	 ['urwid']
+	 ['https://files.pythonhosted.org/packages/c7/90/415728875c230fafd13d118512bde3184d810d7bf798a631abc05fac09d0/urwid-2.0.1.tar.gz']
 patches :
 EOF_patch :
 install :

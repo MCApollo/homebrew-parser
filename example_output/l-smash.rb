@@ -8,7 +8,11 @@ description :
 	 Tool for working with MP4 files
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

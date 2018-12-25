@@ -20,7 +20,11 @@ link_deps :
 	 libusb
 	 npth
 	 pinentry
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

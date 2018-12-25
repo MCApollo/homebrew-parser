@@ -14,7 +14,11 @@ link_deps :
 	 gcc
 	 open-mpi
 	 szip
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

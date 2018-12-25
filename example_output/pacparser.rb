@@ -8,7 +8,11 @@ description :
 	 Library to parse proxy auto-config (PAC) files
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 gtkmm3
 	 gtksourceview3
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

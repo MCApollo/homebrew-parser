@@ -13,7 +13,11 @@ link_deps :
 	 libpng
 	 libtiff
 	 little-cms2
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/DentonW/DevIL/commit/4a2d7822.patch?full_index=1
 EOF_patch :

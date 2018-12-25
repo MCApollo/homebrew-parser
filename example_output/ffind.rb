@@ -8,8 +8,12 @@ description :
 	 Friendlier find
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 sleuthkit
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -11,7 +11,11 @@ build_deps :
 	 xmlto
 link_deps :
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/proxytunnel/proxytunnel/commit/0cfce96.patch?full_index=1
 	 https://github.com/proxytunnel/proxytunnel/pull/27.patch?full_index=1

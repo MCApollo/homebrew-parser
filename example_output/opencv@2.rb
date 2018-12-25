@@ -18,7 +18,11 @@ link_deps :
 	 openexr
 	 python@2
 	 numpy
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

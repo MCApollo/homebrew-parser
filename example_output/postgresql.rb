@@ -12,9 +12,13 @@ link_deps :
 	 icu4c
 	 openssl
 	 readline
+optional_deps :
 	 python
 conflicts :
 	 postgres-xc
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

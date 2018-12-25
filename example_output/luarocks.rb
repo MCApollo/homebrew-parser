@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 lua@5.1
 	 lua
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

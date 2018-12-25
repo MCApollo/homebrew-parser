@@ -15,7 +15,11 @@ link_deps :
 	 libsndfile
 	 sdl2
 	 :x11
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

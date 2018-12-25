@@ -8,7 +8,11 @@ description :
 	 Terraform version manager inspired by rbenv
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

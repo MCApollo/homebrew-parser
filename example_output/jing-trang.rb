@@ -10,7 +10,11 @@ build_deps :
 	 ant
 link_deps :
 	 :java
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

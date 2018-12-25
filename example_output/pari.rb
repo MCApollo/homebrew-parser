@@ -11,7 +11,11 @@ link_deps :
 	 gmp
 	 readline
 	 :x11
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

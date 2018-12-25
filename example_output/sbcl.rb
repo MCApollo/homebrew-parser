@@ -8,7 +8,11 @@ description :
 	 Steel Bank Common Lisp system
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['bootstrap64']
+	 ['https://downloads.sourceforge.net/project/sbcl/sbcl/1.2.11/sbcl-1.2.11-x86-64-darwin-binary.tar.bz2']
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/c5ffdb11/sbcl/patch-make-doc.diff
 EOF_patch :

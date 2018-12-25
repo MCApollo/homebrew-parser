@@ -8,7 +8,11 @@ description :
 	 TCP port scanner, scans entire Internet in under 5 minutes
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

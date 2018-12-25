@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 ec2-api-tools
 	 :java
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

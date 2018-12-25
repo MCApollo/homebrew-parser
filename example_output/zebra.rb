@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 icu4c
 	 yaz
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

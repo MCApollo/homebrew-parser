@@ -8,7 +8,11 @@ description :
 	 Adds basic gemset support to rbenv
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

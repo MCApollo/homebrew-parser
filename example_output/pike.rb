@@ -12,7 +12,11 @@ link_deps :
 	 libtiff
 	 nettle
 	 pcre
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

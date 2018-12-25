@@ -12,7 +12,11 @@ link_deps :
 	 numpy
 	 python
 	 sdl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

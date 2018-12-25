@@ -14,8 +14,12 @@ link_deps :
 	 gdk-pixbuf
 	 hicolor-icon-theme
 	 pango
+optional_deps :
 	 jasper
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://bug757187.bugzilla-attachments.gnome.org/attachment.cgi?id=331173
 EOF_patch :

@@ -8,7 +8,11 @@ description :
 	 Tool to hide JavaScript inside valid image files
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

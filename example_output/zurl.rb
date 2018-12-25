@@ -13,7 +13,11 @@ link_deps :
 	 curl
 	 qt
 	 zeromq
+optional_deps :
 conflicts :
+resource :
+	 ['pyzmq']
+	 ['https://files.pythonhosted.org/packages/1e/f9/d0675409c11d11e549e3da000901cfaabd848da117390ee00030e14bfdb6/pyzmq-16.0.3.tar.gz']
 patches :
 EOF_patch :
 install :

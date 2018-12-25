@@ -10,7 +10,11 @@ build_deps :
 	 autoconf
 	 pkg-config
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['Perl4::CoreLibs']
+	 ['https://cpan.metacpan.org/authors/id/Z/ZE/ZEFRAM/Perl4-CoreLibs-0.003.tar.gz']
 patches :
 EOF_patch :
 	 diff -Naur winexe-1.00-orig/source4/winexe/winexe.h winexe-1.00/source4/winexe/winexe.h

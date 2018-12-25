@@ -13,7 +13,11 @@ build_deps :
 link_deps :
 	 ffmpeg
 	 sdl2
+optional_deps :
 conflicts :
+resource :
+	 ['prebuilt-server']
+	 ['https://github.com/Genymobile/scrcpy/releases/download/v1.5/scrcpy-server-v1.5.jar']
 patches :
 EOF_patch :
 install :

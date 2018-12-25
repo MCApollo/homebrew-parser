@@ -14,7 +14,11 @@ link_deps :
 	 lua
 	 postgresql
 	 proj
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

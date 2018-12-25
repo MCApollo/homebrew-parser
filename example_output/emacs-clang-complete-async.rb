@@ -8,7 +8,11 @@ description :
 build_deps :
 link_deps :
 	 llvm
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/yocchi/emacs-clang-complete-async/commit/5ce197b15d7b8c9abfc862596bf8d902116c9efe.diff?full_index=1
 EOF_patch :

@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 :java
+optional_deps :
 conflicts :
+resource :
+	 ['conscript', 'launcher']
+	 ['https://github.com/foundweekends/conscript.git', 'https://oss.sonatype.org/content/repositories/public/org/scala-sbt/launcher/1.0.1/launcher-1.0.1.jar']
 patches :
 EOF_patch :
 install :

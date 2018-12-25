@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 :macos
+optional_deps :
 conflicts :
+resource :
+	 ['Crypt::Twofish', 'Digest::SHA', 'DateTime', 'DateTime::Locale', 'DateTime::TimeZone']
+	 ['https://cpan.metacpan.org/authors/id/A/AM/AMS/Crypt-Twofish-2.17.tar.gz', 'https://cpan.metacpan.org/authors/id/M/MS/MSHELOR/Digest-SHA-5.96.tar.gz', 'https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/DateTime-1.35.tar.gz', 'https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/DateTime-Locale-1.05.tar.gz', 'https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/DateTime-TimeZone-2.01.tar.gz']
 patches :
 EOF_patch :
 install :

@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 openssl
 	 readline
+optional_deps :
 conflicts :
+resource :
+	 ['test-pwsafe-db']
+	 ['https://raw.githubusercontent.com/nsd20463/pwsafe/208de3a94339df36b6e9cd8aeb7e0be0a67fd3d7/test.dat']
 patches :
 EOF_patch :
 install :

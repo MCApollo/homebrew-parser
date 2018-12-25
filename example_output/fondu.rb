@@ -8,8 +8,12 @@ description :
 	 Tools to convert between different font formats
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 cspice
+resource :
+	 ['cminch.ttf']
+	 ['http://mirrors.ctan.org/fonts/cm/ps-type1/bakoma/ttf/cminch.ttf']
 patches :
 EOF_patch :
 install :

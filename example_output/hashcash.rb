@@ -8,7 +8,11 @@ description :
 	 Proof-of-work algorithm to counter denial-of-service (DoS) attacks
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

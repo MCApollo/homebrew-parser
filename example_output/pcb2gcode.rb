@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 gerbv
 	 gtkmm
+optional_deps :
 conflicts :
+resource :
+	 ['boost']
+	 ['https://dl.bintray.com/boostorg/release/1.66.0/source/boost_1_66_0.tar.bz2']
 patches :
 EOF_patch :
 install :

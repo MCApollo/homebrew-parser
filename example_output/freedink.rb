@@ -18,7 +18,11 @@ link_deps :
 	 sdl_image
 	 sdl_mixer
 	 sdl_ttf
+optional_deps :
 conflicts :
+resource :
+	 ['freedink-data']
+	 ['https://ftp.gnu.org/gnu/freedink/freedink-data-1.08.20170409.tar.gz']
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 LALR(1) parser generator like yacc or bison
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -13,7 +13,11 @@ link_deps :
 	 flac
 	 libogg
 	 libsndfile
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

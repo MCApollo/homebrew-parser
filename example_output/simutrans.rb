@@ -11,7 +11,11 @@ link_deps :
 	 libpng
 	 :macos
 	 sdl2
+optional_deps :
 conflicts :
+resource :
+	 ['pak64', 'text']
+	 ['https://downloads.sourceforge.net/project/simutrans/pak64/120-4/simupak64-120-4.zip', 'https://simutrans-germany.com/translator/data/tab/language_pack-Base+texts.zip']
 patches :
 EOF_patch :
 install :

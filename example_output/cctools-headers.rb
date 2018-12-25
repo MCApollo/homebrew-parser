@@ -8,7 +8,11 @@ description :
 	 cctools headers via Apple
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['headers']
+	 ['https://opensource.apple.com/tarballs/xnu/xnu-2422.90.20.tar.gz']
 patches :
 EOF_patch :
 install :

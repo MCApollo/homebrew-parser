@@ -8,7 +8,11 @@ description :
 	 Secure Programming Lint
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/src/osd.c b/src/osd.c

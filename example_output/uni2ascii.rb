@@ -8,7 +8,11 @@ description :
 	 Bi-directional conversion between UTF-8 and various ASCII flavors
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

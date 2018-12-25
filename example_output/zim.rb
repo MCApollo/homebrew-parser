@@ -13,9 +13,13 @@ link_deps :
 	 pygobject
 	 pygtk
 	 python@2
+optional_deps :
 	 graphviz
 	 pygtksourceview
 conflicts :
+resource :
+	 ['pyxdg']
+	 ['https://files.pythonhosted.org/packages/source/p/pyxdg/pyxdg-0.25.tar.gz']
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Convert text strings to printed bars
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff -bur barcode-original/barcode.h barcode-new/barcode.h

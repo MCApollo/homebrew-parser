@@ -16,7 +16,11 @@ link_deps :
 	 libzip
 	 qt
 	 sdl2
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

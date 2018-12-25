@@ -8,7 +8,11 @@ description :
 	 Program for designing PCR primers
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

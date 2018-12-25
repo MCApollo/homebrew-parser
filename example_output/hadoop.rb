@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 :java
+optional_deps :
 conflicts :
 	 yarn
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

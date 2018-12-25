@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 task
+optional_deps :
 conflicts :
+resource :
+	 ['Curses']
+	 ['https://cpan.metacpan.org/authors/id/G/GI/GIRAFFED/Curses-1.31.tgz']
 patches :
 EOF_patch :
 install :

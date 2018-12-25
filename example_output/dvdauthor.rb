@@ -13,7 +13,11 @@ link_deps :
 	 libdvdread
 	 libpng
 	 libxml2
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 pygtk
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

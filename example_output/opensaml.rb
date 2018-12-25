@@ -14,7 +14,11 @@ link_deps :
 	 xerces-c
 	 xml-security-c
 	 xml-tooling-c
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

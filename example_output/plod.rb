@@ -8,7 +8,11 @@ description :
 	 Keep an online journal of what you're working on
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

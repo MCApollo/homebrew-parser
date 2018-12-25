@@ -10,7 +10,11 @@ build_deps :
 	 pkg-config
 link_deps :
 	 libestr
+optional_deps :
 conflicts :
+resource :
+	 ['libfastjson']
+	 ['http://download.rsyslog.com/libfastjson/libfastjson-0.99.8.tar.gz']
 patches :
 EOF_patch :
 install :

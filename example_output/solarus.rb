@@ -16,7 +16,11 @@ link_deps :
 	 sdl2
 	 sdl2_image
 	 sdl2_ttf
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

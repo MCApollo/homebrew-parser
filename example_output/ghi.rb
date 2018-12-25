@@ -8,7 +8,11 @@ description :
 	 Work on GitHub issues on the command-line
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['multi_json', 'pygments.rb']
+	 ['https://rubygems.org/gems/multi_json-1.12.1.gem', 'https://rubygems.org/gems/pygments.rb-1.1.2.gem']
 patches :
 EOF_patch :
 install :

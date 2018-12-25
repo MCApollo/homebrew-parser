@@ -12,7 +12,11 @@ link_deps :
 	 glib
 	 graphviz
 	 pkg-config
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

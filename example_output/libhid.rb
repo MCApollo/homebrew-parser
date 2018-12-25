@@ -10,7 +10,11 @@ build_deps :
 link_deps :
 	 libusb
 	 libusb-compat
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- libhid-0.2.16/src/Makefile.am.org	2014-01-02 19:20:33.000000000 +0200

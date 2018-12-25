@@ -13,7 +13,11 @@ link_deps :
 	 openssl
 	 :osxfuse
 	 xz
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git i/scripts/mountavfs w/scripts/mountavfs

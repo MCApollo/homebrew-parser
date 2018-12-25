@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 libtool
+optional_deps :
 conflicts :
 	 virtuoso
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

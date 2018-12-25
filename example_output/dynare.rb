@@ -19,7 +19,11 @@ link_deps :
 	 octave
 	 suite-sparse
 	 veclibfort
+optional_deps :
 conflicts :
+resource :
+	 ['slicot']
+	 ['https://mirrors.ocf.berkeley.edu/debian/pool/main/s/slicot/slicot_5.0+20101122.orig.tar.gz']
 patches :
 EOF_patch :
 install :

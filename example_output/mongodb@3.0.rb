@@ -11,9 +11,13 @@ build_deps :
 	 scons
 link_deps :
 	 :macos
+optional_deps :
 	 boost
 	 openssl
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

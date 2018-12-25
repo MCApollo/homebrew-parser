@@ -8,7 +8,11 @@ description :
 	 Lightweight RPC library (based on XML and HTTP)
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

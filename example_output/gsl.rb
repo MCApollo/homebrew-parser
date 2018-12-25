@@ -8,7 +8,11 @@ description :
 	 Numerical library for C and C++
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

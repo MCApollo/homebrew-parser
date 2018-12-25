@@ -13,7 +13,11 @@ link_deps :
 	 ilmbase
 	 libtiff
 	 openexr
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

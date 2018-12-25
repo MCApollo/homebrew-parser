@@ -13,7 +13,11 @@ link_deps :
 	 libtasn1
 	 openssl
 	 usbmuxd
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

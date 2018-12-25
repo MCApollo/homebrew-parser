@@ -13,7 +13,11 @@ link_deps :
 	 glib
 	 gnutls
 	 libidn
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

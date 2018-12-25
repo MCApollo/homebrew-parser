@@ -8,7 +8,11 @@ description :
 	 Benchmark suite for file systems and hard drives
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/57a21ef/bonnie%2B%2B/remove-large-file-support-macros.diff
 EOF_patch :

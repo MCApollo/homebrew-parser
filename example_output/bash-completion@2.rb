@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 bash
+optional_deps :
 conflicts :
 	 bash-completion
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

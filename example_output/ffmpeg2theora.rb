@@ -10,12 +10,16 @@ build_deps :
 	 pkg-config
 	 scons
 link_deps :
-	 libkate
 	 ffmpeg
 	 libogg
 	 libvorbis
 	 theora
+optional_deps :
+	 libkate
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,8 +8,12 @@ description :
 	 Encrypt and decrypt files and streams
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 ccat
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

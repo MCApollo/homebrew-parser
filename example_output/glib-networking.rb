@@ -15,7 +15,11 @@ link_deps :
 	 glib
 	 gnutls
 	 gsettings-desktop-schemas
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

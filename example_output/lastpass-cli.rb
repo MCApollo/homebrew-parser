@@ -15,7 +15,11 @@ link_deps :
 	 curl
 	 openssl
 	 pinentry
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

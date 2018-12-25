@@ -26,7 +26,6 @@ link_deps :
 	 python@2
 	 sqlite
 	 zstd
-	 mysql
 	 cfitsio
 	 epsilon
 	 hdf5
@@ -41,7 +40,12 @@ link_deps :
 	 webp
 	 xerces-c
 	 xz
+optional_deps :
+	 mysql
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

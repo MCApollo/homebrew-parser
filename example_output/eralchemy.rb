@@ -12,7 +12,11 @@ link_deps :
 	 graphviz
 	 openssl
 	 python
+optional_deps :
 conflicts :
+resource :
+	 ['pygraphviz', 'SQLAlchemy', 'er_example']
+	 ['https://files.pythonhosted.org/packages/98/bb/a32e33f7665b921c926209305dde66fe41003a4ad934b10efb7c1211a419/pygraphviz-1.3.1.tar.gz', 'https://files.pythonhosted.org/packages/f3/b7/d8725042f105cc6b71c7bae0ffd46e49f762e5a08f421f1eddd855a1f723/SQLAlchemy-1.2.4.tar.gz', 'https://raw.githubusercontent.com/Alexis-benoist/eralchemy/v1.1.0/example/newsmeme.er']
 patches :
 EOF_patch :
 install :

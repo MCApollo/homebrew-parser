@@ -12,7 +12,11 @@ link_deps :
 	 lz4
 	 lzlib
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

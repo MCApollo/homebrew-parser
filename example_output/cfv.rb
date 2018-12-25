@@ -8,7 +8,11 @@ description :
 	 Test and create various files (e.g., .sfv, .csv, .crc., .torrent)
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

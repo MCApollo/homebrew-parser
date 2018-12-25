@@ -10,7 +10,11 @@ build_deps :
 	 cmake
 link_deps :
 	 glfw
+optional_deps :
 conflicts :
+resource :
+	 ['bunny']
+	 ['https://raw.githubusercontent.com/FreeCAD/Examples/be0b4f9/Point_cloud_ExampleFiles/PointCloud-Data_Stanford-Bunny.asc']
 patches :
 EOF_patch :
 install :

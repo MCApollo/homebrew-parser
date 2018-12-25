@@ -11,7 +11,11 @@ build_deps :
 	 go-bindata
 	 govendor
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/apache/incubator-openwhisk-cli/pull/362.patch?full_index=1
 	 https://github.com/apache/incubator-openwhisk-cli/pull/363.patch?full_index=1

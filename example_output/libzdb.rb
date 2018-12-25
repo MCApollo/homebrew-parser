@@ -12,7 +12,11 @@ link_deps :
 	 openssl
 	 postgresql
 	 sqlite
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Download and install various runtime libraries
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

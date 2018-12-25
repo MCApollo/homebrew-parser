@@ -12,10 +12,14 @@ link_deps :
 	 gmp
 	 openssl
 	 readline
-	 libarchive
 	 :x11
 	 jpeg
+optional_deps :
+	 libarchive
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

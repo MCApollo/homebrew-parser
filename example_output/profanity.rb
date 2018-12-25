@@ -18,7 +18,11 @@ link_deps :
 	 ossp-uuid
 	 readline
 	 terminal-notifier
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

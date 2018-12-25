@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 hdf5
+optional_deps :
 conflicts :
+resource :
+	 ['test_mat_file']
+	 ['https://web.uvic.ca/~monahana/eos225/poc_data.mat.sfx']
 patches :
 EOF_patch :
 install :

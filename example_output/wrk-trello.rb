@@ -8,8 +8,12 @@ description :
 	 Command-line interface to Trello
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 wrk
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

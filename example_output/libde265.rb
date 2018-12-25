@@ -8,7 +8,11 @@ description :
 	 Open h.265 video codec implementation
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

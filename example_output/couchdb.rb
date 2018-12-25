@@ -11,7 +11,11 @@ link_deps :
 	 erlang@19
 	 icu4c
 	 spidermonkey
+optional_deps :
 conflicts :
+resource :
+	 ['geocouch', 'geocouch']
+	 ['https://github.com/couchbase/geocouch/archive/couchdb1.3.x.tar.gz']
 patches :
 EOF_patch :
 install :

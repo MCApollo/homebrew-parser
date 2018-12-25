@@ -8,7 +8,11 @@ description :
 	 SFV utility tools
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- a/bsdsfv.c	2012-09-25 07:31:03.000000000 -0500

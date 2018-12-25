@@ -8,8 +8,12 @@ description :
 	 Toolkit for assembling FITS images into custom mosaics
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 wdiff
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

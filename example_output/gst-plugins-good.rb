@@ -9,7 +9,6 @@ description :
 build_deps :
 	 pkg-config
 link_deps :
-	 check
 	 cairo
 	 flac
 	 gettext
@@ -22,6 +21,8 @@ link_deps :
 	 orc
 	 speex
 	 taglib
+optional_deps :
+	 check
 	 aalib
 	 gdk-pixbuf
 	 gtk+3
@@ -31,6 +32,9 @@ link_deps :
 	 pulseaudio
 	 :x11
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

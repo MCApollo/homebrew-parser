@@ -8,7 +8,11 @@ description :
 	 Analytics and search dashboard for Elasticsearch
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['node', 'yarn']
+	 ['https://nodejs.org/dist/v8.14.0/node-v8.14.0.tar.xz', 'https://yarnpkg.com/downloads/1.12.3/yarn-v1.12.3.tar.gz']
 patches :
 EOF_patch :
 install :

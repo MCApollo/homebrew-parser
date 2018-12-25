@@ -11,7 +11,11 @@ build_deps :
 	 gnu-sed
 	 groff
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

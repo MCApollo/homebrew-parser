@@ -7,7 +7,11 @@ description :
 	 Read CD and get CDDB discid information
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/cd-discid.c b/cd-discid.c

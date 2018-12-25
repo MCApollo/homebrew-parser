@@ -9,7 +9,11 @@ description :
 build_deps :
 	 :x11
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

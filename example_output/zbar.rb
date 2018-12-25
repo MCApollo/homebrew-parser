@@ -15,8 +15,12 @@ link_deps :
 	 libtool
 	 ufraw
 	 xz
+optional_deps :
 	 :x11
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/zbar/jpeg.c b/zbar/jpeg.c

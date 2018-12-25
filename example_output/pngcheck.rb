@@ -8,7 +8,11 @@ description :
 	 Print info and check PNG, JNG, and MNG files
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

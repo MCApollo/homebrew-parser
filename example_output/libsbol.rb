@@ -12,7 +12,11 @@ build_deps :
 link_deps :
 	 jsoncpp
 	 raptor
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

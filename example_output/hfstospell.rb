@@ -12,7 +12,11 @@ link_deps :
 	 icu4c
 	 libarchive
 	 libxml++
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/674a62d/hfstospell/no-cxx17.diff
 EOF_patch :

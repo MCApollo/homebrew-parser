@@ -8,7 +8,11 @@ description :
 	 Security assessment and troubleshooting tool for IPv6
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

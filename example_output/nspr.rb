@@ -8,7 +8,11 @@ description :
 	 Platform-neutral API for system-level and libc-like functions
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

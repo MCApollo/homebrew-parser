@@ -11,7 +11,11 @@ link_deps :
 	 boost
 	 miniupnpc
 	 openssl@1.1
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

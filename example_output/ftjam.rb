@@ -8,8 +8,12 @@ description :
 	 Build tool that can be used as a replacement for Make
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 jam
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

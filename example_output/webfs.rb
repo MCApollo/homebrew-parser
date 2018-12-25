@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/0518a6d1/webfs/patch-ls.c
 EOF_patch :

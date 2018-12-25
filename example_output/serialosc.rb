@@ -11,7 +11,11 @@ link_deps :
 	 confuse
 	 liblo
 	 libmonome
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

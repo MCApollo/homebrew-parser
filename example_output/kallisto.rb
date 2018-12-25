@@ -12,7 +12,11 @@ build_deps :
 	 cmake
 link_deps :
 	 hdf5
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

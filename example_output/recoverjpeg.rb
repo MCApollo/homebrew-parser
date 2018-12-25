@@ -8,7 +8,11 @@ description :
 	 Tool to recover JPEG images from a file system image
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

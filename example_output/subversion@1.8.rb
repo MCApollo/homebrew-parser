@@ -14,10 +14,14 @@ link_deps :
 	 apr-util
 	 openssl
 	 sqlite
+	 swig
+optional_deps :
 	 :java
 	 python@2
-	 swig
 conflicts :
+resource :
+	 ['serf']
+	 ['https://www.apache.org/dyn/closer.cgi?path=serf/serf-1.3.9.tar.bz2']
 patches :
 EOF_patch :
 	 diff --git a/configure b/configure

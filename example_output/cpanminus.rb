@@ -8,7 +8,11 @@ description :
 	 Get, unpack, build, and install modules from CPAN
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

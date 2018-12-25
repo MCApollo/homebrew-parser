@@ -14,11 +14,15 @@ link_deps :
 	 libpng
 	 libvorbis
 	 mad
+optional_deps :
 	 libao
 	 libsndfile
 	 opencore-amr
 	 opusfile
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

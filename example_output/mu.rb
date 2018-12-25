@@ -16,8 +16,12 @@ link_deps :
 	 gettext
 	 glib
 	 xapian
+optional_deps :
 	 emacs
 conflicts :
+resource :
+	 ['gmime']
+	 ['https://download.gnome.org/sources/gmime/2.6/gmime-2.6.23.tar.xz']
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Prolog compiler with constraint solving
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

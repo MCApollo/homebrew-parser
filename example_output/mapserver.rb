@@ -19,10 +19,14 @@ link_deps :
 	 libpng
 	 proj
 	 protobuf-c
+	 postgresql
+optional_deps :
 	 cairo
 	 geos
-	 postgresql
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

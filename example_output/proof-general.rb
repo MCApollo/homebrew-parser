@@ -11,7 +11,11 @@ build_deps :
 	 texinfo
 link_deps :
 	 emacs
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

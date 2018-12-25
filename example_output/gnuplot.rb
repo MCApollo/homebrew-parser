@@ -13,10 +13,14 @@ link_deps :
 	 lua
 	 pango
 	 readline
+optional_deps :
 	 qt
 	 wxmac
 	 :x11
 conflicts :
+resource :
+	 ['libcerf']
+	 ['https://www.mirrorservice.org/sites/distfiles.macports.org/libcerf/libcerf-1.5.tgz']
 patches :
 EOF_patch :
 install :

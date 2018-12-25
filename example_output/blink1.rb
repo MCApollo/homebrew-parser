@@ -8,7 +8,11 @@ description :
 	 Control blink(1) indicator light
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

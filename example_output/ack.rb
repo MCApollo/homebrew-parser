@@ -8,7 +8,11 @@ description :
 	 Search tool like grep, but optimized for programmers
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

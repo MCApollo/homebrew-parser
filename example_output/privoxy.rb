@@ -12,7 +12,11 @@ build_deps :
 	 libtool
 link_deps :
 	 pcre
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

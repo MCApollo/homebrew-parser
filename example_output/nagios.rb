@@ -11,7 +11,11 @@ link_deps :
 	 gd
 	 libpng
 	 nagios-plugins
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

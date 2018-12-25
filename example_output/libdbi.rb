@@ -8,7 +8,11 @@ description :
 	 Database-independent abstraction layer in C, similar to DBI/DBD in Perl
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

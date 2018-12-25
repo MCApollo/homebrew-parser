@@ -12,7 +12,11 @@ link_deps :
 	 console_bridge
 	 tinyxml
 	 urdfdom_headers
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

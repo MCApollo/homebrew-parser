@@ -8,8 +8,12 @@ description :
 	 UTF8-friendly version of tradition vi
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 vim
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

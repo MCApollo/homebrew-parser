@@ -17,7 +17,11 @@ link_deps :
 	 gettext
 	 glib
 	 libgit2
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

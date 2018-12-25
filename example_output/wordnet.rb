@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 :x11
+optional_deps :
 conflicts :
+resource :
+	 ['dict']
+	 ['http://wordnetcode.princeton.edu/wn3.1.dict.tar.gz']
 patches :
 EOF_patch :
 install :

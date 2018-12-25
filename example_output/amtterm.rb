@@ -8,7 +8,11 @@ description :
 	 Serial-over-LAN (sol) client for Intel AMT
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['SOAP::Lite']
+	 ['https://cpan.metacpan.org/authors/id/P/PH/PHRED/SOAP-Lite-1.11.tar.gz']
 patches :
 EOF_patch :
 install :

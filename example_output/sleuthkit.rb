@@ -14,9 +14,13 @@ link_deps :
 	 libewf
 	 libpq
 	 sqlite
+optional_deps :
 conflicts :
 	 irods
 	 ffind
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

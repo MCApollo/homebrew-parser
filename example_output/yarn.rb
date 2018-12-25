@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 node
+optional_deps :
 conflicts :
 	 hadoop
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

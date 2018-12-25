@@ -8,7 +8,11 @@ description :
 	 Prevents you from committing sensitive information to a git repo
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

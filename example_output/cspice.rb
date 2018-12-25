@@ -8,11 +8,15 @@ description :
 	 Observation geometry system for robotic space science missions
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
 	 openhmd
 	 libftdi0
 	 enscript
 	 fondu
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -8,7 +8,11 @@ description :
 	 Tools for genome arithmetic (set theory on the genome)
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

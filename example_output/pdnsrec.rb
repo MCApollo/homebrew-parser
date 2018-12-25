@@ -13,7 +13,11 @@ link_deps :
 	 gcc
 	 lua
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

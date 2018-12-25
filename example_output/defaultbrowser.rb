@@ -8,7 +8,11 @@ description :
 	 Command-line tool for getting & setting the default browser
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

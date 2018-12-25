@@ -9,8 +9,12 @@ description :
 build_deps :
 link_deps :
 	 mad
+optional_deps :
 conflicts :
 	 num-utils
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

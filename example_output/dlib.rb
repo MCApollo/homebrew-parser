@@ -12,9 +12,13 @@ link_deps :
 	 jpeg
 	 libpng
 	 :macos
+optional_deps :
 	 openblas
 	 :x11
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

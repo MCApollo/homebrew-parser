@@ -8,7 +8,11 @@ description :
 	 CLI tool that runs a command and highlights STDERR output
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

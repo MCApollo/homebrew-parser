@@ -8,7 +8,11 @@ description :
 	 Test SSL/TLS enabled services to discover supported cipher suites
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['insecure-openssl']
+	 ['https://github.com/openssl/openssl/archive/OpenSSL_1_0_2f.tar.gz']
 patches :
 EOF_patch :
 install :

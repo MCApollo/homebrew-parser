@@ -14,7 +14,11 @@ build_deps :
 	 pkg-config
 link_deps :
 	 pcre2
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/00615b/ucg/xcode9.patch
 EOF_patch :

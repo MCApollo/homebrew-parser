@@ -8,7 +8,11 @@ description :
 	 Version control system
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://opensource.apple.com/tarballs/cvs/cvs-45.tar.gz
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/24118ec737c7/cvs/vasnprintf-high-sierra-fix.diff

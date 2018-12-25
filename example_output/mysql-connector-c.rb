@@ -10,11 +10,15 @@ build_deps :
 	 cmake
 link_deps :
 	 openssl
+optional_deps :
 conflicts :
 	 mysql
 	 mariadb
 	 percona-server
 	 mysql-cluster
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

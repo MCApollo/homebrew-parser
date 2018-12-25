@@ -12,9 +12,13 @@ link_deps :
 	 pcre2
 	 openssl
 	 curl
+optional_deps :
 	 openssl
 	 curl
 conflicts :
+resource :
+	 ['html', 'man']
+	 ['https://www.kernel.org/pub/software/scm/git/git-htmldocs-2.20.1.tar.xz', 'https://www.kernel.org/pub/software/scm/git/git-manpages-2.20.1.tar.xz']
 patches :
 EOF_patch :
 install :

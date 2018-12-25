@@ -10,7 +10,11 @@ build_deps :
 	 cabal-install
 	 ghc
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['stack_lts_12_yaml']
+	 ['https://raw.githubusercontent.com/commercialhaskell/stack/v1.9.3/stack-lts-12.yaml']
 patches :
 EOF_patch :
 install :

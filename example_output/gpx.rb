@@ -8,7 +8,11 @@ description :
 	 Gcode to x3g converter for 3D printers running Sailfish
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

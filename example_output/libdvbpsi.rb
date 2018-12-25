@@ -8,7 +8,11 @@ description :
 	 Library to decode/generate MPEG TS and DVB PSI tables
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

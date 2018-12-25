@@ -8,7 +8,11 @@ description :
 	 Low-level access to audio, keyboard, mouse, joystick and graphics
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://bugzilla-attachments.libsdl.org/attachment.cgi?id=1320
 	 https://bugzilla-attachments.libsdl.org/attachment.cgi?id=1324

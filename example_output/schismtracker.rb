@@ -11,7 +11,11 @@ build_deps :
 	 automake
 link_deps :
 	 sdl
+optional_deps :
 conflicts :
+resource :
+	 ['demo_mods']
+	 ['https://files.scene.org/get:us-http/mirrors/modsoulbrother/vim/vim-best-of.zip']
 patches :
 EOF_patch :
 install :

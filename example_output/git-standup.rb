@@ -8,7 +8,11 @@ description :
 	 Git extension to generate reports for standup meetings
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -14,7 +14,11 @@ build_deps :
 link_deps :
 	 json-c
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

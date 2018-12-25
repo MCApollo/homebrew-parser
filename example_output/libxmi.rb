@@ -8,7 +8,11 @@ description :
 	 C/C++ function library for rasterizing 2D vector graphics
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

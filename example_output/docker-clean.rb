@@ -8,7 +8,11 @@ description :
 	 Clean Docker containers, images, networks, and volumes
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

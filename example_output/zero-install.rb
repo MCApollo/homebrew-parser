@@ -14,8 +14,12 @@ build_deps :
 	 pkg-config
 link_deps :
 	 gnupg
+optional_deps :
 	 gtk+
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

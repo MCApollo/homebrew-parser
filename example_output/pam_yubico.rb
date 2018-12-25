@@ -12,7 +12,11 @@ link_deps :
 	 libyubikey
 	 ykclient
 	 ykpers
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

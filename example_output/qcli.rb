@@ -12,7 +12,11 @@ link_deps :
 	 ffmpeg
 	 qt
 	 qwt
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

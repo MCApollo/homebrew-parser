@@ -13,7 +13,11 @@ link_deps :
 	 neon
 	 openssl
 	 readline
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 --- cadaver-0.23.3-orig/configure	2009-12-16 01:36:26.000000000 +0300

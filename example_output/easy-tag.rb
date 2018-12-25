@@ -22,7 +22,11 @@ link_deps :
 	 speex
 	 taglib
 	 wavpack
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 	 diff --git a/Makefile.in b/Makefile.in

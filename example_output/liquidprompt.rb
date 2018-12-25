@@ -8,7 +8,11 @@ description :
 	 Adaptive prompt for bash and zsh shells
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

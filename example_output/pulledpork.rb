@@ -9,7 +9,11 @@ description :
 build_deps :
 link_deps :
 	 openssl
+optional_deps :
 conflicts :
+resource :
+	 ['Switch', 'Crypt::SSLeay']
+	 ['https://cpan.metacpan.org/authors/id/C/CH/CHORNY/Switch-2.17.tar.gz', 'https://cpan.metacpan.org/authors/id/N/NA/NANIS/Crypt-SSLeay-0.72.tar.gz']
 patches :
 EOF_patch :
 install :

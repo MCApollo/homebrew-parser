@@ -13,7 +13,11 @@ link_deps :
 	 netcdf
 	 texinfo
 	 udunits
+optional_deps :
 conflicts :
+resource :
+	 ['example_nc']
+	 ['https://www.unidata.ucar.edu/software/netcdf/examples/WMI_Lear.nc']
 patches :
 EOF_patch :
 install :

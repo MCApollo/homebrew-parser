@@ -13,9 +13,13 @@ build_deps :
 	 pkg-config
 link_deps :
 	 hidapi
+optional_deps :
 conflicts :
 	 cspice
 	 libftdi0
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

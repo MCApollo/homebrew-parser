@@ -13,7 +13,11 @@ build_deps :
 link_deps :
 	 :xcode
 	 libev
+optional_deps :
 conflicts :
+resource :
+	 ['tinycorelinux']
+	 ['https://dl.bintray.com/markeissler/homebrew/hyperkit-kernel/tinycorelinux_8.x.tar.gz']
 patches :
 EOF_patch :
 install :

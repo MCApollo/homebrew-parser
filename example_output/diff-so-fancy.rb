@@ -8,7 +8,11 @@ description :
 	 Good-lookin' diffs with diff-highlight and more
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -9,8 +9,12 @@ description :
 build_deps :
 	 :xcode
 link_deps :
+optional_deps :
 conflicts :
 	 inetutils
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

@@ -9,7 +9,11 @@ description :
 build_deps :
 	 go
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['test']
+	 ['https://raw.githubusercontent.com/mmarkdown/mmark/v2.0.7/rfc/2100.md']
 patches :
 EOF_patch :
 install :

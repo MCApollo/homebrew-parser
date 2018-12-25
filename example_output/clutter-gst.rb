@@ -13,7 +13,11 @@ link_deps :
 	 gdk-pixbuf
 	 gst-plugins-base
 	 gstreamer
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

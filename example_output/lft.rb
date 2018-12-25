@@ -8,7 +8,11 @@ description :
 	 Layer Four Traceroute (LFT), an advanced traceroute tool
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

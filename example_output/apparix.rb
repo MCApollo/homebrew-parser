@@ -8,7 +8,11 @@ description :
 	 File system navigation via bookmarking directories
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

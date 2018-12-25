@@ -10,7 +10,11 @@ build_deps :
 	 cmake
 link_deps :
 	 popt
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

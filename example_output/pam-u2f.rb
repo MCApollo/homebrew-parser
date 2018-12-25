@@ -15,7 +15,11 @@ build_deps :
 link_deps :
 	 libu2f-host
 	 libu2f-server
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 EOF_patch :
 install :

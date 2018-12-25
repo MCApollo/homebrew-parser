@@ -13,7 +13,11 @@ link_deps :
 	 libffi
 	 pkg-config
 	 python@2
+optional_deps :
 conflicts :
+resource :
+	 ['tutorial']
+	 ['https://gist.github.com/7a0023656ccfe309337a.git']
 patches :
 EOF_patch :
 install :

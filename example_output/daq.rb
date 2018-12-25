@@ -8,7 +8,11 @@ description :
 	 Network intrusion prevention and detection system
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://raw.githubusercontent.com/Homebrew/formula-patches/b345dac/daq/patch-pcap-version.diff
 EOF_patch :

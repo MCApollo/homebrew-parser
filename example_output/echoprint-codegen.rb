@@ -11,7 +11,11 @@ link_deps :
 	 boost
 	 ffmpeg
 	 taglib
+optional_deps :
 conflicts :
+resource :
+	 []
+	 []
 patches :
 	 https://github.com/echonest/echoprint-codegen/commit/5ac72c40ae920f507f3f4da8b8875533bccf5e02.diff?full_index=1
 EOF_patch :

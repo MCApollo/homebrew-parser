@@ -11,7 +11,11 @@ build_deps :
 link_deps :
 	 python
 	 :macos
+optional_deps :
 conflicts :
+resource :
+	 ['gmp', 'binary', 'testsuite']
+	 ['https://ftp.gnu.org/gnu/gmp/gmp-6.1.2.tar.xz', 'https://downloads.haskell.org/~ghc/8.4.4/ghc-8.4.4-x86_64-apple-darwin.tar.xz', 'https://downloads.haskell.org/~ghc/8.4.4/ghc-8.4.4-testsuite.tar.xz']
 patches :
 EOF_patch :
 	 diff --git a/docs/users_guide/flags.py b/docs/users_guide/flags.py

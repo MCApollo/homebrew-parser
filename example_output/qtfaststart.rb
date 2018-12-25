@@ -8,7 +8,11 @@ description :
 	 Utility for Quicktime files
 build_deps :
 link_deps :
+optional_deps :
 conflicts :
+resource :
+	 ['mov']
+	 ['https://github.com/van7hu/fanca/raw/master/examples/kmplayer/samples/H264_test4_Talkingheadclipped_mov_480x320.mov']
 patches :
 EOF_patch :
 install :
