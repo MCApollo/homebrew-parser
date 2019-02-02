@@ -78,6 +78,8 @@ class HomebrewParser(object):
 		for line in contents:
 			if not isData: # This will create malformed patches if not disabled.
 				line = self.preprocess(line)
+			else:
+				line = line.rstrip('\n')
 			match = None
 			if Debug:
 				print('--> ', line)
