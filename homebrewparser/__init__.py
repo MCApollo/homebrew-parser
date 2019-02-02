@@ -61,7 +61,7 @@ class HomebrewParser(object):
 			sys.exit(1)
 		contents = open(path).readlines()
 		# Affects how to parse data
-		Debug		= False # XXX: Remove Debug
+		Debug		= True # XXX: Remove Debug
 		foundURL	= False # Ensure DL URL is found in the very least
 		shouldLoop 	= False # "Fast-Forward" mode
 		patchMode	= False # Keep URLs of patches
@@ -76,7 +76,8 @@ class HomebrewParser(object):
 			r'^(?:^end)(?:$|\.\S+)')
 		''''''
 		for line in contents:
-			line = self.preprocess(line)
+			if not isData: # This will create malformed patches if not disabled.
+				line = self.preprocess(line)
 			match = None
 			if Debug:
 				print('--> ', line)
